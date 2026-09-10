@@ -190,29 +190,38 @@ nav .container{display:flex;align-items:center;justify-content:space-between;hei
     var isSubmitting = false;
 
     // Google Form target + field mapping.
-    // IMPORTANT: verify these entry.XXXXXXX IDs against your live form's
-    // "Get pre-filled link" output — if the form has been edited since these
-    // were captured, the IDs below may no longer match and data will be
-    // silently dropped by Google (no error is shown to the user).
+    // These are the *entry* IDs from the form's "Get pre-filled link" output,
+    // NOT the question/item IDs that sit next to them in the form source.
+    // Posting item IDs makes Google reject the submission with HTTP 400 and
+    // save nothing, so re-verify these against a fresh pre-filled link whenever
+    // the form's questions are edited.
     var GFORM_ACTION_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSehVJ7XrWRRJ6uG_xJniTOVnSklKsvjhQl_T3wUgkbcQ-20zw/formResponse';
     var FIELD_MAP = {
-        name: 'entry.1423833295',
-        email: 'entry.1334309858',
-        phone: 'entry.542707410',
-        date: 'entry.1539017083',
-        time: 'entry.1947505895',
-        timezone: 'entry.1738796657',
-        topic: 'entry.1642892952',
-        message: 'entry.998721038'
+        name: 'entry.889024105',
+        email: 'entry.929801647',
+        phone: 'entry.728122562',
+        time: 'entry.1321030329',
+        timezone: 'entry.864718289',
+        topic: 'entry.974457396',
+        message: 'entry.1385124185'
     };
+    // "Preferred Date" is a Date question, so it is posted as three separate
+    // _year / _month / _day params rather than as one ISO string.
+    var DATE_ENTRY = 'entry.792185836';
+    // The form has "Collect email addresses: Responder input" turned on, which
+    // adds a required built-in field that is not part of FIELD_MAP.
+    var EMAIL_COLLECT_FIELD = 'emailAddress';
 
     // --- Form field setup ---
     var minDate = new Date();
     minDate.setDate(minDate.getDate() + 1);
+    var minDateStr = minDate.getFullYear() + '-' +
+        ('0' + (minDate.getMonth() + 1)).slice(-2) + '-' +
+        ('0' + minDate.getDate()).slice(-2);
     var dateInput = document.getElementById('mp-date');
     if (dateInput) {
-        dateInput.min = minDate.toISOString().split('T')[0];
-        dateInput.value = minDate.toISOString().split('T')[0];
+        dateInput.min = minDateStr;
+        dateInput.value = minDateStr;
     }
 
     // Auto-detect timezone
@@ -243,7 +252,9 @@ nav .container{display:flex;align-items:center;justify-content:space-between;hei
         if (el.type === 'email') {
             ok = val && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val);
         } else if (el.id === 'mp-date') {
-            ok = val && new Date(val) >= new Date();
+            // Compare the raw YYYY-MM-DD strings; parsing to Date treats the
+            // value as UTC midnight and misjudges the boundary day west of UTC.
+            ok = !!val && /^\d{4}-\d{2}-\d{2}$/.test(val) && val >= (el.min || minDateStr);
         } else if (el.tagName === 'SELECT') {
             ok = val && val !== '';
         } else {
@@ -273,31 +284,39 @@ nav .container{display:flex;align-items:center;justify-content:space-between;hei
         }
     });
 
-    // Build the request body explicitly (don't rely on FormData->URLSearchParams
-    // interop, which isn't guaranteed the same way across browsers).
-    function buildRequestBody(data) {
-        var params = new URLSearchParams();
+    // Flatten the form data into the exact name/value pairs Google expects.
+    function buildFields(data) {
+        var fields = [];
+        // Required built-in field from the "Collect email addresses" setting.
+        fields.push([EMAIL_COLLECT_FIELD, data.email]);
         Object.keys(FIELD_MAP).forEach(function(key) {
-            params.append(FIELD_MAP[key], data[key] || '');
+            fields.push([FIELD_MAP[key], data[key] || '']);
         });
-        params.append('fvv', '1');
-        params.append('partialResponse', '');
-        params.append('pageHistory', '0');
-        return params;
+        var parts = (data.date || '').split('-');
+        if (parts.length === 3) {
+            fields.push([DATE_ENTRY + '_year', String(Number(parts[0]))]);
+            fields.push([DATE_ENTRY + '_month', String(Number(parts[1]))]);
+            fields.push([DATE_ENTRY + '_day', String(Number(parts[2]))]);
+        }
+        fields.push(['fvv', '1']);
+        fields.push(['pageHistory', '0']);
+        return fields;
     }
 
     // --- Submission via fetch (no-cors) ---
-    // Note: with mode:'no-cors' the response is always opaque, so we cannot
-    // detect a server-side rejection here (e.g. stale entry IDs). This only
-    // confirms the request was sent, not that Google accepted it.
+    // Note: with mode:'no-cors' the response is always opaque, so this confirms
+    // the request was sent, not that Google accepted it. Payload correctness is
+    // therefore enforced by the mapping above, not detected at runtime.
     function submitToGoogleForm(data) {
+        var params = new URLSearchParams();
+        buildFields(data).forEach(function(f) { params.append(f[0], f[1]); });
         return fetch(GFORM_ACTION_URL, {
             method: 'POST',
             mode: 'no-cors',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded'
             },
-            body: buildRequestBody(data).toString()
+            body: params.toString()
         });
     }
 
@@ -329,19 +348,12 @@ nav .container{display:flex;align-items:center;justify-content:space-between;hei
                     }
                 };
 
-                function addInput(name, value) {
+                buildFields(data).forEach(function(f) {
                     var input = document.createElement('input');
-                    input.name = name;
-                    input.value = value || '';
+                    input.name = f[0];
+                    input.value = f[1];
                     ff.appendChild(input);
-                }
-
-                Object.keys(FIELD_MAP).forEach(function(key) {
-                    addInput(FIELD_MAP[key], data[key]);
                 });
-                addInput('fvv', '1');
-                addInput('partialResponse', '');
-                addInput('pageHistory', '0');
 
                 document.body.appendChild(gi);
                 document.body.appendChild(ff);
@@ -401,15 +413,8 @@ nav .container{display:flex;align-items:center;justify-content:space-between;hei
             message: document.getElementById('mp-message').value.trim()
         };
 
-        console.log('Submitting data:', data);
-
         // Try fetch first, then iframe as fallback
         submitToGoogleForm(data)
-            .then(function() {
-                // With no-cors, we can't check status, but if no error occurred,
-                // the request was sent. Show success.
-                showSuccess();
-            })
             .catch(function(error) {
                 console.warn('Fetch submission failed, trying iframe fallback...', error);
                 return submitViaIframe(data);
