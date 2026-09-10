@@ -182,44 +182,14 @@ section{padding:100px 0}
 .btn-secondary:hover{background:rgba(37,99,235,0.05)}
 
 /* Post hero */
-.post-hero{padding:120px 0 60px;background:linear-gradient(180deg,#080e1c 0%,#0c1425 50%,#0f1a30 100%);color:#fff}
-.post-hero .hero-content{max-width:800px}
-.post-meta{display:flex;flex-wrap:wrap;gap:16px;align-items:center;margin-bottom:20px;font-size:0.85rem;color:#94a3b8}
-.post-meta-category{background:rgba(37,99,235,0.2);color:#93c5fd;padding:4px 12px;border-radius:100px;font-weight:600;font-size:0.8rem}
-.post-hero h1{font-size:clamp(2rem,4vw,3rem);font-weight:900;line-height:1.15;letter-spacing:-0.5px;margin-bottom:16px}
-.hero-description{font-size:1.15rem;color:#cbd5e1;line-height:1.7;max-width:640px}
 
 /* Featured image */
-.featured-image-section{padding:0}
-.featured-image{width:100%;border-radius:16px;border:1px solid rgba(255,255,255,0.06)}
 
 /* Post content */
-.post-content{max-width:800px;margin:0 auto;padding-top:48px;padding-bottom:48px}
-.post-content h2{font-size:1.6rem;font-weight:800;letter-spacing:-0.3px;margin:48px 0 16px;color:#fff}
-.post-content h3{font-size:1.25rem;font-weight:700;margin:32px 0 12px;color:#fff}
-.post-content p{font-size:1rem;color:#94a3b8;line-height:1.8;margin-bottom:20px}
-.post-content ul,.post-content ol{margin:0 0 20px 24px;color:#94a3b8;line-height:1.8}
-.post-content li{margin-bottom:8px}
-.post-content li strong{color:#e2e8f0}
-.post-content blockquote{margin:32px 0;padding:24px 28px;background:rgba(37,99,235,0.06);border-left:3px solid #2563eb;border-radius:0 12px 12px 0;font-size:1.05rem;color:#94a3b8;font-style:italic;line-height:1.7}
-.post-content a{color:#2563eb;text-decoration:underline;text-underline-offset:2px}
-.post-content a:hover{color:#60a5fa}
 
 /* TOC */
-.post-toc{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.06);border-radius:16px;padding:24px 28px;margin-bottom:40px}
-.post-toc h3{font-size:0.9rem;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:#94a3b8;margin-bottom:12px}
-.post-toc ul{list-style:none;margin:0;padding:0}
-.post-toc li{margin-bottom:6px}
-.post-toc a{color:#94a3b8;text-decoration:none;font-size:0.9rem;font-weight:500;transition:color 0.15s}
-.post-toc a:hover{color:#60a5fa}
 
 /* Post footer nav */
-.post-footer-nav{display:flex;justify-content:space-between;gap:24px;margin-top:56px;padding-top:32px;border-top:1px solid rgba(255,255,255,0.04)}
-.post-footer-nav a{display:flex;flex-direction:column;gap:4px;text-decoration:none;padding:16px;border-radius:12px;border:1px solid rgba(255,255,255,0.06);transition:all 0.2s;flex:1}
-.post-footer-nav a:hover{border-color:rgba(96,165,250,0.15);background:rgba(255,255,255,0.02)}
-.post-footer-nav a.next{text-align:right}
-.post-footer-nav .nav-label{font-size:0.8rem;font-weight:600;color:#94a3b8;text-transform:uppercase;letter-spacing:0.3px}
-.post-footer-nav .nav-title{font-size:0.95rem;font-weight:600;color:#e2e8f0}
 
 /* Blog CTA */
 .blog-cta{background:linear-gradient(180deg,#0c1425 0%,#080e1c 100%);color:#fff;padding:80px 0}
@@ -244,22 +214,14 @@ footer{background:#060a14;border-top:1px solid rgba(255,255,255,0.06);padding:56
 .footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:24px;border-top:1px solid rgba(255,255,255,0.04);font-size:0.82rem;color:#94a3b8}
 .footer-bottom a{color:#475569;text-decoration:none}
 .footer-bottom a:hover{color:#94a3b8}
-.footer-bottom-links{display:flex;gap:24px}
-
-@media(max-width:768px){
+.footer-bottom-links{display:flex;gap:24px}@media(max-width:768px){
 .nav-links,.nav-cta{display:none}
 .menu-toggle{display:flex}
 .mobile-menu.active{display:flex}
 .footer-grid{grid-template-columns:1fr 1fr;gap:32px}
-section{padding:60px 0}
-.post-footer-nav{flex-direction:column}
-.post-footer-nav a.next{text-align:left}
-}
-@media(max-width:480px){
+section{padding:60px 0}}@media(max-width:480px){
 .footer-grid{grid-template-columns:1fr}
-.footer-bottom{flex-direction:column;gap:12px;text-align:center}
-}
-</style>
+.footer-bottom{flex-direction:column;gap:12px;text-align:center}}</style>
 </head>
 <body>
 <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -354,7 +316,7 @@ section{padding:60px 0}
   </div>
 </section>
 
-<section>
+<section class="post-content-wrap">
   <div class="container post-content">
 
     <nav class="post-toc" aria-label="Table of contents"><h3>In this article</h3><ul><li><a href="#why-framework">1. Why You Need a Data Quality Framework</a></li><li><a href="#six-dimensions">2. The Six Dimensions of Data Quality</a></li><li><a href="#step-1-assess">3. Step 1: Assess Your Current State</a></li><li><a href="#step-2-rules">4. Step 2: Define Quality Rules and Thresholds</a></li><li><a href="#step-3-monitor">5. Step 3: Implement Automated Monitoring</a></li><li><a href="#step-4-exception">6. Step 4: Build an Exception Management Workflow</a></li><li><a href="#step-5-culture">7. Step 5: Establish Ownership and Culture</a></li><li><a href="#how-4dalert-helps">8. How 4DAlert Accelerates Your Framework</a></li><li><a href="#ai-features">9. AI-Powered Data Quality in 4DAlert</a></li><li><a href="#common-pitfalls">10. Common Pitfalls to Avoid</a></li><li><a href="#getting-started">Getting Started</a></li></ul></nav>

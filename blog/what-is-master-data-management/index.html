@@ -175,36 +175,21 @@ footer{background:#060a14;border-top:1px solid rgba(255,255,255,0.06);padding:56
 .footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:24px;border-top:1px solid rgba(255,255,255,0.04);font-size:0.82rem;color:#94a3b8}
 .footer-bottom a{color:#475569;text-decoration:none}
 .footer-bottom a:hover{color:#94a3b8}
-.footer-bottom-links{display:flex;gap:24px}
-
-@media(max-width:768px){
+.footer-bottom-links{display:flex;gap:24px}@media(max-width:768px){
 .nav-links,.nav-cta{display:none}
 .menu-toggle{display:flex}
 .mobile-menu.active{display:flex}
 .footer-grid{grid-template-columns:1fr 1fr;gap:32px}
-section{padding:60px 0}
-}
-@media(max-width:480px){
+section{padding:60px 0}}@media(max-width:480px){
 .footer-grid{grid-template-columns:1fr}
-.footer-bottom{flex-direction:column;gap:12px;text-align:center}
-}
+.footer-bottom{flex-direction:column;gap:12px;text-align:center}}
 
 /* Page-specific styles */
-.toc{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.06);border-radius:12px;padding:1.5rem 2rem;margin:1.5rem 0 2rem}
-.toc h3{font-size:0.9rem;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:#94a3b8;margin-bottom:0.75rem;margin-top:0}
-.toc ol{margin:0;padding-left:1.25rem}
-.toc li{margin-bottom:0.4rem;font-size:0.92rem}
-.toc a{color:#2563eb;text-decoration:none}
-.toc a:hover{text-decoration:underline}
 .faq-item h3{font-size:1rem;font-weight:700;color:#e2e8f0;margin:0 0 0.5rem}
 .faq-item p{font-size:0.95rem;color:#94a3b8;margin:0;line-height:1.7}
-.author-bio-body h4{font-size:0.95rem;font-weight:700;color:#fff;margin:0 0 4px}
-.author-bio-body p{font-size:0.88rem;color:#94a3b8;margin:0;line-height:1.6}
 .blog-cta .btn-secondary{display:inline-flex;align-items:center;gap:8px;background:transparent;color:#e2e8f0;padding:14px 32px;border-radius:10px;text-decoration:none;font-weight:600;font-size:0.95rem;border:1px solid rgba(255,255,255,0.2);transition:all 0.2s;margin-left:12px}
 .blog-cta .btn-secondary:hover{background:rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.3)}
-.blog-cta .btn-secondary{margin-left:0}
-
-</style>
+.blog-cta .btn-secondary{margin-left:0}</style>
 </head>
 <body>
 <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -299,7 +284,7 @@ section{padding:60px 0}
   </div>
 </section>
 
-<section>
+<section class="post-content-wrap">
   <div class="container post-content">
     <p>In today's data-driven business environment, organizations generate and manage enormous amounts of information every day. Customer details, product information, supplier records, employee data, financial information, and other critical data are often stored across multiple systems.</p>
 

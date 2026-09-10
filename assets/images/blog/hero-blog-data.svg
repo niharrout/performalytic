@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 340" role="img" aria-labelledby="tt">
+<title id="tt">Data analytics and AI insights — trends, metrics and signals surfaced from enterprise data</title>
+<defs>
+<linearGradient id="bgb" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1120"/><stop offset="1" stop-color="#1b2540"/></linearGradient>
+<linearGradient id="brandb" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2563eb"/><stop offset="1" stop-color="#7c3aed"/></linearGradient>
+<linearGradient id="areab" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2563eb" stop-opacity="0.38"/><stop offset="1" stop-color="#2563eb" stop-opacity="0"/></linearGradient>
+<radialGradient id="gbb"><stop offset="0" stop-color="#2563eb" stop-opacity="0.28"/><stop offset="1" stop-color="#2563eb" stop-opacity="0"/></radialGradient>
+<radialGradient id="gpb"><stop offset="0" stop-color="#7c3aed" stop-opacity="0.24"/><stop offset="1" stop-color="#7c3aed" stop-opacity="0"/></radialGradient>
+<pattern id="gridb" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#94a3b8" stroke-opacity="0.06"/></pattern>
+</defs>
+
+<rect width="480" height="340" rx="16" fill="url(#bgb)"/>
+<rect width="480" height="340" rx="16" fill="url(#gridb)"/>
+<circle cx="404" cy="46" r="150" fill="url(#gbb)"/>
+<circle cx="70" cy="300" r="140" fill="url(#gpb)"/>
+
+<!-- main insight card: trend over time -->
+<g>
+  <rect x="38" y="66" width="270" height="164" rx="14" fill="#0f172a" fill-opacity="0.92" stroke="#ffffff" stroke-opacity="0.10"/>
+  <text x="58" y="94" font-family="Inter,system-ui,sans-serif" font-size="10" font-weight="700" letter-spacing="1.6" fill="#64748b">INSIGHT TREND</text>
+  <text x="58" y="122" font-family="Inter,system-ui,sans-serif" font-size="24" font-weight="800" fill="#f8fafc">+38.2%</text>
+  <text x="156" y="121" font-family="Inter,system-ui,sans-serif" font-size="10" font-weight="600" fill="#34d399">▲ vs last quarter</text>
+
+  <!-- baseline grid -->
+  <g stroke="#94a3b8" stroke-opacity="0.10">
+    <line x1="58" y1="206" x2="288" y2="206"/>
+    <line x1="58" y1="178" x2="288" y2="178"/>
+    <line x1="58" y1="150" x2="288" y2="150"/>
+  </g>
+
+  <path d="M58 198 L88 188 L118 192 L148 172 L178 176 L208 154 L238 146 L268 132 L288 126 L288 206 L58 206 Z" fill="url(#areab)"/>
+  <path d="M58 198 L88 188 L118 192 L148 172 L178 176 L208 154 L238 146 L268 132 L288 126" fill="none" stroke="url(#brandb)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="288" cy="126" r="4.5" fill="#a78bfa"/>
+  <circle cx="288" cy="126" r="9" fill="#a78bfa" fill-opacity="0.18"/>
+</g>
+
+<!-- AI signal card -->
+<g>
+  <rect x="322" y="92" width="122" height="86" rx="12" fill="#0f172a" fill-opacity="0.92" stroke="#7c3aed" stroke-opacity="0.34"/>
+  <circle cx="348" cy="120" r="11" fill="#7c3aed" fill-opacity="0.16"/>
+  <path d="M348 113.5 L350 118.5 L355 120 L350 121.5 L348 126.5 L346 121.5 L341 120 L346 118.5 Z" fill="#a78bfa"/>
+  <text x="366" y="124" font-family="Inter,system-ui,sans-serif" font-size="10" font-weight="700" letter-spacing="1.2" fill="#c4b5fd">AI SIGNAL</text>
+  <rect x="338" y="140" width="90" height="6" rx="3" fill="#334155"/>
+  <rect x="338" y="140" width="62" height="6" rx="3" fill="url(#brandb)"/>
+  <rect x="338" y="154" width="66" height="6" rx="3" fill="#334155"/>
+  <rect x="338" y="154" width="34" height="6" rx="3" fill="#2563eb" fill-opacity="0.65"/>
+</g>
+
+<!-- article / knowledge stack -->
+<g>
+  <rect x="38" y="248" width="180" height="58" rx="12" fill="#0f172a" fill-opacity="0.92" stroke="#ffffff" stroke-opacity="0.10"/>
+  <rect x="56" y="266" width="26" height="26" rx="7" fill="#2563eb" fill-opacity="0.18"/>
+  <path d="M62 273h14M62 279h14M62 285h9" stroke="#60a5fa" stroke-width="2" stroke-linecap="round"/>
+  <rect x="94" y="266" width="106" height="7" rx="3.5" fill="#334155"/>
+  <rect x="94" y="280" width="76" height="7" rx="3.5" fill="#1e293b"/>
+</g>
+
+<!-- metric chips -->
+<g>
+  <rect x="234" y="248" width="98" height="58" rx="12" fill="#0f172a" fill-opacity="0.92" stroke="#ffffff" stroke-opacity="0.10"/>
+  <text x="252" y="273" font-family="Inter,system-ui,sans-serif" font-size="9" font-weight="700" letter-spacing="1.2" fill="#64748b">SOURCES</text>
+  <text x="252" y="294" font-family="Inter,system-ui,sans-serif" font-size="17" font-weight="800" fill="#e2e8f0">24</text>
+
+  <rect x="346" y="248" width="98" height="58" rx="12" fill="#0f172a" fill-opacity="0.92" stroke="#ffffff" stroke-opacity="0.10"/>
+  <text x="364" y="273" font-family="Inter,system-ui,sans-serif" font-size="9" font-weight="700" letter-spacing="1.2" fill="#64748b">TOPICS</text>
+  <text x="364" y="294" font-family="Inter,system-ui,sans-serif" font-size="17" font-weight="800" fill="#e2e8f0">62</text>
+</g>
+
+<!-- connecting signal path -->
+<path d="M308 148 C316 148 316 196 300 196 C284 196 284 248 268 248" fill="none" stroke="#7c3aed" stroke-opacity="0.30" stroke-width="1.5" stroke-dasharray="4 5"/>
+</svg>
