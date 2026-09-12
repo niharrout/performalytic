@@ -74,6 +74,10 @@ gtag('config', 'G-FV09CSCD2C');
     {"@type":"Question","name":"What databases does 4DAlert support?","acceptedAnswer":{"@type":"Answer","text":"4DAlert supports Snowflake, BigQuery, Redshift, Azure Synapse, Oracle, PostgreSQL, SQL Server, Athena, Databricks, Vertica, and 100+ data platforms through pre-built connectors."}},
     {"@type":"Question","name":"How accurate is 4DAlert's data reconciliation?","acceptedAnswer":{"@type":"Answer","text":"4DAlert delivers 98% reconciliation accuracy using AI/ML-powered algorithms that validate millions of entries daily and detect discrepancies before they impact decisions."}},
     {"@type":"Question","name":"How can I get started with 4DAlert?","acceptedAnswer":{"@type":"Answer","text":"You can schedule a demo with our team to discuss your requirements, or contact sales for pricing details and a personalized walkthrough."}},
+    {"@type":"Question","name":"How is 4DAlert different from dbt tests or Great Expectations?","acceptedAnswer":{"@type":"Answer","text":"4DAlert is a unified platform, not a library. It combines reconciliation, quality monitoring, MDM, and CI/CD in one tool — no glue code required. dbt tests validate transformations within your warehouse. Great Expectations is a Python library your engineers wire up manually. 4DAlert connects directly to 100+ sources, runs cross-system reconciliation, and delivers production-ready automation out of the box."}},
+    {"@type":"Question","name":"Why not build this in-house?","acceptedAnswer":{"@type":"Answer","text":"Teams spend 6–12 months building partial solutions that only cover one use case. 4DAlert delivers production-ready automation in weeks, with 100+ pre-built connectors, anomaly detection, and schema CI/CD included. You avoid the maintenance burden, hiring costs, and technical debt of a custom build."}},
+    {"@type":"Question","name":"How does 4DAlert compare to manual reconciliation?","acceptedAnswer":{"@type":"Answer","text":"Manual processes take days, miss edge cases, and rely on tribal knowledge. 4DAlert runs in minutes with 98% accuracy and catches discrepancies humans overlook — including cross-system mismatches, orphaned records, and slow-drift anomalies."}},
+    {"@type":"Question","name":"Is 4DAlert a replacement for our data warehouse?","acceptedAnswer":{"@type":"Answer","text":"No. 4DAlert sits on top of your existing stack — Snowflake, BigQuery, Redshift, Databricks, and 100+ platforms. It adds reconciliation, quality monitoring, MDM, and CI/CD without requiring you to move data or change your architecture."}},
     {"@type":"Question","name":"Is 4DAlert SOC2 compliant?","acceptedAnswer":{"@type":"Answer","text":"Yes, 4DAlert is AICPA SOC2 compliant, ensuring enterprise-grade security and data protection standards."}}
   ]
 }]
@@ -246,6 +250,21 @@ section{padding:80px 0}
 .testimonial-text{font-size:1.2rem;color:#cbd5e1;line-height:1.8;font-style:italic;margin-bottom:24px;position:relative;z-index:1}
 .testimonial-author{font-size:0.9rem;color:#94a3b8;font-weight:600}
 .testimonial-role{font-size:0.8rem;color:#64748b;margin-top:4px}
+
+/* Competitive FAQ */
+.competitive-faq{padding:100px 0;background:#080e1c}
+.competitive-faq-header{text-align:center;margin-bottom:48px}
+.competitive-faq-list{max-width:800px;margin:0 auto}
+.competitive-faq-item{border:1px solid rgba(255,255,255,0.06);border-radius:16px;margin-bottom:12px;overflow:hidden;transition:border-color .3s}
+.competitive-faq-item:hover{border-color:rgba(96,165,250,0.2)}
+.competitive-faq-question{width:100%;background:rgba(255,255,255,0.02);border:none;padding:24px 28px;display:flex;align-items:center;justify-content:space-between;cursor:pointer;text-align:left;color:#e2e8f0;font-size:1rem;font-weight:600;font-family:inherit;transition:background .2s}
+.competitive-faq-question:hover{background:rgba(255,255,255,0.04)}
+.competitive-faq-question .faq-icon{width:24px;height:24px;border-radius:50%;background:rgba(37,99,235,0.1);border:1px solid rgba(37,99,235,0.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:transform .3s,background .3s}
+.competitive-faq-question .faq-icon svg{width:12px;height:12px;color:#60a5fa}
+.competitive-faq-item.open .competitive-faq-question .faq-icon{transform:rotate(180deg);background:rgba(37,99,235,0.2)}
+.competitive-faq-answer{max-height:0;overflow:hidden;transition:max-height .4s cubic-bezier(.16,1,.3,1)}
+.competitive-faq-item.open .competitive-faq-answer{max-height:300px}
+.competitive-faq-answer-inner{padding:0 28px 24px;font-size:0.9rem;color:#94a3b8;line-height:1.7}
 
 /* CTA */
 .cta-section{background:linear-gradient(180deg,#0c1425 0%,#080e1c 100%);color:#fff;position:relative;overflow:hidden}
@@ -719,6 +738,74 @@ footer{background:#060a14;border-top:1px solid rgba(255,255,255,0.04);padding:56
     </div>
   </div>
 </section>
+
+<!-- Competitive FAQ -->
+<section class="competitive-faq" aria-label="How 4DAlert compares to alternatives">
+  <div class="container">
+    <div class="competitive-faq-header">
+      <span class="section-label">Why 4DAlert</span>
+      <h2 class="section-title">How we compare to alternatives</h2>
+      <p class="section-subtitle mx-auto">Straight answers about what makes 4DAlert different — and when it's not the right fit.</p>
+    </div>
+    <div class="competitive-faq-list">
+      <div class="competitive-faq-item">
+        <button class="competitive-faq-question" aria-expanded="false">
+          <span>How is 4DAlert different from dbt tests or Great Expectations?</span>
+          <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+        </button>
+        <div class="competitive-faq-answer" role="region">
+          <div class="competitive-faq-answer-inner">4DAlert is a unified platform, not a library. It combines reconciliation, quality monitoring, MDM, and CI/CD in one tool — no glue code required. dbt tests validate transformations within your warehouse. Great Expectations is a Python library your engineers wire up manually. 4DAlert connects directly to 100+ sources, runs cross-system reconciliation, and delivers production-ready automation out of the box.</div>
+        </div>
+      </div>
+      <div class="competitive-faq-item">
+        <button class="competitive-faq-question" aria-expanded="false">
+          <span>Why not build this in-house?</span>
+          <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+        </button>
+        <div class="competitive-faq-answer" role="region">
+          <div class="competitive-faq-answer-inner">Teams spend 6–12 months building partial solutions that only cover one use case. 4DAlert delivers production-ready automation in weeks, with 100+ pre-built connectors, anomaly detection, and schema CI/CD included. You avoid the maintenance burden, hiring costs, and technical debt of a custom build — and your engineers stay focused on high-impact work.</div>
+        </div>
+      </div>
+      <div class="competitive-faq-item">
+        <button class="competitive-faq-question" aria-expanded="false">
+          <span>How does 4DAlert compare to manual reconciliation?</span>
+          <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+        </button>
+        <div class="competitive-faq-answer" role="region">
+          <div class="competitive-faq-answer-inner">Manual processes take days, miss edge cases, and rely on tribal knowledge. 4DAlert runs in minutes with 98% accuracy and catches discrepancies humans overlook — including cross-system mismatches, orphaned records, and slow-drift anomalies. Your team gets audit-ready reports instead of spreadsheets.</div>
+        </div>
+      </div>
+      <div class="competitive-faq-item">
+        <button class="competitive-faq-question" aria-expanded="false">
+          <span>Is 4DAlert a replacement for our data warehouse?</span>
+          <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+        </button>
+        <div class="competitive-faq-answer" role="region">
+          <div class="competitive-faq-answer-inner">No. 4DAlert sits on top of your existing stack — Snowflake, BigQuery, Redshift, Databricks, and 100+ platforms. It adds reconciliation, quality monitoring, MDM, and CI/CD without requiring you to move data or change your architecture.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script nonce="P3rf0rm4lyt1c">
+(function(){
+  document.querySelectorAll('.competitive-faq-question').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var item = this.parentElement;
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.competitive-faq-item.open').forEach(function(open){
+        open.classList.remove('open');
+        open.querySelector('.competitive-faq-question').setAttribute('aria-expanded','false');
+      });
+      if(!isOpen){
+        item.classList.add('open');
+        this.setAttribute('aria-expanded','true');
+      }
+    });
+  });
+})();
+</script>
 
 <!-- CTA -->
 <section class="cta-section" aria-label="Get started with 4DAlert">
