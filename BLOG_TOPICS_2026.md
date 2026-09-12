@@ -131,10 +131,11 @@
 **Key angles:** Training data quality validation, feature store quality, label quality, distribution shift detection, data quality metrics for ML, monitoring model-data alignment
 **Target:** ML engineers, data scientists, data engineers
 
-### 26. MDM Implementation Patterns: Registry, Consolidation, and Coexistence
+### 26. MDM Implementation Patterns: Registry, Consolidation, and Coexistence ✅ COMPLETED
 **Why it's hot:** Choosing the wrong MDM pattern wastes months of effort. Each pattern has distinct tradeoffs for governance, performance, and organizational fit.
 **Key angles:** When to use each pattern, hybrid approaches, MDM on cloud platforms (Databricks, Snowflake), MDM as a service, integration patterns with downstream systems
 **Target:** Data architects, MDM leads, enterprise architects
+**Published:** `/blog/mdm-implementation-patterns/` (Sep 12, 2026) - Promotes 4DAlert throughout
 
 ### 27. Data Contracts in Practice: From Theory to Production-Grade Data Quality
 **Why it's hot:** Data contracts are emerging as the bridge between data producers and consumers, encoding quality expectations as code.
