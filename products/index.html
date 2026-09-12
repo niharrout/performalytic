@@ -267,7 +267,7 @@ section{padding:80px 0}
 .competitive-faq-item.open .competitive-faq-answer{max-height:300px}
 .competitive-faq-answer-inner{padding:0 28px 24px;font-size:0.9rem;color:#94a3b8;line-height:1.7}
 
-/* Demo Form */
+/* Book a Meeting CTA */
 .demo-section{background:linear-gradient(180deg,#080e1c 0%,#0c1425 100%);padding:100px 0;position:relative;overflow:hidden}
 .demo-section::before{content:'';position:absolute;top:-200px;left:50%;transform:translateX(-50%);width:800px;height:800px;background:radial-gradient(circle,rgba(37,99,235,0.08),transparent 70%);pointer-events:none}
 .demo-inner{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;position:relative;z-index:1}
@@ -277,19 +277,15 @@ section{padding:80px 0}
 .demo-benefit{display:flex;gap:12px;align-items:flex-start}
 .demo-benefit svg{width:20px;height:20px;color:#4ade80;flex-shrink:0;margin-top:2px}
 .demo-benefit span{font-size:0.88rem;color:#cbd5e1;line-height:1.5}
-.demo-form-card{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.06);border-radius:20px;padding:40px;backdrop-filter:blur(8px)}
-.demo-form-card h3{font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:24px}
-.demo-form{display:flex;flex-direction:column;gap:16px}
-.demo-field{display:flex;flex-direction:column;gap:6px}
-.demo-field label{font-size:0.78rem;font-weight:600;color:#94a3b8;text-transform:uppercase;letter-spacing:0.5px}
-.demo-field input,.demo-field select,.demo-field textarea{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:12px 16px;color:#e2e8f0;font-size:0.88rem;font-family:Inter,sans-serif;transition:border-color 0.2s}
-.demo-field input:focus,.demo-field select:focus,.demo-field textarea:focus{outline:none;border-color:rgba(37,99,235,0.5);box-shadow:0 0 0 3px rgba(37,99,235,0.1)}
-.demo-field select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center}
-.demo-field select option{background:#0f172a;color:#e2e8f0}
-.demo-field textarea{resize:vertical;min-height:80px}
-.demo-submit{background:linear-gradient(135deg,#2563eb,#7c3aed);color:#fff;border:none;border-radius:10px;padding:14px 32px;font-size:0.9rem;font-weight:700;cursor:pointer;transition:all 0.3s;font-family:Inter,sans-serif}
-.demo-submit:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(37,99,235,0.35)}
-.demo-note{font-size:0.75rem;color:#475569;text-align:center;margin-top:8px}
+.demo-booking-card{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.06);border-radius:20px;padding:48px;text-align:center;backdrop-filter:blur(8px)}
+.demo-booking-card .booking-icon{width:64px;height:64px;border-radius:16px;background:rgba(37,99,235,0.1);border:1px solid rgba(37,99,235,0.15);display:flex;align-items:center;justify-content:center;margin:0 auto 24px}
+.demo-booking-card .booking-icon svg{width:32px;height:32px;color:#60a5fa}
+.demo-booking-card h3{font-size:1.2rem;font-weight:700;color:#fff;margin-bottom:8px}
+.demo-booking-card p{font-size:0.88rem;color:#94a3b8;line-height:1.6;margin-bottom:28px}
+.demo-booking-btn{display:inline-flex;align-items:center;gap:10px;padding:16px 40px;border-radius:12px;background:linear-gradient(135deg,#2563eb,#7c3aed);color:#fff;font-weight:700;font-size:1rem;text-decoration:none;transition:all .3s;box-shadow:0 4px 20px rgba(37,99,235,0.3)}
+.demo-booking-btn:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(37,99,235,0.45)}
+.demo-booking-btn svg{width:20px;height:20px}
+.demo-booking-note{font-size:0.78rem;color:#475569;margin-top:16px}
 @media(max-width:768px){.demo-inner{grid-template-columns:1fr;gap:32px}}
 
 /* CTA */
@@ -1125,14 +1121,14 @@ footer{background:#060a14;border-top:1px solid rgba(255,255,255,0.04);padding:56
 })();
 </script>
 
-<!-- Demo Request Form -->
-<section class="demo-section" id="demo" aria-label="Request a demo">
+<!-- Book a Meeting -->
+<section class="demo-section" id="demo" aria-label="Book a meeting">
   <div class="container">
     <div class="demo-inner">
       <div class="demo-text">
         <span class="section-label">See It In Action</span>
-        <h2>Get a personalized demo in 30 minutes</h2>
-        <p>See how 4DAlert works with your actual data stack. Our team will walk you through reconciliation, quality monitoring, MDM, and CI/CD — tailored to your environment.</p>
+        <h2>Get a personalized walkthrough in 30 minutes</h2>
+        <p>See how 4DAlert works with your actual data stack. Pick a time that works for you — our team will walk you through reconciliation, quality monitoring, MDM, and CI/CD tailored to your environment.</p>
         <div class="demo-benefits">
           <div class="demo-benefit">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
@@ -1152,74 +1148,23 @@ footer{background:#060a14;border-top:1px solid rgba(255,255,255,0.04);padding:56
           </div>
         </div>
       </div>
-      <div class="demo-form-card">
-        <h3>Request Your Demo</h3>
-        <form class="demo-form" id="demoForm" action="https://formsubmit.co/ajax/info@performalytic.com" method="POST">
-          <input type="hidden" name="_subject" value="4DAlert Demo Request" />
-          <input type="hidden" name="_captcha" value="false" />
-          <input type="hidden" name="_template" value="table" />
-          <div class="demo-field">
-            <label for="demo-name">Full Name</label>
-            <input type="text" id="demo-name" name="name" placeholder="Jane Smith" required />
-          </div>
-          <div class="demo-field">
-            <label for="demo-email">Work Email</label>
-            <input type="email" id="demo-email" name="email" placeholder="jane@company.com" required />
-          </div>
-          <div class="demo-field">
-            <label for="demo-company">Company</label>
-            <input type="text" id="demo-company" name="company" placeholder="Acme Corp" required />
-          </div>
-          <div class="demo-field">
-            <label for="demo-challenge">Primary Data Challenge</label>
-            <select id="demo-challenge" name="challenge" required>
-              <option value="" disabled selected>Select your main challenge</option>
-              <option value="Data Reconciliation">Data Reconciliation</option>
-              <option value="Data Quality &amp; Observability">Data Quality &amp; Observability</option>
-              <option value="Master Data Management">Master Data Management</option>
-              <option value="Schema CI/CD">Schema CI/CD</option>
-              <option value="Multiple / All Modules">Multiple / All Modules</option>
-            </select>
-          </div>
-          <div class="demo-field">
-            <label for="demo-platforms">Current Platforms</label>
-            <input type="text" id="demo-platforms" name="platforms" placeholder="Snowflake, SAP, BigQuery..." />
-          </div>
-          <div class="demo-field">
-            <label for="demo-notes">Anything else?</label>
-            <textarea id="demo-notes" name="notes" placeholder="Team size, timeline, specific requirements..."></textarea>
-          </div>
-          <button type="submit" class="demo-submit">Schedule My Demo &rarr;</button>
-          <p class="demo-note">No spam. We'll respond within 1 business day.</p>
-        </form>
+      <div class="demo-booking-card">
+        <div class="booking-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><path d="m9 16 2 2 4-4"/></svg>
+        </div>
+        <h3>Book a Meeting</h3>
+        <p>Pick a date and time that works for you. We'll confirm within 24 hours and connect you with a senior data solutions engineer — not a sales rep.</p>
+        <a href="/book-meeting/" class="demo-booking-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          Schedule a Demo &rarr;
+        </a>
+        <p class="demo-booking-note">100% free. No obligation. No sales pitch.</p>
       </div>
     </div>
   </div>
 </section>
 
 <script nonce="P3rf0rm4lyt1c">
-(function(){
-  var form = document.getElementById('demoForm');
-  if(!form) return;
-  form.addEventListener('submit', function(e){
-    e.preventDefault();
-    var btn = form.querySelector('.demo-submit');
-    var origText = btn.textContent;
-    btn.textContent = 'Sending...';
-    btn.disabled = true;
-    var data = new FormData(form);
-    fetch(form.action, {method:'POST', body:data})
-      .then(function(r){return r.json()})
-      .then(function(){
-        form.innerHTML = '<div style="text-align:center;padding:40px 0"><svg viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:48px;height:48px;margin:0 auto 16px"><polyline points="20 6 9 17 4 12"/></svg><h3 style="color:#fff;font-size:1.1rem;margin-bottom:8px">Demo request sent!</h3><p style="color:#94a3b8;font-size:0.88rem">We\'ll be in touch within 1 business day to schedule your personalized walkthrough.</p></div>';
-      })
-      .catch(function(){
-        btn.textContent = origText;
-        btn.disabled = false;
-        alert('Something went wrong. Please try again or email us directly at info@performalytic.com');
-      });
-  });
-})();
 </script>
 
 <!-- CTA -->
@@ -1230,7 +1175,7 @@ footer{background:#060a14;border-top:1px solid rgba(255,255,255,0.04);padding:56
       <h2 class="section-title">Ready to transform your data management?</h2>
       <p class="section-subtitle mx-auto" style="margin-bottom:40px">Schedule a personalized demo to see how 4DAlert automates reconciliation, quality, MDM, and CI/CD for your enterprise.</p>
       <div class="cta-buttons">
-        <a href="#demo" class="btn-hero-primary">Schedule a 30-Min Demo &rarr;</a>
+        <a href="/book-meeting/" class="btn-hero-primary">Schedule a 30-Min Demo &rarr;</a>
         <a href="/contact/" class="btn-hero-outline">Contact Sales</a>
       </div>
       <div class="cta-trust">
