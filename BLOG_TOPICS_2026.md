@@ -35,10 +35,11 @@
 **Key angles:** Snowflake credit optimization, Databricks DBU management, query optimization techniques, right-sizing compute, spot instances
 **Target:** Data engineers, finance teams, CTOs
 
-### 7. RAG Architecture Patterns for Enterprise: The Complete 2026 Guide
+### 7. RAG Architecture Patterns for Enterprise: The Complete 2026 Guide ✅ COMPLETED
 **Why it's hot:** RAG is the standard for enterprise AI. 72% of modern web apps require native AI search integration.
 **Key angles:** Chunking strategies, vector databases (pgvector, Pinecone), hybrid search, re-ranking, evaluation with RAGAS, production deployment
 **Target:** AI engineers, full stack developers, data engineers
+**Published:** `/blog/enterprise-rag-architecture/` (Jul 19, 2026) - Featured post on blog index
 
 ### 8. Data Contracts: Taming the Chaos Between Producers and Consumers
 **Why it's hot:** As data systems expand, standardized agreements on structure, quality, SLAs, and ownership become essential.
@@ -418,7 +419,7 @@
 | # | Topic | Category | Est. Word Count | SEO Potential |
 |---|-------|----------|-----------------|---------------|
 | 1 | Agentic Data Engineering | Data | 4,500 | Very High |
-| 2 | RAG Architecture Patterns | AI/Data | 5,000 | Very High |
+| 2 | RAG Architecture Patterns | AI/Data | 5,000 | Very High | ✅ Done |
 | 3 | Platform Engineering vs DevOps vs SRE | DevOps | 4,000 | Very High |
 | 4 | Full Stack Tech Stack 2026 | Development | 3,500 | High |
 | 5 | Data Modeling Crisis & Semantics | Data | 4,000 | High |
