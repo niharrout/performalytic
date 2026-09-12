@@ -78,6 +78,7 @@ gtag('config', 'G-FV09CSCD2C');
     {"@type":"Question","name":"Why not build this in-house?","acceptedAnswer":{"@type":"Answer","text":"Teams spend 6–12 months building partial solutions that only cover one use case. 4DAlert delivers production-ready automation in weeks, with 100+ pre-built connectors, anomaly detection, and schema CI/CD included. You avoid the maintenance burden, hiring costs, and technical debt of a custom build."}},
     {"@type":"Question","name":"How does 4DAlert compare to manual reconciliation?","acceptedAnswer":{"@type":"Answer","text":"Manual processes take days, miss edge cases, and rely on tribal knowledge. 4DAlert runs in minutes with 98% accuracy and catches discrepancies humans overlook — including cross-system mismatches, orphaned records, and slow-drift anomalies."}},
     {"@type":"Question","name":"Is 4DAlert a replacement for our data warehouse?","acceptedAnswer":{"@type":"Answer","text":"No. 4DAlert sits on top of your existing stack — Snowflake, BigQuery, Redshift, Databricks, and 100+ platforms. It adds reconciliation, quality monitoring, MDM, and CI/CD without requiring you to move data or change your architecture."}},
+    {"@type":"Question","name":"Does 4DAlert support VPC deployment and data residency?","acceptedAnswer":{"@type":"Answer","text":"Yes. 4DAlert can be deployed inside your Virtual Private Cloud on AWS, GCP, or Azure. Your data never leaves your security perimeter. You choose the region where your data resides to meet sovereignty requirements."}},
     {"@type":"Question","name":"Is 4DAlert SOC2 compliant?","acceptedAnswer":{"@type":"Answer","text":"Yes, 4DAlert is AICPA SOC2 compliant, ensuring enterprise-grade security and data protection standards."}}
   ]
 }]
@@ -295,6 +296,9 @@ footer{background:#060a14;border-top:1px solid rgba(255,255,255,0.04);padding:56
 .footer-bottom a{color:#475569;text-decoration:none}
 .footer-bottom a:hover{color:#94a3b8}
 .footer-bottom-links{display:flex;gap:20px}
+.footer-compliance{display:flex;gap:8px;align-items:center;margin:8px 0}
+.compliance-badge{display:inline-flex;align-items:center;gap:4px;padding:4px 10px;border-radius:6px;font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;text-decoration:none;border:1px solid rgba(255,255,255,0.08);background:rgba(255,255,255,0.03);color:#64748b;transition:all .2s}
+.compliance-badge:hover{border-color:rgba(74,222,128,0.3);color:#4ade80;background:rgba(74,222,128,0.05)}
 
 /* Responsive */
 @media(max-width:1024px){
@@ -775,13 +779,22 @@ footer{background:#060a14;border-top:1px solid rgba(255,255,255,0.04);padding:56
           <div class="competitive-faq-answer-inner">Manual processes take days, miss edge cases, and rely on tribal knowledge. 4DAlert runs in minutes with 98% accuracy and catches discrepancies humans overlook — including cross-system mismatches, orphaned records, and slow-drift anomalies. Your team gets audit-ready reports instead of spreadsheets.</div>
         </div>
       </div>
-      <div class="competitive-faq-item">
+        <div class="competitive-faq-item">
         <button class="competitive-faq-question" aria-expanded="false">
           <span>Is 4DAlert a replacement for our data warehouse?</span>
           <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
         </button>
         <div class="competitive-faq-answer" role="region">
           <div class="competitive-faq-answer-inner">No. 4DAlert sits on top of your existing stack — Snowflake, BigQuery, Redshift, Databricks, and 100+ platforms. It adds reconciliation, quality monitoring, MDM, and CI/CD without requiring you to move data or change your architecture.</div>
+        </div>
+      </div>
+      <div class="competitive-faq-item">
+        <button class="competitive-faq-question" aria-expanded="false">
+          <span>Does 4DAlert support VPC deployment and data residency?</span>
+          <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+        </button>
+        <div class="competitive-faq-answer" role="region">
+          <div class="competitive-faq-answer-inner">Yes. 4DAlert can be deployed inside your Virtual Private Cloud on AWS, GCP, or Azure. Your data never leaves your security perimeter. You choose the region where your data resides to meet sovereignty and compliance requirements.</div>
         </div>
       </div>
     </div>
@@ -820,7 +833,7 @@ footer{background:#060a14;border-top:1px solid rgba(255,255,255,0.04);padding:56
       </div>
       <div class="cta-trust">
         <span class="cta-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> SOC2 Compliant</span>
-        <span class="cta-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> No Credit Card Required</span>
+        <span class="cta-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> VPC Deployment Available</span>
         <span class="cta-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> 100+ Integrations</span>
         <span class="cta-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Enterprise Support</span>
       </div>
@@ -870,12 +883,10 @@ footer{background:#060a14;border-top:1px solid rgba(255,255,255,0.04);padding:56
       </div>
     </div>
     <div class="footer-bottom">
-      <span>&copy; 2026 Performalytic. All rights reserved.</span>
-      <div class="footer-bottom-links">
+      <span>&copy; 2026 Performalytic. All rights reserved.</span><div class="footer-compliance"><a href="/security/" class="compliance-badge" title="SOC 2 Type II Certified">SOC 2</a><a href="/security/" class="compliance-badge" title="GDPR Compliant">GDPR</a><a href="/security/" class="compliance-badge" title="HIPAA Compliant">HIPAA</a></div><div class="footer-bottom-links">
         <a href="/terms-conditions/" rel="noopener noreferrer">Terms &amp; Conditions</a>
         <a href="/privacy-policy/" rel="noopener noreferrer">Privacy Policy</a>
-        <a href="/cookie-policy/" rel="noopener noreferrer">Cookie Policy</a>
-      </div>
+        <a href="/cookie-policy/" rel="noopener noreferrer">Cookie Policy</a><a href="/security/" rel="noopener noreferrer">Security</a></div>
     </div>
   </div>
 </footer>
