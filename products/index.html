@@ -267,6 +267,31 @@ section{padding:80px 0}
 .competitive-faq-item.open .competitive-faq-answer{max-height:300px}
 .competitive-faq-answer-inner{padding:0 28px 24px;font-size:0.9rem;color:#94a3b8;line-height:1.7}
 
+/* Demo Form */
+.demo-section{background:linear-gradient(180deg,#080e1c 0%,#0c1425 100%);padding:100px 0;position:relative;overflow:hidden}
+.demo-section::before{content:'';position:absolute;top:-200px;left:50%;transform:translateX(-50%);width:800px;height:800px;background:radial-gradient(circle,rgba(37,99,235,0.08),transparent 70%);pointer-events:none}
+.demo-inner{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;position:relative;z-index:1}
+.demo-text h2{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;color:#fff;line-height:1.15;margin-bottom:16px;letter-spacing:-0.5px}
+.demo-text>p{font-size:0.95rem;color:#94a3b8;line-height:1.7;margin-bottom:28px}
+.demo-benefits{display:flex;flex-direction:column;gap:14px;margin-bottom:28px}
+.demo-benefit{display:flex;gap:12px;align-items:flex-start}
+.demo-benefit svg{width:20px;height:20px;color:#4ade80;flex-shrink:0;margin-top:2px}
+.demo-benefit span{font-size:0.88rem;color:#cbd5e1;line-height:1.5}
+.demo-form-card{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.06);border-radius:20px;padding:40px;backdrop-filter:blur(8px)}
+.demo-form-card h3{font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:24px}
+.demo-form{display:flex;flex-direction:column;gap:16px}
+.demo-field{display:flex;flex-direction:column;gap:6px}
+.demo-field label{font-size:0.78rem;font-weight:600;color:#94a3b8;text-transform:uppercase;letter-spacing:0.5px}
+.demo-field input,.demo-field select,.demo-field textarea{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:12px 16px;color:#e2e8f0;font-size:0.88rem;font-family:Inter,sans-serif;transition:border-color 0.2s}
+.demo-field input:focus,.demo-field select:focus,.demo-field textarea:focus{outline:none;border-color:rgba(37,99,235,0.5);box-shadow:0 0 0 3px rgba(37,99,235,0.1)}
+.demo-field select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center}
+.demo-field select option{background:#0f172a;color:#e2e8f0}
+.demo-field textarea{resize:vertical;min-height:80px}
+.demo-submit{background:linear-gradient(135deg,#2563eb,#7c3aed);color:#fff;border:none;border-radius:10px;padding:14px 32px;font-size:0.9rem;font-weight:700;cursor:pointer;transition:all 0.3s;font-family:Inter,sans-serif}
+.demo-submit:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(37,99,235,0.35)}
+.demo-note{font-size:0.75rem;color:#475569;text-align:center;margin-top:8px}
+@media(max-width:768px){.demo-inner{grid-template-columns:1fr;gap:32px}}
+
 /* CTA */
 .cta-section{background:linear-gradient(180deg,#0c1425 0%,#080e1c 100%);color:#fff;position:relative;overflow:hidden}
 .cta-section::before{content:'';position:absolute;top:-100px;right:-100px;width:500px;height:500px;background:radial-gradient(circle,rgba(37,99,235,0.12),transparent 70%);pointer-events:none}
@@ -1100,6 +1125,103 @@ footer{background:#060a14;border-top:1px solid rgba(255,255,255,0.04);padding:56
 })();
 </script>
 
+<!-- Demo Request Form -->
+<section class="demo-section" id="demo" aria-label="Request a demo">
+  <div class="container">
+    <div class="demo-inner">
+      <div class="demo-text">
+        <span class="section-label">See It In Action</span>
+        <h2>Get a personalized demo in 30 minutes</h2>
+        <p>See how 4DAlert works with your actual data stack. Our team will walk you through reconciliation, quality monitoring, MDM, and CI/CD — tailored to your environment.</p>
+        <div class="demo-benefits">
+          <div class="demo-benefit">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Live walkthrough with your data sources</span>
+          </div>
+          <div class="demo-benefit">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Custom integration architecture review</span>
+          </div>
+          <div class="demo-benefit">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Pricing discussion based on your scale</span>
+          </div>
+          <div class="demo-benefit">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Q&amp;A with our solutions engineers</span>
+          </div>
+        </div>
+      </div>
+      <div class="demo-form-card">
+        <h3>Request Your Demo</h3>
+        <form class="demo-form" id="demoForm" action="https://formsubmit.co/ajax/info@performalytic.com" method="POST">
+          <input type="hidden" name="_subject" value="4DAlert Demo Request" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_template" value="table" />
+          <div class="demo-field">
+            <label for="demo-name">Full Name</label>
+            <input type="text" id="demo-name" name="name" placeholder="Jane Smith" required />
+          </div>
+          <div class="demo-field">
+            <label for="demo-email">Work Email</label>
+            <input type="email" id="demo-email" name="email" placeholder="jane@company.com" required />
+          </div>
+          <div class="demo-field">
+            <label for="demo-company">Company</label>
+            <input type="text" id="demo-company" name="company" placeholder="Acme Corp" required />
+          </div>
+          <div class="demo-field">
+            <label for="demo-challenge">Primary Data Challenge</label>
+            <select id="demo-challenge" name="challenge" required>
+              <option value="" disabled selected>Select your main challenge</option>
+              <option value="Data Reconciliation">Data Reconciliation</option>
+              <option value="Data Quality &amp; Observability">Data Quality &amp; Observability</option>
+              <option value="Master Data Management">Master Data Management</option>
+              <option value="Schema CI/CD">Schema CI/CD</option>
+              <option value="Multiple / All Modules">Multiple / All Modules</option>
+            </select>
+          </div>
+          <div class="demo-field">
+            <label for="demo-platforms">Current Platforms</label>
+            <input type="text" id="demo-platforms" name="platforms" placeholder="Snowflake, SAP, BigQuery..." />
+          </div>
+          <div class="demo-field">
+            <label for="demo-notes">Anything else?</label>
+            <textarea id="demo-notes" name="notes" placeholder="Team size, timeline, specific requirements..."></textarea>
+          </div>
+          <button type="submit" class="demo-submit">Schedule My Demo &rarr;</button>
+          <p class="demo-note">No spam. We'll respond within 1 business day.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script nonce="P3rf0rm4lyt1c">
+(function(){
+  var form = document.getElementById('demoForm');
+  if(!form) return;
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var btn = form.querySelector('.demo-submit');
+    var origText = btn.textContent;
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+    var data = new FormData(form);
+    fetch(form.action, {method:'POST', body:data})
+      .then(function(r){return r.json()})
+      .then(function(){
+        form.innerHTML = '<div style="text-align:center;padding:40px 0"><svg viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:48px;height:48px;margin:0 auto 16px"><polyline points="20 6 9 17 4 12"/></svg><h3 style="color:#fff;font-size:1.1rem;margin-bottom:8px">Demo request sent!</h3><p style="color:#94a3b8;font-size:0.88rem">We\'ll be in touch within 1 business day to schedule your personalized walkthrough.</p></div>';
+      })
+      .catch(function(){
+        btn.textContent = origText;
+        btn.disabled = false;
+        alert('Something went wrong. Please try again or email us directly at info@performalytic.com');
+      });
+  });
+})();
+</script>
+
 <!-- CTA -->
 <section class="cta-section" aria-label="Get started with 4DAlert">
   <div class="container" style="padding:100px 24px">
@@ -1108,7 +1230,7 @@ footer{background:#060a14;border-top:1px solid rgba(255,255,255,0.04);padding:56
       <h2 class="section-title">Ready to transform your data management?</h2>
       <p class="section-subtitle mx-auto" style="margin-bottom:40px">Schedule a personalized demo to see how 4DAlert automates reconciliation, quality, MDM, and CI/CD for your enterprise.</p>
       <div class="cta-buttons">
-        <a href="/contact/" class="btn-hero-primary">Contact Sales &rarr;</a>
+        <a href="#demo" class="btn-hero-primary">Schedule a 30-Min Demo &rarr;</a>
         <a href="/contact/" class="btn-hero-outline">Contact Sales</a>
       </div>
       <div class="cta-trust">
