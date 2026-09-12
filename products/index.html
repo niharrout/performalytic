@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" prefix="og: https://ogp.me/ns#">
 <head>
 <script nonce="P3rf0rm4lyt1c">document.documentElement.classList.add('js');</script>
@@ -117,6 +117,11 @@ nav .container{display:flex;align-items:center;justify-content:space-between;hei
 .mobile-menu .nav-cta{text-align:center;padding:14px;margin-top:8px;border-radius:100px;display:block}
 
 /* Hero */
+.breadcrumb{padding:100px 0 0;font-size:0.82rem;color:#64748b}
+.breadcrumb a{color:#94a3b8;text-decoration:none;transition:color .2s}
+.breadcrumb a:hover{color:#60a5fa}
+.breadcrumb .sep{margin:0 8px;opacity:.4}
+.breadcrumb .current{color:#e2e8f0}
 .product-hero{position:relative;overflow:hidden;background:linear-gradient(180deg,#080e1c 0%,#0c1425 60%,#0f1a30 100%);padding:160px 0 100px}
 .product-hero::before{content:'';position:absolute;width:900px;height:900px;border-radius:50%;left:-300px;top:-350px;background:radial-gradient(circle,rgba(37,99,235,0.18),transparent 65%);pointer-events:none;filter:blur(8px);animation:heroBlob 14s ease-in-out infinite alternate}
 .product-hero::after{content:'';position:absolute;width:700px;height:700px;border-radius:50%;right:-250px;bottom:-350px;background:radial-gradient(circle,rgba(124,58,237,0.15),transparent 65%);pointer-events:none;filter:blur(8px);animation:heroBlob 16s ease-in-out infinite alternate-reverse}
@@ -389,6 +394,10 @@ footer{background:#060a14;border-top:1px solid rgba(255,255,255,0.04);padding:56
 </header>
 
 <main id="main-content">
+
+<nav class="breadcrumb container" aria-label="Breadcrumb">
+  <a href="/">Home</a><span class="sep" aria-hidden="true">/</span><span class="current" aria-current="page">Products</span>
+</nav>
 
 <!-- Hero -->
 <section class="product-hero" id="hero" aria-label="4DAlert platform overview">
@@ -760,6 +769,7 @@ footer{background:#060a14;border-top:1px solid rgba(255,255,255,0.04);padding:56
         <a href="/about/">About Us</a>
         <a href="/careers/">Careers</a>
         <a href="/blog/">Blog</a>
+        <a href="/products/">Products</a>
         <a href="/knowledge/">Knowledge Hub</a>
         <a href="/tools/">Tools &amp; Calculators</a>
         <a href="/contact/">Contact</a>
