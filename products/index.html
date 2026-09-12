@@ -279,6 +279,43 @@ section{padding:80px 0}
 .cta-trust-item{display:flex;align-items:center;gap:8px;font-size:0.82rem;color:#64748b}
 .cta-trust-item svg{width:16px;height:16px;color:#4ade80;flex-shrink:0}
 
+/* Module Deep Dives */
+.module-section{padding:100px 0;position:relative;overflow:hidden}
+.module-section:nth-child(odd){background:#080e1c}
+.module-section:nth-child(even){background:linear-gradient(180deg,#0c1425,#080e1c)}
+.module-section::before{content:'';position:absolute;width:600px;height:600px;border-radius:50%;pointer-events:none;filter:blur(80px);opacity:0.15}
+.module-section:nth-child(1)::before{left:-200px;top:-200px;background:rgba(37,99,235,0.3)}
+.module-section:nth-child(2)::before{right:-200px;top:-200px;background:rgba(16,185,129,0.3)}
+.module-section:nth-child(3)::before{left:-200px;bottom:-200px;background:rgba(124,58,237,0.3)}
+.module-inner{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;position:relative;z-index:1}
+.module-inner.reverse{direction:rtl}.module-inner.reverse>*{direction:ltr}
+.module-label{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;border-radius:100px;font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:16px;border:1px solid}
+.module-label.blue{color:#60a5fa;background:rgba(37,99,235,0.1);border-color:rgba(37,99,235,0.2)}
+.module-label.green{color:#34d399;background:rgba(16,185,129,0.1);border-color:rgba(16,185,129,0.2)}
+.module-label.purple{color:#a78bfa;background:rgba(124,58,237,0.1);border-color:rgba(124,58,237,0.2)}
+.module-text h2{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;color:#fff;line-height:1.15;margin-bottom:16px;letter-spacing:-0.5px}
+.module-text>p{font-size:0.95rem;color:#94a3b8;line-height:1.7;margin-bottom:24px}
+.module-diffs{display:flex;flex-direction:column;gap:16px;margin-bottom:28px}
+.module-diff{display:flex;gap:14px;align-items:flex-start}
+.module-diff-icon{width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.module-diff-icon.blue{background:rgba(37,99,235,0.1);border:1px solid rgba(37,99,235,0.15)}
+.module-diff-icon.green{background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.15)}
+.module-diff-icon.purple{background:rgba(124,58,237,0.1);border:1px solid rgba(124,58,237,0.15)}
+.module-diff-icon svg{width:18px;height:18px}
+.module-diff-text h4{font-size:0.88rem;font-weight:700;color:#e2e8f0;margin-bottom:2px}
+.module-diff-text p{font-size:0.82rem;color:#64748b;line-height:1.5}
+.module-integrations{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.module-int-tag{padding:4px 12px;border-radius:100px;font-size:0.7rem;font-weight:600;background:rgba(255,255,255,0.03);color:#64748b;border:1px solid rgba(255,255,255,0.06)}
+.module-cta{display:inline-flex;align-items:center;gap:8px;padding:12px 28px;border-radius:10px;background:linear-gradient(135deg,#2563eb,#7c3aed);color:#fff;font-weight:700;font-size:0.88rem;text-decoration:none;transition:all .3s}
+.module-cta:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(37,99,235,0.35)}
+.module-visual{display:flex;align-items:center;justify-content:center}
+.module-visual svg{width:100%;max-width:480px}
+.module-quote{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.06);border-radius:16px;padding:24px;margin-top:24px;position:relative}
+.module-quote::before{content:'\201C';position:absolute;top:8px;left:16px;font-size:3rem;font-weight:900;color:rgba(37,99,235,0.15);line-height:1;font-family:Georgia,serif}
+.module-quote p{font-size:0.85rem;color:#cbd5e1;font-style:italic;line-height:1.6;margin-bottom:8px;padding-left:20px}
+.module-quote cite{font-size:0.78rem;color:#64748b;font-style:normal;padding-left:20px}
+@media(max-width:768px){.module-inner{grid-template-columns:1fr;gap:32px}.module-inner.reverse{direction:ltr}.module-visual{order:-1}}
+
 @keyframes fadeInUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
 
 /* Footer */
@@ -644,6 +681,249 @@ footer{background:#060a14;border-top:1px solid rgba(255,255,255,0.04);padding:56
         <div class="step-num">4</div>
         <h3>Act with Confidence</h3>
         <p>Make data-driven decisions backed by verified, high-quality, observable data</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Module Deep Dive: Data Reconciliation -->
+<section class="module-section" aria-label="Data Reconciliation deep dive">
+  <div class="container">
+    <div class="module-inner">
+      <div class="module-text">
+        <span class="module-label blue">Flagship Module</span>
+        <h2>Automated Data Reconciliation</h2>
+        <p>Stop spending days manually comparing spreadsheets. 4DAlert validates millions of entries across your entire data stack in minutes — and catches the discrepancies humans miss.</p>
+        <div class="module-diffs">
+          <div class="module-diff">
+            <div class="module-diff-icon blue"><svg viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div class="module-diff-text"><h4>Cross-system validation</h4><p>Compare source databases against analytics warehouses, BI dashboards, and reporting layers — all automatically</p></div>
+          </div>
+          <div class="module-diff">
+            <div class="module-diff-icon blue"><svg viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div class="module-diff-text"><h4>AI-powered root cause analysis</h4><p>When mismatches occur, 4DAlert identifies why — schema drift, pipeline failures, or transformation errors</p></div>
+          </div>
+          <div class="module-diff">
+            <div class="module-diff-icon blue"><svg viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div class="module-diff-text"><h4>Audit-ready reports</h4><p>Generate compliance-ready reconciliation reports for SOX, BCBS239, and internal audit requirements</p></div>
+          </div>
+        </div>
+        <div class="module-integrations">
+          <span class="module-int-tag">Snowflake</span>
+          <span class="module-int-tag">BigQuery</span>
+          <span class="module-int-tag">Redshift</span>
+          <span class="module-int-tag">SAP</span>
+          <span class="module-int-tag">Databricks</span>
+          <span class="module-int-tag">Oracle</span>
+          <span class="module-int-tag">PostgreSQL</span>
+          <span class="module-int-tag">+ 93 more</span>
+        </div>
+        <a href="/contact/" class="module-cta">See Reconciliation in Action &rarr;</a>
+        <div class="module-quote">
+          <p>4DAlert caught a cross-system discrepancy our team had missed for 3 months. The automated reconciliation paid for itself in the first week.</p>
+          <cite>— Data Director, Fortune 500 Manufacturer</cite>
+        </div>
+      </div>
+      <div class="module-visual">
+        <svg viewBox="0 0 480 360" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="20" y="20" width="440" height="320" rx="20" fill="rgba(15,23,42,0.6)" stroke="rgba(96,165,250,0.15)" stroke-width="1"/>
+          <text x="240" y="52" text-anchor="middle" fill="#64748b" font-size="11" font-family="Inter" font-weight="600">DATA RECONCILIATION FLOW</text>
+          <rect x="40" y="72" width="120" height="80" rx="12" fill="rgba(37,99,235,0.08)" stroke="rgba(96,165,250,0.2)"/>
+          <text x="100" y="108" text-anchor="middle" fill="#60a5fa" font-size="11" font-family="Inter" font-weight="600">Source System</text>
+          <text x="100" y="124" text-anchor="middle" fill="#64748b" font-size="9" font-family="Inter">SAP / Oracle</text>
+          <rect x="180" y="72" width="120" height="80" rx="12" fill="rgba(124,58,237,0.08)" stroke="rgba(167,139,250,0.2)"/>
+          <text x="240" y="108" text-anchor="middle" fill="#a78bfa" font-size="11" font-family="Inter" font-weight="600">4DAlert Engine</text>
+          <text x="240" y="124" text-anchor="middle" fill="#64748b" font-size="9" font-family="Inter">AI Comparison</text>
+          <rect x="320" y="72" width="120" height="80" rx="12" fill="rgba(16,185,129,0.08)" stroke="rgba(52,211,153,0.2)"/>
+          <text x="380" y="108" text-anchor="middle" fill="#34d399" font-size="11" font-family="Inter" font-weight="600">Target System</text>
+          <text x="380" y="124" text-anchor="middle" fill="#64748b" font-size="9" font-family="Inter">Snowflake / BQ</text>
+          <path d="M160 112 L180 112" stroke="rgba(96,165,250,0.4)" stroke-width="2" stroke-dasharray="4 4"/>
+          <path d="M300 112 L320 112" stroke="rgba(96,165,250,0.4)" stroke-width="2" stroke-dasharray="4 4"/>
+          <polygon points="175,108 180,112 175,116" fill="rgba(96,165,250,0.6)"/>
+          <polygon points="295,108 300,112 295,116" fill="rgba(96,165,250,0.6)"/>
+          <rect x="40" y="180" width="400" height="1" fill="rgba(255,255,255,0.04)"/>
+          <text x="240" y="210" text-anchor="middle" fill="#64748b" font-size="10" font-family="Inter" font-weight="600">VALIDATION RESULTS</text>
+          <rect x="40" y="224" width="124" height="50" rx="8" fill="rgba(16,185,129,0.08)" stroke="rgba(52,211,153,0.15)"/>
+          <circle cx="60" cy="249" r="8" fill="rgba(52,211,153,0.3)"/>
+          <text x="60" y="253" text-anchor="middle" fill="#34d399" font-size="10" font-family="Inter" font-weight="700">98%</text>
+          <text x="108" y="244" fill="#94a3b8" font-size="9" font-family="Inter" font-weight="600">Matched</text>
+          <text x="108" y="258" fill="#64748b" font-size="8" font-family="Inter">Records aligned</text>
+          <rect x="178" y="224" width="124" height="50" rx="8" fill="rgba(245,158,11,0.08)" stroke="rgba(251,191,36,0.15)"/>
+          <circle cx="198" cy="249" r="8" fill="rgba(245,158,11,0.3)"/>
+          <text x="198" y="253" text-anchor="middle" fill="#fbbf24" font-size="10" font-family="Inter" font-weight="700">1.5%</text>
+          <text x="246" y="244" fill="#94a3b8" font-size="9" font-family="Inter" font-weight="600">Flagged</text>
+          <text x="246" y="258" fill="#64748b" font-size="8" font-family="Inter">Needs review</text>
+          <rect x="316" y="224" width="124" height="50" rx="8" fill="rgba(239,68,68,0.08)" stroke="rgba(248,113,113,0.15)"/>
+          <circle cx="336" cy="249" r="8" fill="rgba(239,68,68,0.3)"/>
+          <text x="336" y="253" text-anchor="middle" fill="#f87171" font-size="10" font-family="Inter" font-weight="700">0.5%</text>
+          <text x="384" y="244" fill="#94a3b8" font-size="9" font-family="Inter" font-weight="600">Mismatched</text>
+          <text x="384" y="258" fill="#64748b" font-size="8" font-family="Inter">Auto-resolved</text>
+          <rect x="40" y="290" width="400" height="36" rx="8" fill="rgba(37,99,235,0.06)" stroke="rgba(96,165,250,0.1)"/>
+          <circle cx="60" cy="308" r="6" fill="rgba(52,211,153,0.5)"/>
+          <rect x="72" y="304" width="80" height="4" rx="2" fill="rgba(148,163,184,0.2)"/>
+          <circle cx="180" cy="308" r="6" fill="rgba(96,165,250,0.5)"/>
+          <rect x="192" y="304" width="60" height="4" rx="2" fill="rgba(148,163,184,0.2)"/>
+          <circle cx="280" cy="308" r="6" fill="rgba(167,139,250,0.5)"/>
+          <rect x="292" y="304" width="100" height="4" rx="2" fill="rgba(148,163,184,0.2)"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Module Deep Dive: Data Quality -->
+<section class="module-section" aria-label="Data Quality deep dive">
+  <div class="container">
+    <div class="module-inner reverse">
+      <div class="module-text">
+        <span class="module-label green">Observability</span>
+        <h2>Data Quality &amp; Observability</h2>
+        <p>Know the moment something goes wrong — before your stakeholders do. 4DAlert monitors every dimension of data quality across your entire stack with ML-driven anomaly detection.</p>
+        <div class="module-diffs">
+          <div class="module-diff">
+            <div class="module-diff-icon green"><svg viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div class="module-diff-text"><h4>Multi-dimensional monitoring</h4><p>Track freshness, volume, schema, distribution, and custom metrics across every pipeline and table</p></div>
+          </div>
+          <div class="module-diff">
+            <div class="module-diff-icon green"><svg viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div class="module-diff-text"><h4>ML-powered anomaly detection</h4><p>learns your data patterns and flags deviations that static rules miss — including slow drift and seasonal anomalies</p></div>
+          </div>
+          <div class="module-diff">
+            <div class="module-diff-icon green"><svg viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div class="module-diff-text"><h4>Automated alert routing</h4><p>Send alerts to Slack, Teams, PagerDuty, or email — with intelligent grouping to eliminate noise</p></div>
+          </div>
+        </div>
+        <div class="module-integrations">
+          <span class="module-int-tag">Snowflake</span>
+          <span class="module-int-tag">BigQuery</span>
+          <span class="module-int-tag">Databricks</span>
+          <span class="module-int-tag">Airflow</span>
+          <span class="module-int-tag">dbt</span>
+          <span class="module-int-tag">Slack</span>
+          <span class="module-int-tag">PagerDuty</span>
+          <span class="module-int-tag">+ 93 more</span>
+        </div>
+        <a href="/contact/" class="module-cta">See Monitoring in Action &rarr;</a>
+        <div class="module-quote">
+          <p>Before 4DAlert, we found out about data issues from business users. Now we catch them in minutes, not days.</p>
+          <cite>— Head of Data Engineering, Global Pharmaceutical Company</cite>
+        </div>
+      </div>
+      <div class="module-visual">
+        <svg viewBox="0 0 480 360" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="20" y="20" width="440" height="320" rx="20" fill="rgba(15,23,42,0.6)" stroke="rgba(52,211,153,0.15)" stroke-width="1"/>
+          <text x="240" y="52" text-anchor="middle" fill="#64748b" font-size="11" font-family="Inter" font-weight="600">DATA QUALITY DASHBOARD</text>
+          <rect x="40" y="70" width="130" height="90" rx="12" fill="rgba(16,185,129,0.06)" stroke="rgba(52,211,153,0.12)"/>
+          <text x="105" y="96" text-anchor="middle" fill="#34d399" font-size="22" font-family="Inter" font-weight="800">99.2%</text>
+          <text x="105" y="114" text-anchor="middle" fill="#94a3b8" font-size="9" font-family="Inter" font-weight="500">Overall Quality Score</text>
+          <rect x="52" y="130" width="106" height="4" rx="2" fill="rgba(52,211,153,0.15)"/>
+          <rect x="52" y="130" width="95" height="4" rx="2" fill="rgba(52,211,153,0.5)"/>
+          <rect x="180" y="70" width="130" height="90" rx="12" fill="rgba(37,99,235,0.06)" stroke="rgba(96,165,250,0.12)"/>
+          <text x="245" y="96" text-anchor="middle" fill="#60a5fa" font-size="22" font-family="Inter" font-weight="800">247</text>
+          <text x="245" y="114" text-anchor="middle" fill="#94a3b8" font-size="9" font-family="Inter" font-weight="500">Tables Monitored</text>
+          <rect x="192" y="130" width="106" height="4" rx="2" fill="rgba(96,165,250,0.15)"/>
+          <rect x="192" y="130" width="80" height="4" rx="2" fill="rgba(96,165,250,0.5)"/>
+          <rect x="320" y="70" width="130" height="90" rx="12" fill="rgba(167,139,250,0.06)" stroke="rgba(167,139,250,0.12)"/>
+          <text x="385" y="96" text-anchor="middle" fill="#a78bfa" font-size="22" font-family="Inter" font-weight="800">3</text>
+          <text x="385" y="114" text-anchor="middle" fill="#94a3b8" font-size="9" font-family="Inter" font-weight="500">Active Alerts</text>
+          <rect x="332" y="130" width="106" height="4" rx="2" fill="rgba(167,139,250,0.15)"/>
+          <rect x="332" y="130" width="30" height="4" rx="2" fill="rgba(167,139,250,0.5)"/>
+          <rect x="40" y="174" width="410" height="1" fill="rgba(255,255,255,0.04)"/>
+          <text x="40" y="200" fill="#94a3b8" font-size="10" font-family="Inter" font-weight="600">RECENT ANOMALIES</text>
+          <rect x="40" y="212" width="410" height="36" rx="8" fill="rgba(248,113,113,0.06)" stroke="rgba(248,113,113,0.1)"/>
+          <circle cx="58" cy="230" r="5" fill="rgba(248,113,113,0.5)"/>
+          <text x="72" y="228" fill="#f87171" font-size="9" font-family="Inter" font-weight="600">Volume anomaly</text>
+          <text x="72" y="240" fill="#64748b" font-size="8" font-family="Inter">orders_raw — 340% spike detected at 14:23</text>
+          <text x="430" y="234" text-anchor="end" fill="#64748b" font-size="8" font-family="Inter">2 min ago</text>
+          <rect x="40" y="254" width="410" height="36" rx="8" fill="rgba(245,158,11,0.06)" stroke="rgba(245,158,11,0.1)"/>
+          <circle cx="58" cy="272" r="5" fill="rgba(245,158,11,0.5)"/>
+          <text x="72" y="270" fill="#fbbf24" font-size="9" font-family="Inter" font-weight="600">Freshness delay</text>
+          <text x="72" y="282" fill="#64748b" font-size="8" font-family="Inter">customer_metrics — 45min behind schedule</text>
+          <text x="430" y="276" text-anchor="end" fill="#64748b" font-size="8" font-family="Inter">18 min ago</text>
+          <rect x="40" y="296" width="410" height="36" rx="8" fill="rgba(52,211,153,0.06)" stroke="rgba(52,211,153,0.1)"/>
+          <circle cx="58" cy="314" r="5" fill="rgba(52,211,153,0.5)"/>
+          <text x="72" y="312" fill="#34d399" font-size="9" font-family="Inter" font-weight="600">Resolved</text>
+          <text x="72" y="324" fill="#64748b" font-size="8" font-family="Inter">revenue_facts — null percentage normalized</text>
+          <text x="430" y="318" text-anchor="end" fill="#64748b" font-size="8" font-family="Inter">1 hr ago</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Module Deep Dive: Schema CI/CD -->
+<section class="module-section" aria-label="Schema CI/CD deep dive">
+  <div class="container">
+    <div class="module-inner">
+      <div class="module-text">
+        <span class="module-label purple">DevOps</span>
+        <h2>Schema CI/CD Automation</h2>
+        <p>Treat your schema like code. 4DAlert automates schema comparisons, version control, and deployment across environments — so breaking changes never reach production.</p>
+        <div class="module-diffs">
+          <div class="module-diff">
+            <div class="module-diff-icon purple"><svg viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div class="module-diff-text"><h4>Automated schema diffs</h4><p>Compare schemas across dev, staging, and production — with visual diffs showing exactly what changed</p></div>
+          </div>
+          <div class="module-diff">
+            <div class="module-diff-icon purple"><svg viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div class="module-diff-text"><h4>Git-based version control</h4><p>Every schema change is tracked, reviewed, and reversible — with full audit history</p></div>
+          </div>
+          <div class="module-diff">
+            <div class="module-diff-icon purple"><svg viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div class="module-diff-text"><h4>Breaking change detection</h4><p>Automatically flag changes that would break downstream pipelines, dashboards, or reports</p></div>
+          </div>
+        </div>
+        <div class="module-integrations">
+          <span class="module-int-tag">GitLab</span>
+          <span class="module-int-tag">GitHub</span>
+          <span class="module-int-tag">Snowflake</span>
+          <span class="module-int-tag">BigQuery</span>
+          <span class="module-int-tag">Redshift</span>
+          <span class="module-int-tag">Databricks</span>
+          <span class="module-int-tag">dbt</span>
+          <span class="module-int-tag">+ 93 more</span>
+        </div>
+        <a href="/contact/" class="module-cta">See CI/CD in Action &rarr;</a>
+        <div class="module-quote">
+          <p>We went from deploying schema changes once a week to multiple times a day — with full confidence nothing would break.</p>
+          <cite>— Platform Engineering Lead, SaaS Company</cite>
+        </div>
+      </div>
+      <div class="module-visual">
+        <svg viewBox="0 0 480 360" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="20" y="20" width="440" height="320" rx="20" fill="rgba(15,23,42,0.6)" stroke="rgba(167,139,250,0.15)" stroke-width="1"/>
+          <text x="240" y="52" text-anchor="middle" fill="#64748b" font-size="11" font-family="Inter" font-weight="600">SCHEMA CI/CD PIPELINE</text>
+          <rect x="40" y="72" width="100" height="60" rx="10" fill="rgba(167,139,250,0.08)" stroke="rgba(167,139,250,0.2)"/>
+          <text x="90" y="98" text-anchor="middle" fill="#a78bfa" font-size="10" font-family="Inter" font-weight="600">Git Push</text>
+          <text x="90" y="114" text-anchor="middle" fill="#64748b" font-size="8" font-family="Inter">Schema change</text>
+          <path d="M140 102 L170 102" stroke="rgba(167,139,250,0.4)" stroke-width="2" stroke-dasharray="4 4"/>
+          <polygon points="165,98 170,102 165,106" fill="rgba(167,139,250,0.6)"/>
+          <rect x="170" y="72" width="100" height="60" rx="10" fill="rgba(37,99,235,0.08)" stroke="rgba(96,165,250,0.2)"/>
+          <text x="220" y="98" text-anchor="middle" fill="#60a5fa" font-size="10" font-family="Inter" font-weight="600">4DAlert CI</text>
+          <text x="220" y="114" text-anchor="middle" fill="#64748b" font-size="8" font-family="Inter">Auto-diff &amp; check</text>
+          <path d="M270 102 L300 102" stroke="rgba(167,139,250,0.4)" stroke-width="2" stroke-dasharray="4 4"/>
+          <polygon points="295,98 300,102 295,106" fill="rgba(167,139,250,0.6)"/>
+          <rect x="300" y="72" width="100" height="60" rx="10" fill="rgba(16,185,129,0.08)" stroke="rgba(52,211,153,0.2)"/>
+          <text x="350" y="98" text-anchor="middle" fill="#34d399" font-size="10" font-family="Inter" font-weight="600">Deploy</text>
+          <text x="350" y="114" text-anchor="middle" fill="#64748b" font-size="8" font-family="Inter">Production push</text>
+          <rect x="40" y="154" width="400" height="1" fill="rgba(255,255,255,0.04)"/>
+          <text x="240" y="180" text-anchor="middle" fill="#94a3b8" font-size="10" font-family="Inter" font-weight="600">SCHEMA DIFF VIEW</text>
+          <rect x="40" y="192" width="195" height="130" rx="10" fill="rgba(239,68,68,0.04)" stroke="rgba(248,113,113,0.12)"/>
+          <text x="52" y="212" fill="#f87171" font-size="9" font-family="Inter" font-weight="600">BEFORE (Dev)</text>
+          <text x="52" y="232" fill="#94a3b8" font-size="9" font-family="Inter">orders</text>
+          <text x="52" y="248" fill="#64748b" font-size="8" font-family="Inter">  id INT</text>
+          <text x="52" y="262" fill="#64748b" font-size="8" font-family="Inter">  amount DECIMAL</text>
+          <text x="52" y="276" fill="#f87171" font-size="8" font-family="Inter">  status VARCHAR</text>
+          <text x="52" y="290" fill="#64748b" font-size="8" font-family="Inter">  created_at TIMESTAMP</text>
+          <rect x="245" y="192" width="195" height="130" rx="10" fill="rgba(52,211,153,0.04)" stroke="rgba(52,211,153,0.12)"/>
+          <text x="257" y="212" fill="#34d399" font-size="9" font-family="Inter" font-weight="600">AFTER (Prod)</text>
+          <text x="257" y="232" fill="#94a3b8" font-size="9" font-family="Inter">orders</text>
+          <text x="257" y="248" fill="#64748b" font-size="8" font-family="Inter">  id INT</text>
+          <text x="257" y="262" fill="#64748b" font-size="8" font-family="Inter">  amount DECIMAL</text>
+          <text x="257" y="276" fill="#34d399" font-size="8" font-family="Inter">  status VARCHAR</text>
+          <text x="257" y="290" fill="#34d399" font-size="8" font-family="Inter">+ region VARCHAR</text>
+          <text x="257" y="304" fill="#64748b" font-size="8" font-family="Inter">  created_at TIMESTAMP</text>
+        </svg>
       </div>
     </div>
   </div>
