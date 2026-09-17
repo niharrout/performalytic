@@ -229,8 +229,10 @@ section{padding:80px 0}
 .integrations-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:20px;max-width:900px;margin:0 auto}
 .integration-item{background:var(--pa-wb-002);border:1px solid var(--pa-wd-006);border-radius:14px;padding:24px 16px;display:flex;flex-direction:column;align-items:center;gap:10px;transition:all .3s}
 .integration-item:hover{transform:translateY(-4px);box-shadow:0 12px 32px var(--pa-sh-k-025);border-color:rgba(96,165,250,0.2)}
-.integration-item img{height:32px;width:auto;box-sizing:content-box;background:#fff;border-radius:6px;padding:5px 9px;filter:grayscale(1);opacity:.85;transition:opacity .3s,filter .3s}
-.integration-item:hover img{opacity:1;filter:grayscale(0)}
+.integration-item img{width:100px;height:32px;object-fit:contain;object-position:center;opacity:0.95;transition:transform .3s,opacity .3s}
+.integration-item:hover img{opacity:1;transform:scale(1.06)}
+:root[data-theme="dark"] .integration-item img.dark-logo{filter:brightness(0) invert(1)}
+:root[data-theme="dark"] .integration-item img.dim-logo{filter:brightness(1.4) contrast(1.05)}
 .integration-item span{font-size:0.78rem;color:var(--pa-t-dim);font-weight:500}
 
 /* Use Cases */
@@ -1001,15 +1003,15 @@ nav:not(.mobile-menu).nav-scrolled{background:var(--pa-panel-81428-098)!importan
       <p class="section-subtitle mx-auto">Pre-built connectors for the databases, warehouses, and tools you already use.</p>
     </div>
     <div class="integrations-grid">
-      <div class="integration-item"><img src="https://4dalert.com/wp-content/uploads/2025/05/Microsoft-Fabric-logo.jpg" alt="Microsoft Fabric" width="32" height="32" loading="lazy" /><span>Fabric</span></div>
-      <div class="integration-item"><img src="https://4dalert.com/wp-content/uploads/2025/05/databricks-logo.jpg" alt="Databricks" width="32" height="32" loading="lazy" /><span>Databricks</span></div>
-      <div class="integration-item"><img src="https://4dalert.com/wp-content/uploads/2025/05/BigQuery-logo.jpg" alt="BigQuery" width="32" height="32" loading="lazy" /><span>BigQuery</span></div>
-      <div class="integration-item"><img src="https://4dalert.com/wp-content/uploads/2025/05/Oracle-logo.jpg" alt="Oracle" width="32" height="32" loading="lazy" /><span>Oracle</span></div>
-      <div class="integration-item"><img src="https://4dalert.com/wp-content/uploads/2025/05/PostgresSQL-logo.jpg" alt="PostgreSQL" width="32" height="32" loading="lazy" /><span>PostgreSQL</span></div>
-      <div class="integration-item"><img src="https://4dalert.com/wp-content/uploads/2025/05/Airflow-logo.jpg" alt="Airflow" width="32" height="32" loading="lazy" /><span>Airflow</span></div>
-      <div class="integration-item"><img src="https://4dalert.com/wp-content/uploads/2025/05/Looker-logo.jpg" alt="Looker" width="32" height="32" loading="lazy" /><span>Looker</span></div>
-      <div class="integration-item"><img src="https://4dalert.com/wp-content/uploads/2025/05/Vertica-logo.jpg" alt="Vertica" width="32" height="32" loading="lazy" /><span>Vertica</span></div>
-      <div class="integration-item"><img src="https://4dalert.com/wp-content/uploads/2025/05/gitlab-logo.png" alt="GitLab" width="32" height="32" loading="lazy" /><span>GitLab</span></div>
+      <div class="integration-item"><img src="/assets/images/connectors/fabric.png" alt="Microsoft Fabric" loading="lazy" /><span>Fabric</span></div>
+      <div class="integration-item"><img src="/assets/images/connectors/databricks.png" alt="Databricks" loading="lazy" /><span>Databricks</span></div>
+      <div class="integration-item"><img src="/assets/images/connectors/bigquery.png" alt="BigQuery" loading="lazy" /><span>BigQuery</span></div>
+      <div class="integration-item"><img src="/assets/images/connectors/oracle.png" alt="Oracle" loading="lazy" /><span>Oracle</span></div>
+      <div class="integration-item"><img src="/assets/images/connectors/postgresql.png" alt="PostgreSQL" loading="lazy" /><span>PostgreSQL</span></div>
+      <div class="integration-item"><img src="/assets/images/connectors/airflow.png" alt="Airflow" loading="lazy" /><span>Airflow</span></div>
+      <div class="integration-item"><img src="/assets/images/connectors/looker.png" alt="Looker" class="dim-logo" loading="lazy" /><span>Looker</span></div>
+      <div class="integration-item"><img src="/assets/images/connectors/vertica.png" alt="Vertica" class="dark-logo" loading="lazy" /><span>Vertica</span></div>
+      <div class="integration-item"><img src="/assets/images/connectors/gitlab.png" alt="GitLab" class="dark-logo" loading="lazy" /><span>GitLab</span></div>
     </div>
   </div>
 </section>
