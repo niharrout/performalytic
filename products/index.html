@@ -158,13 +158,13 @@ nav .container{display:flex;align-items:center;justify-content:space-between;hei
 :root[data-theme="light"] .trust-strip{background:rgba(15,23,42,0.02)}
 .trust-strip{padding:48px 0;background:rgba(255,255,255,0.01);border-top:1px solid var(--pa-wd-006);border-bottom:1px solid var(--pa-wd-006)}
 .trust-label{text-align:center;font-size:0.8rem;font-weight:600;color:var(--pa-t-dim);text-transform:uppercase;letter-spacing:0.15em;margin-bottom:24px}
-/* Client and partner logos are a mix of transparent PNGs and flattened
-   JPEGs, so they cannot share one silhouette filter. Each logo sits on its
-   own white chip instead: legible on the dark page and on the light one,
-   with colour restored on hover. */
-.trust-logos{display:flex;align-items:center;justify-content:center;gap:48px;flex-wrap:wrap}
-.trust-logos img{height:28px;width:auto;box-sizing:content-box;background:#fff;border-radius:6px;padding:5px 9px;filter:grayscale(1);opacity:.8;transition:opacity .3s,filter .3s}
-.trust-logos img:hover{opacity:1;filter:grayscale(0)}
+/* Client logos are real transparent brand PNGs: colourful on both themes,
+   hoverable, and centred on a shared baseline. */
+.trust-logos{display:flex;align-items:center;justify-content:center;gap:40px;flex-wrap:wrap}
+.trust-logos img{max-width:150px;max-height:32px;width:auto;height:auto;object-fit:contain;opacity:.95;transition:transform .3s,opacity .3s}
+.trust-logos img:hover{opacity:1;transform:scale(1.06)}
+:root[data-theme="dark"] .trust-logos img.dark-logo{filter:brightness(0) invert(1)}
+.trust-logos img.dim-logo{filter:brightness(1.4) contrast(1.05)}
 
 /* Sections */
 section{padding:80px 0}
@@ -567,13 +567,13 @@ nav:not(.mobile-menu).nav-scrolled{background:var(--pa-panel-81428-098)!importan
   <div class="container">
     <p class="trust-label">Trusted by data-driven enterprises worldwide</p>
     <div class="trust-logos" role="list">
-      <img src="https://4dalert.com/wp-content/uploads/2025/05/pfizer-logo.png" alt="Pfizer" width="80" height="28" loading="lazy" />
-      <img src="https://4dalert.com/wp-content/uploads/2025/07/ecolab-logo-1-1.png" alt="Ecolab" width="80" height="28" loading="lazy" />
-      <img src="https://4dalert.com/wp-content/uploads/2025/05/partnerre-logo.png" alt="PartnerRe" width="100" height="28" loading="lazy" />
-      <img src="https://4dalert.com/wp-content/uploads/2025/05/Championx-logo.png" alt="ChampionX" width="100" height="28" loading="lazy" />
-      <img src="https://4dalert.com/wp-content/uploads/2025/05/SGSCO-logo.png" alt="SGS" width="80" height="28" loading="lazy" />
-      <img src="https://4dalert.com/wp-content/uploads/2025/05/Universal-Woods-logo.png" alt="Universal Woods" width="120" height="28" loading="lazy" />
-      <img src="https://4dalert.com/wp-content/uploads/2025/09/gsk-logo.jpeg" alt="GSK" width="60" height="28" loading="lazy" />
+      <img src="/assets/images/clients/pfizer.png" alt="Pfizer" loading="lazy" />
+      <img src="/assets/images/clients/ecolab.png" alt="Ecolab" loading="lazy" />
+      <img src="/assets/images/clients/partnerre.png" alt="PartnerRe" class="dark-logo" loading="lazy" />
+      <img src="/assets/images/clients/championx.png" alt="ChampionX" class="dim-logo" loading="lazy" />
+      <img src="/assets/images/clients/sgs.png" alt="SGS" loading="lazy" />
+      <img src="/assets/images/clients/uniwoods.png" alt="Universal Woods" loading="lazy" />
+      <img src="/assets/images/clients/gsk.png" alt="GSK" loading="lazy" />
     </div>
   </div>
 </section>
