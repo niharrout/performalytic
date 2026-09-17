@@ -155,11 +155,16 @@ nav .container{display:flex;align-items:center;justify-content:space-between;hei
 .hero-visual img{width:100%;max-width:520px;height:auto;filter:drop-shadow(0 20px 60px rgba(37,99,235,0.2))}
 
 /* Trust Strip */
+:root[data-theme="light"] .trust-strip{background:rgba(15,23,42,0.02)}
 .trust-strip{padding:48px 0;background:rgba(255,255,255,0.01);border-top:1px solid var(--pa-wd-006);border-bottom:1px solid var(--pa-wd-006)}
 .trust-label{text-align:center;font-size:0.8rem;font-weight:600;color:var(--pa-t-dim);text-transform:uppercase;letter-spacing:0.15em;margin-bottom:24px}
-.trust-logos{display:flex;align-items:center;justify-content:center;gap:48px;flex-wrap:wrap;opacity:0.5;filter:brightness(0) invert(1)}
-.trust-logos img{height:28px;width:auto;transition:opacity .3s}
-.trust-logos:hover img{opacity:0.7}
+/* Client and partner logos are a mix of transparent PNGs and flattened
+   JPEGs, so they cannot share one silhouette filter. Each logo sits on its
+   own white chip instead: legible on the dark page and on the light one,
+   with colour restored on hover. */
+.trust-logos{display:flex;align-items:center;justify-content:center;gap:48px;flex-wrap:wrap}
+.trust-logos img{height:28px;width:auto;box-sizing:content-box;background:#fff;border-radius:6px;padding:5px 9px;filter:grayscale(1);opacity:.8;transition:opacity .3s,filter .3s}
+.trust-logos img:hover{opacity:1;filter:grayscale(0)}
 
 /* Sections */
 section{padding:80px 0}
@@ -224,8 +229,8 @@ section{padding:80px 0}
 .integrations-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:20px;max-width:900px;margin:0 auto}
 .integration-item{background:var(--pa-wb-002);border:1px solid var(--pa-wd-006);border-radius:14px;padding:24px 16px;display:flex;flex-direction:column;align-items:center;gap:10px;transition:all .3s}
 .integration-item:hover{transform:translateY(-4px);box-shadow:0 12px 32px var(--pa-sh-k-025);border-color:rgba(96,165,250,0.2)}
-.integration-item img{height:32px;width:auto;filter:brightness(0) invert(1);opacity:0.7;transition:opacity .3s}
-.integration-item:hover img{opacity:1}
+.integration-item img{height:32px;width:auto;box-sizing:content-box;background:#fff;border-radius:6px;padding:5px 9px;filter:grayscale(1);opacity:.85;transition:opacity .3s,filter .3s}
+.integration-item:hover img{opacity:1;filter:grayscale(0)}
 .integration-item span{font-size:0.78rem;color:var(--pa-t-dim);font-weight:500}
 
 /* Use Cases */
