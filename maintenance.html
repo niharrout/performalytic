@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
-<meta charset="UTF-8" />
+<meta charset="UTF-8" /><meta name="theme-color" content="#080e1c" /><script id="pa-theme-init">(function(){var d=document.documentElement;d.classList.add('js');var t;try{t=localStorage.getItem('pa-theme')}catch(e){}t=(t==='light'||t==='dark')?t:'dark';d.setAttribute('data-theme',t);function paint(v){d.setAttribute('data-theme',v);try{localStorage.setItem('pa-theme',v)}catch(e){}var m=document.querySelector('meta[name="theme-color"]');if(m)m.setAttribute('content',v==='light'?'#ffffff':'#080e1c');var b=document.querySelectorAll('.theme-toggle'),i,l=v==='light'?'Switch to dark theme':'Switch to light theme';for(i=0;i<b.length;i++){b[i].setAttribute('aria-pressed',v==='light'?'true':'false');b[i].setAttribute('aria-label',l);b[i].setAttribute('title',l)}}function bind(){var b=document.querySelectorAll('.theme-toggle'),i;for(i=0;i<b.length;i++){b[i].addEventListener('click',function(){paint(d.getAttribute('data-theme')==='light'?'dark':'light')})}paint(d.getAttribute('data-theme'))}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',bind)}else{bind()}})();</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="robots" content="noindex" />
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests" />
@@ -15,11 +15,11 @@
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;color:#e2e8f0;background:#080e1c;line-height:1.6;display:flex;flex-direction:column;min-height:100vh;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;color:var(--pa-t);background:var(--pa-bg);line-height:1.6;display:flex;flex-direction:column;min-height:100vh;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 a{color:inherit}
 
 .skip-link{position:absolute;top:-100%;left:16px;z-index:9999;background:#2563eb;color:#fff;padding:12px 24px;border-radius:0 0 8px 8px;font-weight:600;font-size:0.9rem;text-decoration:none;transition:top 0.2s}.skip-link:focus{top:0}
-.main-content{flex:1;display:flex;align-items:center;justify-content:center;padding:80px 24px;background:linear-gradient(180deg,#080e1c 0%,#0c1425 100%)}
+.main-content{flex:1;display:flex;align-items:center;justify-content:center;padding:80px 24px;background:linear-gradient(180deg,var(--pa-bg) 0%,var(--pa-bg-2) 100%)}
 .mt-container{max-width:560px;width:100%;text-align:center}
 
 /* Icon */
@@ -35,34 +35,34 @@ a{color:inherit}
 .mt-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(245,158,11,0.15);color:#f59e0b;padding:6px 14px;border-radius:100px;font-size:0.78rem;font-weight:600;margin-bottom:20px}
 .mt-badge svg{width:14px;height:14px;flex-shrink:0}
 
-.mt-title{font-size:clamp(1.5rem,3vw,2rem);font-weight:800;color:#fff;margin-bottom:12px;letter-spacing:-0.3px}
-.mt-desc{font-size:1rem;color:#94a3b8;line-height:1.7;margin-bottom:32px}
+.mt-title{font-size:clamp(1.5rem,3vw,2rem);font-weight:800;color:var(--pa-t-strong);margin-bottom:12px;letter-spacing:-0.3px}
+.mt-desc{font-size:1rem;color:var(--pa-t-muted);line-height:1.7;margin-bottom:32px}
 
 /* Status card */
-.status-card{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.06);border-radius:16px;padding:24px;margin-bottom:32px;text-align:left;box-shadow:0 1px 3px rgba(0,0,0,0.04)}
+.status-card{background:var(--pa-wb-002);border:1px solid var(--pa-wd-006);border-radius:16px;padding:24px;margin-bottom:32px;text-align:left;box-shadow:0 1px 3px var(--pa-sh-k-004)}
 .status-item{display:flex;align-items:flex-start;gap:12px;padding:12px 0}
-.status-item+.status-item{border-top:1px solid rgba(255,255,255,0.06)}
+.status-item+.status-item{border-top:1px solid var(--pa-wd-006)}
 .status-icon{width:20px;height:20px;flex-shrink:0;margin-top:2px}
 .status-icon.active{color:#10b981}
 .status-icon.pending{color:#f59e0b}
-.status-text{font-size:.88rem;color:#94a3b8;line-height:1.5}
-.status-text strong{color:#e2e8f0;font-weight:600}
-.status-text .eta{display:inline-block;background:rgba(37,99,235,0.1);color:#60a5fa;padding:2px 10px;border-radius:100px;font-size:0.78rem;font-weight:600;margin-top:4px}
+.status-text{font-size:.88rem;color:var(--pa-t-muted);line-height:1.5}
+.status-text strong{color:var(--pa-t);font-weight:600}
+.status-text .eta{display:inline-block;background:rgba(37,99,235,0.1);color:var(--pa-at-blue);padding:2px 10px;border-radius:100px;font-size:0.78rem;font-weight:600;margin-top:4px}
 
 /* Social / Contact */
 .mt-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:32px}
 .btn-primary{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#2563eb,#3b82f6);color:#fff;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:600;font-size:0.93rem;transition:all 0.2s;border:none;cursor:pointer}
 .btn-primary:hover{background:#1d4ed8;transform:translateY(-2px);box-shadow:0 12px 36px rgba(37,99,235,0.3)}
 .btn-primary:focus-visible{outline:2px solid #60a5fa;outline-offset:2px}
-.btn-secondary{display:inline-flex;align-items:center;gap:8px;background:transparent;color:#94a3b8;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:600;font-size:0.93rem;border:1px solid #e2e8f0;transition:all 0.2s}
-.btn-secondary:hover{background:#f8fafc;border-color:#cbd5e1;color:#e2e8f0}
+.btn-secondary{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--pa-t-muted);padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:600;font-size:0.93rem;border:1px solid #e2e8f0;transition:all 0.2s}
+.btn-secondary:hover{background:#f8fafc;border-color:#cbd5e1;color:var(--pa-t)}
 
 .mt-social{display:flex;gap:12px;justify-content:center}
-.mt-social a{width:44px;height:44px;border-radius:12px;border:1px solid rgba(255,255,255,0.06);display:flex;align-items:center;justify-content:center;color:#64748b;text-decoration:none;transition:all 0.2s}
-.mt-social a:hover{border-color:#60a5fa;color:#60a5fa;background:#eff6ff}
+.mt-social a{width:44px;height:44px;border-radius:12px;border:1px solid var(--pa-wd-006);display:flex;align-items:center;justify-content:center;color:var(--pa-t-dim);text-decoration:none;transition:all 0.2s}
+.mt-social a:hover{border-color:#60a5fa;color:var(--pa-at-blue);background:#eff6ff}
 
-.mt-note{font-size:.78rem;color:#475569;margin-top:24px}
-.mt-note a{color:#60a5fa;text-decoration:none}
+.mt-note{font-size:.78rem;color:var(--pa-t-dim-2);margin-top:24px}
+.mt-note a{color:var(--pa-at-blue);text-decoration:none}
 .mt-note a:hover{text-decoration:underline}
 
 @media(max-width:480px){
@@ -79,6 +79,37 @@ a{color:inherit}
   html{font-size:14px}
 }
 </style>
+<style id="pa-theme">
+/* Theme tokens. The dark column reproduces the colours the site shipped
+   with, so dark mode is unchanged; light mode re-points the same tokens. */
+:root{color-scheme:dark;--pa-at-amber:#fbbf24;--pa-at-amber-2:#fcd34d;--pa-at-blue:#60a5fa;--pa-at-blue-2:#93c5fd;--pa-at-cyan:#22d3ee;--pa-at-green:#34d399;--pa-at-green-2:#6ee7b7;--pa-at-green-3:#4ade80;--pa-at-green-4:#86efac;--pa-at-indigo:#818cf8;--pa-at-orange:#fb923c;--pa-at-pink:#f472b6;--pa-at-purple:#a78bfa;--pa-at-purple-2:#c4b5fd;--pa-at-red:#f87171;--pa-at-red-2:#fca5a5;--pa-at-sky:#7dd3fc;--pa-at-sky-2:#38bdf8;--pa-at-teal:#2dd4bf;--pa-bg:#080e1c;--pa-bg-2:#0c1425;--pa-bg-3:#0f1a30;--pa-bg-4:#0f1d35;--pa-bg-alt:#0a1628;--pa-bg-deep:#060a14;--pa-bg-deep-2:#060d1a;--pa-field:#0b1422;--pa-field-focus:#0d1626;--pa-panel-132036-085:rgba(13,20,36,0.85);--pa-panel-152342-05:rgba(15,23,42,0.5);--pa-panel-152342-06:rgba(15,23,42,0.6);--pa-panel-152342-08:rgba(15,23,42,0.8);--pa-panel-152342-09:rgba(15,23,42,0.9);--pa-panel-152342-098:rgba(15,23,42,0.98);--pa-panel-81428-09:rgba(8,14,28,0.9);--pa-panel-81428-092:rgba(8,14,28,0.92);--pa-panel-81428-098:rgba(8,14,28,0.98);--pa-sh-152342-005:rgba(15,23,42,0.05);--pa-sh-152342-006:rgba(15,23,42,0.06);--pa-sh-152342-01:rgba(15,23,42,0.1);--pa-sh-152342-012:rgba(15,23,42,0.12);--pa-sh-2623-08:rgba(2,6,23,0.8);--pa-sh-k-004:rgba(0,0,0,0.04);--pa-sh-k-006:rgba(0,0,0,0.06);--pa-sh-k-008:rgba(0,0,0,.08);--pa-sh-k-02:rgba(0,0,0,0.2);--pa-sh-k-025:rgba(0,0,0,0.25);--pa-sh-k-03:rgba(0,0,0,0.3);--pa-sh-k-035:rgba(0,0,0,0.35);--pa-sh-k-04:rgba(0,0,0,0.4);--pa-sh-k-045:rgba(0,0,0,0.45);--pa-surface:#0f172a;--pa-surface-2:#1e293b;--pa-surface-3:#334155;--pa-surface-4:#1e3a5f;--pa-surface-5:#2b3a5c;--pa-t:#e2e8f0;--pa-t-2:#cbd5e1;--pa-t-dim:#64748b;--pa-t-dim-2:#475569;--pa-t-muted:#94a3b8;--pa-t-strong:#fff;--pa-wb-002:rgba(255,255,255,0.02);--pa-wb-003:rgba(255,255,255,0.03);--pa-wb-004:rgba(255,255,255,0.04);--pa-wb-005:rgba(255,255,255,0.05);--pa-wb-006:rgba(255,255,255,0.06);--pa-wb-007:rgba(255,255,255,0.07);--pa-wb-008:rgba(255,255,255,0.08);--pa-wb-01:rgba(255,255,255,0.1);--pa-wb-012:rgba(255,255,255,0.12);--pa-wb-015:rgba(255,255,255,0.15);--pa-wb-02:rgba(255,255,255,0.2);--pa-wb-03:rgba(255,255,255,0.3);--pa-wb-06:rgba(255,255,255,0.6);--pa-wb-08:rgba(255,255,255,0.8);--pa-wd-004:rgba(255,255,255,0.04);--pa-wd-005:rgba(255,255,255,0.05);--pa-wd-006:rgba(255,255,255,0.06);--pa-wd-007:rgba(255,255,255,0.07);--pa-wd-008:rgba(255,255,255,0.08);--pa-wd-01:rgba(255,255,255,0.1);--pa-wd-012:rgba(255,255,255,0.12);--pa-wd-015:rgba(255,255,255,0.15);--pa-wd-02:rgba(255,255,255,0.2);--pa-wd-025:rgba(255,255,255,0.25);--pa-wd-03:rgba(255,255,255,0.3);--pa-wd-04:rgba(255,255,255,0.4);--pa-wt-07:rgba(255,255,255,0.7);--pa-wt-08:rgba(255,255,255,0.8);--pa-toggle-bg:rgba(255,255,255,0.05);--pa-toggle-bd:rgba(255,255,255,0.10);--pa-toggle-fg:#94a3b8;--pa-toggle-bg-h:rgba(255,255,255,0.10);--pa-toggle-fg-h:#fff;}
+:root[data-theme="light"]{color-scheme:light;--pa-at-amber:#b45309;--pa-at-amber-2:#b45309;--pa-at-blue:#2563eb;--pa-at-blue-2:#3b82f6;--pa-at-cyan:#0891b2;--pa-at-green:#059669;--pa-at-green-2:#047857;--pa-at-green-3:#16a34a;--pa-at-green-4:#16a34a;--pa-at-indigo:#4f46e5;--pa-at-orange:#c2410c;--pa-at-pink:#db2777;--pa-at-purple:#7c3aed;--pa-at-purple-2:#8b5cf6;--pa-at-red:#dc2626;--pa-at-red-2:#dc2626;--pa-at-sky:#0284c7;--pa-at-sky-2:#0284c7;--pa-at-teal:#0d9488;--pa-bg:#ffffff;--pa-bg-2:#f8fafc;--pa-bg-3:#eef3fb;--pa-bg-4:#eef3fb;--pa-bg-alt:#f8fafc;--pa-bg-deep:#f1f5f9;--pa-bg-deep-2:#f1f5f9;--pa-field:#ffffff;--pa-field-focus:#ffffff;--pa-panel-132036-085:rgba(255,255,255,0.94);--pa-panel-152342-05:rgba(248,250,252,0.75);--pa-panel-152342-06:rgba(248,250,252,0.85);--pa-panel-152342-08:rgba(255,255,255,0.92);--pa-panel-152342-09:rgba(255,255,255,0.95);--pa-panel-152342-098:rgba(255,255,255,0.97);--pa-panel-81428-09:rgba(255,255,255,0.95);--pa-panel-81428-092:rgba(255,255,255,0.90);--pa-panel-81428-098:rgba(255,255,255,0.97);--pa-sh-152342-005:rgba(15,23,42,0.04);--pa-sh-152342-006:rgba(15,23,42,0.05);--pa-sh-152342-01:rgba(15,23,42,0.05);--pa-sh-152342-012:rgba(15,23,42,0.05);--pa-sh-2623-08:rgba(15,23,42,0.16);--pa-sh-k-004:rgba(15,23,42,0.04);--pa-sh-k-006:rgba(15,23,42,0.05);--pa-sh-k-008:rgba(15,23,42,0.05);--pa-sh-k-02:rgba(15,23,42,0.06);--pa-sh-k-025:rgba(15,23,42,0.07);--pa-sh-k-03:rgba(15,23,42,0.08);--pa-sh-k-035:rgba(15,23,42,0.09);--pa-sh-k-04:rgba(15,23,42,0.10);--pa-sh-k-045:rgba(15,23,42,0.10);--pa-surface:#ffffff;--pa-surface-2:#f1f5f9;--pa-surface-3:#e2e8f0;--pa-surface-4:#dbeafe;--pa-surface-5:#dbeafe;--pa-t:#334155;--pa-t-2:#475569;--pa-t-dim:#64748b;--pa-t-dim-2:#64748b;--pa-t-muted:#475569;--pa-t-strong:#0f172a;--pa-wb-002:rgba(15,23,42,0.030);--pa-wb-003:rgba(15,23,42,0.035);--pa-wb-004:rgba(15,23,42,0.045);--pa-wb-005:rgba(15,23,42,0.045);--pa-wb-006:rgba(15,23,42,0.055);--pa-wb-007:rgba(15,23,42,0.055);--pa-wb-008:rgba(15,23,42,0.06);--pa-wb-01:rgba(15,23,42,0.065);--pa-wb-012:rgba(15,23,42,0.07);--pa-wb-015:rgba(15,23,42,0.08);--pa-wb-02:rgba(15,23,42,0.09);--pa-wb-03:rgba(15,23,42,0.11);--pa-wb-06:rgba(15,23,42,0.20);--pa-wb-08:rgba(15,23,42,0.28);--pa-wd-004:rgba(15,23,42,0.08);--pa-wd-005:rgba(15,23,42,0.09);--pa-wd-006:rgba(15,23,42,0.10);--pa-wd-007:rgba(15,23,42,0.11);--pa-wd-008:rgba(15,23,42,0.12);--pa-wd-01:rgba(15,23,42,0.14);--pa-wd-012:rgba(15,23,42,0.16);--pa-wd-015:rgba(15,23,42,0.18);--pa-wd-02:rgba(15,23,42,0.20);--pa-wd-025:rgba(15,23,42,0.22);--pa-wd-03:rgba(15,23,42,0.24);--pa-wd-04:rgba(15,23,42,0.28);--pa-wt-07:rgba(15,23,42,0.57);--pa-wt-08:rgba(15,23,42,0.66);--pa-toggle-bg:rgba(15,23,42,0.05);--pa-toggle-bd:rgba(15,23,42,0.14);--pa-toggle-fg:#475569;--pa-toggle-bg-h:rgba(15,23,42,0.09);--pa-toggle-fg-h:#0f172a;}
+/* Scrolled navbar: a class, so it follows the theme (see main.js). */
+nav.nav-scrolled{background:var(--pa-panel-81428-098);box-shadow:0 1px 3px var(--pa-sh-k-03)}
+/* Theme toggle */
+.theme-toggle{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;padding:0;border-radius:50%;background:var(--pa-toggle-bg);border:1px solid var(--pa-toggle-bd);color:var(--pa-toggle-fg);cursor:pointer;transition:background .2s,border-color .2s,color .2s,transform .2s;flex-shrink:0}
+.theme-toggle:hover{background:var(--pa-toggle-bg-h);color:var(--pa-toggle-fg-h);transform:translateY(-1px)}
+.theme-toggle:focus-visible{outline:2px solid #60a5fa;outline-offset:2px}
+.theme-toggle svg{width:18px;height:18px;display:block;pointer-events:none}
+.theme-toggle .ico-sun{display:none}
+:root[data-theme="light"] .theme-toggle .ico-sun{display:block}
+:root[data-theme="light"] .theme-toggle .ico-moon{display:none}
+.nav-theme-item{display:flex;align-items:center}
+/* The nav list is hidden at 768px, so a second control sits by the hamburger. */
+.theme-toggle-mobile{display:none;margin-left:auto;margin-right:10px}
+@media(max-width:768px){nav .nav-theme-item{display:none}.theme-toggle-mobile{display:inline-flex}}
+@media(prefers-reduced-motion:reduce){.theme-toggle{transition:none}}
+/* The hamburger bars are painted white and would vanish on a light nav. */
+:root[data-theme="light"] .menu-toggle span{background:#0f172a}
+/* Some form fields pin color-scheme:dark, which would keep native date and
+   select pickers dark on a light page. */
+:root[data-theme="light"] input,:root[data-theme="light"] select,:root[data-theme="light"] textarea{color-scheme:light}
+/* The footer wordmark is white-on-transparent; light mode uses the blue
+   lockup the navbar already loads, so it costs no extra request. */
+.footer-brand-logo-light{display:none}
+:root[data-theme="light"] .footer-brand-logo-dark{display:none}
+:root[data-theme="light"] .footer-brand-logo-light{display:block;width:170px;max-width:170px;height:auto}
+</style>
 </head>
 <body>
 <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -93,14 +124,14 @@ a{color:inherit}
             <stop offset="100%" stop-color="#7c3aed"/>
           </linearGradient>
         </defs>
-        <circle class="spin-slow" cx="60" cy="60" r="50" fill="none" stroke="#e2e8f0" stroke-width="2" stroke-dasharray="4,6"/>
+        <circle class="spin-slow" cx="60" cy="60" r="50" fill="none" stroke="var(--pa-t)" stroke-width="2" stroke-dasharray="4,6"/>
         <circle class="spin-med" cx="60" cy="60" r="42" fill="none" stroke="url(#mg)" stroke-width="2" stroke-dasharray="8,6" opacity=".3"/>
-        <rect x="48" y="28" width="24" height="16" rx="4" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
-        <rect x="52" y="32" width="16" height="8" rx="2" fill="#e2e8f0"/>
-        <rect x="44" y="44" width="32" height="20" rx="4" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
-        <rect x="48" y="50" width="24" height="8" rx="2" fill="#e2e8f0"/>
-        <rect x="40" y="64" width="40" height="24" rx="4" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5"/>
-        <rect x="44" y="72" width="32" height="8" rx="2" fill="#e2e8f0"/>
+        <rect x="48" y="28" width="24" height="16" rx="4" fill="#f8fafc" stroke="var(--pa-t-2)" stroke-width="1.5"/>
+        <rect x="52" y="32" width="16" height="8" rx="2" fill="var(--pa-t)"/>
+        <rect x="44" y="44" width="32" height="20" rx="4" fill="#f8fafc" stroke="var(--pa-t-2)" stroke-width="1.5"/>
+        <rect x="48" y="50" width="24" height="8" rx="2" fill="var(--pa-t)"/>
+        <rect x="40" y="64" width="40" height="24" rx="4" fill="#f8fafc" stroke="var(--pa-t-2)" stroke-width="1.5"/>
+        <rect x="44" y="72" width="32" height="8" rx="2" fill="var(--pa-t)"/>
         <circle cx="30" cy="30" r="4" fill="#2563eb" opacity=".2" class="bounce-dot"/>
         <circle cx="90" cy="35" r="3" fill="#7c3aed" opacity=".15" class="bounce-dot"/>
         <circle cx="90" cy="95" r="4" fill="#2563eb" opacity=".2" class="bounce-dot"/>

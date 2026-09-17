@@ -238,12 +238,13 @@
     var tickingNav = false;
 
     function updateNav() {
+      // Toggle a class rather than writing inline colours, so the scrolled
+      // navbar follows the active theme (see nav.nav-scrolled in the
+      // #pa-theme stylesheet).
       if (window.scrollY > 10) {
-        nav.style.background = 'rgba(8,14,28,0.98)';
-        nav.style.boxShadow = '0 1px 3px rgba(0,0,0,0.3)';
+        nav.classList.add('nav-scrolled');
       } else {
-        nav.style.background = 'rgba(8,14,28,0.92)';
-        nav.style.boxShadow = 'none';
+        nav.classList.remove('nav-scrolled');
       }
     }
 
