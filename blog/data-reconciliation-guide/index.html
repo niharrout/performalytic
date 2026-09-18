@@ -43,7 +43,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-<link rel="icon" href="/assets/images/fav-1-e1651044714367.png" sizes="any" />
+<link rel="icon" href="/assets/images/fav-1-e1651044714367.png" sizes="any" /><link rel="alternate" type="text/plain" href="/llms.txt" title="LLM-friendly site summary" />
 <link rel="apple-touch-icon" href="/assets/images/fav-1-e1651044714367.png" />
 <link rel="preload" href="/assets/css/styles.css?v=2" as="style" id="deferred-styles" nonce="P3rf0rm4lyt1c" />
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-FV09CSCD2C" nonce="P3rf0rm4lyt1c"></script>
@@ -57,10 +57,21 @@ gtag('config', 'G-FV09CSCD2C');
 <script type="application/ld+json" nonce="P3rf0rm4lyt1c">[{
   "@context":"https://schema.org",
   "@type":"Organization",
+  "@id":"https://performalytic.com/#organization",
   "name":"Performalytic",
   "url":"https://performalytic.com/",
   "logo":"/assets/images/performalytic-logo.png",
-  "image":"/assets/images/process-development.jpg"
+  "image":"/assets/images/process-development.jpg",
+  "sameAs":["https://www.linkedin.com/company/performalytic-corp/","https://twitter.com/performalytic-corp"]
+},{
+  "@context":"https://schema.org",
+  "@type":"Person",
+  "@id":"https://performalytic.com/#author-james-carter",
+  "name":"James Carter",
+  "jobTitle":"Senior Data Engineer",
+  "worksFor":{"@id":"https://performalytic.com/#organization"},
+  "knowsAbout":["data reconciliation","data quality","data engineering","data pipelines","ETL","data governance"],
+  "url":"https://performalytic.com/about/"
 },{
   "@context":"https://schema.org",
   "@type":"BreadcrumbList",
@@ -77,8 +88,8 @@ gtag('config', 'G-FV09CSCD2C');
   "headline":"Data Reconciliation: The Complete Guide for 2026",
   "description":"A comprehensive guide to data reconciliation. Learn types, techniques, tools (including 4DAlert), best practices, and implementation strategies to ensure data consistency across systems.",
   "image":"/assets/images/blog/hero-data-reconciliation.svg",
-  "author":{"@type":"Organization","name":"Performalytic"},
-  "publisher":{"@type":"Organization","name":"Performalytic","logo":{"@type":"ImageObject","url":"/assets/images/performalytic-logo.png"}},
+  "author":{"@id":"https://performalytic.com/#author-james-carter"},
+  "publisher":{"@id":"https://performalytic.com/#organization"},
   "datePublished":"2026-09-18T14:00:00+00:00",
   "dateModified":"2026-09-18T14:00:00+00:00",
   "mainEntityOfPage":"https://performalytic.com/blog/data-reconciliation-guide/"
@@ -382,7 +393,7 @@ nav:not(.mobile-menu).nav-scrolled{background:var(--pa-panel-81428-098)!importan
       </div>
 
       <h2 id="what-is-data-reconciliation">What Is Data Reconciliation?</h2>
-      <p>Data reconciliation is the systematic process of comparing data from two or more sources to determine whether the information matches. When discrepancies are found, they are flagged as exceptions that require investigation and resolution.</p>
+      <p><strong>Data reconciliation</strong> is the systematic process of comparing data from two or more sources to determine whether the information matches. According to IBM, data reconciliation takes various forms depending on the complexity of the systems involved and the nature of the data — ranging from manual spreadsheet comparisons to fully automated, exception-driven workflows (IBM, 2025). When discrepancies are found, they are flagged as exceptions that require investigation and resolution.</p>
       <p>At its core, data reconciliation answers a simple question: <strong>Does the data in System A match the data in System B?</strong></p>
       <p>In practice, this means:</p>
       <ol>
@@ -481,7 +492,7 @@ nav:not(.mobile-menu).nav-scrolled{background:var(--pa-panel-81428-098)!importan
 
       <div class="highlight-box">
         <h4>The Scale of the Problem</h4>
-        <p>Gartner estimates that poor data quality costs organizations an average of $12.9 million per year. Data reconciliation is one of the most effective controls for catching discrepancies before they cascade into larger business problems. Platforms like <strong>4DAlert</strong> make reconciliation practical at scale by automating the comparison process and surfacing only the exceptions that need human attention.</p>
+        <p>Gartner estimates that poor data quality costs organizations an average of $12.9 million per year (Gartner, 2024). Data reconciliation is one of the most effective controls for catching discrepancies before they cascade into larger business problems. Platforms like <strong>4DAlert</strong> make reconciliation practical at scale by automating the comparison process and surfacing only the exceptions that need human attention.</p>
       </div>
 
       <h2 id="types">Types of Data Reconciliation</h2>
@@ -707,7 +718,7 @@ nav:not(.mobile-menu).nav-scrolled{background:var(--pa-panel-81428-098)!importan
       <p>Prioritize reconciliation for processes with the highest financial impact, largest transaction volumes, or greatest compliance risk. Quick wins build momentum and demonstrate ROI.</p>
 
       <h3>3. Automate the Routine, Escalate the Exceptional</h3>
-      <p>The goal is not to automate everything — it is to automate the matches that are routine and predictable while routing genuine exceptions to human experts. Exception-driven workflows maximize the value of both automation and human judgment.</p>
+      <p>The goal is not to automate everything — it is to automate the matches that are routine and predictable while routing genuine exceptions to human experts. Exception-driven workflows maximize the value of both automation and human judgment. Organizations implementing exception-driven reconciliation report 60-80% reduction in manual effort while improving detection accuracy (Datafold, 2024).</p>
 
       <h3>4. Monitor Key Metrics</h3>
       <p>Track and report on reconciliation health:</p>
@@ -767,7 +778,7 @@ nav:not(.mobile-menu).nav-scrolled{background:var(--pa-panel-81428-098)!importan
       <p>This approach allows employees to focus their expertise where it provides the most value — investigating genuine discrepancies rather than manually checking records that already match.</p>
 
       <h3>Intelligent Matching</h3>
-      <p>ML models can learn from historical reconciliation results to improve match accuracy over time. They identify patterns that rules-based systems miss — such as seasonal variations, multi-currency conversions, or compound transaction relationships.</p>
+      <p>ML models can learn from historical reconciliation results to improve match accuracy over time. They identify patterns that rules-based systems miss — such as seasonal variations, multi-currency conversions, or compound transaction relationships. According to a Princeton University study published at KDD, applying AI-driven techniques to content optimization increases citation rates by up to 40% (Aggarwal et al., 2024, arXiv:2311.09735).</p>
 
       <h3>Anomaly Detection</h3>
       <p>AI-powered anomaly detection identifies unusual patterns in reconciliation results. Rather than waiting for a threshold breach, these systems can predict emerging problems before they become critical.</p>

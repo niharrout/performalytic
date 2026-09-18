@@ -1,56 +1,51 @@
 # Performalytic
 
-> Data-Driven Growth for Your Business. Performalytic is an enterprise data analytics, AI, and DevOps consulting firm that helps organizations turn data into a competitive advantage. Headquartered in Chicago, IL with a global delivery center in Bhubaneswar, India. Trusted by 500+ enterprise clients with 800+ data professionals and 99.9% client satisfaction.
+> Performalytic is an enterprise data analytics, AI, and DevOps consulting firm headquartered in Chicago, IL with a global delivery center in Bhubaneswar, India. Trusted by 500+ enterprise clients with 800+ data professionals and 99.9% client satisfaction. We help organizations turn data into a competitive advantage.
 
 ## Services
-- [Enterprise Solution Development](/enterprise-solution-development/): Data strategy, architecture, master data management, governance, and platform modernization
-- [Advanced Analytics & AI](/advanced-analytics-ai/): Machine learning, generative AI, RAG systems, AI agents, predictive analytics, and responsible AI
-- [BI Integration](/bi-integration/): Business intelligence implementation on Power BI, SAP, Snowflake, Databricks, and Microsoft Fabric
-- [Application Development & System Integration](/application-development-and-system-integration/): Custom application development, CI/CD automation, and system integration
 
-## Solutions
-- AI-Powered MDM & Entity Resolution
-- Automated Data Reconciliation
-- Data Quality & Observability
-- CI/CD Pipeline Automation
-- Schema Compare & Version Control
-- Entity Relationship Modeling
+- [Enterprise Solution Development](https://performalytic.com/enterprise-solution-development/): Data strategy, architecture, master data management, governance, and platform modernization
+- [Advanced Analytics & AI](https://performalytic.com/advanced-analytics-ai/): Machine learning, generative AI, RAG systems, AI agents, predictive analytics, and responsible AI
+- [BI Integration](https://performalytic.com/bi-integration/): Business intelligence implementation on Power BI, SAP, Snowflake, Databricks, and Microsoft Fabric
+- [Application Development & System Integration](https://performalytic.com/application-development-and-system-integration/): Custom application development, CI/CD automation, and system integration
 
-## Products & Tools
-- [4DAlert](/products/): AI-powered data management platform
-- [Data ROI Calculator](/tools/data-roi-calculator/): Free interactive tool to estimate savings from better data
-- [All Tools](/tools/): Calculators and assessments
+## Products
+
+- [4DAlert](https://performalytic.com/products/): AI-powered data management platform for data reconciliation, quality, and CI/CD
+- [Data ROI Calculator](https://performalytic.com/tools/data-roi-calculator/): Free interactive tool to estimate savings from better data
+
+## Key Topics
+
+- Data Reconciliation: Automated cross-system data comparison, exception-driven workflows, and reconciliation best practices
+- Master Data Management: Entity resolution, golden record, MDM implementation patterns
+- Data Quality: Data quality frameworks, AI-native data quality, observability
+- Business Intelligence: BI platform comparison, analytics strategy, dashboard design
+- AI & Machine Learning: RAG architecture, AI agents, responsible AI, generative AI
+- DevOps: CI/CD for data, schema compare, pipeline automation
+
+## Blog
+
+- [Data Reconciliation: The Complete Guide for 2026](https://performalytic.com/blog/data-reconciliation-guide/)
+- [Automated Data Reconciliation: The Ultimate Guide](https://performalytic.com/blog/automated-data-reconciliation/)
+- [Enterprise RAG Architecture: A Practical Guide](https://performalytic.com/blog/enterprise-rag-architecture/)
+- [AI Agents in the Enterprise](https://performalytic.com/blog/ai-agents-enterprise/)
+- [Databricks vs Snowflake: Complete Comparison](https://performalytic.com/blog/databricks-vs-snowflake/)
+- [What is Business Intelligence? Complete Guide](https://performalytic.com/blog/what-is-business-intelligence/)
+- [Data Quality Framework: Step-by-Step Guide](https://performalytic.com/blog/data-quality-framework/)
+- [Master Data Management in the AI Era](https://performalytic.com/blog/mdm-ai-era/)
+- [The Future of Automated Data Reconciliation](https://performalytic.com/blog/future-of-automated-data-reconciliation/)
+- [Data Reconciliation Across Cloud Platforms](https://performalytic.com/blog/cross-cloud-data-reconciliation/)
+- [How AI Is Changing Data Quality](https://performalytic.com/blog/ai-changing-data-quality/)
+- [Building a Responsible AI Framework](https://performalytic.com/blog/responsible-ai-framework/)
+- [The Real Cost of Bad Data](https://performalytic.com/blog/real-cost-of-bad-data/)
+- [Schema Compare Guide](https://performalytic.com/blog/schema-compare-guide/)
 
 ## Company
-- [About](/about/)
-- [Case Studies](/case-studies/)
-- [Testimonials](/testimonials/)
-- [Industries](/industries/)
-- [Technologies](/technologies/)
-- [Technology Partners](/partners/)
-- [Knowledge Hub](/knowledge/)
-- [FAQ](/faq/)
-- [Careers](/careers/)
-- [Contact](/contact/)
 
-## Blog (Latest Insights)
-- [Databricks vs Snowflake: The Complete Comparison Guide for 2026](/blog/databricks-vs-snowflake/)
-- [Enterprise RAG Architecture: A Practical Guide for 2026](/blog/enterprise-rag-architecture/)
-- [AI Agents in the Enterprise: From Copilots to Autonomous Workflows](/blog/ai-agents-enterprise/)
-- [The Real Cost of Bad Data: How Poor Data Quality Impacts Your Bottom Line](/blog/real-cost-of-bad-data/)
-- [Master Data Management (MDM) in the AI Era](/blog/mdm-ai-era/)
-- [What Is Master Data Management (MDM)? A Complete Guide](/blog/what-is-master-data-management/)
-- [Building a Responsible AI Framework: Governance, Bias, and Compliance in 2026](/blog/responsible-ai-framework/)
-- [Automated Data Reconciliation: The Ultimate Guide for 2026](/blog/automated-data-reconciliation/)
-- [How to Build a Data-Driven Culture in Your Organization](/blog/build-data-driven-culture/)
-- [What is Business Intelligence? A Complete Guide for 2026](/blog/what-is-business-intelligence/)
-- [The Data Modeling Crisis: Why 89% of Teams Struggle with Semantics](/blog/data-modeling-crisis/)
-- [How AI Is Changing Data Quality](/blog/ai-changing-data-quality/)
-- [5 Signs Your Data Infrastructure Is Holding Your Business Back](/blog/signs-data-infrastructure-holding-back/)
-- [DevOps Best Practices for Data Teams](/blog/devops-best-practices/)
-- [How to Choose the Right Analytics Platform](/blog/choose-right-analytics-platform/)
-- [Data Reconciliation Across Cloud Platforms](/blog/cross-cloud-data-reconciliation/)
-- [The Ultimate Guide to Data-Driven Decision Making in 2026](/blog/data-driven-decision-making/)
-- [How AI is Transforming Business Intelligence](/blog/ai-business-intelligence/)
-- [The Ultimate Guide to Schema Compare & CI/CD for Databases](/blog/schema-compare-guide/)
-- [Building a Data Quality Framework That Actually Works](/blog/data-quality-framework/)
+- [About](https://performalytic.com/about/)
+- [Industries](https://performalytic.com/industries/)
+- [Technologies](https://performalytic.com/technologies/)
+- [Knowledge Hub](https://performalytic.com/knowledge/)
+- [FAQ](https://performalytic.com/faq/)
+- [Contact](https://performalytic.com/contact/)
+- [Careers](https://performalytic.com/careers/)
