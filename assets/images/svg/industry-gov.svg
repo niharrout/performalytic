@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <defs>
+    <linearGradient id="govGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2563eb"/>
+      <stop offset="100%" style="stop-color:#60a5fa"/>
+    </linearGradient>
+  </defs>
+  <rect width="200" height="200" rx="16" fill="#0f1d35"/>
+
+  <!-- Government building -->
+  <g>
+    <!-- Dome -->
+    <path d="M85,75 Q100,40 115,75 Z" fill="rgba(96,165,250,0.15)" stroke="#60a5fa" stroke-width="1.5"/>
+    <line x1="100" y1="42" x2="100" y2="75" stroke="rgba(96,165,250,0.35)" stroke-width="1"/>
+    <line x1="90" y1="52" x2="110" y2="52" stroke="rgba(96,165,250,0.35)" stroke-width="1"/>
+
+    <!-- Main body -->
+    <rect x="65" y="75" width="70" height="65" rx="3" fill="rgba(37,99,235,0.08)" stroke="rgba(96,165,250,0.4)" stroke-width="1.5"/>
+
+    <!-- Pediment -->
+    <polygon points="60,75 100,50 140,75" fill="rgba(96,165,250,0.12)" stroke="rgba(96,165,250,0.4)" stroke-width="1.5"/>
+
+    <!-- Columns -->
+    <rect x="72" y="80" width="7" height="52" rx="2" fill="rgba(96,165,250,0.1)" stroke="rgba(96,165,250,0.3)" stroke-width="1"/>
+    <rect x="84" y="80" width="7" height="52" rx="2" fill="rgba(96,165,250,0.1)" stroke="rgba(96,165,250,0.3)" stroke-width="1"/>
+    <rect x="109" y="80" width="7" height="52" rx="2" fill="rgba(96,165,250,0.1)" stroke="rgba(96,165,250,0.3)" stroke-width="1"/>
+    <rect x="121" y="80" width="7" height="52" rx="2" fill="rgba(96,165,250,0.1)" stroke="rgba(96,165,250,0.3)" stroke-width="1"/>
+
+    <!-- Base -->
+    <rect x="58" y="132" width="84" height="10" rx="2" fill="rgba(96,165,250,0.1)" stroke="rgba(96,165,250,0.25)" stroke-width="1"/>
+  </g>
+
+  <!-- Flag -->
+  <g>
+    <line x1="148" y1="40" x2="148" y2="120" stroke="#60a5fa" stroke-width="2"/>
+    <path d="M148,40 L174,47 L148,54 Z" fill="rgba(239,68,68,0.35)" stroke="rgba(248,113,113,0.5)" stroke-width="1"/>
+  </g>
+
+  <!-- Shield -->
+  <g transform="translate(100, 158)">
+    <path d="M0,-12 L10,-6 L10,4 C10,10 0,16 0,16 C0,16-10,10-10,4 L-10,-6 Z" fill="rgba(74,222,128,0.1)" stroke="#4ade80" stroke-width="1.2"/>
+    <path d="M0,-7 L6,-3 L6,3 C6,7 0,11 0,11 C0,11-6,7-6,3 L-6,-3 Z" fill="rgba(74,222,128,0.2)"/>
+  </g>
+
+  <!-- Data stream -->
+  <path d="M30,150 Q60,130 80,158" fill="none" stroke="url(#govGrad)" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.6">
+    <animate attributeName="stroke-dashoffset" values="0;14" dur="2s" repeatCount="indefinite"/>
+  </path>
+  <circle cx="30" cy="150" r="4" fill="none" stroke="#60a5fa" stroke-width="1.5"/>
+  <circle cx="30" cy="150" r="1.5" fill="#60a5fa"/>
+</svg>
