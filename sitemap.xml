@@ -2,252 +2,272 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://performalytic.com/</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-09-18</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://performalytic.com/about/</loc>
-    <lastmod>2026-08-19</lastmod>
+    <lastmod>2026-09-17</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://performalytic.com/advanced-analytics-ai/</loc>
-    <lastmod>2026-08-19</lastmod>
+    <lastmod>2026-09-17</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://performalytic.com/application-development-and-system-integration/</loc>
-    <lastmod>2026-08-19</lastmod>
+    <lastmod>2026-09-17</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://performalytic.com/bi-integration/</loc>
-    <lastmod>2026-08-19</lastmod>
+    <lastmod>2026-09-17</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://performalytic.com/blog/</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-09-18</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://performalytic.com/blog/ai-agents-enterprise/</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-09-17</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://performalytic.com/blog/ai-business-intelligence/</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-09-17</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://performalytic.com/blog/ai-changing-data-quality/</loc>
-    <lastmod>2026-08-19</lastmod>
+    <lastmod>2026-09-17</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://performalytic.com/blog/automated-data-reconciliation/</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-09-17</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://performalytic.com/blog/build-data-driven-culture/</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-09-17</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://performalytic.com/blog/choose-right-analytics-platform/</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-09-17</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://performalytic.com/blog/cross-cloud-data-reconciliation/</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-09-17</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://performalytic.com/blog/data-driven-decision-making/</loc>
-    <lastmod>2026-08-19</lastmod>
+    <lastmod>2026-09-17</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://performalytic.com/blog/data-modeling-crisis/</loc>
-    <lastmod>2026-08-19</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://performalytic.com/blog/databricks-vs-snowflake/</loc>
-    <lastmod>2026-08-21</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://performalytic.com/blog/devops-best-practices/</loc>
-    <lastmod>2026-08-21</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://performalytic.com/blog/enterprise-rag-architecture/</loc>
-    <lastmod>2026-08-21</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://performalytic.com/blog/future-of-automated-data-reconciliation/</loc>
-    <lastmod>2026-08-21</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://performalytic.com/blog/mdm-ai-era/</loc>
-    <lastmod>2026-08-21</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://performalytic.com/blog/real-cost-of-bad-data/</loc>
-    <lastmod>2026-08-21</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://performalytic.com/blog/responsible-ai-framework/</loc>
-    <lastmod>2026-08-21</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://performalytic.com/blog/signs-data-infrastructure-holding-back/</loc>
-    <lastmod>2026-08-21</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://performalytic.com/blog/what-is-business-intelligence/</loc>
-    <lastmod>2026-08-21</lastmod>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://performalytic.com/blog/what-is-master-data-management/</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-09-17</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://performalytic.com/blog/data-quality-framework/</loc>
-    <lastmod>2026-08-27</lastmod>
+    <lastmod>2026-09-17</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://performalytic.com/blog/data-reconciliation-guide/</loc>
+    <lastmod>2026-09-18</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://performalytic.com/blog/databricks-vs-snowflake/</loc>
+    <lastmod>2026-09-17</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://performalytic.com/blog/devops-best-practices/</loc>
+    <lastmod>2026-09-17</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://performalytic.com/blog/enterprise-rag-architecture/</loc>
+    <lastmod>2026-09-17</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://performalytic.com/blog/future-of-automated-data-reconciliation/</loc>
+    <lastmod>2026-09-17</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://performalytic.com/blog/mdm-ai-era/</loc>
+    <lastmod>2026-09-17</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://performalytic.com/blog/mdm-implementation-patterns/</loc>
+    <lastmod>2026-09-17</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://performalytic.com/blog/real-cost-of-bad-data/</loc>
+    <lastmod>2026-09-17</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://performalytic.com/blog/responsible-ai-framework/</loc>
+    <lastmod>2026-09-17</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://performalytic.com/blog/schema-compare-guide/</loc>
-    <lastmod>2026-08-25</lastmod>
+    <lastmod>2026-09-17</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://performalytic.com/blog/signs-data-infrastructure-holding-back/</loc>
+    <lastmod>2026-09-17</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://performalytic.com/blog/what-is-business-intelligence/</loc>
+    <lastmod>2026-09-17</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://performalytic.com/blog/what-is-master-data-management/</loc>
+    <lastmod>2026-09-17</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://performalytic.com/book-meeting/</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-09-17</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://performalytic.com/careers/</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-09-17</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://performalytic.com/careers/apply/</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-09-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://performalytic.com/case-studies/</loc>
+    <lastmod>2026-09-17</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://performalytic.com/contact/</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-09-17</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://performalytic.com/cookie-policy/</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-09-17</lastmod>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://performalytic.com/enterprise-solution-development/</loc>
-    <lastmod>2026-08-19</lastmod>
+    <lastmod>2026-09-17</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://performalytic.com/faq/</loc>
-    <lastmod>2026-08-19</lastmod>
+    <lastmod>2026-09-17</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://performalytic.com/industries/</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-09-17</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://performalytic.com/knowledge/</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-09-17</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://performalytic.com/knowledge/ai-machine-learning/</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-09-17</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://performalytic.com/knowledge/business-intelligence-analytics/</loc>
-    <lastmod>2026-08-19</lastmod>
+    <lastmod>2026-09-17</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://performalytic.com/knowledge/cloud-data-platforms/</loc>
-    <lastmod>2026-08-19</lastmod>
+    <lastmod>2026-09-17</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://performalytic.com/knowledge/data-architecture-engineering/</loc>
-    <lastmod>2026-08-19</lastmod>
+    <lastmod>2026-09-17</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://performalytic.com/knowledge/data-governance-quality/</loc>
-    <lastmod>2026-08-19</lastmod>
+    <lastmod>2026-09-17</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://performalytic.com/knowledge/dataops-devops/</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-09-17</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://performalytic.com/privacy-policy/</loc>
-    <lastmod>2026-08-19</lastmod>
+    <lastmod>2026-09-17</lastmod>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://performalytic.com/products/</loc>
-    <lastmod>2026-08-19</lastmod>
+    <lastmod>2026-09-18</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://performalytic.com/sitemap.html</loc>
-    <lastmod>2026-08-21</lastmod>
+    <loc>https://performalytic.com/security/</loc>
+    <lastmod>2026-09-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://performalytic.com/sitemap/</loc>
+    <lastmod>2026-09-18</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://performalytic.com/technologies/</loc>
-    <lastmod>2026-08-19</lastmod>
+    <lastmod>2026-09-17</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://performalytic.com/terms-conditions/</loc>
-    <lastmod>2026-08-19</lastmod>
+    <lastmod>2026-09-17</lastmod>
     <priority>0.3</priority>
   </url>
   <url>
     <loc>https://performalytic.com/testimonials/</loc>
-    <lastmod>2026-08-19</lastmod>
+    <lastmod>2026-09-17</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://performalytic.com/tools/</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-09-18</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://performalytic.com/tools/data-roi-calculator/</loc>
-    <lastmod>2026-08-19</lastmod>
+    <lastmod>2026-09-17</lastmod>
     <priority>0.7</priority>
   </url>
 </urlset>
