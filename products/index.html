@@ -122,11 +122,6 @@ nav .container{display:flex;align-items:center;justify-content:space-between;hei
 .mobile-menu .nav-cta{text-align:center;padding:14px;margin-top:8px;border-radius:100px;display:block}
 
 /* Hero */
-.breadcrumb{padding:100px 0 0;font-size:0.82rem;color:var(--pa-t-dim)}
-.breadcrumb a{color:var(--pa-t-muted);text-decoration:none;transition:color .2s}
-.breadcrumb a:hover{color:var(--pa-at-blue)}
-.breadcrumb .sep{margin:0 8px;opacity:.4}
-.breadcrumb .current{color:var(--pa-t)}
 .product-hero{position:relative;overflow:hidden;background:linear-gradient(180deg,var(--pa-bg) 0%,var(--pa-bg-2) 60%,var(--pa-bg-3) 100%);padding:160px 0 100px}
 .product-hero::before{content:'';position:absolute;width:900px;height:900px;border-radius:50%;left:-300px;top:-350px;background:radial-gradient(circle,rgba(37,99,235,0.18),transparent 65%);pointer-events:none;filter:blur(8px);animation:heroBlob 14s ease-in-out infinite alternate}
 .product-hero::after{content:'';position:absolute;width:700px;height:700px;border-radius:50%;right:-250px;bottom:-350px;background:radial-gradient(circle,rgba(124,58,237,0.15),transparent 65%);pointer-events:none;filter:blur(8px);animation:heroBlob 16s ease-in-out infinite alternate-reverse}
@@ -522,10 +517,6 @@ nav:not(.mobile-menu).nav-scrolled{background:var(--pa-panel-81428-098)!importan
 </header>
 
 <main id="main-content">
-
-<div class="breadcrumb container" aria-label="Breadcrumb" role="navigation">
-  <a href="/">Home</a><span class="sep" aria-hidden="true">/</span><span class="current" aria-current="page">Products</span>
-</div>
 
 <!-- Hero -->
 <section class="product-hero" id="hero" aria-label="4DAlert platform overview">
