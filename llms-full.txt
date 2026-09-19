@@ -39,7 +39,7 @@ Custom application development, continuous integration/continuous deployment (CI
 
 ## Products & Tools
 
-- **4DAlert:** AI-powered data management platform for data reconciliation, quality, and CI/CD (https://performalytic.com/products/).
+- **4DAlert** (https://4dalert.com): AI-powered data management platform built by Performalytic. Modules: AI-powered MDM and entity resolution, automated data reconciliation, data quality and observability, CI/CD pipeline automation, schema compare and version control (SQL Server, PostgreSQL, Oracle, Snowflake, and other databases), entity relationship modeling, and the Ask4D GenAI assistant. Product overview: https://performalytic.com/products/.
 - **Data ROI Calculator:** Free interactive tool that estimates cost savings from better data management (https://performalytic.com/tools/data-roi-calculator/).
 - **Tools Hub:** https://performalytic.com/tools/
 
@@ -113,6 +113,64 @@ We serve enterprises across regulated industries including finance, healthcare, 
 - **Nihar Rout** — Managing Partner & Advisor. Former senior roles at Accenture, Ecolab, and General Electric. MBA from Northwestern's Kellogg School of Management.
 - **Abani Pattanayak** — Partner & Advisor. SAP Catalyst, SAP Executive Data Chef, and SAP HANA Distinguished Engineer. Regular speaker at SAP TechEd, Sapphire, and S-KOM.
 
+## Knowledge Hub
+
+Free practical guides on enterprise data at https://performalytic.com/knowledge/. Each topic page has key definitions, a reading list, and an FAQ.
+
+### Data Architecture & Engineering
+https://performalytic.com/knowledge/data-architecture-engineering/
+Designing scalable data platforms, pipelines, lakehouses, data modeling, and reconciliation built into the architecture.
+
+- **Data architecture:** Data architecture is the blueprint for how an organization collects, stores, integrates, and serves data. It defines the platforms (warehouse, lakehouse, operational stores), the data models, the integration patterns between systems, and the rules for who can use which data. Good architecture makes new use cases cheap to add; poor architecture makes every new report a project.
+- **Data engineering:** Data engineering is the discipline of building and operating the pipelines that move data from source systems into analytics-ready form. It covers ingestion, transformation, orchestration, testing, and monitoring — the work that turns raw operational data into reliable tables that analysts, BI tools, and AI models can depend on.
+- **Data lakehouse:** A data lakehouse combines the low-cost, open-format storage of a data lake with the transactions, schema enforcement, and query performance of a data warehouse. Platforms such as Databricks (Delta Lake), Snowflake, and Microsoft Fabric let one copy of data serve BI, data science, and machine learning.
+- **Batch vs. streaming pipelines:** Batch pipelines process data on a schedule (hourly or nightly) and are simpler and cheaper to run. Streaming pipelines process events continuously and are worth the extra complexity only when a decision genuinely needs data within seconds or minutes — fraud detection, inventory, or operational alerts.
+
+### Business Intelligence & Analytics
+https://performalytic.com/knowledge/business-intelligence-analytics/
+BI strategy, semantic layers, dashboards people use, choosing an analytics platform, and AI in BI.
+
+- **Business intelligence (BI):** Business intelligence is the set of tools and practices that turn organizational data into reports, dashboards, and analysis people use to make decisions. A BI stack typically includes a data source (warehouse or lakehouse), a semantic model that defines metrics consistently, and a visualization tool such as Power BI, Tableau, or Looker.
+- **BI vs. data analytics:** BI focuses on describing what happened and what is happening now, through standard reports and dashboards. Data analytics is broader: it includes diagnostic analysis (why it happened), predictive modelling (what will happen), and prescriptive recommendations (what to do). Mature organizations need both.
+- **Semantic layer:** A semantic layer is a shared set of business definitions — metrics, dimensions, and relationships — that sits between raw data and BI tools. It ensures “revenue” or “active customer” means the same thing in every dashboard, which is the most common cause of reports that disagree.
+- **What makes a dashboard useful:** A useful dashboard answers a specific decision-maker’s questions, shows a small number of trusted metrics with context (targets, trends, comparisons), and loads quickly. Dashboards fail when they try to serve every audience at once or are built on data nobody trusts.
+
+### AI & Machine Learning
+https://performalytic.com/knowledge/ai-machine-learning/
+Production AI: RAG architecture, AI agents, MLOps, and responsible AI governance.
+
+- **Retrieval-augmented generation (RAG):** RAG is an architecture that grounds a large language model in your own data. At question time, relevant documents are retrieved (usually from a vector index) and passed to the model as context, so answers are based on current, company-specific information and can cite their sources — reducing hallucinations without retraining the model.
+- **AI agent:** An AI agent is a system in which a language model plans and carries out multi-step tasks by calling tools — searching data, running queries, calling APIs, or updating records — rather than only generating text. Enterprise agents need guardrails, permissions, and audit trails because they take actions, not just give answers.
+- **MLOps:** MLOps applies DevOps practices to machine learning: versioning data and models, automated training and deployment pipelines, monitoring for data and model drift, and controlled rollback. It is what takes a model from a notebook to a reliable production service.
+- **Responsible AI:** Responsible AI is the set of policies and controls that make AI systems fair, transparent, secure, and compliant — including risk assessment, bias testing, human oversight, documentation, and alignment with frameworks such as the EU AI Act and the NIST AI Risk Management Framework.
+
+### Data Governance & Quality
+https://performalytic.com/knowledge/data-governance-quality/
+Data governance, data quality frameworks, master data management (MDM), golden records, and AI-native data quality.
+
+- **Data governance:** Data governance is the framework of ownership, policies, standards, and processes that ensures data is accurate, secure, consistently defined, and used appropriately. Effective governance assigns clear data owners and stewards, defines critical data elements, and builds controls into everyday workflows instead of adding approval layers.
+- **Data quality:** Data quality measures how fit data is for its intended use. It is commonly assessed across dimensions such as accuracy, completeness, consistency, timeliness, validity, and uniqueness. High-quality data is monitored continuously, not cleaned once.
+- **Master data management (MDM):** Master data management creates and maintains a single, trusted version of core business entities — customers, products, suppliers, locations, and employees — across all systems. It matches and merges duplicate records into a “golden record” and keeps it synchronised with the applications that use it.
+- **Golden record:** A golden record is the single, most accurate and complete version of an entity, assembled by matching duplicate records from multiple systems and applying survivorship rules to choose the best value for each attribute. It is the reference every downstream system and AI model should use.
+
+### Cloud Data Platforms
+https://performalytic.com/knowledge/cloud-data-platforms/
+Snowflake, Databricks, Microsoft Fabric, cloud migration, cost control, and multi-cloud data consistency.
+
+- **Cloud data platform:** A cloud data platform is a managed service for storing, processing, and analysing data at scale — such as Snowflake, Databricks, Google BigQuery, Amazon Redshift, or Microsoft Fabric. It separates storage from compute so each can scale independently, and you pay for what you use.
+- **Snowflake vs. Databricks in one sentence:** Snowflake is a fully managed, SQL-first data warehouse optimised for analytics and data sharing; Databricks is a lakehouse platform built on Apache Spark that is strongest for data engineering, data science, and machine learning. Both now overlap heavily, so the right choice depends on workloads and team skills.
+- **Multi-cloud data management:** Multi-cloud data management means running data workloads across more than one cloud provider — for example AWS, Azure, and Google Cloud — while keeping data consistent, governed, and secure across them. Its hardest problems are data drift between environments, differing formats, and cross-cloud reconciliation.
+- **What drives cloud data costs:** Compute is usually the largest cost: warehouse or cluster size, how long it runs, and inefficient queries. Storage, data egress between regions or clouds, and idle resources follow. Cost control comes from right-sizing, auto-suspend, query optimisation, and usage monitoring.
+
+### DataOps & DevOps
+https://performalytic.com/knowledge/dataops-devops/
+DataOps, CI/CD for data, schema compare, and automated data reconciliation.
+
+- **DataOps:** DataOps applies DevOps and agile practices to data pipelines: version control, automated testing, continuous integration and deployment, monitoring, and fast feedback loops. The goal is to deliver reliable data faster, with fewer manual steps and fewer production incidents.
+- **CI/CD for data:** CI/CD for data means every change to a pipeline, transformation, or database schema is version-controlled, automatically tested, and deployed through the same controlled path to each environment. It replaces hand-run scripts and manual deployments that cause most data outages.
+- **Schema compare:** Schema compare analyses two database schemas — typically development versus production — to find differences in tables, columns, data types, keys, and constraints. It is used to detect breaking changes and schema drift before they reach production and break downstream pipelines and reports.
+- **Automated data reconciliation:** Automated data reconciliation continuously compares data between systems — record counts, aggregates, and field-level values — and flags only the exceptions that exceed an agreed tolerance. It replaces spreadsheet and ad-hoc SQL checks with repeatable, auditable validation.
+
 ## Blog Articles
 
 - Databricks vs Snowflake: The Complete Comparison Guide for 2026 — https://performalytic.com/blog/databricks-vs-snowflake/
@@ -135,7 +193,10 @@ We serve enterprises across regulated industries including finance, healthcare, 
 - How AI is Transforming Business Intelligence — https://performalytic.com/blog/ai-business-intelligence/
 - The Ultimate Guide to Schema Compare & CI/CD for Databases — https://performalytic.com/blog/schema-compare-guide/
 - Building a Data Quality Framework That Actually Works — https://performalytic.com/blog/data-quality-framework/
-- Data-driven Decision Making Guide — https://performalytic.com/blog/data-driven-decision-making/
+
+- Data Reconciliation: The Complete Guide for 2026 — https://performalytic.com/blog/data-reconciliation-guide/
+- MDM Implementation Patterns: Registry, Consolidation, and Coexistence — https://performalytic.com/blog/mdm-implementation-patterns/
+- The Future of Automated Data Reconciliation — https://performalytic.com/blog/future-of-automated-data-reconciliation/
 
 ## Full Site Index
 
@@ -146,6 +207,7 @@ We serve enterprises across regulated industries including finance, healthcare, 
 - BI Integration: https://performalytic.com/bi-integration/
 - Application Development & System Integration: https://performalytic.com/application-development-and-system-integration/
 - Products: https://performalytic.com/products/
+- 4DAlert app: https://4dalert.com
 - Technologies: https://performalytic.com/technologies/
 - Industries: https://performalytic.com/industries/
 - Case Studies: https://performalytic.com/case-studies/
@@ -153,9 +215,18 @@ We serve enterprises across regulated industries including finance, healthcare, 
 - Blog: https://performalytic.com/blog/
 - Tools: https://performalytic.com/tools/
 - Knowledge Hub: https://performalytic.com/knowledge/
+- Knowledge Hub — Data Architecture & Engineering: https://performalytic.com/knowledge/data-architecture-engineering/
+- Knowledge Hub — Business Intelligence & Analytics: https://performalytic.com/knowledge/business-intelligence-analytics/
+- Knowledge Hub — AI & Machine Learning: https://performalytic.com/knowledge/ai-machine-learning/
+- Knowledge Hub — Data Governance & Quality: https://performalytic.com/knowledge/data-governance-quality/
+- Knowledge Hub — Cloud Data Platforms: https://performalytic.com/knowledge/cloud-data-platforms/
+- Knowledge Hub — DataOps & DevOps: https://performalytic.com/knowledge/dataops-devops/
 - FAQ: https://performalytic.com/faq/
 - Careers: https://performalytic.com/careers/
 - Contact: https://performalytic.com/contact/
+- Book a Meeting: https://performalytic.com/book-meeting/
+- Security: https://performalytic.com/security/
+- Cookie Policy: https://performalytic.com/cookie-policy/
 - Privacy Policy: https://performalytic.com/privacy-policy/
 - Terms & Conditions: https://performalytic.com/terms-conditions/
 - Cookie Policy: https://performalytic.com/cookie-policy/

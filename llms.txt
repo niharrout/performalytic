@@ -11,7 +11,8 @@
 
 ## Products
 
-- [4DAlert](https://performalytic.com/products/): AI-powered data management platform for data reconciliation, quality, and CI/CD
+- [4DAlert](https://4dalert.com): AI-powered data management platform by Performalytic — automated data reconciliation, data quality and observability, master data management and entity resolution, schema compare, CI/CD for data, and the Ask4D GenAI assistant. App and product site: https://4dalert.com
+- [4DAlert product overview](https://performalytic.com/products/): Modules, integrations, and use cases on performalytic.com
 - [Data ROI Calculator](https://performalytic.com/tools/data-roi-calculator/): Free interactive tool to estimate savings from better data
 
 ## Key Topics
@@ -22,6 +23,16 @@
 - Business Intelligence: BI platform comparison, analytics strategy, dashboard design
 - AI & Machine Learning: RAG architecture, AI agents, responsible AI, generative AI
 - DevOps: CI/CD for data, schema compare, pipeline automation
+
+## Knowledge Hub
+
+- [Knowledge Hub](https://performalytic.com/knowledge/): Free practical guides on enterprise data, with definitions and FAQs for each topic
+- [Data Architecture & Engineering](https://performalytic.com/knowledge/data-architecture-engineering/): Designing scalable data platforms, pipelines, lakehouses, data modeling, and reconciliation built into the architecture
+- [Business Intelligence & Analytics](https://performalytic.com/knowledge/business-intelligence-analytics/): BI strategy, semantic layers, dashboards people use, choosing an analytics platform, and AI in BI
+- [AI & Machine Learning](https://performalytic.com/knowledge/ai-machine-learning/): Production AI: RAG architecture, AI agents, MLOps, and responsible AI governance
+- [Data Governance & Quality](https://performalytic.com/knowledge/data-governance-quality/): Data governance, data quality frameworks, master data management (MDM), golden records, and AI-native data quality
+- [Cloud Data Platforms](https://performalytic.com/knowledge/cloud-data-platforms/): Snowflake, Databricks, Microsoft Fabric, cloud migration, cost control, and multi-cloud data consistency
+- [DataOps & DevOps](https://performalytic.com/knowledge/dataops-devops/): DataOps, CI/CD for data, schema compare, and automated data reconciliation
 
 ## Blog
 
@@ -40,6 +51,12 @@
 - [The Real Cost of Bad Data](https://performalytic.com/blog/real-cost-of-bad-data/)
 - [Schema Compare Guide](https://performalytic.com/blog/schema-compare-guide/)
 
+- [What Is Master Data Management (MDM)? A Complete Guide](https://performalytic.com/blog/what-is-master-data-management/)
+- [MDM Implementation Patterns: Registry, Consolidation, and Coexistence](https://performalytic.com/blog/mdm-implementation-patterns/)
+- [Data Modeling Crisis: Why Teams Struggle with Semantics](https://performalytic.com/blog/data-modeling-crisis/)
+- [How to Choose the Right Analytics Platform](https://performalytic.com/blog/choose-right-analytics-platform/)
+- [DevOps Best Practices for Data Teams](https://performalytic.com/blog/devops-best-practices/)
+
 ## Company
 
 - [About](https://performalytic.com/about/)
@@ -49,3 +66,5 @@
 - [FAQ](https://performalytic.com/faq/)
 - [Contact](https://performalytic.com/contact/)
 - [Careers](https://performalytic.com/careers/)
+- [Book a Meeting](https://performalytic.com/book-meeting/)
+- [4DAlert app](https://4dalert.com)
