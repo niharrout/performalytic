@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" role="img" aria-labelledby="erTitle erDesc">
+<title id="erTitle">AI entity resolution</title>
+<desc id="erDesc">Candidate records from CRM, ERP, and marketing are compared using deterministic, probabilistic, and machine learning methods, then merged into one golden record with audit logging</desc>
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0B1120"/><stop offset="1" stop-color="#111C33"/></linearGradient>
+<linearGradient id="brand" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2563EB"/><stop offset="1" stop-color="#7C3AED"/></linearGradient>
+<radialGradient id="glowBlue"><stop offset="0" stop-color="#2563EB" stop-opacity="0.26"/><stop offset="1" stop-color="#2563EB" stop-opacity="0"/></radialGradient>
+<radialGradient id="glowGreen"><stop offset="0" stop-color="#34D399" stop-opacity="0.16"/><stop offset="1" stop-color="#34D399" stop-opacity="0"/></radialGradient>
+<pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#94A3B8" stroke-opacity="0.05"/></pattern>
+<filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="10" stdDeviation="18" flood-color="#000814" flood-opacity="0.45"/></filter>
+<marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#60A5FA" fill-opacity="0.65"/></marker>
+<marker id="arrG" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#34D399" fill-opacity="0.65"/></marker>
+</defs>
+<rect width="1200" height="600" fill="url(#bg)"/>
+<rect width="1200" height="600" fill="url(#grid)"/>
+<ellipse cx="600" cy="280" rx="330" ry="260" fill="url(#glowBlue)"/>
+<ellipse cx="974" cy="300" rx="240" ry="210" fill="url(#glowGreen)"/>
+
+<g font-family="Inter, Segoe UI, system-ui, sans-serif">
+<text x="64" y="66" font-size="13" font-weight="700" letter-spacing="4" fill="#60A5FA">ENTITY RESOLUTION</text>
+<text x="64" y="100" font-size="19" font-weight="800" fill="#E2E8F0">Which records are the same person?</text>
+
+<text x="64" y="150" font-size="11.5" font-weight="700" letter-spacing="2.5" fill="#64748B">CANDIDATE RECORDS</text>
+<text x="600" y="150" text-anchor="middle" font-size="11.5" font-weight="700" letter-spacing="2.5" fill="#64748B">HOW MATCHING WORKS</text>
+
+<!-- candidate cards -->
+<g>
+<rect x="64" y="170" width="300" height="84" rx="14" fill="#0E1830" stroke="#94A3B8" stroke-opacity="0.16"/>
+<circle cx="104" cy="212" r="22" fill="#2563EB" fill-opacity="0.18" stroke="#60A5FA" stroke-opacity="0.5"/>
+<text x="104" y="218" text-anchor="middle" font-size="14" font-weight="700" fill="#93C5FD">J</text>
+<text x="140" y="200" font-size="12" font-weight="700" letter-spacing="1" fill="#60A5FA">CRM</text>
+<text x="140" y="224" font-size="14.5" font-weight="600" fill="#E2E8F0">J. Smith</text>
+<rect x="292" y="199" width="60" height="26" rx="13" fill="#34D399" fill-opacity="0.12" stroke="#34D399" stroke-opacity="0.35"/>
+<text x="322" y="217" text-anchor="middle" font-size="13" font-weight="700" fill="#6EE7B7">96%</text>
+</g>
+<g>
+<rect x="64" y="274" width="300" height="84" rx="14" fill="#0E1830" stroke="#94A3B8" stroke-opacity="0.16"/>
+<circle cx="104" cy="316" r="22" fill="#7C3AED" fill-opacity="0.18" stroke="#A78BFA" stroke-opacity="0.5"/>
+<text x="104" y="322" text-anchor="middle" font-size="14" font-weight="700" fill="#C4B5FD">S</text>
+<text x="140" y="304" font-size="12" font-weight="700" letter-spacing="1" fill="#A78BFA">ERP</text>
+<text x="140" y="328" font-size="14.5" font-weight="600" fill="#E2E8F0">SMITH, JOHN</text>
+<rect x="292" y="303" width="60" height="26" rx="13" fill="#34D399" fill-opacity="0.12" stroke="#34D399" stroke-opacity="0.35"/>
+<text x="322" y="321" text-anchor="middle" font-size="13" font-weight="700" fill="#6EE7B7">94%</text>
+</g>
+<g>
+<rect x="64" y="378" width="300" height="84" rx="14" fill="#0E1830" stroke="#94A3B8" stroke-opacity="0.16"/>
+<circle cx="104" cy="420" r="22" fill="#06B6D4" fill-opacity="0.18" stroke="#67E8F9" stroke-opacity="0.45"/>
+<text x="104" y="426" text-anchor="middle" font-size="14" font-weight="700" fill="#A5F3FC">J</text>
+<text x="140" y="408" font-size="12" font-weight="700" letter-spacing="1" fill="#67E8F9">MARKETING</text>
+<text x="140" y="432" font-size="14.5" font-weight="600" fill="#E2E8F0">john@acme.com</text>
+<rect x="292" y="407" width="60" height="26" rx="13" fill="#34D399" fill-opacity="0.12" stroke="#34D399" stroke-opacity="0.35"/>
+<text x="322" y="425" text-anchor="middle" font-size="13" font-weight="700" fill="#6EE7B7">91%</text>
+</g>
+
+<!-- candidates to methods -->
+<path d="M364 212 C416 212 426 202 470 202" fill="none" stroke="#60A5FA" stroke-opacity="0.5" stroke-width="2" marker-end="url(#arr)"/>
+<path d="M364 316 C416 316 426 286 470 286" fill="none" stroke="#60A5FA" stroke-opacity="0.5" stroke-width="2" marker-end="url(#arr)"/>
+<path d="M364 420 C416 420 426 370 470 370" fill="none" stroke="#60A5FA" stroke-opacity="0.5" stroke-width="2" marker-end="url(#arr)"/>
+
+<!-- method chips -->
+<g>
+<rect x="470" y="170" width="260" height="64" rx="14" fill="#0E1830" stroke="#60A5FA" stroke-opacity="0.3"/>
+<rect x="486" y="184" width="36" height="36" rx="10" fill="#2563EB" fill-opacity="0.15"/>
+<text x="504" y="208" text-anchor="middle" font-size="15" font-weight="700" fill="#93C5FD">=</text>
+<text x="534" y="198" font-size="13.5" font-weight="700" fill="#E2E8F0">Deterministic</text>
+<text x="534" y="218" font-size="11" fill="#8FA0BC">Exact keys: IDs, emails</text>
+</g>
+<g>
+<rect x="470" y="254" width="260" height="64" rx="14" fill="#0E1830" stroke="#60A5FA" stroke-opacity="0.3"/>
+<rect x="486" y="268" width="36" height="36" rx="10" fill="#7C3AED" fill-opacity="0.15"/>
+<text x="504" y="292" text-anchor="middle" font-size="15" font-weight="700" fill="#C4B5FD">~</text>
+<text x="534" y="282" font-size="13.5" font-weight="700" fill="#E2E8F0">Probabilistic</text>
+<text x="534" y="302" font-size="11" fill="#8FA0BC">Scored likelihood to match</text>
+</g>
+<g>
+<rect x="470" y="338" width="260" height="64" rx="14" fill="#0E1830" stroke="#60A5FA" stroke-opacity="0.3"/>
+<rect x="486" y="352" width="36" height="36" rx="10" fill="#34D399" fill-opacity="0.15"/>
+<text x="504" y="376" text-anchor="middle" font-size="13" font-weight="700" fill="#6EE7B7">ML</text>
+<text x="534" y="366" font-size="13.5" font-weight="700" fill="#E2E8F0">ML-assisted</text>
+<text x="534" y="386" font-size="11" fill="#8FA0BC">Learns from steward feedback</text>
+</g>
+
+<!-- methods to golden record -->
+<path d="M730 202 C770 210 786 250 812 272" fill="none" stroke="#34D399" stroke-opacity="0.5" stroke-width="2" marker-end="url(#arrG)"/>
+<path d="M730 286 C770 286 786 290 812 292" fill="none" stroke="#34D399" stroke-opacity="0.5" stroke-width="2" marker-end="url(#arrG)"/>
+<path d="M730 370 C770 362 786 334 812 314" fill="none" stroke="#34D399" stroke-opacity="0.5" stroke-width="2" marker-end="url(#arrG)"/>
+
+<!-- golden record -->
+<g filter="url(#shadow)">
+<rect x="812" y="170" width="324" height="292" rx="20" fill="#0F1B33" stroke="#34D399" stroke-opacity="0.45"/>
+</g>
+<circle cx="856" cy="222" r="24" fill="#34D399" fill-opacity="0.16" stroke="#34D399" stroke-opacity="0.5"/>
+<polyline points="847,222 854,229 866,214" fill="none" stroke="#34D399" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="892" y="216" font-size="17" font-weight="800" fill="#F1F5F9">Golden Record</text>
+<text x="892" y="238" font-size="11.5" fill="#94A3B8">One entity, best values</text>
+<line x1="836" y1="258" x2="1112" y2="258" stroke="#94A3B8" stroke-opacity="0.14"/>
+<rect x="836" y="274" width="276" height="28" rx="8" fill="#94A3B8" fill-opacity="0.06"/>
+<text x="852" y="293" font-size="12.5"><tspan fill="#94A3B8">Name </tspan><tspan fill="#60A5FA" font-weight="700">&#8594; CRM</tspan></text>
+<rect x="836" y="308" width="276" height="28" rx="8" fill="#94A3B8" fill-opacity="0.06"/>
+<text x="852" y="327" font-size="12.5"><tspan fill="#94A3B8">Phone </tspan><tspan fill="#60A5FA" font-weight="700">&#8594; CRM</tspan></text>
+<rect x="836" y="342" width="276" height="28" rx="8" fill="#94A3B8" fill-opacity="0.06"/>
+<text x="852" y="361" font-size="12.5"><tspan fill="#94A3B8">Address </tspan><tspan fill="#A78BFA" font-weight="700">&#8594; ERP</tspan></text>
+<rect x="836" y="376" width="276" height="28" rx="8" fill="#94A3B8" fill-opacity="0.06"/>
+<text x="852" y="395" font-size="12.5"><tspan fill="#94A3B8">Email </tspan><tspan fill="#34D399" font-weight="700">&#8594; Marketing</tspan></text>
+<rect x="836" y="414" width="276" height="30" rx="15" fill="#34D399" fill-opacity="0.1" stroke="#34D399" stroke-opacity="0.35"/>
+<text x="974" y="434" text-anchor="middle" font-size="11" font-weight="700" letter-spacing="0.5" fill="#6EE7B7">EVERY MERGE LOGGED &#183; AUDITABLE</text>
+
+<!-- steward review strip -->
+<rect x="380" y="516" width="440" height="38" rx="19" fill="#F59E0B" fill-opacity="0.08" stroke="#F59E0B" stroke-opacity="0.3"/>
+<text x="600" y="540" text-anchor="middle" font-size="12.5" font-weight="600" fill="#FCD34D">Low-confidence merges route to steward review</text>
+</g>
+</svg>

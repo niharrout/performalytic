@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" role="img" aria-labelledby="aimdmTitle aimdmDesc">
+<title id="aimdmTitle">AI-based master data management</title>
+<desc id="aimdmDesc">Scattered duplicate records flow into an AI match engine that produces one confidence-scored golden record, then move through match, score, merge, and sync steps</desc>
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0B1120"/><stop offset="1" stop-color="#111C33"/></linearGradient>
+<linearGradient id="orb" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2563EB"/><stop offset="1" stop-color="#7C3AED"/></linearGradient>
+<radialGradient id="orbGlow"><stop offset="0" stop-color="#2563EB" stop-opacity="0.35"/><stop offset="1" stop-color="#2563EB" stop-opacity="0"/></radialGradient>
+<radialGradient id="greenGlow"><stop offset="0" stop-color="#34D399" stop-opacity="0.16"/><stop offset="1" stop-color="#34D399" stop-opacity="0"/></radialGradient>
+<pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#94A3B8" stroke-opacity="0.05"/></pattern>
+<filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="10" stdDeviation="18" flood-color="#000814" flood-opacity="0.45"/></filter>
+<marker id="arrBlue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#60A5FA" fill-opacity="0.7"/></marker>
+<marker id="arrGreen" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#34D399" fill-opacity="0.7"/></marker>
+</defs>
+<rect width="1200" height="600" fill="url(#bg)"/>
+<rect width="1200" height="600" fill="url(#grid)"/>
+<ellipse cx="600" cy="280" rx="300" ry="240" fill="url(#orbGlow)"/>
+<ellipse cx="974" cy="275" rx="260" ry="200" fill="url(#greenGlow)"/>
+
+<g font-family="Inter, Segoe UI, system-ui, sans-serif">
+<text x="64" y="66" font-size="13" font-weight="700" letter-spacing="4" fill="#60A5FA">AI-BASED MDM</text>
+<text x="64" y="100" font-size="19" font-weight="800" fill="#E2E8F0">From scattered records to one trusted golden record</text>
+
+<text x="64" y="150" font-size="11.5" font-weight="700" letter-spacing="2.5" fill="#64748B">SCATTERED DUPLICATES</text>
+
+<!-- duplicate mini cards -->
+<g transform="rotate(-3 139 207)">
+<rect x="64" y="178" width="150" height="58" rx="12" fill="#0E1830" stroke="#94A3B8" stroke-opacity="0.18"/>
+<circle cx="88" cy="207" r="13" fill="#94A3B8" fill-opacity="0.14"/>
+<rect x="110" y="194" width="76" height="7" rx="3.5" fill="#94A3B8" fill-opacity="0.4"/>
+<rect x="110" y="209" width="52" height="6" rx="3" fill="#94A3B8" fill-opacity="0.22"/>
+<circle cx="202" cy="190" r="6" fill="#F87171" fill-opacity="0.85"/>
+</g>
+<g transform="rotate(2 303 193)">
+<rect x="228" y="164" width="150" height="58" rx="12" fill="#0E1830" stroke="#94A3B8" stroke-opacity="0.18"/>
+<circle cx="252" cy="193" r="13" fill="#94A3B8" fill-opacity="0.14"/>
+<rect x="274" y="180" width="76" height="7" rx="3.5" fill="#94A3B8" fill-opacity="0.4"/>
+<rect x="274" y="195" width="52" height="6" rx="3" fill="#94A3B8" fill-opacity="0.22"/>
+<circle cx="366" cy="176" r="6" fill="#F87171" fill-opacity="0.85"/>
+</g>
+<g transform="rotate(-2 139 281)">
+<rect x="64" y="252" width="150" height="58" rx="12" fill="#0E1830" stroke="#94A3B8" stroke-opacity="0.18"/>
+<circle cx="88" cy="281" r="13" fill="#94A3B8" fill-opacity="0.14"/>
+<rect x="110" y="268" width="76" height="7" rx="3.5" fill="#94A3B8" fill-opacity="0.4"/>
+<rect x="110" y="283" width="52" height="6" rx="3" fill="#94A3B8" fill-opacity="0.22"/>
+<circle cx="202" cy="264" r="6" fill="#F87171" fill-opacity="0.85"/>
+</g>
+<g transform="rotate(3 303 275)">
+<rect x="228" y="246" width="150" height="58" rx="12" fill="#0E1830" stroke="#94A3B8" stroke-opacity="0.18"/>
+<circle cx="252" cy="275" r="13" fill="#94A3B8" fill-opacity="0.14"/>
+<rect x="274" y="262" width="76" height="7" rx="3.5" fill="#94A3B8" fill-opacity="0.4"/>
+<rect x="274" y="277" width="52" height="6" rx="3" fill="#94A3B8" fill-opacity="0.22"/>
+<circle cx="366" cy="258" r="6" fill="#F87171" fill-opacity="0.85"/>
+</g>
+<g transform="rotate(-2 221 353)">
+<rect x="146" y="324" width="150" height="58" rx="12" fill="#0E1830" stroke="#94A3B8" stroke-opacity="0.18"/>
+<circle cx="170" cy="353" r="13" fill="#94A3B8" fill-opacity="0.14"/>
+<rect x="192" y="340" width="76" height="7" rx="3.5" fill="#94A3B8" fill-opacity="0.4"/>
+<rect x="192" y="355" width="52" height="6" rx="3" fill="#94A3B8" fill-opacity="0.22"/>
+<circle cx="284" cy="336" r="6" fill="#F87171" fill-opacity="0.85"/>
+</g>
+
+<!-- into engine -->
+<path d="M380 200 C430 210 440 240 476 256" fill="none" stroke="#60A5FA" stroke-opacity="0.55" stroke-width="2" marker-end="url(#arrBlue)"/>
+<path d="M380 275 C430 275 440 275 472 275" fill="none" stroke="#60A5FA" stroke-opacity="0.55" stroke-width="2" marker-end="url(#arrBlue)"/>
+<path d="M296 353 C420 350 440 310 476 294" fill="none" stroke="#60A5FA" stroke-opacity="0.55" stroke-width="2" marker-end="url(#arrBlue)"/>
+
+<!-- engine orb -->
+<circle cx="600" cy="270" r="116" fill="none" stroke="#60A5FA" stroke-opacity="0.3" stroke-width="1.5" stroke-dasharray="4 8"/>
+<circle cx="600" cy="154" r="6" fill="#60A5FA"/><circle cx="700" cy="212" r="6" fill="#60A5FA"/>
+<circle cx="700" cy="328" r="6" fill="#60A5FA"/><circle cx="600" cy="386" r="6" fill="#60A5FA"/>
+<circle cx="500" cy="328" r="6" fill="#60A5FA"/><circle cx="500" cy="212" r="6" fill="#60A5FA"/>
+<g filter="url(#shadow)">
+<circle cx="600" cy="270" r="90" fill="url(#orb)"/>
+</g>
+<circle cx="600" cy="270" r="90" fill="none" stroke="#93C5FD" stroke-opacity="0.5" stroke-width="1.5"/>
+<text x="600" y="262" text-anchor="middle" font-size="17" font-weight="800" fill="#FFFFFF">AI MATCH</text>
+<text x="600" y="286" text-anchor="middle" font-size="12" font-weight="600" letter-spacing="3" fill="#DBEAFE">ENGINE</text>
+<rect x="500" y="410" width="200" height="30" rx="15" fill="#0E1830" stroke="#60A5FA" stroke-opacity="0.4"/>
+<text x="600" y="430" text-anchor="middle" font-size="11.5" font-weight="700" fill="#93C5FD">DETERMINISTIC + ML</text>
+
+<!-- engine to golden record -->
+<path d="M720 250 C770 235 790 220 812 214" fill="none" stroke="#34D399" stroke-opacity="0.55" stroke-width="2" marker-end="url(#arrGreen)"/>
+<path d="M720 290 C770 305 790 320 812 330" fill="none" stroke="#34D399" stroke-opacity="0.55" stroke-width="2" marker-end="url(#arrGreen)"/>
+
+<!-- golden record card -->
+<g filter="url(#shadow)">
+<rect x="812" y="150" width="324" height="250" rx="20" fill="#0F1B33" stroke="#34D399" stroke-opacity="0.45"/>
+</g>
+<circle cx="856" cy="200" r="24" fill="#2563EB" fill-opacity="0.18" stroke="#60A5FA" stroke-opacity="0.5"/>
+<text x="856" y="206" text-anchor="middle" font-size="14" font-weight="700" fill="#93C5FD">JS</text>
+<circle cx="1100" cy="180" r="16" fill="#34D399" fill-opacity="0.16" stroke="#34D399" stroke-opacity="0.5"/>
+<polyline points="1093,180 1098,186 1108,173" fill="none" stroke="#34D399" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="894" y="196" font-size="18" font-weight="800" fill="#F1F5F9">John Smith</text>
+<text x="894" y="218" font-size="11.5" fill="#94A3B8">Golden record &#183; Confidence-scored</text>
+<rect x="836" y="244" width="276" height="30" rx="8" fill="#94A3B8" fill-opacity="0.06"/>
+<text x="852" y="264" font-size="12.5"><tspan fill="#94A3B8">Name </tspan><tspan fill="#60A5FA" font-weight="700">&#8594; CRM</tspan></text>
+<rect x="836" y="282" width="276" height="30" rx="8" fill="#94A3B8" fill-opacity="0.06"/>
+<text x="852" y="302" font-size="12.5"><tspan fill="#94A3B8">Phone </tspan><tspan fill="#60A5FA" font-weight="700">&#8594; CRM</tspan></text>
+<rect x="836" y="320" width="276" height="30" rx="8" fill="#94A3B8" fill-opacity="0.06"/>
+<text x="852" y="340" font-size="12.5"><tspan fill="#94A3B8">Address </tspan><tspan fill="#A78BFA" font-weight="700">&#8594; ERP</tspan></text>
+<rect x="836" y="356" width="276" height="28" rx="8" fill="#94A3B8" fill-opacity="0.06"/>
+<text x="852" y="375" font-size="12.5"><tspan fill="#94A3B8">Email </tspan><tspan fill="#34D399" font-weight="700">&#8594; Marketing</tspan></text>
+
+<!-- steps -->
+<line x1="380" y1="536" x2="920" y2="536" stroke="#94A3B8" stroke-opacity="0.18" stroke-width="2"/>
+<circle cx="380" cy="536" r="16" fill="#0E1830" stroke="#60A5FA" stroke-opacity="0.55" stroke-width="1.5"/>
+<text x="380" y="541" text-anchor="middle" font-size="12" font-weight="700" fill="#93C5FD">1</text>
+<text x="380" y="574" text-anchor="middle" font-size="12.5" font-weight="600" fill="#94A3B8">Match</text>
+<circle cx="560" cy="536" r="16" fill="#0E1830" stroke="#60A5FA" stroke-opacity="0.55" stroke-width="1.5"/>
+<text x="560" y="541" text-anchor="middle" font-size="12" font-weight="700" fill="#93C5FD">2</text>
+<text x="560" y="574" text-anchor="middle" font-size="12.5" font-weight="600" fill="#94A3B8">Score</text>
+<circle cx="740" cy="536" r="16" fill="#0E1830" stroke="#60A5FA" stroke-opacity="0.55" stroke-width="1.5"/>
+<text x="740" y="541" text-anchor="middle" font-size="12" font-weight="700" fill="#93C5FD">3</text>
+<text x="740" y="574" text-anchor="middle" font-size="12.5" font-weight="600" fill="#94A3B8">Merge</text>
+<circle cx="920" cy="536" r="16" fill="#0E1830" stroke="#34D399" stroke-opacity="0.55" stroke-width="1.5"/>
+<text x="920" y="541" text-anchor="middle" font-size="12" font-weight="700" fill="#6EE7B7">4</text>
+<text x="920" y="574" text-anchor="middle" font-size="12.5" font-weight="600" fill="#94A3B8">Sync</text>
+</g>
+</svg>

@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" role="img" aria-labelledby="cmpTitle cmpDesc">
+<title id="cmpTitle">4DAlert versus legacy MDM</title>
+<desc id="cmpDesc">Side-by-side comparison: legacy MDM relies on hand-written rules and six to twelve month projects, while 4DAlert uses AI matching, ships in weeks, and verifies data continuously</desc>
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0B1120"/><stop offset="1" stop-color="#111C33"/></linearGradient>
+<linearGradient id="brand" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2563EB"/><stop offset="1" stop-color="#7C3AED"/></linearGradient>
+<radialGradient id="glowLeft"><stop offset="0" stop-color="#64748B" stop-opacity="0.12"/><stop offset="1" stop-color="#64748B" stop-opacity="0"/></radialGradient>
+<radialGradient id="glowRight"><stop offset="0" stop-color="#2563EB" stop-opacity="0.3"/><stop offset="1" stop-color="#2563EB" stop-opacity="0"/></radialGradient>
+<pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#94A3B8" stroke-opacity="0.05"/></pattern>
+<filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="10" stdDeviation="18" flood-color="#000814" flood-opacity="0.45"/></filter>
+</defs>
+<rect width="1200" height="600" fill="url(#bg)"/>
+<rect width="1200" height="600" fill="url(#grid)"/>
+<ellipse cx="300" cy="320" rx="320" ry="240" fill="url(#glowLeft)"/>
+<ellipse cx="900" cy="320" rx="340" ry="260" fill="url(#glowRight)"/>
+
+<g font-family="Inter, Segoe UI, system-ui, sans-serif">
+<text x="600" y="66" text-anchor="middle" font-size="13" font-weight="700" letter-spacing="4" fill="#60A5FA">4DAlert VS LEGACY MDM</text>
+<text x="600" y="100" text-anchor="middle" font-size="19" font-weight="800" fill="#E2E8F0">Two ways to reach one golden record</text>
+
+<line x1="600" y1="140" x2="600" y2="500" stroke="#94A3B8" stroke-opacity="0.16" stroke-width="2" stroke-dasharray="6 8"/>
+
+<!-- legacy panel -->
+<g>
+<rect x="64" y="140" width="500" height="360" rx="20" fill="#0E1526" stroke="#94A3B8" stroke-opacity="0.2"/>
+<text x="96" y="186" font-size="15" font-weight="800" letter-spacing="1.5" fill="#94A3B8">LEGACY MDM</text>
+<text x="96" y="210" font-size="12" fill="#64748B">Rules-driven, services-heavy</text>
+
+<circle cx="110" cy="254" r="13" fill="#F87171" fill-opacity="0.12" stroke="#F87171" stroke-opacity="0.3"/>
+<text x="110" y="259" text-anchor="middle" font-size="12" font-weight="700" fill="#F87171">&#215;</text>
+<text x="134" y="259" font-size="13.5" font-weight="600" fill="#CBD5E1">Hand-written match rules</text>
+
+<circle cx="110" cy="310" r="13" fill="#F87171" fill-opacity="0.12" stroke="#F87171" stroke-opacity="0.3"/>
+<text x="110" y="315" text-anchor="middle" font-size="12" font-weight="700" fill="#F87171">&#215;</text>
+<text x="134" y="315" font-size="13.5" font-weight="600" fill="#CBD5E1">6&#8211;12 months to first domain</text>
+
+<circle cx="110" cy="366" r="13" fill="#F87171" fill-opacity="0.12" stroke="#F87171" stroke-opacity="0.3"/>
+<text x="110" y="371" text-anchor="middle" font-size="12" font-weight="700" fill="#F87171">&#215;</text>
+<text x="134" y="371" font-size="13.5" font-weight="600" fill="#CBD5E1">Bespoke survivorship code</text>
+
+<circle cx="110" cy="422" r="13" fill="#F87171" fill-opacity="0.12" stroke="#F87171" stroke-opacity="0.3"/>
+<text x="110" y="427" text-anchor="middle" font-size="12" font-weight="700" fill="#F87171">&#215;</text>
+<text x="134" y="427" font-size="13.5" font-weight="600" fill="#CBD5E1">Goes stale between audits</text>
+
+<rect x="96" y="456" width="200" height="30" rx="15" fill="#F87171" fill-opacity="0.08" stroke="#F87171" stroke-opacity="0.25"/>
+<text x="196" y="475" text-anchor="middle" font-size="11.5" font-weight="700" letter-spacing="0.5" fill="#FCA5A5">PROJECT-SHAPED</text>
+</g>
+
+<!-- 4DAlert panel -->
+<g filter="url(#shadow)">
+<rect x="636" y="140" width="500" height="360" rx="20" fill="#0D1730" stroke="url(#brand)" stroke-width="2"/>
+</g>
+<text x="668" y="186" font-size="15" font-weight="800" letter-spacing="1.5" fill="#93C5FD">4DAlert</text>
+<text x="668" y="210" font-size="12" fill="#7DD3FC">AI-powered MDM and entity resolution</text>
+
+<circle cx="682" cy="254" r="13" fill="#34D399" fill-opacity="0.12" stroke="#34D399" stroke-opacity="0.35"/>
+<polyline points="676,254 680,259 689,247" fill="none" stroke="#34D399" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="706" y="259" font-size="13.5" font-weight="600" fill="#E2E8F0">Deterministic + probabilistic + ML</text>
+
+<circle cx="682" cy="310" r="13" fill="#34D399" fill-opacity="0.12" stroke="#34D399" stroke-opacity="0.35"/>
+<polyline points="676,310 680,315 689,303" fill="none" stroke="#34D399" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="706" y="315" font-size="13.5" font-weight="600" fill="#E2E8F0">Weeks to first domain</text>
+
+<circle cx="682" cy="366" r="13" fill="#34D399" fill-opacity="0.12" stroke="#34D399" stroke-opacity="0.35"/>
+<polyline points="676,366 680,371 689,359" fill="none" stroke="#34D399" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="706" y="371" font-size="13.5" font-weight="600" fill="#E2E8F0">Confidence-scored stewardship</text>
+
+<circle cx="682" cy="422" r="13" fill="#34D399" fill-opacity="0.12" stroke="#34D399" stroke-opacity="0.35"/>
+<polyline points="676,422 680,427 689,415" fill="none" stroke="#34D399" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="706" y="427" font-size="13.5" font-weight="600" fill="#E2E8F0">Verified continuously by reconciliation</text>
+
+<rect x="668" y="456" width="260" height="30" rx="15" fill="#34D399" fill-opacity="0.1" stroke="#34D399" stroke-opacity="0.35"/>
+<text x="798" y="475" text-anchor="middle" font-size="11.5" font-weight="700" letter-spacing="0.5" fill="#6EE7B7">PRE-BUILT SAP &amp; SALESFORCE</text>
+
+<!-- VS badge -->
+<circle cx="600" cy="320" r="34" fill="#111A30" stroke="#94A3B8" stroke-opacity="0.35" stroke-width="2"/>
+<text x="600" y="327" text-anchor="middle" font-size="16" font-weight="800" fill="#CBD5E1">VS</text>
+
+<!-- caption -->
+<text x="600" y="548" text-anchor="middle" font-size="13.5" fill="#94A3B8">Both reach the golden record &#8212; one gets there in weeks, and keeps it clean after go-live.</text>
+</g>
+</svg>
