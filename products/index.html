@@ -313,12 +313,14 @@ section{padding:80px 0}
 .module-section:nth-child(1)::before{left:-200px;top:-200px;background:rgba(37,99,235,0.3)}
 .module-section:nth-child(2)::before{right:-200px;top:-200px;background:rgba(16,185,129,0.3)}
 .module-section:nth-child(3)::before{left:-200px;bottom:-200px;background:rgba(124,58,237,0.3)}
+.module-section.mdm-deep::before{right:-200px;bottom:-200px;background:rgba(245,158,11,0.3)}
 .module-inner{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;position:relative;z-index:1}
 .module-inner.reverse{direction:rtl}.module-inner.reverse>*{direction:ltr}
 .module-label{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;border-radius:100px;font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:16px;border:1px solid}
 .module-label.blue{color:var(--pa-at-blue);background:rgba(37,99,235,0.1);border-color:rgba(37,99,235,0.2)}
 .module-label.green{color:var(--pa-at-green);background:rgba(16,185,129,0.1);border-color:rgba(16,185,129,0.2)}
 .module-label.purple{color:var(--pa-at-purple);background:rgba(124,58,237,0.1);border-color:rgba(124,58,237,0.2)}
+.module-label.amber{color:var(--pa-at-amber);background:rgba(245,158,11,0.1);border-color:rgba(251,191,36,0.2)}
 .module-text h2{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;color:var(--pa-t-strong);line-height:1.15;margin-bottom:16px;letter-spacing:-0.5px}
 .module-text>p{font-size:0.95rem;color:var(--pa-t-muted);line-height:1.7;margin-bottom:24px}
 .module-diffs{display:flex;flex-direction:column;gap:16px;margin-bottom:28px}
@@ -327,6 +329,7 @@ section{padding:80px 0}
 .module-diff-icon.blue{background:rgba(37,99,235,0.1);border:1px solid rgba(37,99,235,0.15)}
 .module-diff-icon.green{background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.15)}
 .module-diff-icon.purple{background:rgba(124,58,237,0.1);border:1px solid rgba(124,58,237,0.15)}
+.module-diff-icon.amber{background:rgba(245,158,11,0.1);border:1px solid rgba(251,191,36,0.15)}
 .module-diff-icon svg{width:18px;height:18px}
 .module-diff-text h4{font-size:0.88rem;font-weight:700;color:var(--pa-t);margin-bottom:2px}
 .module-diff-text p{font-size:0.82rem;color:var(--pa-t-dim);line-height:1.5}
