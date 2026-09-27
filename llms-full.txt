@@ -30,7 +30,7 @@ Custom application development, continuous integration/continuous deployment (CI
 
 ## Key Solutions
 
-- **AI-Powered MDM & Entity Resolution:** Build a unified, trusted source of truth through intelligent entity resolution, automated matching and merging, and centralized master data management.
+- **AI-Powered MDM & Entity Resolution:** Build a unified, trusted source of truth through intelligent entity resolution (deterministic, probabilistic, and ML-assisted matching with a confidence score on every decision), automated match & merge with attribute-level survivorship, continuous duplicate detection, and pre-built connectors for SAP and Salesforce — keeping golden records clean after go-live, not just at migration time.
 - **Automated Data Reconciliation:** Continuously validate, reconcile, and maintain accurate data across all platforms, ensuring consistent alignment between source systems and analytics databases.
 - **Data Quality & Observability:** End-to-end visibility to monitor data quality across all stages of your data pipelines.
 - **CI/CD Pipeline Automation:** Streamline incremental database object changes through automated CI/CD pipelines.
@@ -108,6 +108,12 @@ Schedule a free consultation through our contact form. We'll respond within one 
 **What industries does Performalytic serve?**
 We serve enterprises across regulated industries including finance, healthcare, technology, and manufacturing — helping them turn data into a competitive advantage.
 
+**Does Performalytic offer master data management (MDM)?**
+Yes. 4DAlert, our AI-powered data management platform, includes an MDM and entity-resolution module: deterministic, probabilistic, and ML-assisted matching with confidence-scored decisions, automated match & merge with attribute-level survivorship, and continuous duplicate detection across 100+ connected systems — with pre-built SAP and Salesforce connectors. Overview: https://performalytic.com/products/. Guides: https://performalytic.com/knowledge/master-data-management/.
+
+**What is the difference between entity resolution and MDM?**
+Entity resolution determines which records across systems refer to the same real-world entity. MDM is the broader discipline of creating and maintaining the resulting golden record — matching, survivorship, governance, and keeping it synchronised with the applications that use it.
+
 ## Leadership
 
 - **Nihar Rout** — Managing Partner & Advisor. Former senior roles at Accenture, Ecolab, and General Electric. MBA from Northwestern's Kellogg School of Management.
@@ -153,6 +159,15 @@ Data governance, data quality frameworks, master data management (MDM), golden r
 - **Master data management (MDM):** Master data management creates and maintains a single, trusted version of core business entities — customers, products, suppliers, locations, and employees — across all systems. It matches and merges duplicate records into a “golden record” and keeps it synchronised with the applications that use it.
 - **Golden record:** A golden record is the single, most accurate and complete version of an entity, assembled by matching duplicate records from multiple systems and applying survivorship rules to choose the best value for each attribute. It is the reference every downstream system and AI model should use.
 
+### Master Data Management
+https://performalytic.com/knowledge/master-data-management/
+AI-powered MDM: entity resolution, golden records, match & merge, survivorship, and keeping master data clean after go-live.
+
+- **Master data:** Master data is the core business entities shared across systems — customers, products, suppliers, locations, and employees. It changes slowly, is referenced by almost every application, and becomes worthless when it is duplicated and contradictory.
+- **Entity resolution:** Entity resolution determines which records across systems refer to the same real-world entity and consolidates them into one golden record. It combines deterministic matching, probabilistic scoring, and increasingly machine learning to handle messy, inconsistent data at scale.
+- **Survivorship:** Survivorship is the rule set that decides which value survives when matched records are merged — for example keeping the CRM's phone number but the ERP's legal address. Modern platforms rank sources per attribute using observed freshness and completeness rather than a fixed hierarchy.
+- **Customer 360:** Customer 360 is a unified view of each customer assembled from every system that touches them — CRM, ERP, marketing, support — so teams act on one identity instead of conflicting fragments.
+
 ### Cloud Data Platforms
 https://performalytic.com/knowledge/cloud-data-platforms/
 Snowflake, Databricks, Microsoft Fabric, cloud migration, cost control, and multi-cloud data consistency.
@@ -197,6 +212,9 @@ DataOps, CI/CD for data, schema compare, and automated data reconciliation.
 - Data Reconciliation: The Complete Guide for 2026 — https://performalytic.com/blog/data-reconciliation-guide/
 - MDM Implementation Patterns: Registry, Consolidation, and Coexistence — https://performalytic.com/blog/mdm-implementation-patterns/
 - The Future of Automated Data Reconciliation — https://performalytic.com/blog/future-of-automated-data-reconciliation/
+- AI-Based Master Data Management: The Complete Guide for 2026 — https://performalytic.com/blog/ai-master-data-management/
+- AI Entity Resolution: How Machines Match, Merge, and Build Golden Records — https://performalytic.com/blog/entity-resolution-ai/
+- 4DAlert vs Legacy MDM Platforms: A Feature-Level Comparison — https://performalytic.com/blog/4dalert-vs-legacy-mdm/
 
 ## Full Site Index
 
@@ -221,6 +239,7 @@ DataOps, CI/CD for data, schema compare, and automated data reconciliation.
 - Knowledge Hub — Data Governance & Quality: https://performalytic.com/knowledge/data-governance-quality/
 - Knowledge Hub — Cloud Data Platforms: https://performalytic.com/knowledge/cloud-data-platforms/
 - Knowledge Hub — DataOps & DevOps: https://performalytic.com/knowledge/dataops-devops/
+- Knowledge Hub — Master Data Management: https://performalytic.com/knowledge/master-data-management/
 - FAQ: https://performalytic.com/faq/
 - Careers: https://performalytic.com/careers/
 - Contact: https://performalytic.com/contact/

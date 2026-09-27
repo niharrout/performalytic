@@ -18,7 +18,7 @@
 ## Key Topics
 
 - Data Reconciliation: Automated cross-system data comparison, exception-driven workflows, and reconciliation best practices
-- Master Data Management: Entity resolution, golden record, MDM implementation patterns
+- Master Data Management: AI-powered MDM, entity resolution, golden records, match & merge, survivorship, MDM implementation patterns
 - Data Quality: Data quality frameworks, AI-native data quality, observability
 - Business Intelligence: BI platform comparison, analytics strategy, dashboard design
 - AI & Machine Learning: RAG architecture, AI agents, responsible AI, generative AI
@@ -33,6 +33,7 @@
 - [Data Governance & Quality](https://performalytic.com/knowledge/data-governance-quality/): Data governance, data quality frameworks, master data management (MDM), golden records, and AI-native data quality
 - [Cloud Data Platforms](https://performalytic.com/knowledge/cloud-data-platforms/): Snowflake, Databricks, Microsoft Fabric, cloud migration, cost control, and multi-cloud data consistency
 - [DataOps & DevOps](https://performalytic.com/knowledge/dataops-devops/): DataOps, CI/CD for data, schema compare, and automated data reconciliation
+- [Master Data Management](https://performalytic.com/knowledge/master-data-management/): Entity resolution, golden records, match & merge, survivorship, and keeping master data clean after go-live
 
 ## Blog
 
@@ -53,6 +54,9 @@
 
 - [What Is Master Data Management (MDM)? A Complete Guide](https://performalytic.com/blog/what-is-master-data-management/)
 - [MDM Implementation Patterns: Registry, Consolidation, and Coexistence](https://performalytic.com/blog/mdm-implementation-patterns/)
+- [AI-Based Master Data Management: The Complete Guide for 2026](https://performalytic.com/blog/ai-master-data-management/)
+- [AI Entity Resolution: How Machines Match, Merge, and Build Golden Records](https://performalytic.com/blog/entity-resolution-ai/)
+- [4DAlert vs Legacy MDM Platforms: A Feature-Level Comparison](https://performalytic.com/blog/4dalert-vs-legacy-mdm/)
 - [Data Modeling Crisis: Why Teams Struggle with Semantics](https://performalytic.com/blog/data-modeling-crisis/)
 - [How to Choose the Right Analytics Platform](https://performalytic.com/blog/choose-right-analytics-platform/)
 - [DevOps Best Practices for Data Teams](https://performalytic.com/blog/devops-best-practices/)
