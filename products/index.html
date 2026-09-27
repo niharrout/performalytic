@@ -79,6 +79,7 @@ gtag('config', 'G-FV09CSCD2C');
     {"@type":"Question","name":"How does 4DAlert compare to manual reconciliation?","acceptedAnswer":{"@type":"Answer","text":"Manual processes take days, miss edge cases, and rely on tribal knowledge. 4DAlert runs in minutes with 98% accuracy and catches discrepancies humans overlook — including cross-system mismatches, orphaned records, and slow-drift anomalies."}},
     {"@type":"Question","name":"Is 4DAlert a replacement for our data warehouse?","acceptedAnswer":{"@type":"Answer","text":"No. 4DAlert sits on top of your existing stack — Snowflake, BigQuery, Redshift, Databricks, and 100+ platforms. It adds reconciliation, quality monitoring, MDM, and CI/CD without requiring you to move data or change your architecture."}},
     {"@type":"Question","name":"Does 4DAlert support VPC deployment and data residency?","acceptedAnswer":{"@type":"Answer","text":"Yes. 4DAlert can be deployed inside your Virtual Private Cloud on AWS, GCP, or Azure. Your data never leaves your security perimeter. You choose the region where your data resides to meet sovereignty requirements."}},
+    {"@type":"Question","name":"How does 4DAlert compare to legacy MDM platforms?","acceptedAnswer":{"@type":"Answer","text":"Legacy MDM suites lean on hand-written match rules and services-heavy implementations that commonly run 6–12 months for a first domain. 4DAlert combines deterministic, probabilistic, and ML-assisted matching with confidence-scored stewardship and continuous reconciliation, so a first domain typically goes live in weeks on top of your existing stack — with SAP and Salesforce connectors pre-built. Read the full feature breakdown in our <a href=\"/blog/4dalert-vs-legacy-mdm/\">4DAlert vs legacy MDM comparison</a>."}},
     {"@type":"Question","name":"Is 4DAlert SOC2 compliant?","acceptedAnswer":{"@type":"Answer","text":"Yes, 4DAlert is AICPA SOC2 compliant, ensuring enterprise-grade security and data protection standards."}}
   ]
 }]
@@ -330,6 +331,8 @@ section{padding:80px 0}
 .module-diff-icon.green{background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.15)}
 .module-diff-icon.purple{background:rgba(124,58,237,0.1);border:1px solid rgba(124,58,237,0.15)}
 .module-diff-icon.amber{background:rgba(245,158,11,0.1);border:1px solid rgba(251,191,36,0.15)}
+.module-text a{color:var(--pa-at-blue);text-decoration:underline;text-underline-offset:3px}
+.module-text a:hover{color:#93c5fd}
 .module-diff-icon svg{width:18px;height:18px}
 .module-diff-text h4{font-size:0.88rem;font-weight:700;color:var(--pa-t);margin-bottom:2px}
 .module-diff-text p{font-size:0.82rem;color:var(--pa-t-dim);line-height:1.5}
@@ -1002,6 +1005,86 @@ nav:not(.mobile-menu).nav-scrolled{background:var(--pa-panel-81428-098)!importan
   </div>
 </section>
 
+<!-- Module Deep Dive: AI-Powered MDM -->
+<section class="module-section mdm-deep" aria-label="AI-powered master data management deep dive">
+  <div class="container">
+    <div class="module-inner reverse">
+      <div class="module-text">
+        <span class="module-label amber">AI-Powered MDM</span>
+        <h2>Master Data &amp; Entity Resolution</h2>
+        <p>Unify customer, product, and vendor data into one trusted golden record. 4DAlert resolves duplicates across systems, applies survivorship rules automatically, and keeps master data clean after go-live &mdash; not just at migration time. See the <a href="/blog/ai-master-data-management/">feature-level comparison with legacy MDM</a> for the full breakdown.</p>
+        <div class="module-diffs">
+          <div class="module-diff">
+            <div class="module-diff-icon amber"><svg viewBox="0 0 24 24" fill="none" stroke="var(--pa-at-amber)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div class="module-diff-text"><h4>Intelligent entity resolution</h4><p>Deterministic, probabilistic, and ML-assisted matching across customer, product, vendor, and location domains &mdash; with a confidence score on every decision</p></div>
+          </div>
+          <div class="module-diff">
+            <div class="module-diff-icon amber"><svg viewBox="0 0 24 24" fill="none" stroke="var(--pa-at-amber)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div class="module-diff-text"><h4>Automated match &amp; merge</h4><p>Golden records with attribute-level survivorship, so the best source always wins &mdash; and every merge stays auditable</p></div>
+          </div>
+          <div class="module-diff">
+            <div class="module-diff-icon amber"><svg viewBox="0 0 24 24" fill="none" stroke="var(--pa-at-amber)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div class="module-diff-text"><h4>Continuous duplicate detection</h4><p>Ongoing anomaly checks flag new duplicates and broken survivorship rules before they reach your reports</p></div>
+          </div>
+        </div>
+        <div class="module-integrations">
+          <span class="module-int-tag">SAP</span>
+          <span class="module-int-tag">Salesforce</span>
+          <span class="module-int-tag">Snowflake</span>
+          <span class="module-int-tag">BigQuery</span>
+          <span class="module-int-tag">Oracle</span>
+          <span class="module-int-tag">Databricks</span>
+          <span class="module-int-tag">PostgreSQL</span>
+          <span class="module-int-tag">+ 93 more</span>
+        </div>
+        <a href="/knowledge/master-data-management/" class="module-cta">Explore the MDM Knowledge Hub &rarr;</a>
+        <div class="module-quote">
+          <p>Duplicate customer records were our worst data problem. 4DAlert surfaces them with a confidence score instead of a spreadsheet &mdash; and the golden record finally stays golden.</p>
+          <cite>— Data Governance Lead, Global Consumer Goods Enterprise</cite>
+        </div>
+      </div>
+      <div class="module-visual">
+        <svg viewBox="0 0 480 360" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="20" y="20" width="440" height="320" rx="20" fill="var(--pa-panel-152342-06)" stroke="rgba(251,191,36,0.15)" stroke-width="1"/>
+          <text x="240" y="50" text-anchor="middle" fill="var(--pa-t-dim)" font-size="11" font-family="Inter" font-weight="600">DUPLICATE RESOLUTION · MERGE VIEW</text>
+          <text x="40" y="74" fill="var(--pa-t-muted)" font-size="9" font-family="Inter" font-weight="600">CANDIDATE RECORDS</text>
+          <text x="440" y="74" text-anchor="end" fill="var(--pa-t-dim)" font-size="8" font-family="Inter">MATCH SCORE</text>
+          <rect x="40" y="82" width="400" height="36" rx="10" fill="rgba(37,99,235,0.06)" stroke="rgba(96,165,250,0.18)"/>
+          <circle cx="60" cy="100" r="5" fill="rgba(96,165,250,0.5)"/>
+          <text x="74" y="97" fill="var(--pa-at-blue)" font-size="8" font-family="Inter" font-weight="600">CRM</text>
+          <text x="74" y="110" fill="var(--pa-t-muted)" font-size="9.5" font-family="Inter">J. Smith · john.smith@acme.com</text>
+          <rect x="374" y="88" width="56" height="24" rx="12" fill="rgba(52,211,153,0.1)" stroke="rgba(52,211,153,0.2)"/>
+          <text x="402" y="104" text-anchor="middle" fill="var(--pa-at-green)" font-size="10" font-family="Inter" font-weight="700">96%</text>
+          <rect x="40" y="124" width="400" height="36" rx="10" fill="rgba(124,58,237,0.06)" stroke="rgba(167,139,250,0.18)"/>
+          <circle cx="60" cy="142" r="5" fill="rgba(167,139,250,0.5)"/>
+          <text x="74" y="139" fill="var(--pa-at-purple)" font-size="8" font-family="Inter" font-weight="600">ERP</text>
+          <text x="74" y="152" fill="var(--pa-t-muted)" font-size="9.5" font-family="Inter">SMITH, JOHN · +1 415 555 0132</text>
+          <rect x="374" y="130" width="56" height="24" rx="12" fill="rgba(52,211,153,0.1)" stroke="rgba(52,211,153,0.2)"/>
+          <text x="402" y="146" text-anchor="middle" fill="var(--pa-at-green)" font-size="10" font-family="Inter" font-weight="700">94%</text>
+          <rect x="40" y="166" width="400" height="36" rx="10" fill="rgba(16,185,129,0.06)" stroke="rgba(52,211,153,0.18)"/>
+          <circle cx="60" cy="184" r="5" fill="rgba(52,211,153,0.5)"/>
+          <text x="74" y="181" fill="var(--pa-at-green)" font-size="8" font-family="Inter" font-weight="600">Marketing</text>
+          <text x="74" y="194" fill="var(--pa-t-muted)" font-size="9.5" font-family="Inter">J. Smith · acme.com/web-form</text>
+          <rect x="374" y="172" width="56" height="24" rx="12" fill="rgba(52,211,153,0.1)" stroke="rgba(52,211,153,0.2)"/>
+          <text x="402" y="188" text-anchor="middle" fill="var(--pa-at-green)" font-size="10" font-family="Inter" font-weight="700">91%</text>
+          <rect x="40" y="218" width="96" height="1" fill="var(--pa-wb-004)"/>
+          <rect x="344" y="218" width="96" height="1" fill="var(--pa-wb-004)"/>
+          <text x="240" y="222" text-anchor="middle" fill="var(--pa-at-amber)" font-size="9" font-family="Inter" font-weight="600">AUTO-MERGE · SURVIVORSHIP</text>
+          <rect x="40" y="232" width="400" height="80" rx="12" fill="rgba(245,158,11,0.07)" stroke="rgba(251,191,36,0.25)"/>
+          <circle cx="64" cy="252" r="9" fill="rgba(52,211,153,0.25)"/>
+          <polyline points="60,252 63,255 69,248" fill="none" stroke="var(--pa-at-green)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <text x="82" y="256" fill="var(--pa-at-amber)" font-size="9" font-family="Inter" font-weight="600">GOLDEN RECORD</text>
+          <text x="56" y="286" fill="var(--pa-t-dim)" font-size="9" font-family="Inter">name → <tspan fill="var(--pa-at-blue)" font-weight="600">CRM</tspan></text>
+          <text x="250" y="286" fill="var(--pa-t-dim)" font-size="9" font-family="Inter">email → <tspan fill="var(--pa-at-green)" font-weight="600">Marketing</tspan></text>
+          <text x="56" y="306" fill="var(--pa-t-dim)" font-size="9" font-family="Inter">address → <tspan fill="var(--pa-at-purple)" font-weight="600">ERP</tspan></text>
+          <text x="250" y="306" fill="var(--pa-t-dim)" font-size="9" font-family="Inter">phone → <tspan fill="var(--pa-at-blue)" font-weight="600">CRM</tspan></text>
+          <text x="240" y="330" text-anchor="middle" fill="var(--pa-t-dim)" font-size="8" font-family="Inter">Every merge logged with confidence score and winning-source rationale</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Integrations -->
 <section class="integrations-section" id="integrations" aria-label="Supported platforms and databases">
   <div class="container">
@@ -1148,6 +1231,15 @@ nav:not(.mobile-menu).nav-scrolled{background:var(--pa-panel-81428-098)!importan
         </button>
         <div class="competitive-faq-answer" role="region">
           <div class="competitive-faq-answer-inner">Yes. 4DAlert can be deployed inside your Virtual Private Cloud on AWS, GCP, or Azure. Your data never leaves your security perimeter. You choose the region where your data resides to meet sovereignty and compliance requirements.</div>
+        </div>
+      </div>
+      <div class="competitive-faq-item">
+        <button class="competitive-faq-question" aria-expanded="false">
+          <span>How does 4DAlert compare to legacy MDM platforms?</span>
+          <span class="faq-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+        </button>
+        <div class="competitive-faq-answer" role="region">
+          <div class="competitive-faq-answer-inner">Legacy MDM suites lean on hand-written match rules and services-heavy implementations that commonly run 6–12 months for a first domain. 4DAlert combines deterministic, probabilistic, and ML-assisted matching with confidence-scored stewardship and continuous reconciliation, so a first domain typically goes live in weeks on top of your existing stack — with SAP and Salesforce connectors pre-built. Read the full feature breakdown in our <a href="/blog/4dalert-vs-legacy-mdm/">4DAlert vs legacy MDM comparison</a>.</div>
         </div>
       </div>
     </div>
