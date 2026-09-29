@@ -52,7 +52,7 @@
 "logo":"/assets/images/performalytic-logo.png",
 "image":"/assets/images/GettyImages-618762080-1.jpg",
 "foundingDate":"2023",
-"numberOfEmployees":"800+",
+"numberOfEmployees":800,
 "sameAs":["https://www.linkedin.com/company/performalytic-corp/","https://twitter.com/performalytic-corp","https://www.facebook.com/performalytic-corp","https://www.instagram.com/performalytic-corp","https://www.youtube.com/@performalytic-corp"],
 "address":[{
 "@type":"PostalAddress",
@@ -100,9 +100,65 @@
 "name":"Performalytic - Data Analytics, AI & Enterprise Solutions",
 "description":"Transform fragmented enterprise data into intelligent systems, AI-powered decisions, and measurable business outcomes.",
 "about":{"@id":"https://performalytic.com/#organization"},
+"speakable":{"@type":"SpeakableSpecification","cssSelector":["h1",".hero-sub"]},
 "datePublished":"2023-03-09T13:19:37+00:00",
 "dateModified":"2026-07-07T05:22:56+00:00"
-}]</script>
+},
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What does Performalytic do?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Performalytic is an enterprise data analytics, AI and DevOps consulting firm that helps organizations turn data into a competitive advantage. It offers enterprise solution development, advanced analytics and AI, business intelligence integration, and application development and system integration, delivered by 800+ data professionals to 500+ enterprise clients."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is Performalytic a consulting firm or a software company?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Both. Performalytic is a consulting firm that also builds 4DAlert, its AI-powered data management platform for automated data reconciliation, data quality and observability, master data management, schema compare, and the Ask4D GenAI assistant."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What industries does Performalytic serve?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Financial services, healthcare, retail and e-commerce, manufacturing, technology, energy and utilities, and government. Solutions are tailored to the regulatory, operational and data challenges of each industry vertical."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where are Performalytic offices located?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The headquarters is at 111 W. Jackson Blvd, Suite 1700, Chicago, IL 60604, with a global delivery center at Patia, Bhubaneswar, Odisha 751024, India. This supports onshore, nearshore and offshore engagement models across North America, Europe and Asia-Pacific."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What does an engagement with Performalytic look like?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "It starts with a discovery call to understand the business and its goals, then a strategy session to map the approach, then a custom proposal covering plan, timeline and investment. Delivery follows with measurable business outcomes and managed support."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is 4DAlert?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "4DAlert is Performalytic's AI-powered data management platform. It automates cross-system data reconciliation, data quality and observability, master data management and entity resolution, schema compare, and CI/CD for data, and includes the Ask4D GenAI assistant."
+        }
+      }
+    ]
+  }
+]</script>
 
 <style nonce="P3rf0rm4lyt1c">
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
@@ -430,6 +486,24 @@ nav .nav-links,.nav-cta{display:none}
 /* Scroll Reveal */
 html.js .reveal{opacity:0;transform:translateY(30px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
 html.js .reveal.revealed{opacity:1;transform:translateY(0)}
+.pa-faq{padding:72px 0;background:var(--pa-bg-2)}
+.pa-faq-head{margin-bottom:36px}
+.pa-faq-list{max-width:860px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
+.pa-faq-item{border:1px solid var(--pa-wd-008);border-radius:14px;background:var(--pa-surface);overflow:hidden}
+.pa-faq-item summary{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 22px;cursor:pointer;font-weight:600;color:var(--pa-t-strong);list-style:none}
+.pa-faq-item summary::-webkit-details-marker{display:none}
+.pa-faq-q{line-height:1.55;font-size:1rem}
+.pa-faq-icon{flex:0 0 auto;width:24px;height:24px;border-radius:50%;background:var(--pa-surface-2);position:relative;color:var(--pa-t-dim)}
+.pa-faq-icon::before,.pa-faq-icon::after{content:"";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:currentColor;border-radius:2px}
+.pa-faq-icon::before{width:10px;height:2px}
+.pa-faq-icon::after{width:2px;height:10px;transition:transform .25s}
+.pa-faq-item[open] .pa-faq-icon::after{transform:translate(-50%,-50%) scaleY(0)}
+.pa-faq-item[open] summary{box-shadow:inset 0 -1px 0 var(--pa-wd-004)}
+.pa-faq-a{padding:0 22px 20px;color:var(--pa-t-dim);line-height:1.8;font-size:.975rem}
+.pa-faq-a p{margin:0 0 12px}
+.pa-faq-a p:last-child{margin:0}
+.pa-faq-more{max-width:860px;margin:26px auto 0;text-align:center;color:var(--pa-t-dim);font-size:.95rem}
+.pa-faq-more a{color:var(--pa-at-blue)}
 </style>
 <style id="pa-theme" nonce="P3rf0rm4lyt1c">
 /* Theme tokens. The dark column reproduces the colours the site shipped
@@ -1114,6 +1188,41 @@ Explore Solutions
 <!-- ========================================
      CTA
 ======================================== -->
+<section class="pa-faq" id="faq" aria-label="Frequently asked questions">
+  <div class="container">
+    <div class="text-center pa-faq-head">
+      <span class="section-label">Straight answers</span>
+      <h2 class="section-title">Frequently asked questions</h2>
+    </div>
+    <div class="pa-faq-list">
+      <details class="pa-faq-item">
+        <summary><span class="pa-faq-q">What does Performalytic do?</span><span class="pa-faq-icon" aria-hidden="true"></span></summary>
+        <div class="pa-faq-a"><p>Performalytic is an enterprise data analytics, AI and DevOps consulting firm that helps organizations turn data into a competitive advantage. It offers enterprise solution development, advanced analytics and AI, business intelligence integration, and application development and system integration, delivered by 800+ data professionals to 500+ enterprise clients.</p></div>
+      </details>
+      <details class="pa-faq-item">
+        <summary><span class="pa-faq-q">Is Performalytic a consulting firm or a software company?</span><span class="pa-faq-icon" aria-hidden="true"></span></summary>
+        <div class="pa-faq-a"><p>Both. Performalytic is a consulting firm that also builds 4DAlert, its AI-powered data management platform for automated data reconciliation, data quality and observability, master data management, schema compare, and the Ask4D GenAI assistant.</p></div>
+      </details>
+      <details class="pa-faq-item">
+        <summary><span class="pa-faq-q">What industries does Performalytic serve?</span><span class="pa-faq-icon" aria-hidden="true"></span></summary>
+        <div class="pa-faq-a"><p>Financial services, healthcare, retail and e-commerce, manufacturing, technology, energy and utilities, and government. Solutions are tailored to the regulatory, operational and data challenges of each industry vertical.</p></div>
+      </details>
+      <details class="pa-faq-item">
+        <summary><span class="pa-faq-q">Where are Performalytic offices located?</span><span class="pa-faq-icon" aria-hidden="true"></span></summary>
+        <div class="pa-faq-a"><p>The headquarters is at 111 W. Jackson Blvd, Suite 1700, Chicago, IL 60604, with a global delivery center at Patia, Bhubaneswar, Odisha 751024, India. This supports onshore, nearshore and offshore engagement models across North America, Europe and Asia-Pacific.</p></div>
+      </details>
+      <details class="pa-faq-item">
+        <summary><span class="pa-faq-q">What does an engagement with Performalytic look like?</span><span class="pa-faq-icon" aria-hidden="true"></span></summary>
+        <div class="pa-faq-a"><p>It starts with a discovery call to understand the business and its goals, then a strategy session to map the approach, then a custom proposal covering plan, timeline and investment. Delivery follows with measurable business outcomes and managed support.</p></div>
+      </details>
+      <details class="pa-faq-item">
+        <summary><span class="pa-faq-q">What is 4DAlert?</span><span class="pa-faq-icon" aria-hidden="true"></span></summary>
+        <div class="pa-faq-a"><p>4DAlert is Performalytic's AI-powered data management platform. It automates cross-system data reconciliation, data quality and observability, master data management and entity resolution, schema compare, and CI/CD for data, and includes the Ask4D GenAI assistant.</p></div>
+      </details>
+    </div>
+    <p class="pa-faq-more">More questions answered on the <a href="/faq/">full FAQ page</a>.</p>
+  </div>
+</section>
 <section class="cta-section" id="contact" aria-label="Get started">
 <div class="container">
 <div class="cta-inner">

@@ -2,7 +2,7 @@
 
 > Actionable playbook for getting found and cited in AI search — ChatGPT, Google AI Overviews, Perplexity, Bing Copilot, and Gemini — and turning AI-driven visibility into enterprise leads.
 
-> Complements: [SEO_RANKING_GUIDE.md](./SEO_RANKING_GUIDE.md), [DOMAIN_AUTHORITY_PLAN.md](./DOMAIN_AUTHORITY_PLAN.md). Traditional SEO builds rankings; this guide builds **AI citability**.
+> Complements: [SEO_RANKING_GUIDE.md](./SEO_RANKING_GUIDE.md), [DOMAIN_AUTHORITY_PLAN.md](./DOMAIN_AUTHORITY_PLAN.md), [AI_VISIBILITY_AUDIT.md](./AI_VISIBILITY_AUDIT.md). Traditional SEO builds rankings; this guide builds **AI citability**.
 
 ---
 
@@ -35,25 +35,27 @@ Traditional search returns links; AI search returns **answers with citations**. 
 
 ## 2. Current State: What We Already Have
 
-### ✅ Already Done (July 2026)
+### ✅ Already Done (verified September 2026)
 | Asset | Status | AI Value |
 |-------|--------|----------|
-| `llms.txt` + `llms-full.txt` | ✅ Added | Direct feed for LLM-friendly site understanding |
-| Valid JSON-LD on all 37 blocks | ✅ Fixed | Structured entities for AI extraction |
-| Organization / LocalBusiness / FAQPage / Article / Breadcrumb schema | ✅ Present | Entity graph for AI knowledge retrieval |
-| 17 blog posts with Article + FAQ schema | ✅ Live | Quotable long-tail answers |
-| Data ROI Calculator | ✅ Live | Unique, linkable, AI-referenced tool |
-| Case studies + testimonials | ✅ Live | E-E-A-T signals AI engines weigh |
-| AggregateRating (4.9/5, 150 reviews) | ✅ Added | Trust signal in rich results |
-| Social proof on homepage (ratings, testimonials, insights) | ✅ Added | Conversion + citability |
+| `llms.txt` + `llms-full.txt` | ✅ Live | Direct feed for LLM-friendly site understanding; covers every sitemap URL |
+| `llms.txt` alternate link | ✅ On 60+ pages | Declares the LLM entry point in `<head>` |
+| JSON-LD | ✅ 59 files parse clean | Structured entities for AI extraction |
+| Organization / FAQPage / Article / Breadcrumb / Service schema | ✅ Present | Entity graph for AI retrieval |
+| Organization enrichment | ✅ Complete on all 59 | `foundingDate`, `numberOfEmployees`, `knowsAbout`, `areaServed`, `contactPoint`, `sameAs` identical everywhere |
+| FAQPage on the 4 service pages + homepage | ✅ Added Sep 2026 | Visible Q&A + schema on the money pages |
+| Answer-first ledes on the 4 service pages | ✅ Added Sep 2026 | Extractable opening answer under each `<h1>` |
+| `SpeakableSpecification` on service pages + homepage | ✅ Added Sep 2026 | Assistants can read a designated passage |
+| `robots.txt` AI allowances | ✅ 15 UAs explicitly allowed | AI crawlers admitted |
+| Sitemap | ✅ 58 URLs | Indexed surface |
+| Blog `datePublished` | ✅ All 26 posts | Freshness signal |
+| AI visibility prompt audit kit | ✅ `AI_VISIBILITY_AUDIT.md` | Baseline + monthly measurement |
 
-### ❌ Gaps to Close
-- [ ] Consistent `datePublished`/`dateModified` on every page (AI values freshness)
-- [ ] Author/Person entities for thought leadership (E-E-A-T)
-- [ ] "Answer-first" content blocks on service pages
+### ❌ Gaps still open
+- [ ] Named author bios + `Person` schema on every blog post (needs real names/credentials — E-E-A-T)
 - [ ] Original statistics/research (AI engines cite unique data heavily)
 - [ ] Third-party mentions (LinkedIn, Clutch, G2, press) that AI cross-references
-- [ ] Prompt-based testing of how ChatGPT/Perplexity answer questions about us
+- [ ] First prompt-audit baseline run (see [AI_VISIBILITY_AUDIT.md](./AI_VISIBILITY_AUDIT.md))
 
 ---
 
@@ -63,18 +65,7 @@ AI systems crawl the web like search engines (and increasingly via `llms.txt`). 
 
 - [x] **`llms.txt` / `llms-full.txt`** at `https://performalytic.com/llms.txt` — keep current whenever pages/posts change.
 - [x] **Sitemap** at `https://performalytic.com/sitemap.xml` — add every new page/post.
-- [ ] **Robots.txt** — confirm no AI bot is blocked: add explicit allowances for `GPTBot`, `ChatGPT-User`, `PerplexityBot`, `ClaudeBot`, `Google-Extended`, `Bingbot` (responsible AI crawlers). Example:
-
-```txt
-User-agent: GPTBot
-Allow: /
-User-agent: PerplexityBot
-Allow: /
-User-agent: ClaudeBot
-Allow: /
-User-agent: Google-Extended
-Allow: /
-```
+- [x] **`robots.txt`** — AI bots explicitly allowed: `GPTBot`, `ChatGPT-User`, `OAI-SearchBot`, `PerplexityBot`, `ClaudeBot`, `Claude-User`, `Google-Extended`, `Google-CloudVertexBot`, `Applebot-Extended`, `Bytespider`, `Amazonbot`, `Meta-ExternalAgent`, `cohere-ai` (plus `User-agent: * / Allow: /`).
 
 - [ ] **Clean, semantic HTML** — keep single `<h1>` per page, descriptive headings, and paragraph-based content (avoid heavy JS-only rendering; AI retrieval is HTML-first).
 - [ ] **Freshness** — review & update blog posts quarterly; AI engines weight recency heavily.
@@ -90,13 +81,14 @@ Structured data is how AI engines build an entity graph about Performalytic. We 
 Maintain **identical** name/address/URL/logo across all schema and all third-party profiles (LinkedIn, Clutch, G2, Google Business Profile, etc.). AI cross-references NAP to confirm "Performalytic" is one real company.
 
 ### 4.2 Schema to Add/Complete
-- [ ] **Person schema** for leadership (Nihar Rout, Abani Pattanayak) on `/about/` — with `jobTitle`, `alumniOf` (Northwestern Kellogg, etc.), `sameAs` (LinkedIn). Boosts expert E-E-A-T.
-- [ ] **Article schema** completeness on every blog post — ensure `datePublished`, `dateModified`, `author`, `publisher` (mostly present; audit all 17).
-- [ ] **SoftwareApplication** for 4DAlert on `/products/` (present — verify `offers`, `aggregateRating` once G2 reviews exist).
-- [ ] **HowTo** schema on `/tools/data-roi-calculator/` and process sections.
-- [ ] **Review/AggregateRating** on `/testimonials/` (added — keep review count current as reviews grow).
-- [ ] **ItemList** for blog index + case studies (add if not present).
-- [ ] **Service** schema for each of the 4 service pages — with `provider`, `serviceType`, `areaServed`. AI engines surface "services" entities.
+- [ ] **Person schema** for leadership (Nihar Rout, Abani Pattanayak) on `/about/` — extend with `jobTitle`, `alumniOf` (Northwestern Kellogg, etc.), `sameAs` (LinkedIn). Boosts expert E-E-A-T.
+- [x] **Article schema** completeness on every blog post — `datePublished`, `author`, `publisher` present on all 26; `author` still points at the Organization (needs real named authors).
+- [x] **SoftwareApplication** for 4DAlert on `/products/`.
+- [x] **Service** schema on each of the 4 service pages — with `provider`, `serviceType`, `areaServed`.
+- [x] **FAQPage** schema — now on the 4 service pages, the homepage, `/faq/`, `/knowledge/*`, `/products/` and 18 blog posts.
+- [x] **SpeakableSpecification** — service pages, homepage and 3 blog posts.
+- [ ] **Review/AggregateRating** on `/testimonials/` — keep the review count current as reviews grow.
+- [ ] **ItemList** for case studies (blog index already uses `CollectionPage`).
 
 ### 4.3 Validate
 Run every page through:
@@ -220,14 +212,14 @@ Record whether we're mentioned, cited, and whether the source is accurate.
 
 ## 9. Quick Wins (This Week)
 
-1. **Verify AI bots allowed** in `robots.txt` (GPTBot, PerplexityBot, ClaudeBot, Google-Extended).
-2. **Submit sitemap** to Bing Webmaster Tools (Bing powers Copilot).
-3. **Test ChatGPT + Perplexity** with the 5-question audit above; log baseline.
-4. **Add answer-first block** to the top of the 4 service pages.
-5. **Add Person schema** for the two leaders on `/about/`.
-6. **Confirm `llms.txt`/`llms-full.txt`** are live and current.
-7. **Fix any missing dates** on blog posts (datePublished/dateModified).
-8. **Refresh the blog index** with the newest 4 posts (homepage now links them).
+1. [x] **Verify AI bots allowed** in `robots.txt` (GPTBot, OAI-SearchBot, PerplexityBot, ClaudeBot, Google-Extended).
+2. [ ] **Submit sitemap** to Bing Webmaster Tools (Bing powers Copilot).
+3. [ ] **Run the prompt audit baseline** — 15 prompts x 5 engines, see [AI_VISIBILITY_AUDIT.md](./AI_VISIBILITY_AUDIT.md).
+4. [x] **Add answer-first block** to the top of the 4 service pages.
+5. [ ] **Extend Person schema** on `/about/` with `sameAs` and `alumniOf`.
+6. [x] **Confirm `llms.txt`/`llms-full.txt`** are live, current, and linked from `<head>`.
+7. [x] **Dates** — `datePublished` present on all 26 blog posts.
+8. [ ] **Refresh the blog index** with the newest 4 posts.
 
 ---
 
@@ -276,5 +268,5 @@ Record whether we're mentioned, cited, and whether the source is accurate.
 
 ---
 
-*Last updated: August 2026*
+*Last updated: September 2026*
 *Owner: Performalytic Marketing Team*
