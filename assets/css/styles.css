@@ -1030,11 +1030,17 @@ h2[id],h3[id]{scroll-margin-top:96px}
   }
   .nav-logo img {
     height: 30px !important;
-    width: 200px !important;
+    width: auto !important;
   }
   .footer-brand-logo {
     height: 48px !important;
-    max-width: 120px !important;
+    width: auto !important;
+    max-width: 100% !important;
+  }
+  .footer-brand-logo.footer-brand-logo-light {
+    height: auto !important;
+    width: 150px !important;
+    max-width: 100% !important;
   }
 }
 @media (max-width: 480px) {
@@ -1043,11 +1049,17 @@ h2[id],h3[id]{scroll-margin-top:96px}
   }
   .nav-logo img {
     height: 28px !important;
-    width: 187px !important;
+    width: auto !important;
   }
   .footer-brand-logo {
     height: 44px !important;
-    max-width: 110px !important;
+    width: auto !important;
+    max-width: 100% !important;
+  }
+  .footer-brand-logo.footer-brand-logo-light {
+    height: auto !important;
+    width: 140px !important;
+    max-width: 100% !important;
   }
 }
 

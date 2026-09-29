@@ -1,4 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" fill="none">
+  <g transform="translate(0,-60) scale(1.6)">
   <rect width="200" height="200" rx="16" fill="#0f1d35"/>
   
   <!-- Bank building -->
@@ -28,5 +29,7 @@
   <g transform="translate(35, 155)">
     <rect x="-6" y="-2" width="12" height="10" rx="2" fill="rgba(74,222,128,0.15)" stroke="#4ade80" stroke-width="1"/>
     <path d="M-3,-2 L-3,-6 C-3,-10 3,-10 3,-6 L3,-2" fill="none" stroke="#4ade80" stroke-width="1.5"/>
+  </g>
+
   </g>
 </svg>
