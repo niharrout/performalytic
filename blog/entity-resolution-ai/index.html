@@ -223,6 +223,11 @@ section{padding:60px 0}}@media(max-width:480px){
 .footer-bottom{flex-direction:column;gap:12px;text-align:center}}
 
 /* Page-specific styles */
+/* The static FAQ cards reuse the accordion's bordered .faq-item, which has no
+   padding of its own - the heading was sitting flush against the border.
+   The accordion form (.faq-question) keeps its own padding, so scope this to
+   the static cards. */
+.faq-item{padding:20px}
 .faq-item h3{font-size:1rem;font-weight:700;color:var(--pa-t);margin:0 0 0.5rem}
 .faq-item p{font-size:0.95rem;color:var(--pa-t-muted);margin:0;line-height:1.7}
 .blog-cta .btn-secondary{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--pa-t);padding:14px 32px;border-radius:10px;text-decoration:none;font-weight:600;font-size:0.95rem;border:1px solid var(--pa-wd-02);transition:all 0.2s;margin-left:0}
@@ -630,7 +635,6 @@ nav:not(.mobile-menu).nav-scrolled{background:var(--pa-panel-81428-098)!importan
     </div>
 
     <div class="author-bio">
-      <div class="author-bio-avatar" aria-hidden="true">P</div>
       <div class="author-bio-body">
         <h4>About Performalytic</h4>
         <p>Performalytic helps enterprises turn data into a competitive advantage. Our team of 800+ data architects, analytics engineers, and AI specialists delivers end-to-end solutions — from <a href="/enterprise-solution-development/">data strategy and MDM implementation</a> to <a href="/advanced-analytics-ai/">AI-ready data infrastructure</a>. <a href="/contact/">Contact us</a> to discuss your master data challenges.</p>

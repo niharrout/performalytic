@@ -965,7 +965,6 @@ h2[id],h3[id]{scroll-margin-top:96px}
 
 /* Author Bio */
 .author-bio{display:flex;gap:20px;align-items:flex-start;padding:24px;background:var(--pa-wb-002);border:1px solid var(--pa-wd-006);border-radius:16px;margin:40px 0}
-.author-bio-avatar{width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,#2563eb,#7c3aed);flex-shrink:0}
 .author-bio-body h4,.author-bio-info h4{font-weight:700;font-size:1rem;color:var(--pa-t-strong);margin-bottom:4px}
 .author-bio-body p,.author-bio-info p{font-size:.9rem;color:var(--pa-t-muted);line-height:1.6;margin:0}
 
