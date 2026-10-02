@@ -27,15 +27,15 @@
     }
 
     // Staggered reveal for grid items
-    var gridContainers = document.querySelectorAll('.services-grid, .solutions-grid, .tech-grid, .trust-grid, .process-grid, .industries-grid, .tech-card-grid, .features-grid, .use-cases-grid, .tool-grid, .coming-soon-grid, .stats-grid');
+    var gridContainers = document.querySelectorAll('.services-grid, .solutions-grid, .tech-grid, .trust-grid, .process-grid, .industries-grid, .tech-card-grid, .features-grid, .use-cases-grid, .tool-grid, .coming-soon-grid, .stats-grid, .team-grid, .values-grid');
     gridContainers.forEach(function(grid) {
-      var items = grid.querySelectorAll('.service-card, .solution-card, .tech-item, .trust-item, .process-step, .industry-card, .tech-card, .feature-card, .use-case-card, .tool-card, .placeholder-card, .stat-item');
+      var items = grid.querySelectorAll('.service-card, .solution-card, .tech-item, .trust-item, .process-step, .industry-card, .tech-card, .feature-card, .use-case-card, .tool-card, .placeholder-card, .stat-item, .team-card, .value-tag');
       if (!items.length) return;
 
       var gridObserver = new IntersectionObserver(function(entries) {
         entries.forEach(function(entry) {
           if (entry.isIntersecting) {
-            var gridItems = entry.target.querySelectorAll('.service-card, .solution-card, .tech-item, .trust-item, .process-step, .industry-card, .tech-card, .feature-card, .use-case-card, .tool-card, .placeholder-card, .stat-item');
+            var gridItems = entry.target.querySelectorAll('.service-card, .solution-card, .tech-item, .trust-item, .process-step, .industry-card, .tech-card, .feature-card, .use-case-card, .tool-card, .placeholder-card, .stat-item, .team-card, .value-tag');
             gridItems.forEach(function(item, index) {
               setTimeout(function() {
                 item.classList.add('revealed');
