@@ -195,7 +195,7 @@ section{padding:var(--section-pad) 0}
 /* FOOTER */
 footer{background:var(--pa-bg-deep);border-top:1px solid var(--pa-wd-004);padding:var(--section-pad) 0 var(--space-xl)}
 .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:var(--space-2xl);margin-bottom:var(--space-xl)}
-.footer-brand-logo{height:60px;max-width:100%;display:block;margin-bottom:var(--space-md)}
+.footer-brand-logo{width:162px;height:60px;max-width:100%;object-fit:contain;object-position:left center;display:block;margin-bottom:var(--space-md)}
 .footer-brand p{font-size:.85rem;color:var(--pa-t-muted);line-height:1.65;max-width:300px;margin-bottom:0}
 .footer-social{display:flex;gap:var(--space-sm);margin-top:var(--space-lg)}
 .footer-social a{width:38px;height:38px;border-radius:10px;border:1px solid var(--pa-wd-008);display:flex;align-items:center;justify-content:center;color:var(--pa-t-muted);text-decoration:none;transition:all .2s;font-size:.85rem;font-weight:700}
@@ -307,7 +307,7 @@ nav:not(.mobile-menu).nav-scrolled{background:var(--pa-panel-81428-098)!importan
    lockup the navbar already loads, so it costs no extra request. */
 .footer-brand-logo-light{display:none}
 :root[data-theme="light"] .footer-brand-logo-dark{display:none}
-:root[data-theme="light"] .footer-brand-logo-light{display:block;width:170px;max-width:170px;height:auto}
+:root[data-theme="light"] .footer-brand-logo-light{display:block}
 </style>
 <style nonce="P3rf0rm4lyt1c">
 /* Inter (SIL Open Font License 1.1) - self-hosted so no third-party stylesheet blocks render. */

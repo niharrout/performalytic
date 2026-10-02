@@ -1032,15 +1032,15 @@ h2[id],h3[id]{scroll-margin-top:96px}
     height: 30px !important;
     width: auto !important;
   }
+  /* The dark and light footer lockups have different aspect ratios, so both
+     variants share one explicit box and object-fit:contain scales each inside
+     it. Sizing them by different axes made the logo resize on theme toggle. */
   .footer-brand-logo {
     height: 48px !important;
-    width: auto !important;
+    width: 129px !important;
     max-width: 100% !important;
-  }
-  .footer-brand-logo.footer-brand-logo-light {
-    height: auto !important;
-    width: 150px !important;
-    max-width: 100% !important;
+    object-fit: contain;
+    object-position: left center;
   }
 }
 @media (max-width: 480px) {
@@ -1053,13 +1053,10 @@ h2[id],h3[id]{scroll-margin-top:96px}
   }
   .footer-brand-logo {
     height: 44px !important;
-    width: auto !important;
+    width: 119px !important;
     max-width: 100% !important;
-  }
-  .footer-brand-logo.footer-brand-logo-light {
-    height: auto !important;
-    width: 140px !important;
-    max-width: 100% !important;
+    object-fit: contain;
+    object-position: left center;
   }
 }
 
