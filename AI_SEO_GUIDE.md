@@ -55,7 +55,9 @@ Traditional search returns links; AI search returns **answers with citations**. 
 - [ ] Named author bios + `Person` schema on every blog post (needs real names/credentials — E-E-A-T)
 - [ ] Original statistics/research (AI engines cite unique data heavily)
 - [ ] Third-party mentions (LinkedIn, Clutch, G2, press) that AI cross-references
-- [ ] First prompt-audit baseline run (see [AI_VISIBILITY_AUDIT.md](./AI_VISIBILITY_AUDIT.md))
+- [x] First prompt-audit **search-proxy** baseline run (2026-10-05) — `ai-visibility-audit-search-baseline.csv`; brand 100%, competitive/topic 0%
+- [ ] Manual 5-engine baseline (ChatGPT, Perplexity, Copilot, Gemini, AI Overviews) — `ai-visibility-audit.csv` still empty
+- [ ] Dispute Gridinsoft "Phishing 21/100" listing — ranks for "Is Performalytic legitimate?"
 
 ---
 
@@ -214,7 +216,9 @@ Record whether we're mentioned, cited, and whether the source is accurate.
 
 1. [x] **Verify AI bots allowed** in `robots.txt` (GPTBot, OAI-SearchBot, PerplexityBot, ClaudeBot, Google-Extended).
 2. [ ] **Submit sitemap** to Bing Webmaster Tools (Bing powers Copilot).
-3. [ ] **Run the prompt audit baseline** — 15 prompts x 5 engines, see [AI_VISIBILITY_AUDIT.md](./AI_VISIBILITY_AUDIT.md).
+3. [x] **Search-proxy prompt baseline** — 15 prompts run 2026-10-05, see [AI_VISIBILITY_AUDIT.md §10](./AI_VISIBILITY_AUDIT.md).
+3b. [ ] **Manual 5-engine baseline** — 15 prompts x 5 AI tools, see [AI_VISIBILITY_AUDIT.md](./AI_VISIBILITY_AUDIT.md).
+3c. [ ] **Dispute the Gridinsoft phishing listing** — it ranks for "Is Performalytic a legitimate company?".
 4. [x] **Add answer-first block** to the top of the 4 service pages.
 5. [ ] **Extend Person schema** on `/about/` with `sameAs` and `alumniOf`.
 6. [x] **Confirm `llms.txt`/`llms-full.txt`** are live, current, and linked from `<head>`.
@@ -230,7 +234,7 @@ Record whether we're mentioned, cited, and whether the source is accurate.
 |------|--------|---------|
 | 1 | `llms.txt` live, robots AI bots allowed, sitemap to Bing | AI crawl-ready |
 | 2 | Answer-first blocks on 4 service pages + Person schema | Extractable content |
-| 3 | Prompt audit baseline (5 questions, 5 AI tools) | Measured starting point |
+| 3 | Manual prompt audit baseline (15 questions, 5 AI tools); dispute Gridinsoft listing | Measured starting point |
 | 4 | Google Business Profile + directory NAP consistency (Clutch, G2) | Third-party trust |
 
 **Target:** AI crawl-ready, baseline recorded.

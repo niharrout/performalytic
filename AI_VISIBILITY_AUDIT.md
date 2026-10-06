@@ -10,6 +10,7 @@
 | When | What |
 |------|------|
 | Now | **Baseline run** — first full pass, log to `ai-visibility-audit.csv` |
+| Done — 2026-10-05 | **Search-proxy pass** — logged to `ai-visibility-audit-search-baseline.csv` (see §10) |
 | Every month | Repeat the same pass, same questions, same engines |
 | After every content push | Re-run only the Brand + Topic groups |
 
@@ -73,7 +74,7 @@ One pass (75 cells) takes ~30 minutes.
 | Column | Values |
 |--------|--------|
 | `mentioned` | `yes` / `no` — is Performalytic named in the answer? |
-| `cited` | `yes` / `no` — is a `performalytic.com` URL shown as a source? |
+| `cited` | `yes` / `no` — is a `performalytic.com` **or `4dalert.com`** URL shown as a source? |
 | `cited_url` | the exact URL cited (blank if none) |
 | `accuracy` | `accurate` / `partial` / `wrong` / `n/a` (n/a when not mentioned) |
 | `competitors_named` | comma-separated rivals listed (for Group B) |
@@ -115,6 +116,57 @@ AI engines copy the source. Fix the page, not the model:
 ## 9. Files
 
 - `ai-visibility-audit.csv` — pre-filled with all 75 cells, one `run_date` column to fill per month.
+- `ai-visibility-audit-search-baseline.csv` — search-proxy pass, 15 rows, run 2026-10-05.
+
+---
+
+## 10. Search-proxy baseline (2026-10-05)
+
+**What this is:** all 15 prompts run through an AI web-search provider (not the 5 consumer engines).
+It measures whether our content surfaces in the retrieval layer that feeds AI answers.
+It is a **proxy**, not the official baseline — the 5-engine pass in `ai-visibility-audit.csv` is still empty
+and must be run manually in fresh sessions per §2.
+
+### Results
+
+| Group | Prompts | Mentioned | Cited | Target |
+|-------|---------|-----------|-------|--------|
+| A Brand | 3 | 3 (100%) | 3 (100%) | 100% mention ✅ |
+| B Competitive | 3 | 0 (0%) | 0 (0%) | present in ≥1 of 3 ❌ |
+| C Topic | 5 | 0 (0%) | 0 (0%) | ≥50% citation ❌ |
+| D Product & trust | 4 | 2 (50%) | 2 (50%) | accuracy of what is said ⚠️ |
+| **Overall** | **15** | **5 (33%)** | **5 (33%)** | — |
+
+Accuracy of the 5 mentions: 4 accurate, 1 partial (80%).
+
+### Findings
+
+1. **Brand is solid, everything else is zero.** We own brand queries; we appear in *none* of the
+   competitive, topic, or buyer-guide result sets. Group C is the whole opportunity.
+2. **Reputation threat (highest priority).** A Gridinsoft page — *"Performalytic.com Scam Check:
+   Phishing (21/100 Trust Score)"* — ranks #4 for `Is Performalytic a legitimate company?` and also
+   appears for `Performalytic reviews`. AI engines reading this will hedge or drop us.
+   Dispute it: `portal.gridinsoft.com` (claimed profile already exists) with proof of legitimacy.
+3. **`4dalert.com` gets cited, `performalytic.com` does not, for the same product.** D1 cited
+   4dalert.com. Citation check updated to accept both domains (§5).
+4. **Entity data mismatch.** Salary.com employee reviews for "Performalytic Corp" describe a
+   *retail & wholesale* division — wrong-industry data that an AI will happily repeat. Correct or
+   claim that profile.
+5. **We have the content, it is not being retrieved.** D3 (MDM timelines) and D4 (build vs buy)
+   are answered by our `/products/` FAQ, yet competitor blog posts win. The answers exist but are
+   not extractable/ranked enough — check heading structure and whether these Q&As are in visible
+   text above the fold.
+6. **Chicago is winnable and we are absent.** B3 is owned by six local boutiques running dedicated
+   `/chicago/` landing pages with `Service` + `areaServed: Chicago` schema. We are HQ'd in Chicago.
+
+### Next actions
+
+- [ ] Dispute the Gridinsoft phishing listing (blocks Group D trust)
+- [ ] Fix/claim the Salary.com profile (wrong-industry reviews)
+- [ ] Build a Chicago service landing page (Group B3 is the cheapest competitive win)
+- [ ] Rewrite Group C answer pages to match the winner format: definition-first, 400–800 words,
+      comparison tables, cited standards (ISO 8000/25012, DAMA)
+- [ ] Run the **manual 5-engine baseline** into `ai-visibility-audit.csv` — still not done
 
 ---
 
