@@ -217,6 +217,12 @@ DataOps, CI/CD for data, schema compare, and automated data reconciliation.
 - AI Entity Resolution: How Machines Match, Merge, and Build Golden Records — https://performalytic.com/blog/entity-resolution-ai/
 - 4DAlert vs Legacy MDM Platforms: A Feature-Level Comparison — https://performalytic.com/blog/4dalert-vs-legacy-mdm/
 
+- Agentic AI in Database DevOps: A Practical Guide for 2026 — https://performalytic.com/blog/agentic-ai-database-devops/
+- 12 Schema Compare Tools Compared for 2026 — https://performalytic.com/blog/schema-compare-tools/
+- Schema Migration Best Practices: Expand, Contract, and Rollback — https://performalytic.com/blog/schema-migration-best-practices/
+- What Is Schema Drift? Causes, Detection, and Prevention — https://performalytic.com/blog/schema-drift/
+- Database Change Management: The Complete Guide for 2026 — https://performalytic.com/blog/database-change-management/
+
 ## Full Site Index
 
 - Home: https://performalytic.com/

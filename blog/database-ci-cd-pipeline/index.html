@@ -530,7 +530,7 @@ nav:not(.mobile-menu).nav-scrolled{background:var(--pa-panel-81428-098)!importan
         <li><strong>Before merge (pre-deploy gate):</strong> On every pull request, diff the proposed schema against a known-good baseline or against production. Classify each difference as <strong>breaking</strong> (removals, type changes, constraint tightening) or <strong>non-breaking</strong> (purely additive). Fail the build when an unapproved breaking change is present</li>
         <li><strong>After deploy (drift detection):</strong> Re-compare production against what the pipeline just approved. Anything that differs means someone changed the database outside the pipeline — a manual DBA edit, a hotfix, a vendor script — and that should raise an alert, not go unnoticed</li>
       </ul>
-      <p>The pre-deploy gate is what lets you block a dangerous change without blocking the release train. The post-deploy check is what keeps the pipeline honest over months of operation. For the full mechanics, see the <a href="/blog/schema-compare-guide/">schema compare guide</a>.</p>
+      <p>The pre-deploy gate is what lets you block a dangerous change without blocking the release train. The post-deploy check is what keeps the pipeline honest over months of operation. For the full mechanics, see the <a href="/blog/schema-compare-guide/">schema compare guide</a>, and for a side-by-side look at the tooling, see our comparison of <a href="/blog/schema-compare-tools/">schema compare tools</a>.</p>
 
       <!-- Database CI/CD Pipeline Diagram -->
       <div class="diagram-section">
@@ -592,7 +592,7 @@ nav:not(.mobile-menu).nav-scrolled{background:var(--pa-panel-81428-098)!importan
       </div>
 
       <h2 id="manual-vs-automated">5. Manual vs. Automated Database Change Management</h2>
-      <p>Most teams start manual and stay there longer than they should, because manual review feels safer than an automated release. In practice it is the reverse — manual steps are where consistency, speed, and auditability all break down.</p>
+      <p>Most teams start manual and stay there longer than they should, because manual review feels safer than an automated release. In practice it is the reverse — manual steps are where consistency, speed, and auditability all break down. The surrounding process — who requests, approves, and audits each change — is <a href="/blog/database-change-management/">database change management</a>.</p>
 
       <div class="comparison-table-wrap">
         <table class="comparison-table">
@@ -703,7 +703,7 @@ nav:not(.mobile-menu).nav-scrolled{background:var(--pa-panel-81428-098)!importan
       <p>Migration frameworks decide <em>how changes are written</em>. CI runners decide <em>when changes run</em>. Only a comparison layer decides <em>whether the resulting schema is the one you approved</em> — which is why teams running mature database CI/CD almost always add one.</p>
 
       <h2 id="agentic-ai">7. Agentic AI in Database DevOps</h2>
-      <p>The newest layer in the database CI/CD stack is agentic: an AI agent that handles the analysis and drafting work between a natural-language request and a reviewed migration. It does not replace the pipeline — it feeds it better input, faster.</p>
+      <p>The newest layer in the database CI/CD stack is agentic: an AI agent that handles the analysis and drafting work between a natural-language request and a reviewed migration. It does not replace the pipeline — it feeds it better input, faster. The architecture, the use cases that work today, and the failure modes to design against are covered in our guide to <a href="/blog/agentic-ai-database-devops/">agentic AI in database DevOps</a>.</p>
       <p>A well-designed agentic workflow for database changes follows a fixed sequence:</p>
       <ol>
         <li><strong>Parse the request:</strong> Convert a plain-language change request into a structured intent — which entity, which attributes, what constraint</li>
@@ -807,6 +807,7 @@ nav:not(.mobile-menu).nav-scrolled{background:var(--pa-panel-81428-098)!importan
       <h2 id="conclusion">Conclusion</h2>
       <p>Database changes will never behave exactly like application deploys — the state is live, and some changes cannot be undone. But that is an argument for better gates, not for staying manual.</p>
       <p>Teams that treat schema changes as reviewed, versioned, automatically validated artifacts ship faster and break less. The sequence is unglamorous and it works: get migrations into Git, build environments from scratch, add comparison as a merge gate, turn on drift detection, and only then let an agent start drafting the work.</p>
+      <p>For the surrounding details, see our guides to <a href="/blog/schema-drift/">what schema drift is and how to prevent it</a> and to <a href="/blog/schema-migration-best-practices/">schema migration best practices</a> — expand-contract, batched backfills, and rollbacks that are actually tested.</p>
 
       <div class="highlight-box">
         <h4>Ready to Gate Your Database Releases?</h4>
@@ -819,9 +820,9 @@ nav:not(.mobile-menu).nav-scrolled{background:var(--pa-panel-81428-098)!importan
 
       <!-- Post Navigation -->
       <nav class="post-footer-nav" aria-label="Post navigation">
-        <a href="/blog/schema-compare-guide/" class="prev">
+        <a href="/blog/agentic-ai-database-devops/" class="prev">
           <span class="nav-label">Previous</span>
-          <span class="nav-title">Schema Compare Guide: Catch Breaking Changes Before They Reach Production</span>
+          <span class="nav-title">Agentic AI in Database DevOps: A Practical Guide for 2026</span>
         </a>
         <a href="/blog/devops-best-practices/" class="next">
           <span class="nav-label">Next</span>

@@ -350,6 +350,7 @@ nav:not(.mobile-menu).nav-scrolled{background:var(--pa-panel-81428-098)!importan
       <li><strong>Rollbacks:</strong> If a change introduces issues, reverting is straightforward</li>
       <li><strong>Code review:</strong> Peer reviews catch errors before they reach production</li>
     </ul>
+    <p>For databases specifically, version control is what makes a change reversible — the expand-contract pattern, batched backfills, and tested rollback scripts are covered in our <a href="/blog/schema-migration-best-practices/">schema migration best practices</a>.</p>
 
     <h2 id="2-implement-cicd-for-data-pipelines">2. Implement CI/CD for Data Pipelines</h2>
     <p>Continuous Integration and Continuous Deployment (CI/CD) isn't just for application code. Data pipelines benefit enormously from automated testing and deployment:</p>
@@ -358,7 +359,7 @@ nav:not(.mobile-menu).nav-scrolled{background:var(--pa-panel-81428-098)!importan
       <li><strong>Environment parity:</strong> Promote changes through dev, staging, and production with confidence</li>
       <li><strong>Faster iterations:</strong> Deploy data pipeline changes multiple times per day instead of weekly or monthly</li>
     </ul>
-    <p>At Performalytic, we help organizations implement <a href="/application-development-and-system-integration/">CI/CD pipeline automation</a> for their data infrastructure, enabling faster, more reliable releases. For the database side of this — migrations, schema comparison gates, and drift detection — see our guide to <a href="/blog/database-ci-cd-pipeline/">building a database CI/CD pipeline</a>.</p>
+    <p>At Performalytic, we help organizations implement <a href="/application-development-and-system-integration/">CI/CD pipeline automation</a> for their data infrastructure, enabling faster, more reliable releases. For the database side of this — migrations, schema comparison gates, and drift detection — see our guide to <a href="/blog/database-ci-cd-pipeline/">building a database CI/CD pipeline</a>. And for the process around those changes — requests, approvals, risk tiers, and audits — see our guide to <a href="/blog/database-change-management/">database change management</a>.</p>
 
     <h2 id="3-infrastructure-as-code-iac">3. Infrastructure as Code (IaC)</h2>
     <p>Manual infrastructure setup is error-prone and hard to reproduce. Infrastructure as Code tools like Terraform, Pulumi, and AWS CloudFormation allow data teams to define their infrastructure in declarative configuration files:</p>

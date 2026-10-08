@@ -461,7 +461,7 @@ nav:not(.mobile-menu).nav-scrolled{background:var(--pa-panel-81428-098)!importan
     <p>The goal isn't just to list differences — it's to identify <strong>breaking changes</strong> (things that will cause failures) versus <strong>non-breaking changes</strong> (safe additions) so teams can respond appropriately.</p>
 
     <h2 id="why-schema-drift-hurts">2. Why Schema Drift Hurts Data Teams</h2>
-    <p>Schema drift occurs when databases evolve over time without synchronized documentation or change management. It's especially common in organizations with multiple environments (dev, staging, production) or multiple databases feeding into shared analytics pipelines.</p>
+    <p>Schema drift occurs when databases evolve over time without synchronized documentation or change management. It's especially common in organizations with multiple environments (dev, staging, production) or multiple databases feeding into shared analytics pipelines. For the full definition, the common causes, and how to detect and prevent it, see our guide to <a href="/blog/schema-drift/">schema drift</a>.</p>
 
     <blockquote>
       "The most dangerous schema changes are the ones nobody notices — until a dashboard shows NULLs where last month's revenue used to be."
@@ -495,7 +495,7 @@ nav:not(.mobile-menu).nav-scrolled{background:var(--pa-panel-81428-098)!importan
       <li>Integrates with version control and alerting systems</li>
       <li>Maintains a history of schema versions for auditing</li>
     </ul>
-    <p>For any team managing more than a handful of tables across multiple environments, automated schema comparison isn't a luxury — it's a necessity. For a broader look at automating your data operations, see our guide to <a href="/blog/automated-data-reconciliation/">automated data reconciliation</a>.</p>
+    <p>For any team managing more than a handful of tables across multiple environments, automated schema comparison isn't a luxury — it's a necessity. For a side-by-side look at the options, see our comparison of <a href="/blog/schema-compare-tools/">schema compare tools</a>. For a broader look at automating your data operations, see our guide to <a href="/blog/automated-data-reconciliation/">automated data reconciliation</a>.</p>
 
     <h2 id="what-to-compare">4. What to Compare Across Schemas</h2>
     <p>A thorough schema comparison goes beyond just listing tables. Here's what to examine:</p>
@@ -510,7 +510,7 @@ nav:not(.mobile-menu).nav-scrolled{background:var(--pa-panel-81428-098)!importan
     <p>The more comprehensively you compare, the fewer surprises you'll encounter in production. If you're also managing data quality across these schemas, our guide to <a href="/blog/data-modeling-crisis/">data modeling best practices</a> covers how to design schemas that resist drift.</p>
 
     <h2 id="schema-cicd">5. Schema CI/CD: Making It Part of Your Workflow</h2>
-    <p>The most effective way to prevent schema drift is to treat schema changes like code changes — reviewed, tested, and deployed through a controlled pipeline.</p>
+    <p>The most effective way to prevent schema drift is to treat schema changes like code changes — reviewed, tested, and deployed through a controlled pipeline. The surrounding process — who requests, approves, and audits each change — is <a href="/blog/database-change-management/">database change management</a>.</p>
     <ol>
       <li><strong>Version control your schemas:</strong> Store DDL scripts, migration files, or ORM models in Git</li>
       <li><strong>Automate comparison in CI:</strong> On every pull request, compare the proposed schema against production and flag breaking changes</li>

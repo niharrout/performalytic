@@ -66,6 +66,12 @@
 - [The Ultimate Guide to Data-Driven Decision Making in 2026](https://performalytic.com/blog/data-driven-decision-making/)
 - [5 Signs Your Data Infrastructure Is Holding Your Business Back](https://performalytic.com/blog/signs-data-infrastructure-holding-back/)
 
+- [Agentic AI in Database DevOps: A Practical Guide for 2026](https://performalytic.com/blog/agentic-ai-database-devops/)
+- [12 Schema Compare Tools Compared for 2026](https://performalytic.com/blog/schema-compare-tools/)
+- [Schema Migration Best Practices: Expand, Contract, and Rollback](https://performalytic.com/blog/schema-migration-best-practices/)
+- [What Is Schema Drift? Causes, Detection, and Prevention](https://performalytic.com/blog/schema-drift/)
+- [Database Change Management: The Complete Guide for 2026](https://performalytic.com/blog/database-change-management/)
+
 ## Company
 
 - [About](https://performalytic.com/about/)

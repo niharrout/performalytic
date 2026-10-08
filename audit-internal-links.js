@@ -56,6 +56,11 @@ const TOPIC_CLUSTERS = {
     pillar: '/blog/database-ci-cd-pipeline/',
     related: [
       '/blog/schema-compare-guide/',
+      '/blog/schema-drift/',
+      '/blog/database-change-management/',
+      '/blog/schema-migration-best-practices/',
+      '/blog/schema-compare-tools/',
+      '/blog/agentic-ai-database-devops/',
       '/blog/devops-best-practices/',
       '/knowledge/dataops-devops/',
       '/products/'
