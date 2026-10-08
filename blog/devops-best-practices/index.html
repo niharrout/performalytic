@@ -55,6 +55,7 @@ gtag('config', 'G-FV09CSCD2C');
 <script type="application/ld+json" nonce="P3rf0rm4lyt1c">[{
   "@context": "https://schema.org",
   "@type": "Organization",
+  "@id": "https://performalytic.com/#organization",
   "name": "Performalytic",
   "url": "https://performalytic.com/",
   "logo": "/assets/images/performalytic-logo.png",
@@ -104,6 +105,25 @@ gtag('config', 'G-FV09CSCD2C');
     "email": "info@performalytic.com",
     "url": "https://performalytic.com/contact/"
   }
+},
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://performalytic.com/#author-james-carter",
+  "name": "James Carter",
+  "jobTitle": "Senior Data Engineer",
+  "worksFor": {
+    "@id": "https://performalytic.com/#organization"
+  },
+  "knowsAbout": [
+    "DevOps",
+    "CI/CD",
+    "data pipelines",
+    "infrastructure as code",
+    "data engineering",
+    "automated testing"
+  ],
+  "url": "https://performalytic.com/about/"
 },{
   "@context":"https://schema.org",
   "@type":"BreadcrumbList",
@@ -120,8 +140,8 @@ gtag('config', 'G-FV09CSCD2C');
   "headline":"DevOps Best Practices for Data Teams: CI/CD, Automation & More",
   "description":"Learn how to apply DevOps principles to data pipelines and analytics workflows. From CI/CD automation to infrastructure as code.",
   "image":"/assets/images/blog/hero-devops-best-practices.svg",
-  "author":{"@type":"Organization","name":"Performalytic"},
-  "publisher":{"@type":"Organization","name":"Performalytic","logo":{"@type":"ImageObject","url":"/assets/images/performalytic-logo.png"}},
+  "author":{"@id":"https://performalytic.com/#author-james-carter"},
+  "publisher":{"@id":"https://performalytic.com/#organization"},
   "datePublished":"2026-05-10T10:00:00+00:00",
   "dateModified":"2026-07-17T10:00:00+00:00",
   "mainEntityOfPage":"https://performalytic.com/blog/devops-best-practices/"
@@ -323,7 +343,7 @@ nav:not(.mobile-menu).nav-scrolled{background:var(--pa-panel-81428-098)!importan
       <span>&#128196; 7 min read</span>
     </div>
     <h1>DevOps Best Practices for Data Teams: CI/CD, Automation &amp; More</h1>
-    <p class="hero-description">Learn how to apply DevOps principles to data pipelines and analytics workflows - from CI/CD automation to infrastructure as code.</p>
+    <p class="hero-description">Learn how to apply DevOps principles to data pipelines and analytics workflows - version control for SQL and transformation code, CI/CD that tests every change against a real database, infrastructure as code, automated data quality gates, and monitoring that treats pipelines like production software. This guide walks through the seven practices that matter most and how to introduce them without boiling the ocean.</p>
   </div>
 </section>
 
