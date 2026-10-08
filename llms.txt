@@ -60,6 +60,11 @@
 - [Data Modeling Crisis: Why Teams Struggle with Semantics](https://performalytic.com/blog/data-modeling-crisis/)
 - [How to Choose the Right Analytics Platform](https://performalytic.com/blog/choose-right-analytics-platform/)
 - [DevOps Best Practices for Data Teams](https://performalytic.com/blog/devops-best-practices/)
+- [Database CI/CD: How to Build a Schema Change Pipeline](https://performalytic.com/blog/database-ci-cd-pipeline/)
+- [How AI is Transforming Business Intelligence](https://performalytic.com/blog/ai-business-intelligence/)
+- [How to Build a Data-Driven Culture in Your Organization](https://performalytic.com/blog/build-data-driven-culture/)
+- [The Ultimate Guide to Data-Driven Decision Making in 2026](https://performalytic.com/blog/data-driven-decision-making/)
+- [5 Signs Your Data Infrastructure Is Holding Your Business Back](https://performalytic.com/blog/signs-data-infrastructure-holding-back/)
 
 ## Company
 

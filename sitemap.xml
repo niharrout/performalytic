@@ -96,6 +96,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://performalytic.com/blog/database-ci-cd-pipeline/</loc>
+    <lastmod>2026-10-06</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://performalytic.com/blog/databricks-vs-snowflake/</loc>
     <lastmod>2026-09-17</lastmod>
     <priority>0.8</priority>

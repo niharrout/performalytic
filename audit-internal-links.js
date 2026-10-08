@@ -50,6 +50,16 @@ const TOPIC_CLUSTERS = {
       '/blog/data-modeling-crisis/',
       '/knowledge/data-governance-quality/'
     ]
+  },
+  'database-cicd': {
+    keywords: ['database cicd', 'database ci/cd', 'schema change', 'schema drift', 'schema compare', 'database devops', 'schema migration', 'database deployment', 'migration pipeline'],
+    pillar: '/blog/database-ci-cd-pipeline/',
+    related: [
+      '/blog/schema-compare-guide/',
+      '/blog/devops-best-practices/',
+      '/knowledge/dataops-devops/',
+      '/products/'
+    ]
   }
 };
 

@@ -209,6 +209,7 @@ DataOps, CI/CD for data, schema compare, and automated data reconciliation.
 - The Ultimate Guide to Schema Compare & CI/CD for Databases — https://performalytic.com/blog/schema-compare-guide/
 - Building a Data Quality Framework That Actually Works — https://performalytic.com/blog/data-quality-framework/
 
+- Database CI/CD: How to Build a Schema Change Pipeline — https://performalytic.com/blog/database-ci-cd-pipeline/
 - Data Reconciliation: The Complete Guide for 2026 — https://performalytic.com/blog/data-reconciliation-guide/
 - MDM Implementation Patterns: Registry, Consolidation, and Coexistence — https://performalytic.com/blog/mdm-implementation-patterns/
 - The Future of Automated Data Reconciliation — https://performalytic.com/blog/future-of-automated-data-reconciliation/
