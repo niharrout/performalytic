@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" role="img" aria-labelledby="mdmTitle">
+<title id="mdmTitle">How master data management works — inconsistent records from CRM, ERP, product and support systems are standardised, matched and merged into one golden record, then published back</title>
+<defs>
+<linearGradient id="mdmBg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1120"/><stop offset="1" stop-color="#1b2540"/></linearGradient>
+<linearGradient id="mdmBrand" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2563eb"/><stop offset="1" stop-color="#7c3aed"/></linearGradient>
+<radialGradient id="mdmGb"><stop offset="0" stop-color="#2563eb" stop-opacity="0.2"/><stop offset="1" stop-color="#2563eb" stop-opacity="0"/></radialGradient>
+<radialGradient id="mdmGg"><stop offset="0" stop-color="#10b981" stop-opacity="0.16"/><stop offset="1" stop-color="#10b981" stop-opacity="0"/></radialGradient>
+<radialGradient id="mdmGa"><stop offset="0" stop-color="#f59e0b" stop-opacity="0.12"/><stop offset="1" stop-color="#f59e0b" stop-opacity="0"/></radialGradient>
+<pattern id="mdmGrid" width="44" height="44" patternUnits="userSpaceOnUse"><path d="M44 0H0V44" fill="none" stroke="#94a3b8" stroke-opacity="0.06"/></pattern>
+<marker id="mdmArrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0 0 L10 4 L0 8 Z" fill="#60a5fa"/></marker>
+<marker id="mdmArrowG" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0 0 L10 4 L0 8 Z" fill="#34d399"/></marker>
+</defs>
+<rect width="1200" height="600" fill="url(#mdmBg)"/>
+<rect width="1200" height="600" fill="url(#mdmGrid)"/>
+<ellipse cx="230" cy="300" rx="340" ry="330" fill="url(#mdmGb)"/>
+<ellipse cx="980" cy="300" rx="340" ry="330" fill="url(#mdmGg)"/>
+<ellipse cx="600" cy="580" rx="440" ry="200" fill="url(#mdmGa)"/>
+<g font-family="Segoe UI, system-ui, sans-serif">
+
+<text x="50" y="56" font-size="13" letter-spacing="6" fill="#64748b">WHAT IS MASTER DATA MANAGEMENT</text>
+<text x="50" y="86" font-size="16" font-weight="700" fill="#e2e8f0">Many versions of the truth in, one golden record out</text>
+
+<!-- sources -->
+<g>
+<rect x="50" y="120" width="280" height="86" rx="14" fill="#111a30" stroke="#60a5fa" stroke-opacity="0.5"/>
+<text x="72" y="150" font-size="11" letter-spacing="3" fill="#60a5fa">CRM</text>
+<text x="72" y="176" font-size="16" font-weight="700" fill="#e2e8f0">Acme Corp</text>
+<text x="72" y="196" font-size="11" fill="#94a3b8">account_id 88213 &#183; US</text>
+
+<rect x="50" y="222" width="280" height="86" rx="14" fill="#111a30" stroke="#a78bfa" stroke-opacity="0.5"/>
+<text x="72" y="252" font-size="11" letter-spacing="3" fill="#a78bfa">ERP</text>
+<text x="72" y="278" font-size="16" font-weight="700" fill="#e2e8f0">ACME CORPORATION</text>
+<text x="72" y="298" font-size="11" fill="#94a3b8">vendor 1042 &#183; USA</text>
+
+<rect x="50" y="324" width="280" height="86" rx="14" fill="#111a30" stroke="#22d3ee" stroke-opacity="0.5"/>
+<text x="72" y="354" font-size="11" letter-spacing="3" fill="#22d3ee">PRODUCT CATALOG</text>
+<text x="72" y="380" font-size="16" font-weight="700" fill="#e2e8f0">acme</text>
+<text x="72" y="400" font-size="11" fill="#94a3b8">supplier ref A-99</text>
+
+<rect x="50" y="426" width="280" height="86" rx="14" fill="#111a30" stroke="#fbbf24" stroke-opacity="0.5"/>
+<text x="72" y="456" font-size="11" letter-spacing="3" fill="#fbbf24">SUPPORT TICKETS</text>
+<text x="72" y="482" font-size="16" font-weight="700" fill="#e2e8f0">ACME LTD</text>
+<text x="72" y="502" font-size="11" fill="#94a3b8">contact acme.com</text>
+</g>
+
+<!-- connectors -->
+<path d="M330 163 L410 163 L410 210" fill="none" stroke="#60a5fa" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#mdmArrow)"/>
+<path d="M330 265 L410 265" fill="none" stroke="#a78bfa" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#mdmArrow)"/>
+<path d="M330 367 L410 367" fill="none" stroke="#22d3ee" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#mdmArrow)"/>
+<path d="M330 469 L410 469 L410 430" fill="none" stroke="#fbbf24" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#mdmArrow)"/>
+
+<!-- hub -->
+<rect x="420" y="140" width="340" height="340" rx="20" fill="#0f172a" stroke="url(#mdmBrand)" stroke-width="2"/>
+<text x="590" y="182" text-anchor="middle" font-size="12" letter-spacing="5" fill="#64748b">MDM PROCESS</text>
+
+<g>
+<rect x="448" y="204" width="284" height="62" rx="12" fill="#111a30" stroke="#2b3a5c"/>
+<text x="470" y="232" font-size="13" font-weight="700" fill="#22d3ee">1. Standardize</text>
+<text x="470" y="252" font-size="11" fill="#94a3b8">India / IND / IN &#8594; IN</text>
+
+<rect x="448" y="278" width="284" height="62" rx="12" fill="#111a30" stroke="#2b3a5c"/>
+<text x="470" y="306" font-size="13" font-weight="700" fill="#a78bfa">2. Match and deduplicate</text>
+<text x="470" y="326" font-size="11" fill="#94a3b8">same real-world entity?</text>
+
+<rect x="448" y="352" width="284" height="62" rx="12" fill="#111a30" stroke="#2b3a5c"/>
+<text x="470" y="380" font-size="13" font-weight="700" fill="#60a5fa">3. Survivorship</text>
+<text x="470" y="400" font-size="11" fill="#94a3b8">best value wins per attribute</text>
+
+<rect x="448" y="426" width="284" height="40" rx="12" fill="#0d2a22" stroke="#34d399" stroke-opacity="0.6"/>
+<text x="590" y="452" text-anchor="middle" font-size="13" font-weight="700" fill="#34d399">4. Publish to consumers</text>
+</g>
+
+<!-- golden record -->
+<path d="M760 310 L830 310" fill="none" stroke="#34d399" stroke-width="2.5" marker-end="url(#mdmArrowG)"/>
+<rect x="840" y="160" width="310" height="300" rx="20" fill="#0d2a22" stroke="#34d399" stroke-width="2"/>
+<text x="995" y="200" text-anchor="middle" font-size="12" letter-spacing="5" fill="#34d399">GOLDEN RECORD</text>
+<text x="995" y="240" text-anchor="middle" font-size="26" font-weight="800" fill="#e2e8f0">Acme Corp.</text>
+
+<g font-size="13">
+<text x="872" y="286" fill="#94a3b8">Legal name</text><text x="1118" y="286" text-anchor="end" font-weight="700" fill="#e2e8f0">Acme Corporation</text>
+<line x1="872" y1="300" x2="1118" y2="300" stroke="#1e4a3c"/>
+<text x="872" y="326" fill="#94a3b8">Master ID</text><text x="1118" y="326" text-anchor="end" font-weight="700" fill="#34d399">1042</text>
+<line x1="872" y1="340" x2="1118" y2="340" stroke="#1e4a3c"/>
+<text x="872" y="366" fill="#94a3b8">Country</text><text x="1118" y="366" text-anchor="end" font-weight="700" fill="#e2e8f0">IN</text>
+<line x1="872" y1="380" x2="1118" y2="380" stroke="#1e4a3c"/>
+<text x="872" y="406" fill="#94a3b8">Sources merged</text><text x="1118" y="406" text-anchor="end" font-weight="700" fill="#e2e8f0">4</text>
+</g>
+<text x="995" y="438" text-anchor="middle" font-size="11" letter-spacing="2" fill="#64748b">MOST TRUSTED &#183; MOST COMPLETE</text>
+
+<!-- bottom chips -->
+<rect x="50" y="534" width="350" height="44" rx="12" fill="#111a30" stroke="#2b3a5c"/>
+<text x="74" y="562" font-size="12" letter-spacing="2" fill="#94a3b8">CUSTOMER 360 &#183; PRODUCT 360 &#183; SUPPLIER 360</text>
+
+<rect x="420" y="534" width="340" height="44" rx="12" fill="#111a30" stroke="#2b3a5c"/>
+<text x="444" y="562" font-size="12" letter-spacing="2" fill="#94a3b8">ONE DEFINITION PER ENTITY</text>
+
+<rect x="780" y="534" width="370" height="44" rx="12" fill="#111a30" stroke="#2b3a5c"/>
+<text x="804" y="562" font-size="12" letter-spacing="2" fill="#94a3b8">GOVERNED, SCORED, AUDITED</text>
+</g>
+</svg>

@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" role="img" aria-labelledby="scgTitle">
+<title id="scgTitle">Schema comparison — source and target databases diffed column by column across structure, keys, views and routines</title>
+<defs>
+<linearGradient id="scgBg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1120"/><stop offset="1" stop-color="#1b2540"/></linearGradient>
+<linearGradient id="scgBrand" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2563eb"/><stop offset="1" stop-color="#7c3aed"/></linearGradient>
+<radialGradient id="scgGb"><stop offset="0" stop-color="#2563eb" stop-opacity="0.22"/><stop offset="1" stop-color="#2563eb" stop-opacity="0"/></radialGradient>
+<radialGradient id="scgGg"><stop offset="0" stop-color="#10b981" stop-opacity="0.14"/><stop offset="1" stop-color="#10b981" stop-opacity="0"/></radialGradient>
+<radialGradient id="scgGa"><stop offset="0" stop-color="#f59e0b" stop-opacity="0.12"/><stop offset="1" stop-color="#f59e0b" stop-opacity="0"/></radialGradient>
+<pattern id="scgGrid" width="44" height="44" patternUnits="userSpaceOnUse"><path d="M44 0H0V44" fill="none" stroke="#94a3b8" stroke-opacity="0.06"/></pattern>
+</defs>
+<rect width="1200" height="600" fill="url(#scgBg)"/>
+<rect width="1200" height="600" fill="url(#scgGrid)"/>
+<ellipse cx="230" cy="230" rx="320" ry="300" fill="url(#scgGb)"/>
+<ellipse cx="970" cy="230" rx="320" ry="300" fill="url(#scgGg)"/>
+<ellipse cx="600" cy="560" rx="440" ry="220" fill="url(#scgGa)"/>
+<g font-family="Segoe UI, system-ui, sans-serif">
+
+<!-- source -->
+<rect x="50" y="60" width="400" height="380" rx="18" fill="#111a30" stroke="#60a5fa" stroke-opacity="0.45"/>
+<rect x="50" y="60" width="400" height="50" rx="18" fill="#0f172a"/><rect x="50" y="92" width="400" height="18" fill="#0f172a"/>
+<text x="74" y="93" font-size="11" letter-spacing="3" fill="#60a5fa">SOURCE</text>
+<text x="426" y="93" text-anchor="end" font-size="14" font-weight="700" fill="#e2e8f0">postgres &#183; prod</text>
+
+<g font-size="13">
+<text x="74" y="150" font-weight="700" fill="#e2e8f0">orders.id</text><text x="426" y="150" text-anchor="end" fill="#64748b">bigint</text>
+<line x1="74" y1="164" x2="426" y2="164" stroke="#2b3a5c"/>
+<text x="74" y="192" font-weight="700" fill="#e2e8f0">orders.total</text><text x="426" y="192" text-anchor="end" fill="#fbbf24">numeric(12,2)</text>
+<line x1="74" y1="206" x2="426" y2="206" stroke="#2b3a5c"/>
+<text x="74" y="234" font-weight="700" fill="#fb7185">orders.legacy_flag</text><text x="426" y="234" text-anchor="end" fill="#fb7185">boolean</text>
+<line x1="74" y1="248" x2="426" y2="248" stroke="#2b3a5c"/>
+<text x="74" y="276" font-weight="700" fill="#e2e8f0">fk_orders_customer</text><text x="426" y="276" text-anchor="end" fill="#64748b">FOREIGN KEY</text>
+<line x1="74" y1="290" x2="426" y2="290" stroke="#2b3a5c"/>
+<text x="74" y="318" font-weight="700" fill="#e2e8f0">vw_revenue_monthly</text><text x="426" y="318" text-anchor="end" fill="#64748b">VIEW</text>
+<line x1="74" y1="332" x2="426" y2="332" stroke="#2b3a5c"/>
+<text x="74" y="360" font-weight="700" fill="#e2e8f0">fn_refresh_stats()</text><text x="426" y="360" text-anchor="end" fill="#64748b">PROCEDURE</text>
+<line x1="74" y1="374" x2="426" y2="374" stroke="#2b3a5c"/>
+<text x="74" y="404" font-weight="700" fill="#e2e8f0">role: analyst_rw</text><text x="426" y="404" text-anchor="end" fill="#64748b">GRANT</text>
+</g>
+
+<!-- target -->
+<rect x="750" y="60" width="400" height="380" rx="18" fill="#111a30" stroke="#34d399" stroke-opacity="0.45"/>
+<rect x="750" y="60" width="400" height="50" rx="18" fill="#0f172a"/><rect x="750" y="92" width="400" height="18" fill="#0f172a"/>
+<text x="774" y="93" font-size="11" letter-spacing="3" fill="#34d399">TARGET</text>
+<text x="1126" y="93" text-anchor="end" font-size="14" font-weight="700" fill="#e2e8f0">snowflake &#183; stg</text>
+
+<g font-size="13">
+<text x="774" y="150" font-weight="700" fill="#e2e8f0">orders.id</text><text x="1126" y="150" text-anchor="end" fill="#64748b">bigint</text>
+<line x1="774" y1="164" x2="1126" y2="164" stroke="#2b3a5c"/>
+<text x="774" y="192" font-weight="700" fill="#fbbf24">orders.total</text><text x="1126" y="192" text-anchor="end" fill="#fbbf24">text</text>
+<line x1="774" y1="206" x2="1126" y2="206" stroke="#2b3a5c"/>
+<text x="774" y="234" font-weight="700" fill="#64748b" text-decoration="line-through">orders.legacy_flag</text><text x="1126" y="234" text-anchor="end" fill="#64748b">&#8212;</text>
+<line x1="774" y1="248" x2="1126" y2="248" stroke="#2b3a5c"/>
+<text x="774" y="276" font-weight="700" fill="#e2e8f0">fk_orders_customer</text><text x="1126" y="276" text-anchor="end" fill="#fb7185">missing</text>
+<line x1="774" y1="290" x2="1126" y2="290" stroke="#2b3a5c"/>
+<text x="774" y="318" font-weight="700" fill="#e2e8f0">vw_revenue_monthly</text><text x="1126" y="318" text-anchor="end" fill="#fb7185">definition drift</text>
+<line x1="774" y1="332" x2="1126" y2="332" stroke="#2b3a5c"/>
+<text x="774" y="360" font-weight="700" fill="#e2e8f0">fn_refresh_stats()</text><text x="1126" y="360" text-anchor="end" fill="#34d399">match</text>
+<line x1="774" y1="374" x2="1126" y2="374" stroke="#2b3a5c"/>
+<text x="774" y="404" font-weight="700" fill="#fbbf24">role: analyst_ro</text><text x="1126" y="404" text-anchor="end" fill="#fbbf24">narrowed</text>
+</g>
+
+<!-- diff gutter -->
+<rect x="470" y="60" width="260" height="380" rx="18" fill="#0f172a" stroke="url(#scgBrand)" stroke-width="2"/>
+<text x="600" y="102" text-anchor="middle" font-size="11" letter-spacing="4" fill="#64748b">DIFF</text>
+<text x="600" y="132" text-anchor="middle" font-size="18" font-weight="800" fill="#e2e8f0">4 CHANGES</text>
+
+<rect x="494" y="156" width="212" height="56" rx="10" fill="#111a30" stroke="#fb7185" stroke-opacity="0.5"/>
+<text x="510" y="180" font-size="13" font-weight="700" fill="#fb7185">BREAKING</text>
+<text x="510" y="200" font-size="11" fill="#94a3b8">type change &#183; dropped column</text>
+
+<rect x="494" y="224" width="212" height="56" rx="10" fill="#111a30" stroke="#fb7185" stroke-opacity="0.5"/>
+<text x="510" y="248" font-size="13" font-weight="700" fill="#fb7185">BLOCKING</text>
+<text x="510" y="268" font-size="11" fill="#94a3b8">missing FK &#183; view definition</text>
+
+<rect x="494" y="292" width="212" height="56" rx="10" fill="#111a30" stroke="#fbbf24" stroke-opacity="0.5"/>
+<text x="510" y="316" font-size="13" font-weight="700" fill="#fbbf24">REVIEW</text>
+<text x="510" y="336" font-size="11" fill="#94a3b8">permission narrowed</text>
+
+<rect x="494" y="360" width="212" height="56" rx="10" fill="#111a30" stroke="#34d399" stroke-opacity="0.5"/>
+<text x="510" y="384" font-size="13" font-weight="700" fill="#34d399">MATCHED</text>
+<text x="510" y="404" font-size="11" fill="#94a3b8">routine signature identical</text>
+
+<!-- what to compare chips -->
+<text x="600" y="482" text-anchor="middle" font-size="11" letter-spacing="4" fill="#64748b">COMPARE EVERYTHING DOWNSTREAM CONSUMERS TOUCH</text>
+
+<rect x="60" y="500" width="170" height="56" rx="12" fill="#111a30" stroke="#2b3a5c"/>
+<text x="145" y="526" text-anchor="middle" font-size="13" font-weight="700" fill="#60a5fa">STRUCTURE</text>
+<text x="145" y="546" text-anchor="middle" font-size="10" letter-spacing="1" fill="#94a3b8">COLUMNS &#183; TYPES</text>
+
+<rect x="250" y="500" width="170" height="56" rx="12" fill="#111a30" stroke="#2b3a5c"/>
+<text x="335" y="526" text-anchor="middle" font-size="13" font-weight="700" fill="#a78bfa">KEYS</text>
+<text x="335" y="546" text-anchor="middle" font-size="10" letter-spacing="1" fill="#94a3b8">PK &#183; FK &#183; INDEX</text>
+
+<rect x="440" y="500" width="170" height="56" rx="12" fill="#111a30" stroke="#2b3a5c"/>
+<text x="525" y="526" text-anchor="middle" font-size="13" font-weight="700" fill="#34d399">VIEWS</text>
+<text x="525" y="546" text-anchor="middle" font-size="10" letter-spacing="1" fill="#94a3b8">DEFINITIONS</text>
+
+<rect x="630" y="500" width="170" height="56" rx="12" fill="#111a30" stroke="#2b3a5c"/>
+<text x="715" y="526" text-anchor="middle" font-size="13" font-weight="700" fill="#fbbf24">ROUTINES</text>
+<text x="715" y="546" text-anchor="middle" font-size="10" letter-spacing="1" fill="#94a3b8">SIGNATURES</text>
+
+<rect x="820" y="500" width="170" height="56" rx="12" fill="#111a30" stroke="#2b3a5c"/>
+<text x="905" y="526" text-anchor="middle" font-size="13" font-weight="700" fill="#22d3ee">PARTITIONS</text>
+<text x="905" y="546" text-anchor="middle" font-size="10" letter-spacing="1" fill="#94a3b8">DISTRIBUTION</text>
+
+<rect x="1010" y="500" width="140" height="56" rx="12" fill="#111a30" stroke="#2b3a5c"/>
+<text x="1080" y="526" text-anchor="middle" font-size="13" font-weight="700" fill="#fb7185">GRANTS</text>
+<text x="1080" y="546" text-anchor="middle" font-size="10" letter-spacing="1" fill="#94a3b8">PERMISSIONS</text>
+</g>
+</svg>

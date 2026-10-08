@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" role="img" aria-labelledby="mpTitle">
+<title id="mpTitle">MDM implementation patterns compared — registry, consolidation and coexistence, with the migration path that connects them</title>
+<defs>
+<linearGradient id="mpBg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1120"/><stop offset="1" stop-color="#1b2540"/></linearGradient>
+<radialGradient id="mpG1"><stop offset="0" stop-color="#2563eb" stop-opacity="0.2"/><stop offset="1" stop-color="#2563eb" stop-opacity="0"/></radialGradient>
+<radialGradient id="mpG2"><stop offset="0" stop-color="#8b5cf6" stop-opacity="0.18"/><stop offset="1" stop-color="#8b5cf6" stop-opacity="0"/></radialGradient>
+<radialGradient id="mpG3"><stop offset="0" stop-color="#10b981" stop-opacity="0.13"/><stop offset="1" stop-color="#10b981" stop-opacity="0"/></radialGradient>
+<pattern id="mpGrid" width="44" height="44" patternUnits="userSpaceOnUse"><path d="M44 0H0V44" fill="none" stroke="#94a3b8" stroke-opacity="0.06"/></pattern>
+<marker id="mpArrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0 0 L10 4 L0 8 Z" fill="#475569"/></marker>
+</defs>
+
+<rect width="1200" height="600" fill="url(#mpBg)"/>
+<rect width="1200" height="600" fill="url(#mpGrid)"/>
+<ellipse cx="250" cy="180" rx="300" ry="220" fill="url(#mpG1)"/>
+<ellipse cx="950" cy="300" rx="300" ry="230" fill="url(#mpG2)"/>
+<ellipse cx="600" cy="560" rx="420" ry="160" fill="url(#mpG3)"/>
+
+<!-- header -->
+<text x="50" y="62" font-family="Segoe UI, system-ui, sans-serif" font-size="26" font-weight="700" fill="#e2e8f0">MDM IMPLEMENTATION PATTERNS</text>
+<text x="50" y="92" font-family="Segoe UI, system-ui, sans-serif" font-size="15" fill="#94a3b8">Registry, consolidation, coexistence — pick the shape before you pick the tool</text>
+<rect x="950" y="40" width="200" height="34" rx="17" fill="none" stroke="#2b3a5c"/>
+<text x="1050" y="62" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" font-weight="600" fill="#94a3b8">PATTERN COMPARISON</text>
+
+<!-- card 1: registry -->
+<rect x="50" y="140" width="350" height="250" rx="14" fill="#111a30" stroke="#2b3a5c"/>
+<circle cx="84" cy="178" r="17" fill="#2563eb" fill-opacity="0.16" stroke="#60a5fa"/>
+<text x="84" y="184" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="700" fill="#60a5fa">1</text>
+<text x="112" y="185" font-family="Segoe UI, system-ui, sans-serif" font-size="19" font-weight="700" fill="#e2e8f0">Registry</text>
+<line x1="74" y1="212" x2="376" y2="212" stroke="#2b3a5c"/>
+<circle cx="78" cy="236" r="3.5" fill="#60a5fa"/>
+<text x="94" y="241" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#cbd5e1">No data leaves the source system</text>
+<circle cx="78" cy="266" r="3.5" fill="#60a5fa"/>
+<text x="94" y="271" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#cbd5e1">Fastest path to one shared ID</text>
+<circle cx="78" cy="296" r="3.5" fill="#60a5fa"/>
+<text x="94" y="301" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#cbd5e1">Hub is a lookup, not an owner</text>
+<rect x="74" y="326" width="302" height="28" rx="14" fill="#0f172a" stroke="#2b3a5c"/>
+<text x="225" y="345" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11" font-weight="600" fill="#94a3b8">LIGHTWEIGHT · FAST START</text>
+
+<!-- card 2: consolidation -->
+<rect x="425" y="140" width="350" height="250" rx="14" fill="#111a30" stroke="#2b3a5c"/>
+<circle cx="459" cy="178" r="17" fill="#8b5cf6" fill-opacity="0.16" stroke="#a78bfa"/>
+<text x="459" y="184" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="700" fill="#a78bfa">2</text>
+<text x="487" y="185" font-family="Segoe UI, system-ui, sans-serif" font-size="19" font-weight="700" fill="#e2e8f0">Consolidation</text>
+<line x1="449" y1="212" x2="751" y2="212" stroke="#2b3a5c"/>
+<circle cx="453" cy="236" r="3.5" fill="#a78bfa"/>
+<text x="469" y="241" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#cbd5e1">Hub becomes the system of record</text>
+<circle cx="453" cy="266" r="3.5" fill="#a78bfa"/>
+<text x="469" y="271" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#cbd5e1">Golden record published back out</text>
+<circle cx="453" cy="296" r="3.5" fill="#a78bfa"/>
+<text x="469" y="301" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#cbd5e1">Survivorship and stewardship</text>
+<rect x="449" y="326" width="302" height="28" rx="14" fill="#0f172a" stroke="#2b3a5c"/>
+<text x="600" y="345" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11" font-weight="600" fill="#94a3b8">GOVERNED · GOLDEN RECORD</text>
+
+<!-- card 3: coexistence -->
+<rect x="800" y="140" width="350" height="250" rx="14" fill="#111a30" stroke="#2b3a5c"/>
+<circle cx="834" cy="178" r="17" fill="#10b981" fill-opacity="0.16" stroke="#34d399"/>
+<text x="834" y="184" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="700" fill="#34d399">3</text>
+<text x="862" y="185" font-family="Segoe UI, system-ui, sans-serif" font-size="19" font-weight="700" fill="#e2e8f0">Coexistence</text>
+<line x1="824" y1="212" x2="1126" y2="212" stroke="#2b3a5c"/>
+<circle cx="828" cy="236" r="3.5" fill="#34d399"/>
+<text x="844" y="241" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#cbd5e1">Registry and consolidation combined</text>
+<circle cx="828" cy="266" r="3.5" fill="#34d399"/>
+<text x="844" y="271" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#cbd5e1">Local and global copies both kept</text>
+<circle cx="828" cy="296" r="3.5" fill="#34d399"/>
+<text x="844" y="301" font-family="Segoe UI, system-ui, sans-serif" font-size="13" fill="#cbd5e1">Most complete, most complex</text>
+<rect x="824" y="326" width="302" height="28" rx="14" fill="#0f172a" stroke="#2b3a5c"/>
+<text x="975" y="345" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="11" font-weight="600" fill="#94a3b8">FULL CIRCLE · HIGH EFFORT</text>
+
+<!-- migration path -->
+<rect x="50" y="410" width="1100" height="160" rx="14" fill="#0f172a" stroke="#2b3a5c"/>
+<text x="74" y="440" font-family="Segoe UI, system-ui, sans-serif" font-size="13" font-weight="700" fill="#64748b">MIGRATION PATH — PATTERNS EVOLVE IN ONE DIRECTION</text>
+
+<rect x="74" y="458" width="230" height="52" rx="12" fill="#111a30" stroke="#60a5fa"/>
+<text x="189" y="490" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="700" fill="#60a5fa">Registry</text>
+<line x1="314" y1="484" x2="344" y2="484" stroke="#475569" stroke-width="2" marker-end="url(#mpArrow)"/>
+
+<rect x="354" y="458" width="230" height="52" rx="12" fill="#111a30" stroke="#a78bfa"/>
+<text x="469" y="490" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="700" fill="#a78bfa">Consolidation</text>
+<line x1="594" y1="484" x2="624" y2="484" stroke="#475569" stroke-width="2" marker-end="url(#mpArrow)"/>
+
+<rect x="634" y="458" width="230" height="52" rx="12" fill="#111a30" stroke="#34d399"/>
+<text x="749" y="490" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="15" font-weight="700" fill="#34d399">Coexistence</text>
+<line x1="874" y1="484" x2="904" y2="484" stroke="#475569" stroke-width="2" marker-end="url(#mpArrow)"/>
+
+<rect x="914" y="458" width="212" height="52" rx="12" fill="#111a30" stroke="#2b3a5c"/>
+<text x="1020" y="480" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" font-weight="600" fill="#e2e8f0">Start light.</text>
+<text x="1020" y="498" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="12" fill="#94a3b8">Add authority over time.</text>
+
+<text x="74" y="548" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#64748b">Choosing a pattern is an architecture decision, not a vendor decision.</text>
+<text x="1126" y="548" text-anchor="end" font-family="Segoe UI, system-ui, sans-serif" font-size="12.5" fill="#64748b">4DAlert supports all three.</text>
+</svg>

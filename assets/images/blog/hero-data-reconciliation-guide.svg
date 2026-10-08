@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" role="img" aria-labelledby="drgTitle">
+<title id="drgTitle">Data reconciliation guide — two sources compared row by row against match keys, tolerance and grain, with mismatches routed to exceptions</title>
+<defs>
+<linearGradient id="drgBg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1120"/><stop offset="1" stop-color="#1b2540"/></linearGradient>
+<linearGradient id="drgBrand" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2563eb"/><stop offset="1" stop-color="#7c3aed"/></linearGradient>
+<radialGradient id="drgGb"><stop offset="0" stop-color="#2563eb" stop-opacity="0.2"/><stop offset="1" stop-color="#2563eb" stop-opacity="0"/></radialGradient>
+<radialGradient id="drgGg"><stop offset="0" stop-color="#10b981" stop-opacity="0.15"/><stop offset="1" stop-color="#10b981" stop-opacity="0"/></radialGradient>
+<radialGradient id="drgGr"><stop offset="0" stop-color="#f43f5e" stop-opacity="0.13"/><stop offset="1" stop-color="#f43f5e" stop-opacity="0"/></radialGradient>
+<pattern id="drgGrid" width="44" height="44" patternUnits="userSpaceOnUse"><path d="M44 0H0V44" fill="none" stroke="#94a3b8" stroke-opacity="0.06"/></pattern>
+</defs>
+<rect width="1200" height="600" fill="url(#drgBg)"/>
+<rect width="1200" height="600" fill="url(#drgGrid)"/>
+<ellipse cx="300" cy="300" rx="360" ry="330" fill="url(#drgGb)"/>
+<ellipse cx="960" cy="220" rx="340" ry="300" fill="url(#drgGg)"/>
+<ellipse cx="700" cy="580" rx="460" ry="200" fill="url(#drgGr)"/>
+<g font-family="Segoe UI, system-ui, sans-serif">
+
+<text x="50" y="56" font-size="13" letter-spacing="6" fill="#64748b">DATA RECONCILIATION GUIDE</text>
+<text x="50" y="86" font-size="16" font-weight="700" fill="#e2e8f0">Four decisions define whether your reconciliation can be trusted</text>
+
+<!-- comparison panel -->
+<rect x="50" y="120" width="580" height="310" rx="18" fill="#0f172a" stroke="url(#drgBrand)" stroke-width="2"/>
+<rect x="50" y="120" width="580" height="48" rx="18" fill="#131f38"/>
+<rect x="50" y="150" width="580" height="18" fill="#131f38"/>
+<text x="74" y="152" font-size="12" letter-spacing="3" fill="#60a5fa">SOURCE A &#183; LEDGER</text>
+<text x="340" y="152" text-anchor="middle" font-size="12" letter-spacing="3" fill="#64748b">STATUS</text>
+<text x="606" y="152" text-anchor="end" font-size="12" letter-spacing="3" fill="#34d399">SOURCE B &#183; BANK</text>
+
+<g font-size="14">
+<text x="74" y="212" font-weight="700" fill="#e2e8f0">1,240,000.00</text>
+<text x="340" y="212" text-anchor="middle" font-size="17" font-weight="800" fill="#34d399">&#10003;</text>
+<text x="606" y="212" text-anchor="end" font-weight="700" fill="#e2e8f0">1,240,000.00</text>
+<line x1="74" y1="230" x2="606" y2="230" stroke="#2b3a5c"/>
+
+<text x="74" y="262" font-weight="700" fill="#e2e8f0">98,412.55</text>
+<text x="340" y="262" text-anchor="middle" font-size="17" font-weight="800" fill="#34d399">&#10003;</text>
+<text x="606" y="262" text-anchor="end" font-weight="700" fill="#e2e8f0">98,412.55</text>
+<line x1="74" y1="280" x2="606" y2="280" stroke="#2b3a5c"/>
+
+<text x="74" y="312" font-weight="700" fill="#e2e8f0">47,900.00</text>
+<text x="340" y="312" text-anchor="middle" font-size="17" font-weight="800" fill="#fbbf24">&#8800;</text>
+<text x="606" y="312" text-anchor="end" font-weight="700" fill="#fbbf24">47,940.00</text>
+<line x1="74" y1="330" x2="606" y2="330" stroke="#2b3a5c"/>
+
+<text x="74" y="362" font-weight="700" fill="#64748b">12,300.00</text>
+<text x="340" y="362" text-anchor="middle" font-size="17" font-weight="800" fill="#fb7185">&#8212;</text>
+<text x="606" y="362" text-anchor="end" font-weight="700" fill="#fb7185">no row</text>
+<line x1="74" y1="380" x2="606" y2="380" stroke="#2b3a5c"/>
+
+<text x="74" y="412" font-weight="700" fill="#e2e8f0">215,000.00</text>
+<text x="340" y="412" text-anchor="middle" font-size="17" font-weight="800" fill="#34d399">&#10003;</text>
+<text x="606" y="412" text-anchor="end" font-weight="700" fill="#e2e8f0">215,000.00</text>
+</g>
+
+<!-- four decisions -->
+<g>
+<rect x="660" y="120" width="240" height="148" rx="16" fill="#111a30" stroke="#60a5fa" stroke-opacity="0.55"/>
+<text x="684" y="154" font-size="11" letter-spacing="3" fill="#60a5fa">DECISION 1</text>
+<text x="684" y="184" font-size="17" font-weight="800" fill="#e2e8f0">Match keys</text>
+<text x="684" y="210" font-size="12" fill="#94a3b8">Which fields prove two</text>
+<text x="684" y="230" font-size="12" fill="#94a3b8">rows describe the same thing</text>
+<text x="684" y="254" font-size="11" letter-spacing="1" fill="#64748b">ACCOUNT &#183; PERIOD &#183; CURRENCY</text>
+
+<rect x="910" y="120" width="240" height="148" rx="16" fill="#111a30" stroke="#22d3ee" stroke-opacity="0.55"/>
+<text x="934" y="154" font-size="11" letter-spacing="3" fill="#22d3ee">DECISION 2</text>
+<text x="934" y="184" font-size="17" font-weight="800" fill="#e2e8f0">Tolerance</text>
+<text x="934" y="210" font-size="12" fill="#94a3b8">How close counts as equal</text>
+<text x="934" y="230" font-size="12" fill="#94a3b8">before it becomes a break</text>
+<text x="934" y="254" font-size="11" letter-spacing="1" fill="#64748b">EXACT &#183; ABSOLUTE &#183; PERCENT</text>
+
+<rect x="660" y="282" width="240" height="148" rx="16" fill="#111a30" stroke="#a78bfa" stroke-opacity="0.55"/>
+<text x="684" y="316" font-size="11" letter-spacing="3" fill="#a78bfa">DECISION 3</text>
+<text x="684" y="346" font-size="17" font-weight="800" fill="#e2e8f0">Grain</text>
+<text x="684" y="372" font-size="12" fill="#94a3b8">Row, account, period or</text>
+<text x="684" y="392" font-size="12" fill="#94a3b8">running balance that day</text>
+<text x="684" y="416" font-size="11" letter-spacing="1" fill="#64748b">WRONG GRAIN = FALSE BREAKS</text>
+
+<rect x="910" y="282" width="240" height="148" rx="16" fill="#111a30" stroke="#fb7185" stroke-opacity="0.55"/>
+<text x="934" y="316" font-size="11" letter-spacing="3" fill="#fb7185">DECISION 4</text>
+<text x="934" y="346" font-size="17" font-weight="800" fill="#e2e8f0">Exceptions</text>
+<text x="934" y="372" font-size="12" fill="#94a3b8">Where a break goes, who</text>
+<text x="934" y="392" font-size="12" fill="#94a3b8">owns it and when it closes</text>
+<text x="934" y="416" font-size="11" letter-spacing="1" fill="#64748b">ROUTE &#183; AGE &#183; ESCALATE</text>
+</g>
+
+<!-- legend -->
+<text x="600" y="474" text-anchor="middle" font-size="11" letter-spacing="4" fill="#64748b">A BREAK IS ONLY A SIGNAL &#8212; THE ROUTING DECIDES WHETHER IT GETS FIXED</text>
+
+<rect x="50" y="496" width="350" height="60" rx="14" fill="#0d2a22" stroke="#34d399" stroke-opacity="0.6"/>
+<text x="74" y="524" font-size="15" font-weight="800" fill="#34d399">MATCH</text>
+<text x="74" y="546" font-size="12" fill="#94a3b8">Inside tolerance &#8212; close it automatically</text>
+
+<rect x="425" y="496" width="350" height="60" rx="14" fill="#1e1710" stroke="#fbbf24" stroke-opacity="0.6"/>
+<text x="449" y="524" font-size="15" font-weight="800" fill="#fbbf24">WITHIN TOLERANCE</text>
+<text x="449" y="546" font-size="12" fill="#94a3b8">Material enough to log, not to chase</text>
+
+<rect x="800" y="496" width="350" height="60" rx="14" fill="#1a1020" stroke="#fb7185" stroke-opacity="0.6"/>
+<text x="824" y="524" font-size="15" font-weight="800" fill="#fb7185">EXCEPTION</text>
+<text x="824" y="546" font-size="12" fill="#94a3b8">Assigned, aged and escalated until closed</text>
+</g>
+</svg>

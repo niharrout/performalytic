@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" role="img" aria-labelledby="smTitle">
+<title id="smTitle">Expand and contract migration — the new structure is added and backfilled in batches while the old one stays authoritative, readers switch behind a flag, and the old structure is removed in a later release</title>
+<defs>
+<linearGradient id="smBg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1120"/><stop offset="1" stop-color="#1b2540"/></linearGradient>
+<linearGradient id="smBrand" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2563eb"/><stop offset="1" stop-color="#7c3aed"/></linearGradient>
+<radialGradient id="smGb"><stop offset="0" stop-color="#2563eb" stop-opacity="0.2"/><stop offset="1" stop-color="#2563eb" stop-opacity="0"/></radialGradient>
+<radialGradient id="smGg"><stop offset="0" stop-color="#10b981" stop-opacity="0.14"/><stop offset="1" stop-color="#10b981" stop-opacity="0"/></radialGradient>
+<radialGradient id="smGa"><stop offset="0" stop-color="#f59e0b" stop-opacity="0.12"/><stop offset="1" stop-color="#f59e0b" stop-opacity="0"/></radialGradient>
+<pattern id="smGrid" width="44" height="44" patternUnits="userSpaceOnUse"><path d="M44 0H0V44" fill="none" stroke="#94a3b8" stroke-opacity="0.06"/></pattern>
+</defs>
+<rect width="1200" height="600" fill="url(#smBg)"/>
+<rect width="1200" height="600" fill="url(#smGrid)"/>
+<ellipse cx="360" cy="300" rx="380" ry="300" fill="url(#smGb)"/>
+<ellipse cx="1000" cy="440" rx="360" ry="280" fill="url(#smGg)"/>
+<ellipse cx="700" cy="40" rx="420" ry="180" fill="url(#smGa)"/>
+<g font-family="Segoe UI, system-ui, sans-serif">
+
+<text x="50" y="62" font-size="13" letter-spacing="6" fill="#64748b">SCHEMA MIGRATION BEST PRACTICES</text>
+<text x="50" y="94" font-size="17" font-weight="700" fill="#e2e8f0">Expand, backfill, switch, contract &#8212; the old and new structures live side by side</text>
+
+<!-- phase headers -->
+<g text-anchor="middle" font-size="12" letter-spacing="2" fill="#64748b">
+<text x="345" y="152">DEPLOY</text>
+<text x="575" y="152">BACKFILL</text>
+<text x="805" y="152">SWITCH</text>
+<text x="1035" y="152">LATER RELEASE</text>
+</g>
+<g stroke="#2b3a5c" stroke-dasharray="4 6">
+<line x1="230" y1="164" x2="230" y2="410"/>
+<line x1="460" y1="164" x2="460" y2="410"/>
+<line x1="690" y1="164" x2="690" y2="410"/>
+<line x1="920" y1="164" x2="920" y2="410"/>
+<line x1="1150" y1="164" x2="1150" y2="410"/>
+</g>
+
+<!-- lane 1 : old structure -->
+<rect x="50" y="176" width="160" height="100" rx="14" fill="#0f172a" stroke="#2b3a5c"/>
+<text x="130" y="218" text-anchor="middle" font-size="13" font-weight="700" fill="#e2e8f0">OLD</text>
+<text x="130" y="240" text-anchor="middle" font-size="13" font-weight="700" fill="#e2e8f0">STRUCTURE</text>
+<text x="130" y="260" text-anchor="middle" font-size="10" letter-spacing="1" fill="#94a3b8">STILL AUTHORITATIVE</text>
+
+<rect x="242" y="188" width="666" height="76" rx="12" fill="#111a30" stroke="#60a5fa" stroke-opacity="0.6"/>
+<text x="575" y="220" text-anchor="middle" font-size="14" font-weight="700" fill="#60a5fa">Serves reads and writes</text>
+<text x="575" y="244" text-anchor="middle" font-size="12" fill="#94a3b8">nothing changes for consumers yet</text>
+
+<rect x="922" y="188" width="226" height="76" rx="12" fill="#111a30" stroke="#60a5fa" stroke-opacity="0.35" stroke-dasharray="7 5"/>
+<text x="1035" y="220" text-anchor="middle" font-size="13" font-weight="700" fill="#60a5fa">Retained, unused</text>
+<text x="1035" y="244" text-anchor="middle" font-size="11" fill="#94a3b8">dropped in its own release</text>
+
+<!-- lane 2 : new structure -->
+<rect x="50" y="288" width="160" height="100" rx="14" fill="#0f172a" stroke="url(#smBrand)" stroke-width="2"/>
+<text x="130" y="330" text-anchor="middle" font-size="13" font-weight="700" fill="#e2e8f0">NEW</text>
+<text x="130" y="352" text-anchor="middle" font-size="13" font-weight="700" fill="#e2e8f0">STRUCTURE</text>
+<text x="130" y="372" text-anchor="middle" font-size="10" letter-spacing="1" fill="#a78bfa">ADDITIVE ONLY</text>
+
+<rect x="242" y="300" width="206" height="76" rx="12" fill="#0d2233" stroke="#22d3ee" stroke-opacity="0.7"/>
+<text x="345" y="332" text-anchor="middle" font-size="13" font-weight="700" fill="#22d3ee">1. Expand</text>
+<text x="345" y="356" text-anchor="middle" font-size="11" fill="#94a3b8">nullable column added</text>
+
+<rect x="462" y="300" width="216" height="76" rx="12" fill="#111a30" stroke="#60a5fa" stroke-opacity="0.7"/>
+<text x="570" y="332" text-anchor="middle" font-size="13" font-weight="700" fill="#60a5fa">2. Backfill</text>
+<text x="570" y="356" text-anchor="middle" font-size="11" fill="#94a3b8">batched &#183; checkpointed</text>
+
+<rect x="692" y="300" width="216" height="76" rx="12" fill="#151333" stroke="#a78bfa" stroke-opacity="0.7"/>
+<text x="800" y="332" text-anchor="middle" font-size="13" font-weight="700" fill="#a78bfa">3. Switch</text>
+<text x="800" y="356" text-anchor="middle" font-size="11" fill="#94a3b8">flip the feature flag</text>
+
+<rect x="922" y="300" width="226" height="76" rx="12" fill="#0d2a22" stroke="#34d399" stroke-opacity="0.7"/>
+<text x="1035" y="332" text-anchor="middle" font-size="13" font-weight="700" fill="#34d399">4. Contract</text>
+<text x="1035" y="356" text-anchor="middle" font-size="11" fill="#94a3b8">old column removed</text>
+
+<!-- flag marker -->
+<g>
+<line x1="805" y1="266" x2="805" y2="300" stroke="#a78bfa" stroke-width="2" stroke-dasharray="4 4"/>
+<circle cx="805" cy="283" r="13" fill="#151333" stroke="#a78bfa" stroke-width="2"/>
+<text x="805" y="288" text-anchor="middle" font-size="13" font-weight="800" fill="#a78bfa">&#9679;</text>
+</g>
+
+<text x="600" y="432" text-anchor="middle" font-size="11" letter-spacing="4" fill="#64748b">NEVER BREAK A READER THAT IS STILL RUNNING THE OLD QUERY</text>
+
+<!-- guarantees -->
+<rect x="50" y="452" width="262" height="104" rx="14" fill="#111a30" stroke="#2b3a5c"/>
+<text x="74" y="488" font-size="18" font-weight="800" fill="#34d399">0 DOWNTIME</text>
+<text x="74" y="512" font-size="12" fill="#94a3b8">Additive change only, both</text>
+<text x="74" y="532" font-size="12" fill="#94a3b8">structures readable at once</text>
+
+<rect x="332" y="452" width="262" height="104" rx="14" fill="#111a30" stroke="#2b3a5c"/>
+<text x="356" y="488" font-size="18" font-weight="800" fill="#60a5fa">BATCHED</text>
+<text x="356" y="512" font-size="12" fill="#94a3b8">Backfill in chunks with a</text>
+<text x="356" y="532" font-size="12" fill="#94a3b8">checkpoint and a resume point</text>
+
+<rect x="614" y="452" width="262" height="104" rx="14" fill="#111a30" stroke="#2b3a5c"/>
+<text x="638" y="488" font-size="18" font-weight="800" fill="#a78bfa">REVERSIBLE</text>
+<text x="638" y="512" font-size="12" fill="#94a3b8">Every phase has its own</text>
+<text x="638" y="532" font-size="12" fill="#94a3b8">rollback before the next starts</text>
+
+<rect x="896" y="452" width="254" height="104" rx="14" fill="#111a30" stroke="#2b3a5c"/>
+<text x="920" y="488" font-size="18" font-weight="800" fill="#fbbf24">SEPARATE</text>
+<text x="920" y="512" font-size="12" fill="#94a3b8">Removal ships in a later</text>
+<text x="920" y="532" font-size="12" fill="#94a3b8">release, never in the same PR</text>
+</g>
+</svg>

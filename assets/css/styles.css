@@ -939,7 +939,7 @@ h2[id],h3[id]{scroll-margin-top:96px}
 /* Diagram containers (wrapper chrome only - inline SVG content is untouched) */
 .architecture-diagram,.use-case-diagram,.diagram-section{padding:40px 0}
 .architecture-diagram .diagram-container,.use-case-diagram .diagram-container,.diagram-container{background:var(--pa-surface);border-radius:16px;padding:24px;margin:24px 0;border:1px solid var(--pa-wd-012);overflow-x:auto}
-.architecture-diagram .diagram-container svg,.use-case-diagram .diagram-container svg{width:100%;min-width:700px;height:auto}
+.architecture-diagram .diagram-container svg,.use-case-diagram .diagram-container svg,.diagram-container svg{width:100%;min-width:640px;height:auto;display:block}
 .architecture-diagram .diagram-caption,.use-case-diagram .diagram-caption,.diagram-caption{text-align:center;color:var(--pa-t-muted);font-size:.85rem;margin-top:16px;font-style:italic}
 
 /* Pricing Cards */

@@ -24,11 +24,11 @@
 <meta property="og:description" content="Reconciling data across AWS, Azure, GCP, and on-prem is one of the hardest unsolved problems in data engineering. Learn cross-cloud reconciliation patterns and lakehouse reconciliation." />
 <meta property="og:url" content="https://performalytic.com/blog/cross-cloud-data-reconciliation/" />
 <meta property="og:site_name" content="Performalytic" />
-<meta property="og:image" content="https://performalytic.com/assets/images/blog/hero-cross-cloud-reconciliation-og.png" />
+<meta property="og:image" content="https://performalytic.com/assets/images/blog/hero-cross-cloud-reconciliation.svg" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="600" />
-<meta property="og:image:type" content="image/png" />
-<meta property="og:image:alt" content="Cross-cloud data reconciliation across AWS, Azure, GCP, and on-prem environments" />
+<meta property="og:image:type" content="image/svg+xml" />
+<meta property="og:image:alt" content="Cross-cloud data reconciliation engine connecting AWS, Azure, GCP, and on-prem environments" />
 <meta property="article:published_time" content="2026-07-21T10:00:00+00:00" />
 <meta property="article:modified_time" content="2026-07-21T10:00:00+00:00" />
 <meta property="article:author" content="Performalytic" />
@@ -42,7 +42,7 @@
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Data Reconciliation Across Cloud Platforms: Multi-Cloud and Hybrid Challenges | Performalytic" />
 <meta name="twitter:description" content="Reconciling data across AWS, Azure, GCP, and on-prem is one of the hardest unsolved problems in data engineering." />
-<meta name="twitter:image" content="https://performalytic.com/assets/images/blog/hero-cross-cloud-reconciliation-og.png" />
+<meta name="twitter:image" content="https://performalytic.com/assets/images/blog/hero-cross-cloud-reconciliation.svg" />
 
 <link rel="dns-prefetch" href="//performalytic.com" />
 
@@ -122,7 +122,7 @@ gtag('config', 'G-FV09CSCD2C');
   "@type":"Article",
   "headline":"Data Reconciliation Across Cloud Platforms: Multi-Cloud and Hybrid Challenges",
   "description":"Reconciling data across AWS, Azure, GCP, and on-prem is one of the hardest unsolved problems in data engineering. Learn cross-cloud reconciliation patterns, schema drift detection, and lakehouse reconciliation.",
-  "image":"/assets/images/blog/hero-cross-cloud-reconciliation-og.png",
+  "image":"/assets/images/blog/hero-cross-cloud-reconciliation.svg",
   "author":{"@type":"Organization","name":"Performalytic"},
   "publisher":{"@type":"Organization","name":"Performalytic","logo":{"@type":"ImageObject","url":"/assets/images/performalytic-logo.png"}},
   "datePublished":"2026-07-21T10:00:00+00:00",
@@ -380,6 +380,16 @@ nav:not(.mobile-menu).nav-scrolled{background:var(--pa-panel-81428-098)!importan
     <h2 id="patterns">Cross-Cloud Reconciliation Patterns</h2>
     <p>There are three primary patterns for reconciling data across cloud platforms, each with different tradeoffs:</p>
 
+      <!-- concept-diagram:start -->
+      <div class="diagram-section">
+        <div class="diagram-container">
+          <svg viewBox="0 0 960 160" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Three patterns for reconciling data across cloud platforms">
+            <defs><marker id="dg-cross-cloud-data-reconciliation-a" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><polygon points="0 0, 9 3.5, 0 7" style="fill:var(--pa-t-dim)"/></marker><marker id="dg-cross-cloud-data-reconciliation-ag" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><polygon points="0 0, 9 3.5, 0 7" style="fill:#10b981"/></marker><marker id="dg-cross-cloud-data-reconciliation-ar" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><polygon points="0 0, 9 3.5, 0 7" style="fill:#ef4444"/></marker></defs><rect x="16" y="24" width="297.3333333333333" height="104" rx="12" style="fill:var(--pa-surface-2);stroke:var(--pa-wb-012)"/><rect x="28" y="25" width="273.3333333333333" height="3" rx="1.5" style="fill:var(--pa-at-blue)"/><rect x="28" y="38" width="93" height="20" rx="10" style="fill:transparent"/><text x="74.5" y="52" text-anchor="middle" style="fill:var(--pa-at-blue);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:9.5px;font-weight:800"><tspan x="74.5">Pattern 1</tspan></text><text x="164.66666666666666" y="82" text-anchor="middle" style="fill:var(--pa-at-blue);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:13px;font-weight:700"><tspan x="164.66666666666666">Hub-and-spoke</tspan></text><text x="164.66666666666666" y="104" text-anchor="middle" style="fill:var(--pa-t-muted);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:10px;font-weight:500"><tspan x="164.66666666666666">One environment reconciles everything — simple, but</tspan><tspan x="164.66666666666666" dy="13">a single point of truth and a bottleneck.</tspan></text><rect x="331.3333333333333" y="24" width="297.3333333333333" height="104" rx="12" style="fill:var(--pa-surface-2);stroke:var(--pa-wb-012)"/><rect x="343.3333333333333" y="25" width="273.3333333333333" height="3" rx="1.5" style="fill:var(--pa-at-indigo)"/><rect x="343.3333333333333" y="38" width="93" height="20" rx="10" style="fill:transparent"/><text x="389.8333333333333" y="52" text-anchor="middle" style="fill:var(--pa-at-indigo);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:9.5px;font-weight:800"><tspan x="389.8333333333333">Pattern 2</tspan></text><text x="480" y="82" text-anchor="middle" style="fill:var(--pa-at-indigo);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:13px;font-weight:700"><tspan x="480">Peer-to-peer</tspan></text><text x="480" y="104" text-anchor="middle" style="fill:var(--pa-t-muted);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:10px;font-weight:500"><tspan x="480">Every environment reconciles with every other —</tspan><tspan x="480" dy="13">resilient, but n(n-1)/2 comparisons.</tspan></text><rect x="646.6666666666666" y="24" width="297.3333333333333" height="104" rx="12" style="fill:var(--pa-surface-2);stroke:var(--pa-wb-012)"/><rect x="658.6666666666666" y="25" width="273.3333333333333" height="3" rx="1.5" style="fill:var(--pa-at-teal)"/><rect x="658.6666666666666" y="38" width="93" height="20" rx="10" style="fill:transparent"/><text x="705.1666666666666" y="52" text-anchor="middle" style="fill:var(--pa-at-teal);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:9.5px;font-weight:800"><tspan x="705.1666666666666">Pattern 3</tspan></text><text x="795.3333333333333" y="82" text-anchor="middle" style="fill:var(--pa-at-teal);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:13px;font-weight:700"><tspan x="795.3333333333333">Federated catalog</tspan></text><text x="795.3333333333333" y="104" text-anchor="middle" style="fill:var(--pa-t-muted);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:10px;font-weight:500"><tspan x="795.3333333333333">A shared catalog carries the profile; each</tspan><tspan x="795.3333333333333" dy="13">environment answers its own comparisons.</tspan></text>
+          </svg>
+        </div>
+        <p class="diagram-caption">Three cross-cloud reconciliation patterns, each with a different trade-off between simplicity, resilience and operational overhead.</p>
+      </div>
+      <!-- concept-diagram:end -->
     <h3>Hub-and-Spoke Reconciliation</h3>
     <p>Select one environment as the reconciliation hub — typically your primary analytics platform or a neutral lakehouse layer. All other environments periodically publish their data profiles to the hub, which performs record-level matching, schema comparison, and drift detection. This pattern is straightforward to implement but creates a single point of truth and potential bottleneck.</p>
     <p><strong>Best for:</strong> Organizations with a clear primary analytics platform and a need for a single source of truth.</p>
@@ -590,4 +600,4 @@ el.addEventListener('click',function(){gtag('event','click',{event_category:'cta
 </script>
 <script src="/assets/js/main.js?v=3" nonce="P3rf0rm4lyt1c" defer></script>
 </body>
-</html>
+</html

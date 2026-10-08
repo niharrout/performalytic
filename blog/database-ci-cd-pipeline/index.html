@@ -24,7 +24,7 @@
 <meta property="og:description" content="Database CI/CD puts schema changes through an automated pipeline instead of a ticket. Learn the seven stages, the tools, and where agentic AI fits." />
 <meta property="og:url" content="https://performalytic.com/blog/database-ci-cd-pipeline/" />
 <meta property="og:site_name" content="Performalytic" />
-<meta property="og:image" content="https://performalytic.com/assets/images/blog/hero-devops-best-practices.svg" />
+<meta property="og:image" content="https://performalytic.com/assets/images/blog/hero-database-ci-cd.svg" />
 <meta property="og:image:alt" content="Database CI/CD pipeline diagram - automated schema change management stages" />
 <meta property="article:published_time" content="2026-10-06T14:00:00+00:00" />
 <meta property="article:modified_time" content="2026-10-06T14:00:00+00:00" />
@@ -34,7 +34,7 @@
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Database CI/CD: How to Build a Schema Change Pipeline" />
 <meta name="twitter:description" content="Database CI/CD puts schema changes through an automated pipeline instead of a ticket. Learn the seven stages, the tools, and where agentic AI fits." />
-<meta name="twitter:image" content="https://performalytic.com/assets/images/blog/hero-devops-best-practices.svg" />
+<meta name="twitter:image" content="https://performalytic.com/assets/images/blog/hero-database-ci-cd.svg" />
 
 <link rel="dns-prefetch" href="//performalytic.com" />
 
@@ -123,7 +123,7 @@ gtag('config', 'G-FV09CSCD2C');
   "@type":"Article",
   "headline":"Database CI/CD: How to Build a Schema Change Pipeline",
   "description":"Database CI/CD is the practice of applying continuous integration and continuous delivery to database schema changes, so every migration and DDL change is versioned, reviewed, tested, and deployed through an automated pipeline instead of a manual ticket.",
-  "image":"/assets/images/blog/hero-devops-best-practices.svg",
+  "image":"/assets/images/blog/hero-database-ci-cd.svg",
   "author":{"@id":"https://performalytic.com/#author-james-carter"},
   "publisher":{"@id":"https://performalytic.com/#organization"},
   "datePublished":"2026-10-06T14:00:00+00:00",
@@ -391,7 +391,7 @@ nav:not(.mobile-menu).nav-scrolled{background:var(--pa-panel-81428-098)!importan
 <!-- Featured Image -->
 <section class="featured-image-section">
   <div class="container">
-    <img src="/assets/images/blog/hero-devops-best-practices.svg" alt="Database CI/CD pipeline - automated schema change management from commit to production" class="featured-image" width="1200" height="600" fetchpriority="high" loading="eager" decoding="async" />
+    <img src="/assets/images/blog/hero-database-ci-cd.svg" alt="Database CI/CD pipeline - automated schema change management from commit to production" class="featured-image" width="1200" height="600" fetchpriority="high" loading="eager" decoding="async" />
     <p class="featured-image-caption">A database CI/CD pipeline moves schema changes from commit to production through automated validation, comparison, and gated deployment</p>
   </div>
 </section>
@@ -552,40 +552,40 @@ nav:not(.mobile-menu).nav-scrolled{background:var(--pa-panel-81428-098)!importan
 
             <rect x="20" y="60" width="130" height="60" rx="10" fill="url(#dbcd-g1)" opacity="0.92"/>
             <text x="85" y="86" text-anchor="middle" fill="#fff" font-family="Inter, sans-serif" font-size="12" font-weight="700">Commit</text>
-            <text x="85" y="104" text-anchor="middle" fill="#dbeafe" font-family="Inter, sans-serif" font-size="10">Migration in Git</text>
+            <text x="85" y="104" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" style="fill:var(--pa-at-blue)">Migration in Git</text>
 
-            <path d="M150 90 L200 90" stroke="#94a3b8" stroke-width="2" fill="none" marker-end="url(#dbcd-arrow)"/>
+            <path d="M150 90 L200 90" stroke-width="2" fill="none" marker-end="url(#dbcd-arrow)"/ style="stroke:var(--pa-t-muted)">
 
-            <rect x="200" y="60" width="140" height="60" rx="10" fill="var(--pa-surface-2)"/>
-            <text x="270" y="86" text-anchor="middle" fill="#fff" font-family="Inter, sans-serif" font-size="12" font-weight="700">Lint + Build</text>
-            <text x="270" y="104" text-anchor="middle" fill="#94a3b8" font-family="Inter, sans-serif" font-size="10">Disposable database</text>
+            <rect x="200" y="60" width="140" height="60" rx="10"/ style="fill:var(--pa-surface-2)">
+            <text x="270" y="86" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" font-weight="700" style="fill:var(--pa-t-strong)">Lint + Build</text>
+            <text x="270" y="104" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" style="fill:var(--pa-t-muted)">Disposable database</text>
 
-            <path d="M340 90 L390 90" stroke="#94a3b8" stroke-width="2" fill="none" marker-end="url(#dbcd-arrow)"/>
+            <path d="M340 90 L390 90" stroke-width="2" fill="none" marker-end="url(#dbcd-arrow)"/ style="stroke:var(--pa-t-muted)">
 
             <rect x="390" y="40" width="170" height="100" rx="12" fill="url(#dbcd-g2)" opacity="0.92"/>
             <text x="475" y="72" text-anchor="middle" fill="#fff" font-family="Inter, sans-serif" font-size="13" font-weight="800">Schema Compare</text>
-            <text x="475" y="94" text-anchor="middle" fill="#d1fae5" font-family="Inter, sans-serif" font-size="10">Breaking vs. non-breaking</text>
-            <text x="475" y="114" text-anchor="middle" fill="#a7f3d0" font-family="Inter, sans-serif" font-size="9">Test | Diff | Classify</text>
+            <text x="475" y="94" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" style="fill:var(--pa-at-green)">Breaking vs. non-breaking</text>
+            <text x="475" y="114" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" style="fill:var(--pa-at-green-2)">Test | Diff | Classify</text>
 
-            <path d="M560 70 L640 70" stroke="#10b981" stroke-width="2" fill="none" marker-end="url(#dbcd-arrow)"/>
-            <text x="600" y="60" text-anchor="middle" fill="#10b981" font-family="Inter, sans-serif" font-size="10" font-weight="600">Pass</text>
+            <path d="M560 70 L640 70" stroke-width="2" fill="none" marker-end="url(#dbcd-arrow)"/ style="stroke:var(--pa-at-green)">
+            <text x="600" y="60" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" font-weight="600" style="fill:var(--pa-at-green)">Pass</text>
 
-            <path d="M475 140 L475 230 L640 230" stroke="#ef4444" stroke-width="2" fill="none" marker-end="url(#dbcd-arrow)"/>
-            <text x="560" y="220" text-anchor="middle" fill="#ef4444" font-family="Inter, sans-serif" font-size="10" font-weight="600">Blocking change</text>
+            <path d="M475 140 L475 230 L640 230" stroke-width="2" fill="none" marker-end="url(#dbcd-arrow)"/ style="stroke:var(--pa-at-red)">
+            <text x="560" y="220" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" font-weight="600" style="fill:var(--pa-at-red)">Blocking change</text>
 
-            <rect x="640" y="40" width="130" height="60" rx="10" fill="var(--pa-surface-2)"/>
-            <text x="705" y="66" text-anchor="middle" fill="#fff" font-family="Inter, sans-serif" font-size="12" font-weight="700">PR Review</text>
-            <text x="705" y="84" text-anchor="middle" fill="#94a3b8" font-family="Inter, sans-serif" font-size="10">Diff visible to team</text>
+            <rect x="640" y="40" width="130" height="60" rx="10"/ style="fill:var(--pa-surface-2)">
+            <text x="705" y="66" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" font-weight="700" style="fill:var(--pa-t-strong)">PR Review</text>
+            <text x="705" y="84" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" style="fill:var(--pa-t-muted)">Diff visible to team</text>
 
-            <path d="M770 70 L820 70 L820 130" stroke="#94a3b8" stroke-width="2" fill="none" marker-end="url(#dbcd-arrow)"/>
+            <path d="M770 70 L820 70 L820 130" stroke-width="2" fill="none" marker-end="url(#dbcd-arrow)"/ style="stroke:var(--pa-t-muted)">
 
             <rect x="760" y="130" width="120" height="60" rx="10" fill="url(#dbcd-g1)" opacity="0.92"/>
             <text x="820" y="156" text-anchor="middle" fill="#fff" font-family="Inter, sans-serif" font-size="12" font-weight="700">Production</text>
-            <text x="820" y="174" text-anchor="middle" fill="#dbeafe" font-family="Inter, sans-serif" font-size="10">Drift check</text>
+            <text x="820" y="174" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" style="fill:var(--pa-at-blue)">Drift check</text>
 
             <rect x="640" y="200" width="130" height="60" rx="10" fill="#7f1d1d"/>
-            <text x="705" y="226" text-anchor="middle" fill="#fecaca" font-family="Inter, sans-serif" font-size="11" font-weight="700">Blocked</text>
-            <text x="705" y="244" text-anchor="middle" fill="#fecaca" font-family="Inter, sans-serif" font-size="9">Merge halted</text>
+            <text x="705" y="226" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" font-weight="700" style="fill:var(--pa-at-red)">Blocked</text>
+            <text x="705" y="244" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" style="fill:var(--pa-at-red)">Merge halted</text>
           </svg>
         </div>
         <p class="diagram-caption">The database CI/CD pipeline: a schema comparison gate sits between testing and review, blocking breaking changes and verifying production after deploy</p>

@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" role="img" aria-labelledby="dcmTitle">
+<title id="dcmTitle">Database change management lifecycle — request, author, review, test, approve, deploy and verify, with risk tiers deciding how much approval each change needs</title>
+<defs>
+<linearGradient id="dcmBg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1120"/><stop offset="1" stop-color="#1b2540"/></linearGradient>
+<linearGradient id="dcmBrand" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2563eb"/><stop offset="1" stop-color="#7c3aed"/></linearGradient>
+<radialGradient id="dcmGb"><stop offset="0" stop-color="#2563eb" stop-opacity="0.2"/><stop offset="1" stop-color="#2563eb" stop-opacity="0"/></radialGradient>
+<radialGradient id="dcmGa"><stop offset="0" stop-color="#f59e0b" stop-opacity="0.14"/><stop offset="1" stop-color="#f59e0b" stop-opacity="0"/></radialGradient>
+<radialGradient id="dcmGg"><stop offset="0" stop-color="#10b981" stop-opacity="0.12"/><stop offset="1" stop-color="#10b981" stop-opacity="0"/></radialGradient>
+<pattern id="dcmGrid" width="44" height="44" patternUnits="userSpaceOnUse"><path d="M44 0H0V44" fill="none" stroke="#94a3b8" stroke-opacity="0.06"/></pattern>
+</defs>
+<rect width="1200" height="600" fill="url(#dcmBg)"/>
+<rect width="1200" height="600" fill="url(#dcmGrid)"/>
+<ellipse cx="300" cy="220" rx="360" ry="300" fill="url(#dcmGb)"/>
+<ellipse cx="960" cy="520" rx="380" ry="260" fill="url(#dcmGa)"/>
+<ellipse cx="640" cy="60" rx="420" ry="180" fill="url(#dcmGg)"/>
+<g font-family="Segoe UI, system-ui, sans-serif">
+
+<text x="50" y="64" font-size="13" letter-spacing="6" fill="#64748b">DATABASE CHANGE MANAGEMENT</text>
+<text x="50" y="96" font-size="17" font-weight="700" fill="#e2e8f0">Every change gets a spec, a diff, a test and an audit trail</text>
+
+<!-- rail -->
+<line x1="110" y1="240" x2="1088" y2="240" stroke="#2b3a5c" stroke-width="3"/>
+<g>
+<circle cx="110" cy="240" r="44" fill="#111a30" stroke="#60a5fa" stroke-width="2"/>
+<text x="110" y="248" text-anchor="middle" font-size="20" font-weight="800" fill="#60a5fa">1</text>
+
+<circle cx="273" cy="240" r="44" fill="#111a30" stroke="#60a5fa" stroke-width="2"/>
+<text x="273" y="248" text-anchor="middle" font-size="20" font-weight="800" fill="#60a5fa">2</text>
+
+<circle cx="436" cy="240" r="44" fill="#111a30" stroke="#a78bfa" stroke-width="2"/>
+<text x="436" y="248" text-anchor="middle" font-size="20" font-weight="800" fill="#a78bfa">3</text>
+
+<circle cx="599" cy="240" r="44" fill="#111a30" stroke="#22d3ee" stroke-width="2"/>
+<text x="599" y="248" text-anchor="middle" font-size="20" font-weight="800" fill="#22d3ee">4</text>
+
+<circle cx="762" cy="240" r="50" fill="url(#dcmBrand)"/>
+<text x="762" y="250" text-anchor="middle" font-size="24" font-weight="800" fill="#ffffff">5</text>
+
+<circle cx="925" cy="240" r="44" fill="#111a30" stroke="#34d399" stroke-width="2"/>
+<text x="925" y="248" text-anchor="middle" font-size="20" font-weight="800" fill="#34d399">6</text>
+
+<circle cx="1088" cy="240" r="44" fill="#111a30" stroke="#34d399" stroke-width="2"/>
+<text x="1088" y="248" text-anchor="middle" font-size="20" font-weight="800" fill="#34d399">7</text>
+</g>
+
+<!-- arrowheads between stages -->
+<g fill="#475569">
+<path d="M160 234 L174 240 L160 246 Z"/><path d="M323 234 L337 240 L323 246 Z"/>
+<path d="M486 234 L500 240 L486 246 Z"/><path d="M649 234 L663 240 L649 246 Z"/>
+<path d="M818 234 L834 240 L818 246 Z"/><path d="M975 234 L989 240 L975 246 Z"/>
+</g>
+
+<!-- stage labels -->
+<g text-anchor="middle">
+<text x="110" y="326" font-size="13" font-weight="700" fill="#e2e8f0">Request</text><text x="110" y="346" font-size="11" fill="#94a3b8">spec &#183; lock &#183; rollback</text>
+<text x="273" y="326" font-size="13" font-weight="700" fill="#e2e8f0">Author</text><text x="273" y="346" font-size="11" fill="#94a3b8">migration in Git</text>
+<text x="436" y="326" font-size="13" font-weight="700" fill="#e2e8f0">Review</text><text x="436" y="346" font-size="11" fill="#94a3b8">generated diff</text>
+<text x="599" y="326" font-size="13" font-weight="700" fill="#e2e8f0">Test</text><text x="599" y="346" font-size="11" fill="#94a3b8">disposable database</text>
+<text x="762" y="332" font-size="14" font-weight="800" fill="#a78bfa">Approve</text><text x="762" y="352" font-size="11" fill="#94a3b8">proportional to risk</text>
+<text x="925" y="326" font-size="13" font-weight="700" fill="#e2e8f0">Deploy</text><text x="925" y="346" font-size="11" fill="#94a3b8">one promotion path</text>
+<text x="1088" y="326" font-size="13" font-weight="700" fill="#e2e8f0">Verify</text><text x="1088" y="346" font-size="11" fill="#94a3b8">audit trail closed</text>
+</g>
+
+<text x="600" y="412" text-anchor="middle" font-size="11" letter-spacing="4" fill="#64748b">APPROVAL DEPTH SCALES WITH THE RISK OF THE CHANGE</text>
+
+<!-- risk tiers -->
+<rect x="50" y="430" width="360" height="130" rx="16" fill="#111a30" stroke="#34d399" stroke-opacity="0.5"/>
+<rect x="50" y="430" width="6" height="130" rx="3" fill="#34d399"/>
+<text x="78" y="466" font-size="13" letter-spacing="3" fill="#34d399">TIER 1 &#183; SAFE</text>
+<text x="78" y="494" font-size="14" font-weight="700" fill="#e2e8f0">Additive, nullable, no lock</text>
+<text x="78" y="516" font-size="12" fill="#94a3b8">Merges on green build</text>
+<text x="78" y="540" font-size="11" letter-spacing="1" fill="#64748b">INDEX &#183; NEW TABLE &#183; NEW COLUMN</text>
+
+<rect x="420" y="430" width="360" height="130" rx="16" fill="#111a30" stroke="#fbbf24" stroke-opacity="0.5"/>
+<rect x="420" y="430" width="6" height="130" rx="3" fill="#fbbf24"/>
+<text x="448" y="466" font-size="13" letter-spacing="3" fill="#fbbf24">TIER 2 &#183; REVIEW</text>
+<text x="448" y="494" font-size="14" font-weight="700" fill="#e2e8f0">Constraint and FK changes</text>
+<text x="448" y="516" font-size="12" fill="#94a3b8">Peer review plus test evidence</text>
+<text x="448" y="540" font-size="11" letter-spacing="1" fill="#64748b">FK &#183; UNIQUE &#183; BACKFILL SMALL</text>
+
+<rect x="790" y="430" width="360" height="130" rx="16" fill="#111a30" stroke="#fb7185" stroke-opacity="0.5"/>
+<rect x="790" y="430" width="6" height="130" rx="3" fill="#fb7185"/>
+<text x="818" y="466" font-size="13" letter-spacing="3" fill="#fb7185">TIER 3 &#183; RISKY</text>
+<text x="818" y="494" font-size="14" font-weight="700" fill="#e2e8f0">Type change, long lock, big backfill</text>
+<text x="818" y="516" font-size="12" fill="#94a3b8">Named approver and rollback path</text>
+<text x="818" y="540" font-size="11" letter-spacing="1" fill="#64748b">RENAME &#183; DROP &#183; WIDE ALTER</text>
+</g>
+</svg>

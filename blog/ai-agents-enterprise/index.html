@@ -24,11 +24,11 @@
 <meta property="og:description" content="A comprehensive guide to AI agents in the enterprise. Learn how agentic AI workflows differ from copilots, explore architecture patterns, and discover implementation best practices." />
 <meta property="og:url" content="https://performalytic.com/blog/ai-agents-enterprise/" />
 <meta property="og:site_name" content="Performalytic" />
-<meta property="og:image" content="https://performalytic.com/assets/images/blog-analytics-dashboard.jpg" />
+<meta property="og:image" content="https://performalytic.com/assets/images/blog/hero-ai-agents.svg" />
 <meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
-<meta property="og:image:type" content="image/jpeg" />
-<meta property="og:image:alt" content="AI Agents in the Enterprise - From Copilots to Autonomous Workflows" />
+<meta property="og:image:height" content="600" />
+<meta property="og:image:type" content="image/svg+xml" />
+<meta property="og:image:alt" content="AI agents and automation - an orchestrator coordinating specialized autonomous agents" />
 <meta property="article:published_time" content="2026-07-19T10:00:00+00:00" />
 <meta property="article:modified_time" content="2026-07-19T10:00:00+00:00" />
 <meta property="article:author" content="Performalytic" />
@@ -37,7 +37,7 @@
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="AI Agents in the Enterprise: From Copilots to Autonomous Workflows" />
 <meta name="twitter:description" content="A comprehensive guide to AI agents in the enterprise. Learn how agentic AI workflows differ from copilots, explore architecture patterns, and discover implementation best practices." />
-<meta name="twitter:image" content="https://performalytic.com/assets/images/blog-analytics-dashboard.jpg" />
+<meta name="twitter:image" content="https://performalytic.com/assets/images/blog/hero-ai-agents.svg" />
 
 <link rel="dns-prefetch" href="//performalytic.com" />
 
@@ -119,7 +119,7 @@ gtag('config', 'G-FV09CSCD2C');
   "@type":"Article",
   "headline":"AI Agents in the Enterprise: From Copilots to Autonomous Workflows",
   "description":"A comprehensive guide to AI agents in the enterprise. Learn how agentic AI workflows differ from copilots, explore architecture patterns, and discover implementation best practices.",
-  "image":"/assets/images/blog-analytics-dashboard.jpg",
+  "image":"/assets/images/blog/hero-ai-agents.svg",
   "author":{"@type":"Organization","name":"Performalytic"},
   "publisher":{"@type":"Organization","name":"Performalytic","logo":{"@type":"ImageObject","url":"/assets/images/performalytic-logo.png"}},
   "datePublished":"2026-07-19T10:00:00+00:00",
@@ -423,7 +423,6 @@ nav:not(.mobile-menu).nav-scrolled{background:var(--pa-panel-81428-098)!importan
 
     <nav class="post-toc" aria-label="Table of contents"><h3>In this article</h3><ul><li><a href="#the-agent-core-loop">The Agent Core Loop</a></li><li><a href="#what-are-ai-agents-vs-copilots-vs-traditional-ai">What Are AI Agents (vs Copilots, vs Traditional AI)</a></li><li><a href="#how-ai-agents-work-the-core-loop">How AI Agents Work: The Core Loop</a></li><li><a href="#types-of-ai-agents-in-the-enterprise">Types of AI Agents in the Enterprise</a></li><li><a href="#enterprise-use-cases">Enterprise Use Cases</a></li><li><a href="#architecture-patterns">Architecture Patterns</a></li><li><a href="#implementation-considerations">Implementation Considerations</a></li><li><a href="#building-vs-buying-ai-agents">Building vs Buying AI Agents</a></li><li><a href="#the-future-of-ai-agents-in-the-enterprise">The Future of AI Agents in the Enterprise</a></li><li><a href="#how-we-help">How We Help</a></li></ul></nav>
 
-
     <div class="tldr-box">
       <h3>TL;DR - Key Takeaways</h3>
       <ul>
@@ -516,6 +515,16 @@ nav:not(.mobile-menu).nav-scrolled{background:var(--pa-panel-81428-098)!importan
 
     <p>Every AI agent, regardless of its specific implementation, follows a core loop that repeats until the goal is achieved or a stopping condition is met.</p>
 
+      <!-- concept-diagram:start -->
+      <div class="diagram-section">
+        <div class="diagram-container">
+          <svg viewBox="0 0 960 212" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The AI agent core loop: perception, reasoning, action and memory">
+            <defs><linearGradient id="dg-ai-agents-enterprise-blue" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#2563eb"/><stop offset="100%" stop-color="#7c3aed"/></linearGradient><linearGradient id="dg-ai-agents-enterprise-green" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#047857"/><stop offset="100%" stop-color="#10b981"/></linearGradient><marker id="dg-ai-agents-enterprise-a" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><polygon points="0 0, 9 3.5, 0 7" style="fill:var(--pa-t-dim)"/></marker><marker id="dg-ai-agents-enterprise-ag" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><polygon points="0 0, 9 3.5, 0 7" style="fill:#10b981"/></marker><marker id="dg-ai-agents-enterprise-ar" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><polygon points="0 0, 9 3.5, 0 7" style="fill:#ef4444"/></marker></defs><rect x="18" y="30" width="201" height="86" rx="10" style="fill:url(#dg-ai-agents-enterprise-blue)"/><text x="118.5" y="65" text-anchor="middle" style="fill:#ffffff;font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:12px;font-weight:700"><tspan x="118.5">1. Perception</tspan></text><text x="118.5" y="83" text-anchor="middle" style="fill:rgba(255,255,255,.86);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:9.5px;font-weight:500"><tspan x="118.5">Databases, APIs, documents, logs</tspan></text><path d="M223 73 L255 73" style="fill:none;stroke:var(--pa-t-dim);stroke-width:2" marker-end="url(#dg-ai-agents-enterprise-a)"/><rect x="259" y="30" width="201" height="86" rx="10" style="fill:var(--pa-surface-2);stroke:var(--pa-wb-012);stroke-width:1"/><text x="359.5" y="65" text-anchor="middle" style="fill:var(--pa-t-strong);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:12px;font-weight:700"><tspan x="359.5">2. Reasoning</tspan></text><text x="359.5" y="83" text-anchor="middle" style="fill:var(--pa-t-muted);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:9.5px;font-weight:500"><tspan x="359.5">LLM decomposes goal into sub-tasks</tspan></text><path d="M464 73 L496 73" style="fill:none;stroke:var(--pa-t-dim);stroke-width:2" marker-end="url(#dg-ai-agents-enterprise-a)"/><rect x="500" y="30" width="201" height="86" rx="10" style="fill:var(--pa-surface-2);stroke:var(--pa-wb-012);stroke-width:1"/><text x="600.5" y="65" text-anchor="middle" style="fill:var(--pa-t-strong);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:12px;font-weight:700"><tspan x="600.5">3. Action</tspan></text><text x="600.5" y="83" text-anchor="middle" style="fill:var(--pa-t-muted);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:9.5px;font-weight:500"><tspan x="600.5">Tools execute the chosen step</tspan></text><path d="M705 73 L737 73" style="fill:none;stroke:var(--pa-t-dim);stroke-width:2" marker-end="url(#dg-ai-agents-enterprise-a)"/><rect x="741" y="30" width="201" height="86" rx="10" style="fill:url(#dg-ai-agents-enterprise-green)"/><text x="841.5" y="65" text-anchor="middle" style="fill:#ffffff;font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:12px;font-weight:700"><tspan x="841.5">4. Memory</tspan></text><text x="841.5" y="83" text-anchor="middle" style="fill:rgba(255,255,255,.86);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:9.5px;font-weight:500"><tspan x="841.5">Results stored for the next turn</tspan></text><path d="M841.5 120 V160 H118.5 V126" style="fill:none;stroke:var(--pa-t-dim);stroke-width:2;stroke-dasharray:6 5" marker-end="url(#dg-ai-agents-enterprise-a)" stroke-linejoin="round"/><rect x="330" y="137" width="300" height="46" rx="10" style="fill:var(--pa-surface-2);stroke:var(--pa-wb-012)"/><text x="480" y="157.5" text-anchor="middle" style="fill:var(--pa-t-muted);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:10.5px;font-weight:700"><tspan x="480">Repeats until the goal is achieved or a stop</tspan><tspan x="480" dy="13">condition is met</tspan></text>
+          </svg>
+        </div>
+        <p class="diagram-caption">Every AI agent runs the same core loop — perceive the environment, reason to a plan, act through tools, and write the result back to memory — repeating until the goal is met or a stop condition fires.</p>
+      </div>
+      <!-- concept-diagram:end -->
     <h3>1. Perception</h3>
     <p>The agent gathers information about its environment. This can include reading from databases, querying APIs, parsing documents, monitoring system logs, or receiving instructions from users. Perception is the input layer - it gives the agent the context it needs to reason effectively. Enterprise agents typically connect to multiple data sources simultaneously: a CRM system, a data warehouse, a ticketing platform, and communication channels.</p>
 
@@ -780,4 +789,4 @@ el.addEventListener('click',function(){gtag('event','click',{event_category:'cta
 </script>
 <script src="/assets/js/main.js?v=3" nonce="P3rf0rm4lyt1c" defer></script>
 </body>
-</html>
+</html

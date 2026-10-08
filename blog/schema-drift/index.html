@@ -24,7 +24,7 @@
 <meta property="og:description" content="Schema drift is any unplanned change to a data structure that downstream consumers never agreed to. Learn the causes, how to detect it, and how to stop it." />
 <meta property="og:url" content="https://performalytic.com/blog/schema-drift/" />
 <meta property="og:site_name" content="Performalytic" />
-<meta property="og:image" content="https://performalytic.com/assets/images/blog/hero-blog-data.svg" />
+<meta property="og:image" content="https://performalytic.com/assets/images/blog/hero-schema-drift.svg" />
 <meta property="og:image:alt" content="Schema drift diagram - unplanned changes to a data structure breaking downstream consumers" />
 <meta property="article:published_time" content="2026-10-06T15:00:00+00:00" />
 <meta property="article:modified_time" content="2026-10-06T15:00:00+00:00" />
@@ -34,7 +34,7 @@
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="What Is Schema Drift? Causes, Detection, and Prevention" />
 <meta name="twitter:description" content="Schema drift is any unplanned change to a data structure that downstream consumers never agreed to. Learn the causes, how to detect it, and how to stop it." />
-<meta name="twitter:image" content="https://performalytic.com/assets/images/blog/hero-blog-data.svg" />
+<meta name="twitter:image" content="https://performalytic.com/assets/images/blog/hero-schema-drift.svg" />
 
 <link rel="dns-prefetch" href="//performalytic.com" />
 
@@ -149,7 +149,7 @@ gtag('config', 'G-FV09CSCD2C');
     "@type": "Article",
     "headline": "What Is Schema Drift? Causes, Detection, and Prevention",
     "description": "Schema drift is any unplanned change to a data structure that downstream consumers never agreed to. Learn the causes, how to detect it, and how to stop it.",
-    "image": "/assets/images/blog/hero-blog-data.svg",
+    "image": "/assets/images/blog/hero-schema-drift.svg",
     "author": {
       "@id": "https://performalytic.com/#author-james-carter"
     },
@@ -448,7 +448,7 @@ nav:not(.mobile-menu).nav-scrolled{background:var(--pa-panel-81428-098)!importan
 <!-- Featured Image -->
 <section class="featured-image-section">
   <div class="container">
-    <img src="/assets/images/blog/hero-blog-data.svg" alt="Schema drift diagram - unplanned changes to a data structure breaking downstream consumers" class="featured-image" width="1200" height="600" fetchpriority="high" loading="eager" decoding="async" />
+    <img src="/assets/images/blog/hero-schema-drift.svg" alt="Schema drift diagram - unplanned changes to a data structure breaking downstream consumers" class="featured-image" width="1200" height="600" fetchpriority="high" loading="eager" decoding="async" />
     <p class="featured-image-caption">Schema drift starts as one small unannounced column change and ends as a broken pipeline, a blank dashboard, or a silent wrong number</p>
   </div>
 </section>
@@ -511,6 +511,17 @@ nav:not(.mobile-menu).nav-scrolled{background:var(--pa-panel-81428-098)!importan
 
       <h2 id="drift-vs-evolution">2. Schema Drift vs. Schema Evolution vs. Data Drift</h2>
       <p>These three terms get used interchangeably in casual conversation, and conflating them is expensive - because the fix for each one is completely different.</p>
+
+      <!-- concept-diagram:start -->
+      <div class="diagram-section">
+        <div class="diagram-container">
+          <svg viewBox="0 0 960 318" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Schema drift, schema evolution, data drift and code drift compared">
+            <defs><marker id="dg-schema-drift-a" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><polygon points="0 0, 9 3.5, 0 7" style="fill:var(--pa-t-dim)"/></marker><marker id="dg-schema-drift-ag" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><polygon points="0 0, 9 3.5, 0 7" style="fill:#10b981"/></marker><marker id="dg-schema-drift-ar" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><polygon points="0 0, 9 3.5, 0 7" style="fill:#ef4444"/></marker></defs><rect x="16" y="24" width="455" height="122" rx="12" style="fill:var(--pa-surface-2);stroke:var(--pa-wb-012)"/><rect x="28" y="25" width="431" height="3" rx="1.5" style="fill:var(--pa-at-red)"/><rect x="28" y="38" width="93" height="20" rx="10" style="fill:transparent"/><text x="74.5" y="52" text-anchor="middle" style="fill:var(--pa-at-red);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:9.5px;font-weight:800"><tspan x="74.5">Unplanned</tspan></text><text x="243.5" y="82" text-anchor="middle" style="fill:var(--pa-at-red);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:13px;font-weight:700"><tspan x="243.5">Schema drift</tspan></text><text x="243.5" y="104" text-anchor="middle" style="fill:var(--pa-t-muted);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:10px;font-weight:500"><tspan x="243.5">Structure changes with no plan. Signal: nulls where values used to be, a failed</tspan><tspan x="243.5" dy="13">parse. Fix: diff it, notify the owner, repair the mapping.</tspan></text><rect x="489" y="24" width="455" height="122" rx="12" style="fill:var(--pa-surface-2);stroke:var(--pa-wb-012)"/><rect x="501" y="25" width="431" height="3" rx="1.5" style="fill:var(--pa-at-green)"/><rect x="501" y="38" width="79" height="20" rx="10" style="fill:transparent"/><text x="540.5" y="52" text-anchor="middle" style="fill:var(--pa-at-green);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:9.5px;font-weight:800"><tspan x="540.5">Planned</tspan></text><text x="716.5" y="82" text-anchor="middle" style="fill:var(--pa-at-green);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:13px;font-weight:700"><tspan x="716.5">Schema evolution</tspan></text><text x="716.5" y="104" text-anchor="middle" style="fill:var(--pa-t-muted);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:10px;font-weight:500"><tspan x="716.5">Structure changes on purpose. Signal: a migration, a versioned message, a</tspan><tspan x="716.5" dy="13">deprecation notice. Fix: version it and keep readers backward-compatible.</tspan></text><rect x="16" y="164" width="455" height="122" rx="12" style="fill:var(--pa-surface-2);stroke:var(--pa-wb-012)"/><rect x="28" y="165" width="431" height="3" rx="1.5" style="fill:var(--pa-at-amber)"/><rect x="28" y="178" width="93" height="20" rx="10" style="fill:transparent"/><text x="74.5" y="192" text-anchor="middle" style="fill:var(--pa-at-amber);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:9.5px;font-weight:800"><tspan x="74.5">Unplanned</tspan></text><text x="243.5" y="222" text-anchor="middle" style="fill:var(--pa-at-amber);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:13px;font-weight:700"><tspan x="243.5">Data drift</tspan></text><text x="243.5" y="244" text-anchor="middle" style="fill:var(--pa-t-muted);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:10px;font-weight:500"><tspan x="243.5">Columns stay, contents shift. Signal: distribution change, new category,</tspan><tspan x="243.5" dy="13">null-rate spike. Fix: monitor quality and retrain models.</tspan></text><rect x="489" y="164" width="455" height="122" rx="12" style="fill:var(--pa-surface-2);stroke:var(--pa-wb-012)"/><rect x="501" y="165" width="431" height="3" rx="1.5" style="fill:var(--pa-at-blue)"/><rect x="501" y="178" width="149" height="20" rx="10" style="fill:transparent"/><text x="575.5" y="192" text-anchor="middle" style="fill:var(--pa-at-blue);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:9.5px;font-weight:800"><tspan x="575.5">Usually unplanned</tspan></text><text x="716.5" y="222" text-anchor="middle" style="fill:var(--pa-at-blue);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:13px;font-weight:700"><tspan x="716.5">Code drift</tspan></text><text x="716.5" y="244" text-anchor="middle" style="fill:var(--pa-t-muted);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:10px;font-weight:500"><tspan x="716.5">Same job, different results. Signal: two environments disagreeing. Fix: version</tspan><tspan x="716.5" dy="13">and deploy through one pipeline.</tspan></text>
+          </svg>
+        </div>
+        <p class="diagram-caption">Conflating these four is expensive, because the fix for each is different: if the columns changed it is schema; if only the contents changed it is data; if someone wrote it down first it is evolution.</p>
+      </div>
+      <!-- concept-diagram:end -->
       <div class="comparison-table-wrap">
         <table>
           <thead>
@@ -848,4 +859,4 @@ el.addEventListener('click',function(){gtag('event','click',{event_category:'cta
 </script>
 <script src="/assets/js/main.js?v=3" nonce="P3rf0rm4lyt1c" defer></script>
 </body>
-</html>
+</html

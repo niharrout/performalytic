@@ -24,7 +24,7 @@
 <meta property="og:description" content="Agentic AI plans, drafts, tests, and reviews database changes - humans approve. See where it works today, where it fails, and how to deploy it safely." />
 <meta property="og:url" content="https://performalytic.com/blog/agentic-ai-database-devops/" />
 <meta property="og:site_name" content="Performalytic" />
-<meta property="og:image" content="https://performalytic.com/assets/images/blog/hero-ai-agents.svg" />
+<meta property="og:image" content="https://performalytic.com/assets/images/blog/hero-agentic-database-devops.svg" />
 <meta property="og:image:alt" content="Agentic AI workflow for database DevOps - plan, generate, verify, approve, deploy with human checkpoints" />
 <meta property="article:published_time" content="2026-10-08T14:00:00+00:00" />
 <meta property="article:modified_time" content="2026-10-08T14:00:00+00:00" />
@@ -34,7 +34,7 @@
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Agentic AI in Database DevOps: A Practical Guide for 2026" />
 <meta name="twitter:description" content="Agentic AI plans, drafts, tests, and reviews database changes - humans approve. See where it works today, where it fails, and how to deploy it safely." />
-<meta name="twitter:image" content="https://performalytic.com/assets/images/blog/hero-ai-agents.svg" />
+<meta name="twitter:image" content="https://performalytic.com/assets/images/blog/hero-agentic-database-devops.svg" />
 
 <link rel="dns-prefetch" href="//performalytic.com" />
 
@@ -149,7 +149,7 @@ gtag('config', 'G-FV09CSCD2C');
     "@type": "Article",
     "headline": "Agentic AI in Database DevOps: A Practical Guide for 2026",
     "description": "Agentic AI plans, drafts, tests, and reviews database changes - humans approve. See where it works today, where it fails, and how to deploy it safely.",
-    "image": "/assets/images/blog/hero-ai-agents.svg",
+    "image": "/assets/images/blog/hero-agentic-database-devops.svg",
     "author": {
       "@id": "https://performalytic.com/#author-david-kim"
     },
@@ -448,7 +448,7 @@ nav:not(.mobile-menu).nav-scrolled{background:var(--pa-panel-81428-098)!importan
 <!-- Featured Image -->
 <section class="featured-image-section">
   <div class="container">
-    <img src="/assets/images/blog/hero-ai-agents.svg" alt="Agentic AI workflow for database DevOps - plan, generate, verify, approve, deploy with human checkpoints" class="featured-image" width="1200" height="600" fetchpriority="high" loading="eager" decoding="async" />
+    <img src="/assets/images/blog/hero-agentic-database-devops.svg" alt="Agentic AI workflow for database DevOps - plan, generate, verify, approve, deploy with human checkpoints" class="featured-image" width="1200" height="600" fetchpriority="high" loading="eager" decoding="async" />
     <p class="featured-image-caption">The working pattern: the agent proposes a change with its reasoning and blast radius, deterministic checks verify it, a person approves it, and the pipeline executes</p>
   </div>
 </section>
@@ -506,6 +506,17 @@ nav:not(.mobile-menu).nav-scrolled{background:var(--pa-panel-81428-098)!importan
 
       <h2 id="architecture">2. How an Agentic Database Workflow Is Structured</h2>
       <p>The working architecture has six components. Every serious implementation looks roughly like this, whether it is assembled from a framework or bought as a product.</p>
+
+      <!-- concept-diagram:start -->
+      <div class="diagram-section">
+        <div class="diagram-container">
+          <svg viewBox="0 0 960 156" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Six components of an agentic database workflow, from scope to human approval">
+            <defs><linearGradient id="dg-agentic-ai-database-devops-blue" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#2563eb"/><stop offset="100%" stop-color="#7c3aed"/></linearGradient><marker id="dg-agentic-ai-database-devops-a" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><polygon points="0 0, 9 3.5, 0 7" style="fill:var(--pa-t-dim)"/></marker><marker id="dg-agentic-ai-database-devops-ag" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><polygon points="0 0, 9 3.5, 0 7" style="fill:#10b981"/></marker><marker id="dg-agentic-ai-database-devops-ar" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><polygon points="0 0, 9 3.5, 0 7" style="fill:#ef4444"/></marker></defs><rect x="18" y="34" width="115.66666666666667" height="88" rx="10" style="fill:url(#dg-agentic-ai-database-devops-blue)"/><text x="75.83333333333334" y="70" text-anchor="middle" style="fill:#ffffff;font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:11.5px;font-weight:700"><tspan x="75.83333333333334">Goal &amp; scope</tspan></text><text x="75.83333333333334" y="88" text-anchor="middle" style="fill:rgba(255,255,255,.86);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:9px;font-weight:500"><tspan x="75.83333333333334">Database, objects,</tspan><tspan x="75.83333333333334" dy="12">change class</tspan></text><path d="M137.66666666666669 78 L175.66666666666669 78" style="fill:none;stroke:var(--pa-t-dim);stroke-width:2" marker-end="url(#dg-agentic-ai-database-devops-a)"/><text x="156.66666666666669" y="67" text-anchor="middle" style="fill:var(--pa-t-muted);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:9.5px;font-weight:700"><tspan x="156.66666666666669">stated</tspan></text><rect x="179.66666666666669" y="34" width="115.66666666666667" height="88" rx="10" style="fill:var(--pa-surface-2);stroke:var(--pa-wb-012);stroke-width:1"/><text x="237.50000000000003" y="70" text-anchor="middle" style="fill:var(--pa-t-strong);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:11.5px;font-weight:700"><tspan x="237.50000000000003">Context layer</tspan></text><text x="237.50000000000003" y="88" text-anchor="middle" style="fill:var(--pa-t-muted);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:9px;font-weight:500"><tspan x="237.50000000000003">Schema, lineage,</tspan><tspan x="237.50000000000003" dy="12">history, logs</tspan></text><path d="M299.33333333333337 78 L337.33333333333337 78" style="fill:none;stroke:var(--pa-t-dim);stroke-width:2" marker-end="url(#dg-agentic-ai-database-devops-a)"/><text x="318.33333333333337" y="67" text-anchor="middle" style="fill:var(--pa-t-muted);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:9.5px;font-weight:700"><tspan x="318.33333333333337">read</tspan></text><rect x="341.33333333333337" y="34" width="115.66666666666667" height="88" rx="10" style="fill:var(--pa-surface-2);stroke:var(--pa-wb-012);stroke-width:1"/><text x="399.1666666666667" y="70" text-anchor="middle" style="fill:var(--pa-t-strong);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:11.5px;font-weight:700"><tspan x="399.1666666666667">Tool set</tspan></text><text x="399.1666666666667" y="88" text-anchor="middle" style="fill:var(--pa-t-muted);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:9px;font-weight:500"><tspan x="399.1666666666667">Diff, author, test,</tspan><tspan x="399.1666666666667" dy="12">provision</tspan></text><path d="M461.00000000000006 78 L499.00000000000006 78" style="fill:none;stroke:var(--pa-t-dim);stroke-width:2" marker-end="url(#dg-agentic-ai-database-devops-a)"/><text x="480.00000000000006" y="67" text-anchor="middle" style="fill:var(--pa-t-muted);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:9.5px;font-weight:700"><tspan x="480.00000000000006">call</tspan></text><rect x="503.00000000000006" y="34" width="115.66666666666667" height="88" rx="10" style="fill:var(--pa-surface-2);stroke:var(--pa-wb-012);stroke-width:1"/><text x="560.8333333333334" y="70" text-anchor="middle" style="fill:var(--pa-t-strong);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:11.5px;font-weight:700"><tspan x="560.8333333333334">Plan</tspan></text><text x="560.8333333333334" y="88" text-anchor="middle" style="fill:var(--pa-t-muted);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:9px;font-weight:500"><tspan x="560.8333333333334">Sequenced actions</tspan><tspan x="560.8333333333334" dy="12">with reasoning</tspan></text><path d="M622.6666666666667 78 L660.6666666666667 78" style="fill:none;stroke:var(--pa-t-dim);stroke-width:2" marker-end="url(#dg-agentic-ai-database-devops-a)"/><text x="641.6666666666667" y="67" text-anchor="middle" style="fill:var(--pa-t-muted);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:9.5px;font-weight:700"><tspan x="641.6666666666667">review</tspan></text><rect x="664.6666666666667" y="34" width="115.66666666666667" height="88" rx="10" style="fill:var(--pa-surface-2);stroke:var(--pa-wb-012);stroke-width:1"/><text x="722.5000000000001" y="63" text-anchor="middle" style="fill:var(--pa-t-strong);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:11.5px;font-weight:700"><tspan x="722.5000000000001">Verification</tspan><tspan x="722.5000000000001" dy="15">gate</tspan></text><text x="722.5000000000001" y="96" text-anchor="middle" style="fill:var(--pa-t-muted);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:9px;font-weight:500"><tspan x="722.5000000000001">Deterministic checks</tspan><tspan x="722.5000000000001" dy="12">decide</tspan></text><path d="M784.3333333333334 78 L822.3333333333334 78" style="fill:none;stroke:var(--pa-t-dim);stroke-width:2" marker-end="url(#dg-agentic-ai-database-devops-a)"/><text x="803.3333333333334" y="67" text-anchor="middle" style="fill:var(--pa-t-muted);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:9.5px;font-weight:700"><tspan x="803.3333333333334">pass</tspan></text><rect x="826.3333333333335" y="34" width="115.66666666666667" height="88" rx="10" style="fill:var(--pa-surface-2);stroke:var(--pa-wb-012);stroke-width:1"/><text x="884.1666666666669" y="70" text-anchor="middle" style="fill:var(--pa-t-strong);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:11.5px;font-weight:700"><tspan x="884.1666666666669">Approval</tspan></text><text x="884.1666666666669" y="88" text-anchor="middle" style="fill:var(--pa-t-muted);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:9px;font-weight:500"><tspan x="884.1666666666669">Named human, then</tspan><tspan x="884.1666666666669" dy="12">pipeline runs</tspan></text>
+          </svg>
+        </div>
+        <p class="diagram-caption">The six components of an agentic database workflow: scope and live context feed a reviewable plan, a deterministic gate decides, and a named human approves before anything executes.</p>
+      </div>
+      <!-- concept-diagram:end -->
       <ol>
         <li><strong>The goal and scope.</strong> A stated objective plus a declared boundary: which database, which objects, which change class. Scope is given to the agent, not inferred by it.</li>
         <li><strong>The context layer.</strong> Live reads of schema, lineage, recent migration history, data volume, and query logs. This is what keeps the agent from inventing structure.</li>
@@ -811,4 +822,4 @@ el.addEventListener('click',function(){gtag('event','click',{event_category:'cta
 </script>
 <script src="/assets/js/main.js?v=3" nonce="P3rf0rm4lyt1c" defer></script>
 </body>
-</html>
+</html

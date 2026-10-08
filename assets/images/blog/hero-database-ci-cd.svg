@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" role="img" aria-labelledby="ccdTitle">
+<title id="ccdTitle">Database CI/CD pipeline — commit, build, quality gate, staging, production and monitoring, with a breaking change stopped at the gate before it reaches production</title>
+<defs>
+<linearGradient id="ccdBg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1120"/><stop offset="1" stop-color="#1b2540"/></linearGradient>
+<linearGradient id="ccdBrand" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2563eb"/><stop offset="1" stop-color="#7c3aed"/></linearGradient>
+<radialGradient id="ccdGb"><stop offset="0" stop-color="#2563eb" stop-opacity="0.2"/><stop offset="1" stop-color="#2563eb" stop-opacity="0"/></radialGradient>
+<radialGradient id="ccdGr"><stop offset="0" stop-color="#f43f5e" stop-opacity="0.16"/><stop offset="1" stop-color="#f43f5e" stop-opacity="0"/></radialGradient>
+<radialGradient id="ccdGg"><stop offset="0" stop-color="#10b981" stop-opacity="0.13"/><stop offset="1" stop-color="#10b981" stop-opacity="0"/></radialGradient>
+<pattern id="ccdGrid" width="44" height="44" patternUnits="userSpaceOnUse"><path d="M44 0H0V44" fill="none" stroke="#94a3b8" stroke-opacity="0.06"/></pattern>
+<marker id="ccdArrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0 0 L10 4 L0 8 Z" fill="#475569"/></marker>
+<marker id="ccdArrowRed" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0 0 L10 4 L0 8 Z" fill="#fb7185"/></marker>
+</defs>
+<rect width="1200" height="600" fill="url(#ccdBg)"/>
+<rect width="1200" height="600" fill="url(#ccdGrid)"/>
+<ellipse cx="470" cy="230" rx="380" ry="300" fill="url(#ccdGb)"/>
+<ellipse cx="480" cy="540" rx="360" ry="240" fill="url(#ccdGr)"/>
+<ellipse cx="1040" cy="300" rx="320" ry="300" fill="url(#ccdGg)"/>
+<g font-family="Segoe UI, system-ui, sans-serif">
+
+<text x="50" y="62" font-size="13" letter-spacing="6" fill="#64748b">DATABASE CI/CD</text>
+<text x="50" y="94" font-size="17" font-weight="700" fill="#e2e8f0">The pipeline treats a migration exactly like application code</text>
+
+<!-- rail -->
+<line x1="110" y1="250" x2="1060" y2="250" stroke="#2b3a5c" stroke-width="3"/>
+<path d="M162 250 L184 250" stroke="#475569" stroke-width="2" marker-end="url(#ccdArrow)"/>
+<path d="M352 250 L374 250" stroke="#475569" stroke-width="2" marker-end="url(#ccdArrow)"/>
+<path d="M542 250 L564 250" stroke="#475569" stroke-width="2" marker-end="url(#ccdArrow)"/>
+<path d="M732 250 L754 250" stroke="#475569" stroke-width="2" marker-end="url(#ccdArrow)"/>
+<path d="M922 250 L944 250" stroke="#475569" stroke-width="2" marker-end="url(#ccdArrow)"/>
+
+<circle cx="110" cy="250" r="46" fill="#111a30" stroke="#60a5fa" stroke-width="2"/>
+<text x="110" y="258" text-anchor="middle" font-size="14" font-weight="800" fill="#60a5fa">GIT</text>
+
+<circle cx="300" cy="250" r="46" fill="#111a30" stroke="#60a5fa" stroke-width="2"/>
+<text x="300" y="258" text-anchor="middle" font-size="14" font-weight="800" fill="#60a5fa">BUILD</text>
+
+<circle cx="490" cy="250" r="54" fill="url(#ccdBrand)"/>
+<text x="490" y="246" text-anchor="middle" font-size="13" font-weight="800" fill="#ffffff">QUALITY</text>
+<text x="490" y="266" text-anchor="middle" font-size="13" font-weight="800" fill="#ffffff">GATE</text>
+
+<circle cx="680" cy="250" r="46" fill="#111a30" stroke="#a78bfa" stroke-width="2"/>
+<text x="680" y="258" text-anchor="middle" font-size="13" font-weight="800" fill="#a78bfa">STAGE</text>
+
+<circle cx="870" cy="250" r="46" fill="#111a30" stroke="#34d399" stroke-width="2"/>
+<text x="870" y="258" text-anchor="middle" font-size="13" font-weight="800" fill="#34d399">PROD</text>
+
+<circle cx="1060" cy="250" r="46" fill="#111a30" stroke="#22d3ee" stroke-width="2"/>
+<text x="1060" y="258" text-anchor="middle" font-size="12" font-weight="800" fill="#22d3ee">WATCH</text>
+
+<g text-anchor="middle">
+<text x="110" y="334" font-size="13" font-weight="700" fill="#e2e8f0">Commit</text><text x="110" y="354" font-size="11" fill="#94a3b8">migration in version control</text>
+<text x="300" y="334" font-size="13" font-weight="700" fill="#e2e8f0">Build + test</text><text x="300" y="354" font-size="11" fill="#94a3b8">disposable database</text>
+<text x="490" y="340" font-size="13" font-weight="700" fill="#a78bfa">Schema + DQ checks</text><text x="490" y="360" font-size="11" fill="#94a3b8">blocking rules decide</text>
+<text x="680" y="334" font-size="13" font-weight="700" fill="#e2e8f0">Staging</text><text x="680" y="354" font-size="11" fill="#94a3b8">environment parity</text>
+<text x="870" y="334" font-size="13" font-weight="700" fill="#e2e8f0">Production</text><text x="870" y="354" font-size="11" fill="#94a3b8">automated promotion</text>
+<text x="1060" y="334" font-size="13" font-weight="700" fill="#e2e8f0">Monitor</text><text x="1060" y="354" font-size="10" fill="#94a3b8">freshness, volume, drift</text>
+</g>
+
+<!-- blocked branch -->
+<path d="M490 306 L490 372 L430 372 L430 418" fill="none" stroke="#fb7185" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#ccdArrowRed)"/>
+<rect x="250" y="420" width="360" height="96" rx="14" fill="#1a1020" stroke="#fb7185" stroke-opacity="0.6"/>
+<text x="274" y="452" font-size="12" letter-spacing="3" fill="#fb7185">GATE SAYS NO</text>
+<text x="274" y="478" font-size="14" font-weight="700" fill="#e2e8f0">Breaking change &#183; PR halted</text>
+<text x="274" y="500" font-size="12" fill="#94a3b8">Nothing reaches staging until it is fixed</text>
+
+<!-- guarantees -->
+<rect x="660" y="420" width="240" height="96" rx="14" fill="#111a30" stroke="#34d399" stroke-opacity="0.5"/>
+<text x="684" y="452" font-size="15" font-weight="800" fill="#34d399">PARITY</text>
+<text x="684" y="476" font-size="12" fill="#94a3b8">Staging runs the same</text>
+<text x="684" y="496" font-size="12" fill="#94a3b8">migrations as production</text>
+
+<rect x="910" y="420" width="240" height="96" rx="14" fill="#111a30" stroke="#60a5fa" stroke-opacity="0.5"/>
+<text x="934" y="452" font-size="15" font-weight="800" fill="#60a5fa">ROLLBACK</text>
+<text x="934" y="476" font-size="12" fill="#94a3b8">Every migration ships</text>
+<text x="934" y="496" font-size="12" fill="#94a3b8">with its reversal path</text>
+
+<text x="600" y="566" text-anchor="middle" font-size="11" letter-spacing="4" fill="#64748b">VERSION &#183; TEST &#183; GATE &#183; PROMOTE &#183; OBSERVE</text>
+</g>
+</svg>

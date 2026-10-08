@@ -24,11 +24,11 @@
 <meta property="og:description" content="Traditional data quality tests - not null, unique, referential integrity - are brittle and context-blind. Learn how AI-native DQ with knowledge graphs is transforming data quality." />
 <meta property="og:url" content="https://performalytic.com/blog/ai-changing-data-quality/" />
 <meta property="og:site_name" content="Performalytic" />
-<meta property="og:image" content="https://performalytic.com/assets/images/blog-hero-ai-dq.jpg" />
+<meta property="og:image" content="https://performalytic.com/assets/images/blog/hero-ai-changing-data-quality.svg" />
 <meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
-<meta property="og:image:type" content="image/jpeg" />
-<meta property="og:image:alt" content="AI transforming data quality from micro-tests to context-aware quality with knowledge graphs" />
+<meta property="og:image:height" content="600" />
+<meta property="og:image:type" content="image/svg+xml" />
+<meta property="og:image:alt" content="AI transforming data quality from column-specific micro-tests to context-aware knowledge graphs" />
 <meta property="article:published_time" content="2026-07-21T10:00:00+00:00" />
 <meta property="article:modified_time" content="2026-07-21T10:00:00+00:00" />
 <meta property="article:author" content="Performalytic" />
@@ -43,7 +43,7 @@
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="How AI Is Changing Data Quality: From Micro-Tests to Context-Aware Quality | Performalytic" />
 <meta name="twitter:description" content="Traditional data quality tests - not null, unique, referential integrity - are brittle and context-blind. Learn how AI-native DQ is transforming data quality." />
-<meta name="twitter:image" content="https://performalytic.com/assets/images/blog-hero-ai-dq.jpg" />
+<meta name="twitter:image" content="https://performalytic.com/assets/images/blog/hero-ai-changing-data-quality.svg" />
 
 <link rel="dns-prefetch" href="//performalytic.com" />
 
@@ -123,7 +123,7 @@ gtag('config', 'G-FV09CSCD2C');
   "@type":"Article",
   "headline":"How AI Is Changing Data Quality: From Micro-Tests to Context-Aware Quality",
   "description":"Traditional data quality tests - not null, unique, referential integrity - are brittle and context-blind. Learn how AI-native DQ with knowledge graphs and MCP is transforming data quality from micro-tests to context-aware quality.",
-  "image":"/assets/images/GettyImages-618762080-1.jpg",
+  "image":"/assets/images/blog/hero-ai-changing-data-quality.svg",
   "author":{"@type":"Organization","name":"Performalytic"},
   "publisher":{"@type":"Organization","name":"Performalytic","logo":{"@type":"ImageObject","url":"/assets/images/performalytic-logo.png"}},
   "datePublished":"2026-07-21T10:00:00+00:00",
@@ -395,6 +395,16 @@ nav:not(.mobile-menu).nav-scrolled{background:var(--pa-panel-81428-098)!importan
     <h2 id="traditional-dq-limits">The Limits of Traditional Data Quality</h2>
     <p>Let's be clear: column-level tests are not useless. They're essential guardrails. A NOT NULL constraint on a primary key is non-negotiable. A UNIQUE test on an email address catches real problems. Foreign key checks prevent orphaned records that break joins. These tests are cheap, fast, and valuable.</p>
 
+      <!-- concept-diagram:start -->
+      <div class="diagram-section">
+        <div class="diagram-container">
+          <svg viewBox="0 0 960 258" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Column-level tests compared with context-aware data quality">
+            <defs><linearGradient id="dg-ai-changing-data-quality-slate" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#334155"/><stop offset="100%" stop-color="#64748b"/></linearGradient><linearGradient id="dg-ai-changing-data-quality-green" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#047857"/><stop offset="100%" stop-color="#10b981"/></linearGradient><marker id="dg-ai-changing-data-quality-a" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><polygon points="0 0, 9 3.5, 0 7" style="fill:var(--pa-t-dim)"/></marker><marker id="dg-ai-changing-data-quality-ag" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><polygon points="0 0, 9 3.5, 0 7" style="fill:#10b981"/></marker><marker id="dg-ai-changing-data-quality-ar" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><polygon points="0 0, 9 3.5, 0 7" style="fill:#ef4444"/></marker></defs><rect x="16" y="26" width="436" height="204" rx="14" style="fill:var(--pa-wb-004);stroke:var(--pa-wb-008)"/><rect x="16" y="26" width="436" height="44" rx="14" style="fill:url(#dg-ai-changing-data-quality-slate)"/><rect x="16" y="56" width="436" height="14" style="fill:url(#dg-ai-changing-data-quality-slate)"/><text x="234" y="53" text-anchor="middle" style="fill:#fff;font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:13px;font-weight:800"><tspan x="234">Column-level tests</tspan></text><rect x="32" y="89" width="14" height="14" rx="4" style="fill:var(--pa-wb-008)"/><path d="M35.5 96 l3 3 l5.5 -6" style="fill:none;stroke:var(--pa-at-blue);stroke-width:2" stroke-linecap="round" stroke-linejoin="round"/><text x="56" y="102" text-anchor="start" style="fill:var(--pa-t-strong);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:11.5px;font-weight:500"><tspan x="56">NOT NULL, UNIQUE, FK checks</tspan></text><rect x="32" y="125" width="14" height="14" rx="4" style="fill:var(--pa-wb-008)"/><path d="M35.5 132 l3 3 l5.5 -6" style="fill:none;stroke:var(--pa-at-blue);stroke-width:2" stroke-linecap="round" stroke-linejoin="round"/><text x="56" y="138" text-anchor="start" style="fill:var(--pa-t-strong);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:11.5px;font-weight:500"><tspan x="56">No business context</tspan></text><rect x="32" y="161" width="14" height="14" rx="4" style="fill:var(--pa-wb-008)"/><path d="M35.5 168 l3 3 l5.5 -6" style="fill:none;stroke:var(--pa-at-blue);stroke-width:2" stroke-linecap="round" stroke-linejoin="round"/><text x="56" y="174" text-anchor="start" style="fill:var(--pa-t-strong);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:11.5px;font-weight:500"><tspan x="56">No relationship awareness</tspan></text><rect x="32" y="197" width="14" height="14" rx="4" style="fill:var(--pa-wb-008)"/><path d="M35.5 204 l3 3 l5.5 -6" style="fill:none;stroke:var(--pa-at-blue);stroke-width:2" stroke-linecap="round" stroke-linejoin="round"/><text x="56" y="210" text-anchor="start" style="fill:var(--pa-t-strong);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:11.5px;font-weight:500"><tspan x="56">40-60% false positives reported</tspan></text><rect x="508" y="26" width="436" height="204" rx="14" style="fill:var(--pa-wb-004);stroke:var(--pa-wb-008)"/><rect x="508" y="26" width="436" height="44" rx="14" style="fill:url(#dg-ai-changing-data-quality-green)"/><rect x="508" y="56" width="436" height="14" style="fill:url(#dg-ai-changing-data-quality-green)"/><text x="726" y="53" text-anchor="middle" style="fill:#fff;font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:13px;font-weight:800"><tspan x="726">Context-aware DQ</tspan></text><rect x="524" y="89" width="14" height="14" rx="4" style="fill:var(--pa-wb-008)"/><path d="M527.5 96 l3 3 l5.5 -6" style="fill:none;stroke:var(--pa-at-green);stroke-width:2" stroke-linecap="round" stroke-linejoin="round"/><text x="548" y="102" text-anchor="start" style="fill:var(--pa-t-strong);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:11.5px;font-weight:500"><tspan x="548">Reads the entity relationship graph</tspan></text><rect x="524" y="125" width="14" height="14" rx="4" style="fill:var(--pa-wb-008)"/><path d="M527.5 132 l3 3 l5.5 -6" style="fill:none;stroke:var(--pa-at-green);stroke-width:2" stroke-linecap="round" stroke-linejoin="round"/><text x="548" y="138" text-anchor="start" style="fill:var(--pa-t-strong);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:11.5px;font-weight:500"><tspan x="548">Judges nulls by business domain</tspan></text><rect x="524" y="161" width="14" height="14" rx="4" style="fill:var(--pa-wb-008)"/><path d="M527.5 168 l3 3 l5.5 -6" style="fill:none;stroke:var(--pa-at-green);stroke-width:2" stroke-linecap="round" stroke-linejoin="round"/><text x="548" y="174" text-anchor="start" style="fill:var(--pa-t-strong);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:11.5px;font-weight:500"><tspan x="548">Thresholds adapt to seasonality</tspan></text><rect x="524" y="197" width="14" height="14" rx="4" style="fill:var(--pa-wb-008)"/><path d="M527.5 204 l3 3 l5.5 -6" style="fill:none;stroke:var(--pa-at-green);stroke-width:2" stroke-linecap="round" stroke-linejoin="round"/><text x="548" y="210" text-anchor="start" style="fill:var(--pa-t-strong);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:11.5px;font-weight:500"><tspan x="548">Fewer, sharper, trusted alerts</tspan></text><circle cx="480" cy="128" r="22" style="fill:var(--pa-surface-2);stroke:var(--pa-wb-012);stroke-width:2"/><text x="480" y="133" text-anchor="middle" style="fill:var(--pa-t-muted);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:13px;font-weight:800">vs</text>
+          </svg>
+        </div>
+        <p class="diagram-caption">Column-level tests are essential guardrails, but they cannot see business context or entity relationships — which is why teams report 40-60% of data quality test failures are false positives.</p>
+      </div>
+      <!-- concept-diagram:end -->
     <p>But they have fundamental blind spots:</p>
     <ul>
       <li><strong>No business context:</strong> A null in a phone number field might be acceptable, concerning, or catastrophic depending on the business domain. The test can't tell the difference.</li>
@@ -625,4 +635,4 @@ el.addEventListener('click',function(){gtag('event','click',{event_category:'cta
 </script>
 <script src="/assets/js/main.js?v=3" nonce="P3rf0rm4lyt1c" defer></script>
 </body>
-</html>
+</html

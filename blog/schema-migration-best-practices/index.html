@@ -24,7 +24,7 @@
 <meta property="og:description" content="Schema migration best practices for zero-downtime changes: expand-contract, safe rollbacks, backfill strategy, testing, and locking pitfalls to avoid." />
 <meta property="og:url" content="https://performalytic.com/blog/schema-migration-best-practices/" />
 <meta property="og:site_name" content="Performalytic" />
-<meta property="og:image" content="https://performalytic.com/assets/images/blog/hero-data-quality-framework.svg" />
+<meta property="og:image" content="https://performalytic.com/assets/images/blog/hero-schema-migration.svg" />
 <meta property="og:image:alt" content="Schema migration best practices - expand, backfill, switch, contract applied in safe stages" />
 <meta property="article:published_time" content="2026-10-07T14:00:00+00:00" />
 <meta property="article:modified_time" content="2026-10-07T14:00:00+00:00" />
@@ -34,7 +34,7 @@
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Schema Migration Best Practices: Expand, Contract, and Rollback" />
 <meta name="twitter:description" content="Schema migration best practices for zero-downtime changes: expand-contract, safe rollbacks, backfill strategy, testing, and locking pitfalls to avoid." />
-<meta name="twitter:image" content="https://performalytic.com/assets/images/blog/hero-data-quality-framework.svg" />
+<meta name="twitter:image" content="https://performalytic.com/assets/images/blog/hero-schema-migration.svg" />
 
 <link rel="dns-prefetch" href="//performalytic.com" />
 
@@ -149,7 +149,7 @@ gtag('config', 'G-FV09CSCD2C');
     "@type": "Article",
     "headline": "Schema Migration Best Practices: Expand, Contract, and Rollback",
     "description": "Schema migration best practices for zero-downtime changes: expand-contract, safe rollbacks, backfill strategy, testing, and locking pitfalls to avoid.",
-    "image": "/assets/images/blog/hero-data-quality-framework.svg",
+    "image": "/assets/images/blog/hero-schema-migration.svg",
     "author": {
       "@id": "https://performalytic.com/#author-james-carter"
     },
@@ -448,7 +448,7 @@ nav:not(.mobile-menu).nav-scrolled{background:var(--pa-panel-81428-098)!importan
 <!-- Featured Image -->
 <section class="featured-image-section">
   <div class="container">
-    <img src="/assets/images/blog/hero-data-quality-framework.svg" alt="Schema migration best practices - expand, backfill, switch, contract applied in safe stages" class="featured-image" width="1200" height="600" fetchpriority="high" loading="eager" decoding="async" />
+    <img src="/assets/images/blog/hero-schema-migration.svg" alt="Schema migration best practices - expand, backfill, switch, contract applied in safe stages" class="featured-image" width="1200" height="600" fetchpriority="high" loading="eager" decoding="async" />
     <p class="featured-image-caption">A safe migration is not one statement; it is a sequence of small, reversible stages each of which leaves the system working</p>
   </div>
 </section>
@@ -513,6 +513,17 @@ nav:not(.mobile-menu).nav-scrolled{background:var(--pa-panel-81428-098)!importan
 
       <h2 id="expand-contract">3. The Expand-Contract Pattern</h2>
       <p>Expand-contract - also called parallel change, or expand-and-migrate - is the standard technique for satisfying the golden rule across a rolling deployment.</p>
+
+      <!-- concept-diagram:start -->
+      <div class="diagram-section">
+        <div class="diagram-container">
+          <svg viewBox="0 0 960 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Expand-contract migration timeline showing old and new structures in parallel">
+            <defs><linearGradient id="dg-schema-migration-best-practices-cyan" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#0e7490"/><stop offset="100%" stop-color="#0891b2"/></linearGradient><linearGradient id="dg-schema-migration-best-practices-blue" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#2563eb"/><stop offset="100%" stop-color="#7c3aed"/></linearGradient><linearGradient id="dg-schema-migration-best-practices-indigo" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#4f46e5"/><stop offset="100%" stop-color="#7c3aed"/></linearGradient><linearGradient id="dg-schema-migration-best-practices-green" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#047857"/><stop offset="100%" stop-color="#10b981"/></linearGradient><marker id="dg-schema-migration-best-practices-a" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><polygon points="0 0, 9 3.5, 0 7" style="fill:var(--pa-t-dim)"/></marker><marker id="dg-schema-migration-best-practices-ag" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><polygon points="0 0, 9 3.5, 0 7" style="fill:#10b981"/></marker><marker id="dg-schema-migration-best-practices-ar" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><polygon points="0 0, 9 3.5, 0 7" style="fill:#ef4444"/></marker></defs><rect x="196" y="34" width="744" height="138" rx="8" style="fill:var(--pa-wb-004)"/><path d="M196 34 V172" style="stroke:var(--pa-wb-008);stroke-width:1;stroke-dasharray:4 4"/><text x="202" y="26" text-anchor="start" style="fill:var(--pa-t-dim);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:9.5px;font-weight:700"><tspan x="202">Deploy</tspan></text><path d="M374.56 34 V172" style="stroke:var(--pa-wb-008);stroke-width:1;stroke-dasharray:4 4"/><text x="380.56" y="26" text-anchor="start" style="fill:var(--pa-t-dim);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:9.5px;font-weight:700"><tspan x="380.56">Backfill</tspan></text><path d="M657.28 34 V172" style="stroke:var(--pa-wb-008);stroke-width:1;stroke-dasharray:4 4"/><text x="663.28" y="26" text-anchor="start" style="fill:var(--pa-t-dim);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:9.5px;font-weight:700"><tspan x="663.28">Switch</tspan></text><path d="M806.0799999999999 34 V172" style="stroke:var(--pa-wb-008);stroke-width:1;stroke-dasharray:4 4"/><text x="812.0799999999999" y="26" text-anchor="start" style="fill:var(--pa-t-dim);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:9.5px;font-weight:700"><tspan x="812.0799999999999">Later release</tspan></text><path d="M940 34 V172" style="stroke:var(--pa-wb-008);stroke-width:1;stroke-dasharray:4 4"/><text x="936" y="26" text-anchor="end" style="fill:var(--pa-t-dim);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:9.5px;font-weight:700"><tspan x="936"></tspan></text><text x="20" y="85" text-anchor="start" style="fill:var(--pa-t-strong);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:11.5px;font-weight:700"><tspan x="20">Old structure</tspan></text><text x="20" y="101" text-anchor="start" style="fill:var(--pa-t-muted);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:9px;font-weight:500"><tspan x="20">Still authoritative</tspan></text><rect x="196" y="64" width="491.04" height="42" rx="8" style="fill:var(--pa-wb-008);stroke:var(--pa-at-blue);stroke-width:1.5" stroke-dasharray="0"/><text x="441.52" y="89" text-anchor="middle" style="fill:var(--pa-at-blue);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:10.5px;font-weight:700"><tspan x="441.52">Present and serving reads and writes</tspan></text><rect x="687.04" y="64" width="252.95999999999998" height="42" rx="8" style="fill:var(--pa-wb-008);stroke:var(--pa-at-blue);stroke-width:1.5" stroke-dasharray="6 4"/><text x="813.52" y="89" text-anchor="middle" style="fill:var(--pa-at-blue);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:10.5px;font-weight:700"><tspan x="813.52">Retained, unused</tspan></text><text x="20" y="151" text-anchor="start" style="fill:var(--pa-t-strong);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:11.5px;font-weight:700"><tspan x="20">New structure</tspan></text><text x="20" y="167" text-anchor="start" style="fill:var(--pa-t-muted);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:9px;font-weight:500"><tspan x="20">Added, then promoted</tspan></text><rect x="196" y="130" width="178.56" height="42" rx="8" style="fill:url(#dg-schema-migration-best-practices-cyan)"/><text x="285.28" y="155" text-anchor="middle" style="fill:#fff;font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:10.5px;font-weight:700"><tspan x="285.28">1. Expand</tspan></text><rect x="374.56" y="130" width="282.72" height="42" rx="8" style="fill:url(#dg-schema-migration-best-practices-blue)"/><text x="515.9200000000001" y="155" text-anchor="middle" style="fill:#fff;font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:10.5px;font-weight:700"><tspan x="515.9200000000001">2. Backfill in batches</tspan></text><rect x="657.28" y="130" width="148.79999999999995" height="42" rx="8" style="fill:url(#dg-schema-migration-best-practices-indigo)"/><text x="731.68" y="148.5" text-anchor="middle" style="fill:#fff;font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:10.5px;font-weight:700"><tspan x="731.68">3. Switch behind a</tspan><tspan x="731.68" dy="13">flag</tspan></text><rect x="806.0799999999999" y="130" width="133.92000000000004" height="42" rx="8" style="fill:url(#dg-schema-migration-best-practices-green)"/><text x="873.04" y="155" text-anchor="middle" style="fill:#fff;font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:10.5px;font-weight:700"><tspan x="873.04">4. Contract</tspan></text><rect x="196" y="196" width="14" height="14" rx="4" style="fill:url(#dg-schema-migration-best-practices-cyan);"/><text x="216" y="208" text-anchor="start" style="fill:var(--pa-t-muted);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:9.5px;font-weight:600"><tspan x="216">Expand — add nullable column</tspan></text><rect x="376.79999999999995" y="196" width="14" height="14" rx="4" style="fill:url(#dg-schema-migration-best-practices-blue);"/><text x="396.79999999999995" y="208" text-anchor="start" style="fill:var(--pa-t-muted);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:9.5px;font-weight:600"><tspan x="396.79999999999995">Backfill — batched, checkpointed</tspan></text><rect x="580" y="196" width="14" height="14" rx="4" style="fill:url(#dg-schema-migration-best-practices-indigo);"/><text x="600" y="208" text-anchor="start" style="fill:var(--pa-t-muted);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:9.5px;font-weight:600"><tspan x="600">Switch — flip the flag</tspan></text><rect x="727.2" y="196" width="14" height="14" rx="4" style="fill:url(#dg-schema-migration-best-practices-green);"/><text x="747.2" y="208" text-anchor="start" style="fill:var(--pa-t-muted);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:9.5px;font-weight:600"><tspan x="747.2">Contract — separate release</tspan></text>
+          </svg>
+        </div>
+        <p class="diagram-caption">The expand-contract pattern: the new structure is added first and backfilled in batches while the old one stays authoritative, readers switch behind a flag, and the old structure is only removed in a separate release.</p>
+      </div>
+      <!-- concept-diagram:end -->
       <div class="comparison-table-wrap">
         <table>
           <thead>
@@ -816,4 +827,4 @@ el.addEventListener('click',function(){gtag('event','click',{event_category:'cta
 </script>
 <script src="/assets/js/main.js?v=3" nonce="P3rf0rm4lyt1c" defer></script>
 </body>
-</html>
+</html

@@ -24,11 +24,11 @@
 <meta property="og:description" content="A comprehensive guide to enterprise RAG architecture covering implementation patterns, design decisions, evaluation metrics, and production best practices." />
 <meta property="og:url" content="https://performalytic.com/blog/enterprise-rag-architecture/" />
 <meta property="og:site_name" content="Performalytic" />
-<meta property="og:image" content="https://performalytic.com/assets/images/blog-analytics-dashboard.jpg" />
+<meta property="og:image" content="https://performalytic.com/assets/images/blog/hero-enterprise-rag.svg" />
 <meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
-<meta property="og:image:type" content="image/jpeg" />
-<meta property="og:image:alt" content="Enterprise RAG Architecture - Retrieval Augmented Generation Guide" />
+<meta property="og:image:height" content="600" />
+<meta property="og:image:type" content="image/svg+xml" />
+<meta property="og:image:alt" content="Enterprise RAG architecture - documents embedded, retrieved, and generated into grounded answers" />
 <meta property="article:published_time" content="2026-07-19T10:00:00+00:00" />
 <meta property="article:modified_time" content="2026-07-19T10:00:00+00:00" />
 <meta property="article:author" content="Performalytic" />
@@ -37,7 +37,7 @@
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Enterprise RAG Architecture: A Practical Guide for 2026" />
 <meta name="twitter:description" content="A comprehensive guide to enterprise RAG architecture covering implementation patterns, design decisions, evaluation metrics, and production best practices." />
-<meta name="twitter:image" content="https://performalytic.com/assets/images/blog-analytics-dashboard.jpg" />
+<meta name="twitter:image" content="https://performalytic.com/assets/images/blog/hero-enterprise-rag.svg" />
 
 <link rel="dns-prefetch" href="//performalytic.com" />
 
@@ -119,7 +119,7 @@ gtag('config', 'G-FV09CSCD2C');
   "@type":"Article",
   "headline":"Enterprise RAG Architecture: A Practical Guide for 2026",
   "description":"Enterprise RAG architecture is the production system design around retrieval-augmented generation: an offline pipeline that ingests and indexes private documents, an online path that retrieves them with hybrid search and reranking, and a governance layer enforcing permissions and citations.",
-  "image":"/assets/images/blog-analytics-dashboard.jpg",
+  "image":"/assets/images/blog/hero-enterprise-rag.svg",
   "author":{"@type":"Organization","name":"Performalytic"},
   "publisher":{"@type":"Organization","name":"Performalytic","logo":{"@type":"ImageObject","url":"/assets/images/performalytic-logo.png"}},
   "datePublished":"2026-07-19T10:00:00+00:00",
@@ -364,6 +364,17 @@ nav:not(.mobile-menu).nav-scrolled{background:var(--pa-panel-81428-098)!importan
   <div class="container">
     <h2 id="how-rag-works-the-complete-pipeline">How RAG Works: The Complete Pipeline</h2>
     <p>This diagram shows the end-to-end flow of a production RAG system, from document ingestion through retrieval to answer generation.</p>
+
+      <!-- concept-diagram:start -->
+      <div class="diagram-section">
+        <div class="diagram-container">
+          <svg viewBox="0 0 960 156" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="End-to-end production RAG pipeline from documents to grounded answer">
+            <defs><linearGradient id="dg-enterprise-rag-architecture-slate" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#334155"/><stop offset="100%" stop-color="#64748b"/></linearGradient><linearGradient id="dg-enterprise-rag-architecture-indigo" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#4f46e5"/><stop offset="100%" stop-color="#7c3aed"/></linearGradient><linearGradient id="dg-enterprise-rag-architecture-blue" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#2563eb"/><stop offset="100%" stop-color="#7c3aed"/></linearGradient><linearGradient id="dg-enterprise-rag-architecture-green" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#047857"/><stop offset="100%" stop-color="#10b981"/></linearGradient><marker id="dg-enterprise-rag-architecture-a" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><polygon points="0 0, 9 3.5, 0 7" style="fill:var(--pa-t-dim)"/></marker><marker id="dg-enterprise-rag-architecture-ag" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><polygon points="0 0, 9 3.5, 0 7" style="fill:#10b981"/></marker><marker id="dg-enterprise-rag-architecture-ar" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><polygon points="0 0, 9 3.5, 0 7" style="fill:#ef4444"/></marker></defs><rect x="18" y="34" width="115.66666666666667" height="88" rx="10" style="fill:url(#dg-enterprise-rag-architecture-slate)"/><text x="75.83333333333334" y="70" text-anchor="middle" style="fill:#ffffff;font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:11.5px;font-weight:700"><tspan x="75.83333333333334">Documents</tspan></text><text x="75.83333333333334" y="88" text-anchor="middle" style="fill:rgba(255,255,255,.86);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:9px;font-weight:500"><tspan x="75.83333333333334">PDF, HTML, APIs, raw</tspan><tspan x="75.83333333333334" dy="12">data</tspan></text><path d="M137.66666666666669 78 L175.66666666666669 78" style="fill:none;stroke:var(--pa-t-dim);stroke-width:2" marker-end="url(#dg-enterprise-rag-architecture-a)"/><text x="156.66666666666669" y="67" text-anchor="middle" style="fill:var(--pa-t-muted);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:9.5px;font-weight:700"><tspan x="156.66666666666669">ingest</tspan></text><rect x="179.66666666666669" y="34" width="115.66666666666667" height="88" rx="10" style="fill:var(--pa-surface-2);stroke:var(--pa-wb-012);stroke-width:1"/><text x="237.50000000000003" y="70" text-anchor="middle" style="fill:var(--pa-t-strong);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:11.5px;font-weight:700"><tspan x="237.50000000000003">Chunking</tspan></text><text x="237.50000000000003" y="88" text-anchor="middle" style="fill:var(--pa-t-muted);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:9px;font-weight:500"><tspan x="237.50000000000003">Fixed-size or</tspan><tspan x="237.50000000000003" dy="12">semantic splits</tspan></text><path d="M299.33333333333337 78 L337.33333333333337 78" style="fill:none;stroke:var(--pa-t-dim);stroke-width:2" marker-end="url(#dg-enterprise-rag-architecture-a)"/><text x="318.33333333333337" y="67" text-anchor="middle" style="fill:var(--pa-t-muted);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:9.5px;font-weight:700"><tspan x="318.33333333333337">split</tspan></text><rect x="341.33333333333337" y="34" width="115.66666666666667" height="88" rx="10" style="fill:var(--pa-surface-2);stroke:var(--pa-wb-012);stroke-width:1"/><text x="399.1666666666667" y="70" text-anchor="middle" style="fill:var(--pa-t-strong);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:11.5px;font-weight:700"><tspan x="399.1666666666667">Embedding</tspan></text><text x="399.1666666666667" y="88" text-anchor="middle" style="fill:var(--pa-t-muted);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:9px;font-weight:500"><tspan x="399.1666666666667">Text turned into</tspan><tspan x="399.1666666666667" dy="12">vectors</tspan></text><path d="M461.00000000000006 78 L499.00000000000006 78" style="fill:none;stroke:var(--pa-t-dim);stroke-width:2" marker-end="url(#dg-enterprise-rag-architecture-a)"/><text x="480.00000000000006" y="67" text-anchor="middle" style="fill:var(--pa-t-muted);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:9.5px;font-weight:700"><tspan x="480.00000000000006">embed</tspan></text><rect x="503.00000000000006" y="34" width="115.66666666666667" height="88" rx="10" style="fill:url(#dg-enterprise-rag-architecture-indigo)"/><text x="560.8333333333334" y="70" text-anchor="middle" style="fill:#ffffff;font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:11.5px;font-weight:700"><tspan x="560.8333333333334">Vector DB</tspan></text><text x="560.8333333333334" y="88" text-anchor="middle" style="fill:rgba(255,255,255,.86);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:9px;font-weight:500"><tspan x="560.8333333333334">Indexed vectors +</tspan><tspan x="560.8333333333334" dy="12">metadata</tspan></text><path d="M622.6666666666667 78 L660.6666666666667 78" style="fill:none;stroke:var(--pa-t-dim);stroke-width:2" marker-end="url(#dg-enterprise-rag-architecture-a)"/><text x="641.6666666666667" y="67" text-anchor="middle" style="fill:var(--pa-t-muted);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:9.5px;font-weight:700"><tspan x="641.6666666666667">query</tspan></text><rect x="664.6666666666667" y="34" width="115.66666666666667" height="88" rx="10" style="fill:url(#dg-enterprise-rag-architecture-blue)"/><text x="722.5000000000001" y="70" text-anchor="middle" style="fill:#ffffff;font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:11.5px;font-weight:700"><tspan x="722.5000000000001">Retrieve</tspan></text><text x="722.5000000000001" y="88" text-anchor="middle" style="fill:rgba(255,255,255,.86);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:9px;font-weight:500"><tspan x="722.5000000000001">Hybrid search +</tspan><tspan x="722.5000000000001" dy="12">re-ranking</tspan></text><path d="M784.3333333333334 78 L822.3333333333334 78" style="fill:none;stroke:var(--pa-t-dim);stroke-width:2" marker-end="url(#dg-enterprise-rag-architecture-a)"/><text x="803.3333333333334" y="67" text-anchor="middle" style="fill:var(--pa-t-muted);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:9.5px;font-weight:700"><tspan x="803.3333333333334">ground</tspan></text><rect x="826.3333333333335" y="34" width="115.66666666666667" height="88" rx="10" style="fill:url(#dg-enterprise-rag-architecture-green)"/><text x="884.1666666666669" y="70" text-anchor="middle" style="fill:#ffffff;font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:11.5px;font-weight:700"><tspan x="884.1666666666669">Generate</tspan></text><text x="884.1666666666669" y="88" text-anchor="middle" style="fill:rgba(255,255,255,.86);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:9px;font-weight:500"><tspan x="884.1666666666669">LLM answer with</tspan><tspan x="884.1666666666669" dy="12">sources</tspan></text>
+          </svg>
+        </div>
+        <p class="diagram-caption">The production RAG pipeline: documents are chunked, embedded and indexed offline; a query triggers retrieval, re-ranking and generation, so the answer is grounded and attributable to a source.</p>
+      </div>
+      <!-- concept-diagram:end -->
     <div class="diagram-container">
       <svg viewBox="0 0 1000 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="RAG pipeline architecture diagram showing document ingestion, embedding, vector storage, retrieval, and generation">
         <defs>
@@ -469,7 +480,6 @@ nav:not(.mobile-menu).nav-scrolled{background:var(--pa-panel-81428-098)!importan
   <div class="container post-content">
 
     <nav class="post-toc" aria-label="Table of contents"><h3>In this article</h3><ul><li><a href="#how-rag-works-the-complete-pipeline">How RAG Works: The Complete Pipeline</a></li><li><a href="#what-is-rag-and-why-it-matters-for-enterprises">What is RAG and Why It Matters for Enterprises</a></li><li><a href="#rag-architecture-components">RAG Architecture Components</a></li><li><a href="#key-design-decisions">Key Design Decisions</a></li><li><a href="#implementation-patterns">Implementation Patterns</a></li><li><a href="#evaluation-and-quality-metrics">Evaluation and Quality Metrics</a></li><li><a href="#common-pitfalls-and-how-to-avoid-them">Common Pitfalls and How to Avoid Them</a></li><li><a href="#rag-vs-fine-tuning-decision-framework">RAG vs Fine-Tuning: Decision Framework</a></li><li><a href="#enterprise-considerations">Enterprise Considerations</a></li><li><a href="#how-we-help">How We Help</a></li></ul></nav>
-
 
     <div class="tldr-box">
       <h3>TL;DR - Key Takeaways</h3>
@@ -991,4 +1001,4 @@ el.addEventListener('click',function(){gtag('event','click',{event_category:'cta
 </script>
 <script src="/assets/js/main.js?v=3" nonce="P3rf0rm4lyt1c" defer></script>
 </body>
-</html>
+</html

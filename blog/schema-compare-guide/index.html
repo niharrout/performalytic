@@ -24,9 +24,9 @@
 <meta property="og:description" content="Learn how schema compare tools help teams detect breaking changes, prevent pipeline failures, and maintain data integrity across environments." />
 <meta property="og:url" content="https://performalytic.com/blog/schema-compare-guide/" />
 <meta property="og:site_name" content="Performalytic" />
-<meta property="og:image" content="https://performalytic.com/assets/images/blog/schema-compare-hero.svg" />
+<meta property="og:image" content="https://performalytic.com/assets/images/blog/hero-schema-compare-guide.svg" />
 <meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
+<meta property="og:image:height" content="600" />
 <meta property="og:image:type" content="image/svg+xml" />
 <meta property="og:image:alt" content="Schema comparison dashboard showing database differences between environments" />
 <meta property="article:published_time" content="2026-08-25T10:00:00+00:00" />
@@ -37,7 +37,7 @@
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Schema Compare Guide: Catch Breaking Changes Before They Reach Production | Performalytic" />
 <meta name="twitter:description" content="Learn how schema compare tools help teams detect breaking changes, prevent pipeline failures, and maintain data integrity across environments." />
-<meta name="twitter:image" content="https://performalytic.com/assets/images/blog/schema-compare-hero.svg" />
+<meta name="twitter:image" content="https://performalytic.com/assets/images/blog/hero-schema-compare-guide.svg" />
 
 <link rel="dns-prefetch" href="//performalytic.com" />
 
@@ -119,7 +119,7 @@ gtag('config', 'G-FV09CSCD2C');
   "@type":"Article",
   "headline":"Schema Compare Guide: Catch Breaking Changes Before They Reach Production",
   "description":"Learn how schema compare tools help teams detect breaking changes, prevent pipeline failures, and maintain data integrity across environments.",
-  "image":"/assets/images/blog/schema-compare-hero.svg",
+  "image":"/assets/images/blog/hero-schema-compare-guide.svg",
   "author":{"@type":"Organization","name":"Performalytic"},
   "publisher":{"@type":"Organization","name":"Performalytic","logo":{"@type":"ImageObject","url":"/assets/images/performalytic-logo.png"}},
   "datePublished":"2026-08-25T10:00:00+00:00",
@@ -388,55 +388,7 @@ nav:not(.mobile-menu).nav-scrolled{background:var(--pa-panel-81428-098)!importan
 
 <section class="featured-image-section" aria-label="Featured image">
   <div class="container">
-    <svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" class="featured-image" role="img" aria-label="Schema comparison dashboard showing database differences between environments" width="1200" height="600">
-      <defs>
-        <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="var(--pa-surface)"/><stop offset="100%" stop-color="var(--pa-surface-2)"/></linearGradient>
-        <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#2563eb"/><stop offset="100%" stop-color="#7c3aed"/></linearGradient>
-      </defs>
-      <rect width="1200" height="600" rx="16" fill="url(#bg)"/>
-      <!-- Left panel - Source schema -->
-      <rect x="40" y="40" width="520" height="520" rx="12" fill="var(--pa-wb-004)" stroke="var(--pa-wb-008)"/>
-      <text x="60" y="75" fill="var(--pa-t-muted)" font-family="Inter,sans-serif" font-size="12" font-weight="600" text-transform="uppercase" letter-spacing="1">SOURCE — Production</text>
-      <rect x="60" y="95" width="480" height="1" fill="var(--pa-wb-006)"/>
-      <!-- Table items -->
-      <rect x="60" y="115" width="480" height="44" rx="8" fill="rgba(37,99,235,0.08)"/>
-      <text x="80" y="142" fill="var(--pa-t)" font-family="Inter,sans-serif" font-size="13" font-weight="600">users</text>
-      <text x="480" y="142" fill="var(--pa-at-blue)" font-family="Inter,sans-serif" font-size="11">12 columns</text>
-      <rect x="60" y="170" width="480" height="44" rx="8" fill="var(--pa-wb-002)"/>
-      <text x="80" y="197" fill="var(--pa-t)" font-family="Inter,sans-serif" font-size="13" font-weight="600">orders</text>
-      <text x="480" y="197" fill="var(--pa-at-blue)" font-family="Inter,sans-serif" font-size="11">8 columns</text>
-      <rect x="60" y="225" width="480" height="44" rx="8" fill="var(--pa-wb-002)"/>
-      <text x="80" y="252" fill="var(--pa-t)" font-family="Inter,sans-serif" font-size="13" font-weight="600">products</text>
-      <text x="480" y="252" fill="var(--pa-at-blue)" font-family="Inter,sans-serif" font-size="11">15 columns</text>
-      <rect x="60" y="280" width="480" height="44" rx="8" fill="var(--pa-wb-002)"/>
-      <text x="80" y="307" fill="var(--pa-t)" font-family="Inter,sans-serif" font-size="13" font-weight="600">inventory</text>
-      <text x="480" y="307" fill="var(--pa-at-blue)" font-family="Inter,sans-serif" font-size="11">6 columns</text>
-      <!-- Right panel - Target schema -->
-      <rect x="640" y="40" width="520" height="520" rx="12" fill="var(--pa-wb-004)" stroke="var(--pa-wb-008)"/>
-      <text x="660" y="75" fill="var(--pa-t-muted)" font-family="Inter,sans-serif" font-size="12" font-weight="600" text-transform="uppercase" letter-spacing="1">TARGET — Staging</text>
-      <rect x="660" y="95" width="480" height="1" fill="var(--pa-wb-006)"/>
-      <rect x="660" y="115" width="480" height="44" rx="8" fill="rgba(37,99,235,0.08)"/>
-      <text x="680" y="142" fill="var(--pa-t)" font-family="Inter,sans-serif" font-size="13" font-weight="600">users</text>
-      <text x="1080" y="142" fill="var(--pa-at-blue)" font-family="Inter,sans-serif" font-size="11">13 columns</text>
-      <!-- Diff highlight -->
-      <rect x="660" y="170" width="480" height="44" rx="8" fill="rgba(239,68,68,0.1)" stroke="rgba(239,68,68,0.3)"/>
-      <text x="680" y="197" fill="var(--pa-at-red-2)" font-family="Inter,sans-serif" font-size="13" font-weight="600">orders</text>
-      <text x="1080" y="197" fill="var(--pa-at-red-2)" font-family="Inter,sans-serif" font-size="11">7 columns</text>
-      <text x="700" y="210" fill="#ef4444" font-family="Inter,sans-serif" font-size="10">- status column removed</text>
-      <rect x="660" y="225" width="480" height="44" rx="8" fill="var(--pa-wb-002)"/>
-      <text x="680" y="252" fill="var(--pa-t)" font-family="Inter,sans-serif" font-size="13" font-weight="600">products</text>
-      <text x="1080" y="252" fill="var(--pa-at-blue)" font-family="Inter,sans-serif" font-size="11">15 columns</text>
-      <!-- Diff highlight -->
-      <rect x="660" y="280" width="480" height="44" rx="8" fill="rgba(34,197,94,0.1)" stroke="rgba(34,197,94,0.3)"/>
-      <text x="680" y="307" fill="var(--pa-at-green-4)" font-family="Inter,sans-serif" font-size="13" font-weight="600">inventory</text>
-      <text x="1080" y="307" fill="var(--pa-at-green-4)" font-family="Inter,sans-serif" font-size="11">6 columns</text>
-      <text x="700" y="320" fill="#22c55e" font-family="Inter,sans-serif" font-size="10">+ warehouse_id added</text>
-      <!-- Summary bar -->
-      <rect x="60" y="360" width="1100" height="60" rx="10" fill="url(#accent)"/>
-      <text x="120" y="396" fill="#fff" font-family="Inter,sans-serif" font-size="14" font-weight="700">Schema Drift Detected</text>
-      <text x="380" y="396" fill="var(--pa-wb-08)" font-family="Inter,sans-serif" font-size="13">2 differences found across 4 tables</text>
-      <text x="900" y="396" fill="#fff" font-family="Inter,sans-serif" font-size="13" font-weight="600">Review Changes &#8594;</text>
-    </svg>
+    <img src="/assets/images/blog/hero-schema-compare-guide.svg" alt="Schema comparison dashboard showing database differences between environments" class="featured-image" width="1200" height="600" fetchpriority="high" loading="eager" decoding="async" />
   </div>
 </section>
 
@@ -499,6 +451,17 @@ nav:not(.mobile-menu).nav-scrolled{background:var(--pa-panel-81428-098)!importan
 
     <h2 id="what-to-compare">4. What to Compare Across Schemas</h2>
     <p>A thorough schema comparison goes beyond just listing tables. Here's what to examine:</p>
+
+      <!-- concept-diagram:start -->
+      <div class="diagram-section">
+        <div class="diagram-container">
+          <svg viewBox="0 0 960 156" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="What a thorough schema comparison examines across two databases">
+            <defs><linearGradient id="dg-schema-compare-guide-blue" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#2563eb"/><stop offset="100%" stop-color="#7c3aed"/></linearGradient><linearGradient id="dg-schema-compare-guide-indigo" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#4f46e5"/><stop offset="100%" stop-color="#7c3aed"/></linearGradient><linearGradient id="dg-schema-compare-guide-amber" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#b45309"/><stop offset="100%" stop-color="#f59e0b"/></linearGradient><marker id="dg-schema-compare-guide-a" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><polygon points="0 0, 9 3.5, 0 7" style="fill:var(--pa-t-dim)"/></marker><marker id="dg-schema-compare-guide-ag" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><polygon points="0 0, 9 3.5, 0 7" style="fill:#10b981"/></marker><marker id="dg-schema-compare-guide-ar" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><polygon points="0 0, 9 3.5, 0 7" style="fill:#ef4444"/></marker></defs><rect x="18" y="34" width="115.66666666666667" height="88" rx="10" style="fill:var(--pa-surface-2);stroke:var(--pa-wb-012);stroke-width:1"/><text x="75.83333333333334" y="70" text-anchor="middle" style="fill:var(--pa-t-strong);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:11.5px;font-weight:700"><tspan x="75.83333333333334">Table structure</tspan></text><text x="75.83333333333334" y="88" text-anchor="middle" style="fill:var(--pa-t-muted);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:9px;font-weight:500"><tspan x="75.83333333333334">Columns, types,</tspan><tspan x="75.83333333333334" dy="12">nullability</tspan></text><path d="M137.66666666666669 78 L175.66666666666669 78" style="fill:none;stroke:var(--pa-t-dim);stroke-width:2" marker-end="url(#dg-schema-compare-guide-a)"/><text x="156.66666666666669" y="67" text-anchor="middle" style="fill:var(--pa-t-muted);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:9.5px;font-weight:700"><tspan x="156.66666666666669">diff</tspan></text><rect x="179.66666666666669" y="34" width="115.66666666666667" height="88" rx="10" style="fill:url(#dg-schema-compare-guide-blue)"/><text x="237.50000000000003" y="63" text-anchor="middle" style="fill:#ffffff;font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:11.5px;font-weight:700"><tspan x="237.50000000000003">Keys &amp;</tspan><tspan x="237.50000000000003" dy="15">constraints</tspan></text><text x="237.50000000000003" y="96" text-anchor="middle" style="fill:rgba(255,255,255,.86);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:9px;font-weight:500"><tspan x="237.50000000000003">PK, FK, unique,</tspan><tspan x="237.50000000000003" dy="12">check, indexes</tspan></text><path d="M299.33333333333337 78 L337.33333333333337 78" style="fill:none;stroke:var(--pa-t-dim);stroke-width:2" marker-end="url(#dg-schema-compare-guide-a)"/><text x="318.33333333333337" y="67" text-anchor="middle" style="fill:var(--pa-t-muted);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:9.5px;font-weight:700"><tspan x="318.33333333333337">diff</tspan></text><rect x="341.33333333333337" y="34" width="115.66666666666667" height="88" rx="10" style="fill:var(--pa-surface-2);stroke:var(--pa-wb-012);stroke-width:1"/><text x="399.1666666666667" y="70" text-anchor="middle" style="fill:var(--pa-t-strong);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:11.5px;font-weight:700"><tspan x="399.1666666666667">Views</tspan></text><text x="399.1666666666667" y="88" text-anchor="middle" style="fill:var(--pa-t-muted);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:9px;font-weight:500"><tspan x="399.1666666666667">Definitions and</tspan><tspan x="399.1666666666667" dy="12">aliases</tspan></text><path d="M461.00000000000006 78 L499.00000000000006 78" style="fill:none;stroke:var(--pa-t-dim);stroke-width:2" marker-end="url(#dg-schema-compare-guide-a)"/><text x="480.00000000000006" y="67" text-anchor="middle" style="fill:var(--pa-t-muted);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:9.5px;font-weight:700"><tspan x="480.00000000000006">diff</tspan></text><rect x="503.00000000000006" y="34" width="115.66666666666667" height="88" rx="10" style="fill:url(#dg-schema-compare-guide-indigo)"/><text x="560.8333333333334" y="70" text-anchor="middle" style="fill:#ffffff;font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:11.5px;font-weight:700"><tspan x="560.8333333333334">Routines</tspan></text><text x="560.8333333333334" y="88" text-anchor="middle" style="fill:rgba(255,255,255,.86);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:9px;font-weight:500"><tspan x="560.8333333333334">Parameters, returns,</tspan><tspan x="560.8333333333334" dy="12">logic</tspan></text><path d="M622.6666666666667 78 L660.6666666666667 78" style="fill:none;stroke:var(--pa-t-dim);stroke-width:2" marker-end="url(#dg-schema-compare-guide-a)"/><text x="641.6666666666667" y="67" text-anchor="middle" style="fill:var(--pa-t-muted);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:9.5px;font-weight:700"><tspan x="641.6666666666667">diff</tspan></text><rect x="664.6666666666667" y="34" width="115.66666666666667" height="88" rx="10" style="fill:var(--pa-surface-2);stroke:var(--pa-wb-012);stroke-width:1"/><text x="722.5000000000001" y="70" text-anchor="middle" style="fill:var(--pa-t-strong);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:11.5px;font-weight:700"><tspan x="722.5000000000001">Partitions</tspan></text><text x="722.5000000000001" y="88" text-anchor="middle" style="fill:var(--pa-t-muted);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:9px;font-weight:500"><tspan x="722.5000000000001">Distribution keys for</tspan><tspan x="722.5000000000001" dy="12">cloud engines</tspan></text><path d="M784.3333333333334 78 L822.3333333333334 78" style="fill:none;stroke:var(--pa-t-dim);stroke-width:2" marker-end="url(#dg-schema-compare-guide-a)"/><text x="803.3333333333334" y="67" text-anchor="middle" style="fill:var(--pa-t-muted);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:9.5px;font-weight:700"><tspan x="803.3333333333334">diff</tspan></text><rect x="826.3333333333335" y="34" width="115.66666666666667" height="88" rx="10" style="fill:url(#dg-schema-compare-guide-amber)"/><text x="884.1666666666669" y="70" text-anchor="middle" style="fill:#ffffff;font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:11.5px;font-weight:700"><tspan x="884.1666666666669">Permissions</tspan></text><text x="884.1666666666669" y="88" text-anchor="middle" style="fill:rgba(255,255,255,.86);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:9px;font-weight:500"><tspan x="884.1666666666669">Role access changes</tspan></text>
+          </svg>
+        </div>
+        <p class="diagram-caption">A thorough comparison goes past table listings: structure, keys, views, routines, distribution and permissions all need to be diffed, because any of them can break a downstream consumer.</p>
+      </div>
+      <!-- concept-diagram:end -->
     <ul>
       <li><strong>Table structure:</strong> Column names, data types, nullability, default values, and auto-increment settings</li>
       <li><strong>Keys and constraints:</strong> Primary keys, foreign keys, unique constraints, check constraints, and indexes</li>
@@ -645,4 +608,4 @@ el.addEventListener('click',function(){gtag('event','click',{event_category:'cta
 </script>
 <script src="/assets/js/main.js?v=3" nonce="P3rf0rm4lyt1c" defer></script>
 </body>
-</html>
+</html

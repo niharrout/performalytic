@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" role="img" aria-labelledby="sdTitle">
+<title id="sdTitle">Schema drift — an unplanned ALTER breaks the downstream pipeline while a planned migration keeps it healthy</title>
+<defs>
+<linearGradient id="sdBg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1120"/><stop offset="1" stop-color="#1b2540"/></linearGradient>
+<linearGradient id="sdBrand" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2563eb"/><stop offset="1" stop-color="#7c3aed"/></linearGradient>
+<radialGradient id="sdGb"><stop offset="0" stop-color="#2563eb" stop-opacity="0.22"/><stop offset="1" stop-color="#2563eb" stop-opacity="0"/></radialGradient>
+<radialGradient id="sdGr"><stop offset="0" stop-color="#f43f5e" stop-opacity="0.16"/><stop offset="1" stop-color="#f43f5e" stop-opacity="0"/></radialGradient>
+<radialGradient id="sdGg"><stop offset="0" stop-color="#10b981" stop-opacity="0.14"/><stop offset="1" stop-color="#10b981" stop-opacity="0"/></radialGradient>
+<pattern id="sdGrid" width="44" height="44" patternUnits="userSpaceOnUse"><path d="M44 0H0V44" fill="none" stroke="#94a3b8" stroke-opacity="0.06"/></pattern>
+</defs>
+<rect width="1200" height="600" fill="url(#sdBg)"/>
+<rect width="1200" height="600" fill="url(#sdGrid)"/>
+<ellipse cx="240" cy="250" rx="340" ry="300" fill="url(#sdGb)"/>
+<ellipse cx="980" cy="180" rx="320" ry="280" fill="url(#sdGr)"/>
+<ellipse cx="700" cy="540" rx="420" ry="220" fill="url(#sdGg)"/>
+<g font-family="Segoe UI, system-ui, sans-serif">
+
+<!-- source table -->
+<rect x="50" y="70" width="340" height="250" rx="18" fill="#111a30" stroke="#2b3a5c"/>
+<rect x="50" y="70" width="340" height="46" rx="18" fill="#0f172a"/>
+<rect x="50" y="100" width="340" height="16" fill="#0f172a"/>
+<text x="74" y="100" font-size="13" letter-spacing="3" fill="#64748b">TABLE</text>
+<text x="366" y="100" text-anchor="end" font-size="13" font-weight="700" fill="#94a3b8">public.orders</text>
+
+<text x="74" y="152" font-size="14" font-weight="700" fill="#e2e8f0">id</text><text x="366" y="152" text-anchor="end" font-size="12" fill="#64748b">bigint PK</text>
+<line x1="74" y1="166" x2="366" y2="166" stroke="#2b3a5c"/>
+<text x="74" y="192" font-size="14" font-weight="700" fill="#e2e8f0">customer_id</text><text x="366" y="192" text-anchor="end" font-size="12" fill="#64748b">bigint</text>
+<line x1="74" y1="206" x2="366" y2="206" stroke="#2b3a5c"/>
+<text x="74" y="232" font-size="14" font-weight="700" fill="#fb7185">emal</text><text x="366" y="232" text-anchor="end" font-size="12" fill="#fb7185">renamed</text>
+<line x1="74" y1="246" x2="366" y2="246" stroke="#2b3a5c"/>
+<text x="74" y="272" font-size="14" font-weight="700" fill="#fbbf24">total</text><text x="366" y="272" text-anchor="end" font-size="12" fill="#fbbf24">numeric &#8594; text</text>
+<line x1="74" y1="286" x2="366" y2="286" stroke="#2b3a5c"/>
+<text x="74" y="308" font-size="13" font-weight="600" fill="#64748b" text-decoration="line-through">legacy_status</text>
+<text x="366" y="308" text-anchor="end" font-size="12" fill="#fb7185">dropped</text>
+
+<!-- unplanned path -->
+<path d="M395 150 L470 150 L470 120 L560 120" fill="none" stroke="#fb7185" stroke-width="2" stroke-dasharray="6 5"/>
+<text x="470" y="88" text-anchor="middle" font-size="11" letter-spacing="2" fill="#fb7185">NO MIGRATION FILE</text>
+
+<path d="M395 250 L470 250 L470 380 L560 380" fill="none" stroke="#34d399" stroke-width="2" stroke-dasharray="6 5"/>
+<text x="470" y="424" text-anchor="middle" font-size="11" letter-spacing="2" fill="#34d399">EXPAND / CONTRACT</text>
+
+<!-- broken consumer -->
+<rect x="560" y="60" width="300" height="130" rx="16" fill="#111a30" stroke="#fb7185" stroke-opacity="0.55"/>
+<text x="584" y="94" font-size="11" letter-spacing="3" fill="#64748b">DOWNSTREAM ETL</text>
+<rect x="584" y="110" width="252" height="54" rx="10" fill="#2a1220" stroke="#fb7185" stroke-opacity="0.5"/>
+<text x="600" y="133" font-size="13" font-weight="700" fill="#fb7185">column "emal" does not exist</text>
+<text x="600" y="154" font-size="12" fill="#94a3b8">Job failed &#183; discovered at runtime</text>
+
+<!-- healthy consumer -->
+<rect x="560" y="330" width="300" height="130" rx="16" fill="#111a30" stroke="#34d399" stroke-opacity="0.55"/>
+<text x="584" y="364" font-size="11" letter-spacing="3" fill="#64748b">VERSIONED PIPELINE</text>
+<rect x="584" y="380" width="252" height="54" rx="10" fill="#0d2a22" stroke="#34d399" stroke-opacity="0.5"/>
+<text x="600" y="403" font-size="13" font-weight="700" fill="#34d399">Diff reviewed &#183; tests pass</text>
+<text x="600" y="424" font-size="12" fill="#94a3b8">Breaking change classified up front</text>
+
+<!-- CI gate -->
+<rect x="900" y="60" width="250" height="400" rx="18" fill="#0f172a" stroke="url(#sdBrand)" stroke-width="2"/>
+<text x="1025" y="102" text-anchor="middle" font-size="12" letter-spacing="3" fill="#64748b">GATE</text>
+<text x="1025" y="132" text-anchor="middle" font-size="17" font-weight="800" fill="#e2e8f0">SCHEMA DIFF</text>
+
+<rect x="924" y="158" width="202" height="66" rx="12" fill="#111a30" stroke="#fb7185" stroke-opacity="0.5"/>
+<text x="1025" y="186" text-anchor="middle" font-size="13" font-weight="700" fill="#fb7185">BLOCKING</text>
+<text x="1025" y="208" text-anchor="middle" font-size="11" fill="#94a3b8">type change &#183; dropped column</text>
+
+<rect x="924" y="240" width="202" height="66" rx="12" fill="#111a30" stroke="#fbbf24" stroke-opacity="0.5"/>
+<text x="1025" y="268" text-anchor="middle" font-size="13" font-weight="700" fill="#fbbf24">NON-BREAKING</text>
+<text x="1025" y="290" text-anchor="middle" font-size="11" fill="#94a3b8">additive column &#183; nullable</text>
+
+<rect x="924" y="322" width="202" height="66" rx="12" fill="#111a30" stroke="#34d399" stroke-opacity="0.5"/>
+<text x="1025" y="350" text-anchor="middle" font-size="13" font-weight="700" fill="#34d399">DRIFT ALERT</text>
+<text x="1025" y="372" text-anchor="middle" font-size="11" fill="#94a3b8">detected outside the pipeline</text>
+
+<text x="1025" y="432" text-anchor="middle" font-size="11" letter-spacing="2" fill="#64748b">CLASSIFY &#183; REVIEW &#183; REPAIR</text>
+
+<!-- bottom chips -->
+<rect x="50" y="480" width="260" height="70" rx="14" fill="#111a30" stroke="#2b3a5c"/>
+<text x="74" y="512" font-size="20" font-weight="800" fill="#fb7185">ALTER</text>
+<text x="74" y="536" font-size="11" letter-spacing="2" fill="#94a3b8">UNANNOUNCED STRUCTURE CHANGE</text>
+
+<rect x="330" y="480" width="260" height="70" rx="14" fill="#111a30" stroke="#2b3a5c"/>
+<text x="354" y="512" font-size="20" font-weight="800" fill="#fbbf24">NULL</text>
+<text x="354" y="536" font-size="11" letter-spacing="2" fill="#94a3b8">NULL RATES SHIFT SILENTLY</text>
+
+<rect x="610" y="480" width="260" height="70" rx="14" fill="#111a30" stroke="#2b3a5c"/>
+<text x="634" y="512" font-size="20" font-weight="800" fill="#60a5fa">RUNTIME</text>
+<text x="634" y="536" font-size="11" letter-spacing="2" fill="#94a3b8">FAILURE SURFACES LATE</text>
+
+<rect x="890" y="480" width="260" height="70" rx="14" fill="#111a30" stroke="#2b3a5c"/>
+<text x="914" y="512" font-size="20" font-weight="800" fill="#34d399">CI</text>
+<text x="914" y="536" font-size="11" letter-spacing="2" fill="#94a3b8">DIFF EVERY PULL REQUEST</text>
+</g>
+</svg>
