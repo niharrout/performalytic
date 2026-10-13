@@ -4,6 +4,14 @@ Disallow: /404.html
 Disallow: /maintenance.html
 Disallow: /thank-you.html
 
+# Draft / work-in-progress pages (not ready for indexing)
+Disallow: /_partners/
+Disallow: /_case-studies/
+Disallow: /partners/
+
+# Internal test/dev artifacts
+Disallow: /__
+
 # AI / LLM crawlers (explicitly allowed)
 User-agent: GPTBot
 Allow: /
