@@ -909,7 +909,6 @@ h2[id],h3[id]{scroll-margin-top:96px}
 .post-footer-nav .next .nav-label{justify-content:flex-start}
 .comparison-box{grid-template-columns:1fr}
 .post-toc,.toc{padding:var(--space-md) var(--space-lg)}
-.related-grid{grid-template-columns:1fr}
 }
 @media(max-width:480px){
 .post-hero{padding:80px 0 32px}
@@ -1003,6 +1002,7 @@ h2[id],h3[id]{scroll-margin-top:96px}
 .architecture-diagram .diagram-container,.use-case-diagram .diagram-container{padding:16px}
 .pricing-comparison .pricing-grid{grid-template-columns:1fr}
 .verdict-grid{grid-template-columns:1fr}
+.related-grid{grid-template-columns:1fr}
 .tldr-box{padding:24px 16px}
 .blog-cta{padding:48px 0}
 .faq-section .comparison-table-wrap{overflow-x:auto}
