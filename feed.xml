@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Performalytic Blog — Enterprise Data, Analytics &amp; AI</title>
+    <link>https://performalytic.com/blog/</link>
+    <atom:link href="https://performalytic.com/feed.xml" rel="self" type="application/rss+xml" />
+    <description>Practical guides on data reconciliation, master data management, data quality, AI, and analytics from the Performalytic team.</description>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 22 Oct 2026 09:00:00 GMT</lastBuildDate>
+    <item>
+      <title>4DAlert vs Legacy MDM Platforms: A Feature-Level Comparison</title>
+      <link>https://performalytic.com/blog/4dalert-vs-legacy-mdm/</link>
+      <guid isPermaLink="true">https://performalytic.com/blog/4dalert-vs-legacy-mdm/</guid>
+      <pubDate>Sat, 26 Sep 2026 09:00:00 GMT</pubDate>
+      <dc:creator>James Carter</dc:creator>
+      <category>Data &amp; Analytics</category>
+      <description>Matching approach, implementation timeline, stewardship, verification, and total cost — how 4DAlert compares to legacy MDM suites, and when each is the right choice.</description>
+    </item>
+    <item>
+      <title>AI Entity Resolution: How Machines Match, Merge, and Build Golden Records</title>
+      <link>https://performalytic.com/blog/entity-resolution-ai/</link>
+      <guid isPermaLink="true">https://performalytic.com/blog/entity-resolution-ai/</guid>
+      <pubDate>Sat, 26 Sep 2026 09:00:00 GMT</pubDate>
+      <dc:creator>Sarah Mitchell</dc:creator>
+      <category>Data &amp; Analytics</category>
+      <description>Deterministic vs probabilistic matching, ML-powered match and merge, confidence scoring, and survivorship — how AI entity resolution builds golden records at scale.</description>
+    </item>
+    <item>
+      <title>AI-Based Master Data Management: The Complete Guide for 2026</title>
+      <link>https://performalytic.com/blog/ai-master-data-management/</link>
+      <guid isPermaLink="true">https://performalytic.com/blog/ai-master-data-management/</guid>
+      <pubDate>Sat, 26 Sep 2026 09:00:00 GMT</pubDate>
+      <dc:creator>David Kim</dc:creator>
+      <category>Data &amp; Analytics</category>
+      <description>How AI transforms master data management — from entity resolution and survivorship to golden record automation — and how AI-based MDM differs from legacy platforms.</description>
+    </item>
+    <item>
+      <title>Data Reconciliation: The Complete Guide for 2026</title>
+      <link>https://performalytic.com/blog/data-reconciliation-guide/</link>
+      <guid isPermaLink="true">https://performalytic.com/blog/data-reconciliation-guide/</guid>
+      <pubDate>Fri, 18 Sep 2026 09:00:00 GMT</pubDate>
+      <dc:creator>James Carter</dc:creator>
+      <category>Data &amp; Analytics</category>
+      <description>A comprehensive guide to data reconciliation. Learn types, techniques, tools (including 4DAlert), best practices, and implementation strategies to ensure data consistency across all your systems.</description>
+    </item>
+    <item>
+      <title>MDM Implementation Patterns: Registry, Consolidation, and Coexistence</title>
+      <link>https://performalytic.com/blog/mdm-implementation-patterns/</link>
+      <guid isPermaLink="true">https://performalytic.com/blog/mdm-implementation-patterns/</guid>
+      <pubDate>Sat, 12 Sep 2026 09:00:00 GMT</pubDate>
+      <dc:creator>Sarah Mitchell</dc:creator>
+      <category>Data &amp; Analytics</category>
+      <description>Choosing the wrong MDM architecture pattern wastes months of effort. This guide breaks down the three canonical patterns — when to use each and how to migrate between them.</description>
+    </item>
+    <item>
+      <title>The Real Cost of Bad Data: How Poor Data Quality Impacts Your Bottom Line</title>
+      <link>https://performalytic.com/blog/real-cost-of-bad-data/</link>
+      <guid isPermaLink="true">https://performalytic.com/blog/real-cost-of-bad-data/</guid>
+      <pubDate>Thu, 10 Sep 2026 09:00:00 GMT</pubDate>
+      <dc:creator>Sarah Mitchell</dc:creator>
+      <category>Data &amp; Analytics</category>
+      <description>Bad data costs enterprises millions every year. Learn how poor data quality impacts your bottom line and what to do about it.</description>
+    </item>
+    <item>
+      <title>Agentic AI in Database DevOps: A Practical Guide for 2026</title>
+      <link>https://performalytic.com/blog/agentic-ai-database-devops/</link>
+      <guid isPermaLink="true">https://performalytic.com/blog/agentic-ai-database-devops/</guid>
+      <pubDate>Thu, 08 Oct 2026 09:00:00 GMT</pubDate>
+      <dc:creator>David Kim</dc:creator>
+      <category>AI &amp; Machine Learning</category>
+      <description>Agentic AI plans, drafts, tests, and reviews database changes - humans approve. See where it works today, where it fails, and how to deploy it safely.</description>
+    </item>
+    <item>
+      <title>Schema Migration Best Practices: Expand, Contract, and Rollback</title>
+      <link>https://performalytic.com/blog/schema-migration-best-practices/</link>
+      <guid isPermaLink="true">https://performalytic.com/blog/schema-migration-best-practices/</guid>
+      <pubDate>Wed, 07 Oct 2026 09:00:00 GMT</pubDate>
+      <dc:creator>James Carter</dc:creator>
+      <category>Data &amp; Analytics</category>
+      <description>Schema migration best practices for zero-downtime changes: expand-contract, safe rollbacks, backfill strategy, testing, and locking pitfalls to avoid.</description>
+    </item>
+    <item>
+      <title>12 Schema Compare Tools Compared for 2026</title>
+      <link>https://performalytic.com/blog/schema-compare-tools/</link>
+      <guid isPermaLink="true">https://performalytic.com/blog/schema-compare-tools/</guid>
+      <pubDate>Wed, 07 Oct 2026 09:00:00 GMT</pubDate>
+      <dc:creator>Sarah Mitchell</dc:creator>
+      <category>Data &amp; Analytics</category>
+      <description>We compare 12 schema compare tools - SSMS, pgAdmin, Flyway, Liquibase, Atlas, Redgate, dbForge, Bytebase and more - by engine coverage, diff depth, and CI fit.</description>
+    </item>
+    <item>
+      <title>Database CI/CD: How to Build a Schema Change Pipeline</title>
+      <link>https://performalytic.com/blog/database-ci-cd-pipeline/</link>
+      <guid isPermaLink="true">https://performalytic.com/blog/database-ci-cd-pipeline/</guid>
+      <pubDate>Tue, 06 Oct 2026 09:00:00 GMT</pubDate>
+      <dc:creator>James Carter</dc:creator>
+      <category>Cloud</category>
+      <description>Database CI/CD puts schema changes through an automated pipeline instead of a ticket. The seven stages, the tooling, and where agentic AI fits into database DevOps.</description>
+    </item>
+    <item>
+      <title>Database Change Management: The Complete Guide</title>
+      <link>https://performalytic.com/blog/database-change-management/</link>
+      <guid isPermaLink="true">https://performalytic.com/blog/database-change-management/</guid>
+      <pubDate>Tue, 06 Oct 2026 09:00:00 GMT</pubDate>
+      <dc:creator>Priya Nair</dc:creator>
+      <category>Cloud</category>
+      <description>Database change management is how teams plan, approve, test, and audit every schema change. Learn the lifecycle, roles, risk tiers, and tooling.</description>
+    </item>
+    <item>
+      <title>What Is Schema Drift? Causes, Detection, and Prevention</title>
+      <link>https://performalytic.com/blog/schema-drift/</link>
+      <guid isPermaLink="true">https://performalytic.com/blog/schema-drift/</guid>
+      <pubDate>Tue, 06 Oct 2026 09:00:00 GMT</pubDate>
+      <dc:creator>James Carter</dc:creator>
+      <category>Data &amp; Analytics</category>
+      <description>Schema drift is any unplanned change to a data structure that downstream consumers never agreed to. Learn the causes, how to detect it, and how to stop it.</description>
+    </item>
+    <item>
+      <title>DevOps Best Practices for Data Teams: CI/CD, Automation &amp; More</title>
+      <link>https://performalytic.com/blog/devops-best-practices/</link>
+      <guid isPermaLink="true">https://performalytic.com/blog/devops-best-practices/</guid>
+      <pubDate>Sun, 10 May 2026 09:00:00 GMT</pubDate>
+      <dc:creator>James Carter</dc:creator>
+      <category>Cloud</category>
+      <description>Learn how to apply DevOps principles to data pipelines and analytics workflows. From CI/CD automation to infrastructure as code.</description>
+    </item>
+    <item>
+      <title>How AI is Transforming Business Intelligence: Trends to Watch</title>
+      <link>https://performalytic.com/blog/ai-business-intelligence/</link>
+      <guid isPermaLink="true">https://performalytic.com/blog/ai-business-intelligence/</guid>
+      <pubDate>Sun, 22 Mar 2026 09:00:00 GMT</pubDate>
+      <dc:creator>David Kim</dc:creator>
+      <category>AI &amp; Machine Learning</category>
+      <description>Explore how artificial intelligence is revolutionizing business intelligence from automated data preparation to predictive analytics.</description>
+    </item>
+    <item>
+      <title>Master Data Management in the AI Era</title>
+      <link>https://performalytic.com/blog/mdm-ai-era/</link>
+      <guid isPermaLink="true">https://performalytic.com/blog/mdm-ai-era/</guid>
+      <pubDate>Tue, 21 Jul 2026 09:00:00 GMT</pubDate>
+      <dc:creator>David Kim</dc:creator>
+      <category>Data &amp; Analytics</category>
+      <description>How MDM has evolved from batch processes to real-time, AI-powered entity resolution for Customer 360 and Product 360.</description>
+    </item>
+    <item>
+      <title>How AI Is Changing Data Quality: From Micro-Tests to Context-Aware Quality</title>
+      <link>https://performalytic.com/blog/ai-changing-data-quality/</link>
+      <guid isPermaLink="true">https://performalytic.com/blog/ai-changing-data-quality/</guid>
+      <pubDate>Tue, 21 Jul 2026 09:00:00 GMT</pubDate>
+      <dc:creator>Emma Wilson</dc:creator>
+      <category>AI &amp; Machine Learning</category>
+      <description>Traditional data quality tests are brittle and context-blind. Learn how AI-native DQ is transforming data quality.</description>
+    </item>
+    <item>
+      <title>The Data Modeling Crisis: Why 89% of Teams Struggle with Semantics</title>
+      <link>https://performalytic.com/blog/data-modeling-crisis/</link>
+      <guid isPermaLink="true">https://performalytic.com/blog/data-modeling-crisis/</guid>
+      <pubDate>Tue, 21 Jul 2026 09:00:00 GMT</pubDate>
+      <dc:creator>James Carter</dc:creator>
+      <category>Data &amp; Analytics</category>
+      <description>89% of data teams struggle with semantic consistency. Learn why the data modeling crisis is analytics biggest hidden threat.</description>
+    </item>
+    <item>
+      <title>Data Reconciliation Across Cloud Platforms: Multi-Cloud and Hybrid Challenges</title>
+      <link>https://performalytic.com/blog/cross-cloud-data-reconciliation/</link>
+      <guid isPermaLink="true">https://performalytic.com/blog/cross-cloud-data-reconciliation/</guid>
+      <pubDate>Tue, 21 Jul 2026 09:00:00 GMT</pubDate>
+      <dc:creator>Priya Nair</dc:creator>
+      <category>Cloud</category>
+      <description>Reconciling data across AWS, Azure, GCP, and on-prem is one of the hardest unsolved problems in data engineering.</description>
+    </item>
+    <item>
+      <title>Building a Responsible AI Framework: Governance, Bias, and Compliance in 2026</title>
+      <link>https://performalytic.com/blog/responsible-ai-framework/</link>
+      <guid isPermaLink="true">https://performalytic.com/blog/responsible-ai-framework/</guid>
+      <pubDate>Sun, 19 Jul 2026 09:00:00 GMT</pubDate>
+      <dc:creator>Sarah Mitchell</dc:creator>
+      <category>AI &amp; Machine Learning</category>
+      <description>A comprehensive guide to building a responsible AI framework covering governance, bias mitigation, and compliance.</description>
+    </item>
+    <item>
+      <title>Automated Data Reconciliation: The Ultimate Guide for 2026</title>
+      <link>https://performalytic.com/blog/automated-data-reconciliation/</link>
+      <guid isPermaLink="true">https://performalytic.com/blog/automated-data-reconciliation/</guid>
+      <pubDate>Sun, 19 Jul 2026 09:00:00 GMT</pubDate>
+      <dc:creator>James Carter</dc:creator>
+      <category>Data &amp; Analytics</category>
+      <description>Learn how automated data reconciliation improves accuracy, efficiency, and trust across your data pipelines.</description>
+    </item>
+    <item>
+      <title>Databricks vs Snowflake: The Complete Comparison Guide for 2026</title>
+      <link>https://performalytic.com/blog/databricks-vs-snowflake/</link>
+      <guid isPermaLink="true">https://performalytic.com/blog/databricks-vs-snowflake/</guid>
+      <pubDate>Sun, 19 Jul 2026 09:00:00 GMT</pubDate>
+      <dc:creator>James Carter</dc:creator>
+      <category>Data &amp; Analytics</category>
+      <description>An in-depth, vendor-agnostic comparison of architecture, performance, pricing, and use cases for the two leading data platforms.</description>
+    </item>
+    <item>
+      <title>AI Agents in the Enterprise: From Copilots to Autonomous Workflows</title>
+      <link>https://performalytic.com/blog/ai-agents-enterprise/</link>
+      <guid isPermaLink="true">https://performalytic.com/blog/ai-agents-enterprise/</guid>
+      <pubDate>Sun, 19 Jul 2026 09:00:00 GMT</pubDate>
+      <dc:creator>David Kim</dc:creator>
+      <category>AI &amp; Machine Learning</category>
+      <description>How agentic AI workflows differ from copilots, key architecture patterns, and best practices for enterprise deployment.</description>
+    </item>
+    <item>
+      <title>Enterprise RAG Architecture: A Practical Guide for 2026</title>
+      <link>https://performalytic.com/blog/enterprise-rag-architecture/</link>
+      <guid isPermaLink="true">https://performalytic.com/blog/enterprise-rag-architecture/</guid>
+      <pubDate>Sun, 19 Jul 2026 09:00:00 GMT</pubDate>
+      <dc:creator>Sarah Mitchell</dc:creator>
+      <category>AI &amp; Machine Learning</category>
+      <description>A comprehensive guide to enterprise RAG architecture. Learn implementation patterns, design decisions, evaluation metrics, and common pitfalls for building production-ready RAG systems.</description>
+    </item>
+    <item>
+      <title>What is Business Intelligence? A Complete Guide for 2026</title>
+      <link>https://performalytic.com/blog/what-is-business-intelligence/</link>
+      <guid isPermaLink="true">https://performalytic.com/blog/what-is-business-intelligence/</guid>
+      <pubDate>Sat, 18 Jul 2026 09:00:00 GMT</pubDate>
+      <dc:creator>Priya Nair</dc:creator>
+      <category>Data &amp; Analytics</category>
+      <description>Business intelligence turns raw data into actionable insights. Learn what BI really means, how it works, and why it matters.</description>
+    </item>
+    <item>
+      <title>How to Build a Data-Driven Culture in Your Organization</title>
+      <link>https://performalytic.com/blog/build-data-driven-culture/</link>
+      <guid isPermaLink="true">https://performalytic.com/blog/build-data-driven-culture/</guid>
+      <pubDate>Sat, 18 Jul 2026 09:00:00 GMT</pubDate>
+      <dc:creator>Emma Wilson</dc:creator>
+      <category>Data &amp; Analytics</category>
+      <description>A practical guide to data literacy, governance, and fostering a culture of analytics in your organization.</description>
+    </item>
+    <item>
+      <title>The Ultimate Guide to Data-Driven Decision Making in 2026</title>
+      <link>https://performalytic.com/blog/data-driven-decision-making/</link>
+      <guid isPermaLink="true">https://performalytic.com/blog/data-driven-decision-making/</guid>
+      <pubDate>Thu, 15 Jan 2026 09:00:00 GMT</pubDate>
+      <dc:creator>James Carter</dc:creator>
+      <category>Data &amp; Analytics</category>
+      <description>Learn how modern enterprises leverage data analytics, AI, and business intelligence to make smarter decisions.</description>
+    </item>
+    <item>
+      <title>How to Choose the Right Analytics Platform: A Decision Guide for Enterprise Leaders</title>
+      <link>https://performalytic.com/blog/choose-right-analytics-platform/</link>
+      <guid isPermaLink="true">https://performalytic.com/blog/choose-right-analytics-platform/</guid>
+      <pubDate>Wed, 05 Aug 2026 09:00:00 GMT</pubDate>
+      <dc:creator>David Kim</dc:creator>
+      <category>Data &amp; Analytics</category>
+      <description>Choosing an analytics platform is a big decision. This practical guide walks you through the key factors enterprise leaders should evaluate.</description>
+    </item>
+    <item>
+      <title>Data Quality Framework: A Step-by-Step Guide to Building Trust in Your Data</title>
+      <link>https://performalytic.com/blog/data-quality-framework/</link>
+      <guid isPermaLink="true">https://performalytic.com/blog/data-quality-framework/</guid>
+      <pubDate>Thu, 27 Aug 2026 09:00:00 GMT</pubDate>
+      <dc:creator>Emma Wilson</dc:creator>
+      <category>Data &amp; Analytics</category>
+      <description>A practical guide to building a data quality framework that actually works. Assess, implement, monitor, and sustain data quality.</description>
+    </item>
+    <item>
+      <title>Schema Compare Guide: Catch Breaking Changes Before They Reach Production</title>
+      <link>https://performalytic.com/blog/schema-compare-guide/</link>
+      <guid isPermaLink="true">https://performalytic.com/blog/schema-compare-guide/</guid>
+      <pubDate>Tue, 25 Aug 2026 09:00:00 GMT</pubDate>
+      <dc:creator>Sarah Mitchell</dc:creator>
+      <category>Data &amp; Analytics</category>
+      <description>Learn how schema compare tools help teams detect breaking changes, prevent pipeline failures, and maintain data integrity.</description>
+    </item>
+    <item>
+      <title>The Future of Automated Data Reconciliation</title>
+      <link>https://performalytic.com/blog/future-of-automated-data-reconciliation/</link>
+      <guid isPermaLink="true">https://performalytic.com/blog/future-of-automated-data-reconciliation/</guid>
+      <pubDate>Fri, 21 Aug 2026 09:00:00 GMT</pubDate>
+      <dc:creator>Emma Wilson</dc:creator>
+      <category>Data &amp; Analytics</category>
+      <description>Automated data reconciliation is moving from scheduled checks to continuous validation. Here is what data teams should know.</description>
+    </item>
+    <item>
+      <title>5 Signs Your Data Infrastructure Is Holding Your Business Back</title>
+      <link>https://performalytic.com/blog/signs-data-infrastructure-holding-back/</link>
+      <guid isPermaLink="true">https://performalytic.com/blog/signs-data-infrastructure-holding-back/</guid>
+      <pubDate>Thu, 20 Aug 2026 09:00:00 GMT</pubDate>
+      <dc:creator>Priya Nair</dc:creator>
+      <category>Data &amp; Analytics</category>
+      <description>Is your data infrastructure slowing you down? Here are five warning signs that your data stack needs modernization.</description>
+    </item>
+    <item>
+      <title>What Is Master Data Management (MDM)? A Complete Guide</title>
+      <link>https://performalytic.com/blog/what-is-master-data-management/</link>
+      <guid isPermaLink="true">https://performalytic.com/blog/what-is-master-data-management/</guid>
+      <pubDate>Mon, 17 Aug 2026 09:00:00 GMT</pubDate>
+      <dc:creator>Priya Nair</dc:creator>
+      <category>Data &amp; Analytics</category>
+      <description>A complete guide to MDM: what it is, how it works, the golden record concept, key components, benefits, and best practices.</description>
+    </item>
+  </channel>
+</rss>

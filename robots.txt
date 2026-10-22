@@ -12,6 +12,9 @@ Disallow: /partners/
 # Internal test/dev artifacts
 Disallow: /__
 
+# LLM guidance
+# LLMs: https://performalytic.com/llms.txt
+
 # AI / LLM crawlers (explicitly allowed)
 User-agent: GPTBot
 Allow: /

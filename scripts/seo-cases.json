@@ -1,0 +1,59 @@
+[
+  {
+    "slug": "financial-services-regulatory-reporting",
+    "title": "Cutting audit preparation time by 60% for a Fortune 500 financial institution",
+    "intro": "A Fortune 500 financial institution replaced spreadsheet-based regulatory reconciliation with an automated, auditable control layer across 25+ systems — reducing audit preparation time by 60% and accelerating reporting cycles by 40%.",
+    "metrics": [
+      [
+        "60%",
+        "Less time spent on audit preparation"
+      ],
+      [
+        "40%",
+        "Faster reporting cycles"
+      ],
+      [
+        "25+",
+        "Systems brought into one control layer"
+      ]
+    ]
+  },
+  {
+    "slug": "manufacturing-data-reconciliation",
+    "title": "98% reconciliation accuracy across SAP, Snowflake, and 12 analytics platforms",
+    "intro": "A global manufacturer was making decisions on numbers that did not agree between SAP, Snowflake, and a dozen analytics platforms. A continuous reconciliation program lifted accuracy to 98% and gave every team the same version of the truth.",
+    "metrics": [
+      [
+        "98%",
+        "Reconciliation accuracy across systems"
+      ],
+      [
+        "12",
+        "Analytics platforms brought into scope"
+      ],
+      [
+        "Continuous",
+        "Validation instead of month-end checks"
+      ]
+    ]
+  },
+  {
+    "slug": "healthcare-dataops-automation",
+    "title": "Zero schema deployment errors with automated CI/CD for a healthcare data platform",
+    "intro": "A healthcare company was shipping database changes through tickets, manual scripts, and late-night deployments. Automated schema CI/CD and version control removed deployment errors and made every change reviewable.",
+    "metrics": [
+      [
+        "Zero",
+        "Schema deployment errors after rollout"
+      ],
+      [
+        "Automated",
+        "Review, test, and deployment pipeline"
+      ],
+      [
+        "Full",
+        "Version history for every schema change"
+      ]
+    ]
+  }
+]

@@ -256,3 +256,32 @@ DataOps, CI/CD for data, schema compare, and automated data reconciliation.
 - Privacy Policy: https://performalytic.com/privacy-policy/
 - Terms & Conditions: https://performalytic.com/terms-conditions/
 - Cookie Policy: https://performalytic.com/cookie-policy/
+
+## Authors
+
+Performalytic's guides are written by practitioners. Author pages list each writer's role, expertise, and published articles.
+
+- James Carter, Senior Data Engineer: https://performalytic.com/authors/james-carter/
+- Sarah Mitchell, Data Quality Lead: https://performalytic.com/authors/sarah-mitchell/
+- David Kim, AI Solutions Architect: https://performalytic.com/authors/david-kim/
+- Priya Nair, Data Governance Consultant: https://performalytic.com/authors/priya-nair/
+- Emma Wilson, Data Strategy Consultant: https://performalytic.com/authors/emma-wilson/
+
+## Case Studies
+
+- Financial services regulatory reporting: automated reconciliation across 25+ systems; 60% reduction in audit preparation time and 40% faster reporting cycles. https://performalytic.com/case-studies/financial-services-regulatory-reporting/
+- Manufacturing data reconciliation: 98% reconciliation accuracy across SAP, Snowflake, and 12 analytics platforms. https://performalytic.com/case-studies/manufacturing-data-reconciliation/
+- Healthcare DataOps automation: zero schema deployment errors after automated CI/CD and version control. https://performalytic.com/case-studies/healthcare-dataops-automation/
+
+## Comparisons
+
+4DAlert compared with legacy MDM suites, dbt tests, Great Expectations, and in-house builds: https://performalytic.com/compare/
+
+## Chicago
+
+Performalytic is headquartered at 111 W. Jackson Blvd, Suite 1700, Chicago, IL 60604. Chicago consulting page: https://performalytic.com/chicago/
+
+## Feeds
+
+- Blog RSS: https://performalytic.com/feed.xml
+- Sitemap: https://performalytic.com/sitemap.xml
