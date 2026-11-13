@@ -1,3 +1,20 @@
+# robots.txt - https://performalytic.com/robots.txt
+# Last updated: 2026-11-13
+#
+# Policy: AI crawlers, AI search/answer engines, and user-triggered AI agents are
+# explicitly welcome on the website, the company/organization pages, and the
+# product pages (/products/ and 4dalert.com). Only drafts and internal test
+# artifacts are excluded.
+#
+# LLM-readable summary: https://performalytic.com/llms.txt
+# Full context:         https://performalytic.com/llms-full.txt
+
+# Content Signals (https://contentsignals.org) - AI use is permitted
+Content-Signal: search=yes, ai-train=yes, ai-input=yes
+
+# ---------------------------------------------------------------------------
+# All crawlers - search engines and anything not named below
+# ---------------------------------------------------------------------------
 User-agent: *
 Allow: /
 Disallow: /404.html
@@ -12,37 +29,55 @@ Disallow: /partners/
 # Internal test/dev artifacts
 Disallow: /__
 
-# LLM guidance
-# LLMs: https://performalytic.com/llms.txt
-
-# AI / LLM crawlers (explicitly allowed)
+# ---------------------------------------------------------------------------
+# AI crawlers - explicitly allowed (training, indexing and live retrieval)
+# ---------------------------------------------------------------------------
+# OpenAI
 User-agent: GPTBot
-Allow: /
-User-agent: ChatGPT-User
-Allow: /
 User-agent: OAI-SearchBot
-Allow: /
-User-agent: PerplexityBot
-Allow: /
-User-agent: Perplexity-User
-Allow: /
+User-agent: ChatGPT-User
+# Anthropic
 User-agent: ClaudeBot
-Allow: /
+User-agent: Claude-SearchBot
 User-agent: Claude-User
-Allow: /
+# Perplexity
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+# Google (Gemini / Vertex AI)
 User-agent: Google-Extended
-Allow: /
 User-agent: Google-CloudVertexBot
-Allow: /
-User-agent: cohere-ai
-Allow: /
+# Apple
+User-agent: Applebot
 User-agent: Applebot-Extended
-Allow: /
-User-agent: Bytespider
-Allow: /
-User-agent: Amazonbot
-Allow: /
+# Microsoft / Bing Copilot
+User-agent: Bingbot
+# Common Crawl
+User-agent: CCBot
+# Meta
 User-agent: Meta-ExternalAgent
+User-agent: Meta-ExternalFetcher
+# Amazon
+User-agent: Amazonbot
+# ByteDance
+User-agent: Bytespider
+# Cohere
+User-agent: cohere-ai
+# Mistral
+User-agent: MistralAI-User
+# DuckDuckGo AI
+User-agent: DuckAssistBot
+# You.com
+User-agent: YouBot
+# Diffbot
+User-agent: Diffbot
+
 Allow: /
+Disallow: /404.html
+Disallow: /maintenance.html
+Disallow: /thank-you.html
+Disallow: /_partners/
+Disallow: /_case-studies/
+Disallow: /partners/
+Disallow: /__
 
 Sitemap: https://performalytic.com/sitemap.xml

@@ -110,6 +110,14 @@
 - [Book a Meeting](https://performalytic.com/book-meeting/)
 - [4DAlert app](https://4dalert.com)
 
+## AI Crawling & Usage
+
+- [robots.txt](https://performalytic.com/robots.txt): AI crawlers, AI search engines and user-triggered assistants are explicitly welcome
+- Consent signal: `Content-Signal: search=yes, ai-train=yes, ai-input=yes`
+- Crawlable: all public pages, including [/products/](https://performalytic.com/products/) (4DAlert) and [4dalert.com](https://4dalert.com)
+- Excluded: `/_partners/`, `/_case-studies/`, `/partners/`, `/__*` (drafts and dev artifacts)
+- Attribution: Performalytic — https://performalytic.com
+
 ## Feeds
 
 - [Blog RSS](https://performalytic.com/feed.xml)

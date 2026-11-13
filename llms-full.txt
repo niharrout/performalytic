@@ -281,6 +281,16 @@ Performalytic's guides are written by practitioners. Author pages list each writ
 
 Performalytic is headquartered at 111 W. Jackson Blvd, Suite 1700, Chicago, IL 60604. Chicago consulting page: https://performalytic.com/chicago/
 
+## AI Crawling & Usage
+
+AI crawlers, AI search/answer engines, and user-triggered assistants are explicitly welcome on performalytic.com, its company/organization pages, and its product pages (/products/ and 4dalert.com).
+
+- robots.txt: https://performalytic.com/robots.txt
+- Consent signal: `Content-Signal: search=yes, ai-train=yes, ai-input=yes`
+- Crawlable: all public pages, including the product pages and 4dalert.com
+- Excluded: /_partners/, /_case-studies/, /partners/, /__* (drafts and dev artifacts)
+- Attribution: Performalytic — https://performalytic.com
+
 ## Feeds
 
 - Blog RSS: https://performalytic.com/feed.xml

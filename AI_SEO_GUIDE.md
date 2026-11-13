@@ -46,7 +46,7 @@ Traditional search returns links; AI search returns **answers with citations**. 
 | FAQPage on the 4 service pages + homepage | ✅ Added Sep 2026 | Visible Q&A + schema on the money pages |
 | Answer-first ledes on the 4 service pages | ✅ Added Sep 2026 | Extractable opening answer under each `<h1>` |
 | `SpeakableSpecification` on service pages + homepage | ✅ Added Sep 2026 | Assistants can read a designated passage |
-| `robots.txt` AI allowances | ✅ 15 UAs explicitly allowed | AI crawlers admitted |
+| `robots.txt` AI allowances | ✅ 23 AI UAs explicitly allowed | AI crawlers admitted |
 | Sitemap | ✅ 58 URLs | Indexed surface |
 | Blog `datePublished` | ✅ All 26 posts | Freshness signal |
 | AI visibility prompt audit kit | ✅ `AI_VISIBILITY_AUDIT.md` | Baseline + monthly measurement |
@@ -67,7 +67,7 @@ AI systems crawl the web like search engines (and increasingly via `llms.txt`). 
 
 - [x] **`llms.txt` / `llms-full.txt`** at `https://performalytic.com/llms.txt` — keep current whenever pages/posts change.
 - [x] **Sitemap** at `https://performalytic.com/sitemap.xml` — add every new page/post.
-- [x] **`robots.txt`** — AI bots explicitly allowed: `GPTBot`, `ChatGPT-User`, `OAI-SearchBot`, `PerplexityBot`, `ClaudeBot`, `Claude-User`, `Google-Extended`, `Google-CloudVertexBot`, `Applebot-Extended`, `Bytespider`, `Amazonbot`, `Meta-ExternalAgent`, `cohere-ai` (plus `User-agent: * / Allow: /`).
+- [x] **`robots.txt`** — AI bots explicitly allowed: `GPTBot`, `OAI-SearchBot`, `ChatGPT-User`, `ClaudeBot`, `Claude-SearchBot`, `Claude-User`, `PerplexityBot`, `Perplexity-User`, `Google-Extended`, `Google-CloudVertexBot`, `Applebot`, `Applebot-Extended`, `Bingbot`, `CCBot`, `Meta-ExternalAgent`, `Meta-ExternalFetcher`, `Amazonbot`, `Bytespider`, `cohere-ai`, `MistralAI-User`, `DuckAssistBot`, `YouBot`, `Diffbot` (plus `User-agent: * / Allow: /`). The same allowlist covers the product pages on `/products/` and 4dalert.com, and a `Content-Signal: search=yes, ai-train=yes, ai-input=yes` line states the AI-use consent explicitly.
 
 - [ ] **Clean, semantic HTML** — keep single `<h1>` per page, descriptive headings, and paragraph-based content (avoid heavy JS-only rendering; AI retrieval is HTML-first).
 - [ ] **Freshness** — review & update blog posts quarterly; AI engines weight recency heavily.
