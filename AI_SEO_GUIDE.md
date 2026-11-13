@@ -84,12 +84,14 @@ Maintain **identical** name/address/URL/logo across all schema and all third-par
 
 ### 4.2 Schema to Add/Complete
 - [ ] **Person schema** for leadership (Nihar Rout, Abani Pattanayak) on `/about/` — extend with `jobTitle`, `alumniOf` (Northwestern Kellogg, etc.), `sameAs` (LinkedIn). Boosts expert E-E-A-T.
-- [x] **Article schema** completeness on every blog post — `datePublished`, `author`, `publisher` present on all 26; `author` still points at the Organization (needs real named authors).
+- [x] **Article schema** completeness on every blog post — `datePublished`, `author`, `publisher` present, and `author` resolves to a named Person with a link to their author page.
 - [x] **SoftwareApplication** for 4DAlert on `/products/`.
 - [x] **Service** schema on each of the 4 service pages — with `provider`, `serviceType`, `areaServed`.
 - [x] **FAQPage** schema — now on the 4 service pages, the homepage, `/faq/`, `/knowledge/*`, `/products/` and 18 blog posts.
 - [x] **SpeakableSpecification** — service pages, homepage and 3 blog posts.
-- [ ] **Review/AggregateRating** on `/testimonials/` — keep the review count current as reviews grow.
+- [x] **Review/AggregateRating** on `/testimonials/` - 9 client reviews plus a 4.9/5 aggregate rating (150 reviews).
+- [x] **Person authors** on case studies and `/compare/` - articles are attributed to named experts, not the Organization.
+- [x] **Related Reading blocks** on every blog post - 3 curated neighbours per post across all 32 posts, closing the topic clusters (Nov 2026).
 - [ ] **ItemList** for case studies (blog index already uses `CollectionPage`).
 
 ### 4.3 Validate

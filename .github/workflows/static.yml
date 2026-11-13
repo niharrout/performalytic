@@ -31,20 +31,16 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          # Full history: the sitemap generator stamps each URL's real last-commit
+          # date with `git log -1 -- <file>`, and the IndexNow step diffs HEAD~1.
+          fetch-depth: 0
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
       - name: Generate sitemap.xml
         run: node generate-sitemap.js
-      - name: Ping IndexNow (Bing)
-        if: env.INDEXNOW_KEY != ''
-        run: |
-          curl -X POST "https://www.bing.com/indexnow" \
-            -H "Content-Type: application/json" \
-            -d '{"host":"performalytic.com","key":"${{ env.INDEXNOW_KEY }}","keyLocation":"https://performalytic.com/${{ env.INDEXNOW_KEY }}.txt","urlList":["https://performalytic.com/sitemap.xml"]}'
-        env:
-          INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
@@ -54,3 +50,10 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
+
+      # Runs after deploy so the URLs are already live when Bing/Copilot fetches them.
+      - name: Submit changed pages to IndexNow
+        continue-on-error: true
+        env:
+          INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
+        run: node scripts/indexnow-changed.js
