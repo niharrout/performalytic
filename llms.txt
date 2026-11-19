@@ -26,7 +26,7 @@
 
 ## Knowledge Hub
 
-- [Knowledge Hub](https://performalytic.com/knowledge/): Free practical guides on enterprise data, with definitions and FAQs for each topic
+- [Knowledge Hub](https://performalytic.com/knowledge/): Free practical guides on enterprise data, with visual explainers, guided learning paths, definitions, and FAQs for each topic
 - [Data Architecture & Engineering](https://performalytic.com/knowledge/data-architecture-engineering/): Designing scalable data platforms, pipelines, lakehouses, data modeling, and reconciliation built into the architecture
 - [Business Intelligence & Analytics](https://performalytic.com/knowledge/business-intelligence-analytics/): BI strategy, semantic layers, dashboards people use, choosing an analytics platform, and AI in BI
 - [AI & Machine Learning](https://performalytic.com/knowledge/ai-machine-learning/): Production AI: RAG architecture, AI agents, MLOps, and responsible AI governance
