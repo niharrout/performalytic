@@ -9,7 +9,7 @@
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
 <meta name="author" content="Performalytic" />
 <meta name="format-detection" content="telephone=no, address=no" />
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com 'nonce-P3rf0rm4lyt1c' 'strict-dynamic'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' https://www.google-analytics.com https://cdn.jsdelivr.net data:; connect-src 'self' https://www.google-analytics.com https://analytics.google.com; frame-src 'self' https://docs.google.com; base-uri 'self'; object-src 'none'; upgrade-insecure-requests" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com 'nonce-P3rf0rm4lyt1c' 'strict-dynamic'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' https://www.google-analytics.com https://cdn.jsdelivr.net data:; connect-src 'self' https://www.google-analytics.com https://analytics.google.com; frame-src 'self' https://docs.google.com; base-uri 'self'; object-src 'none'; upgrade-insecure-requests; style-src-attr 'unsafe-inline'" />
 
 <title>Performalytic | Data Analytics, AI &amp; Enterprise Solutions</title>
 <meta name="keywords" content="data analytics, AI consulting, enterprise transformation, business intelligence, data platforms, RAG systems, AI agents, data governance, master data management, performalytic" />
@@ -431,20 +431,142 @@ nav:not(.mobile-menu).nav-scrolled{background:var(--pa-panel-81428-098)!importan
 @font-face{font-family:'Inter';font-style:normal;font-weight:400 900;font-display:swap;src:url(/assets/fonts/inter-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
 </style>
 <link rel="alternate" type="application/rss+xml" title="Performalytic Blog" href="/feed.xml" />
+<style id="pa-design-polish" nonce="P3rf0rm4lyt1c">
+/* Design consistency pass: one logo lockup, one nav, one CTA. */
+.skip-link:focus{top:0!important}
+.nav-logo{width:230px;max-width:100%;flex:0 0 auto;justify-content:flex-start}
+.nav-logo img{height:36px!important;width:auto!important;max-width:100%;flex:none;object-fit:contain!important;object-position:left center!important;display:block}
+.nav-logo .nav-logo-dark{height:40px!important}
+.nav-logo .nav-logo-light{height:36px!important}
+.nav-logo .nav-logo-light{display:none}
+:root[data-theme="light"] .nav-logo .nav-logo-dark{display:none}
+:root[data-theme="light"] .nav-logo .nav-logo-light{display:block}
+.nav-links>li{position:relative}
+.nav-links>li>a{display:inline-flex;align-items:center;gap:5px;white-space:nowrap}
+.nav-dropdown{display:none;position:absolute;top:100%;left:0;background:var(--pa-panel-152342-098,var(--pa-panel,#0b1324));backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);min-width:240px;border-radius:16px;box-shadow:0 20px 60px var(--pa-sh-k-04,rgba(0,0,0,.35));border:1px solid var(--pa-wd-006,rgba(148,163,184,.15));padding:8px;z-index:100}
+.nav-dropdown::before{content:'';position:absolute;left:0;right:0;top:-10px;height:10px}
+.nav-links>li:hover>.nav-dropdown,.nav-links>li:focus-within>.nav-dropdown,.nav-links>li.is-open>.nav-dropdown{display:block}
+.nav-dropdown a{display:block;padding:9px 12px;border-radius:10px;color:var(--pa-t-muted);font-size:.86rem;text-decoration:none;white-space:nowrap}
+.nav-dropdown a:hover{background:var(--pa-wb-004,rgba(255,255,255,.05));color:var(--pa-t-strong)}
+.nav-cta{white-space:nowrap;flex-shrink:0}
+.nav-links>li>a .nav-chevron{width:12px;height:12px;flex:none;opacity:.55;transition:transform .2s,opacity .2s}
+.nav-links>li:hover>a .nav-chevron,.nav-links>li.is-open>a .nav-chevron{transform:rotate(180deg);opacity:1}
+.menu-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.menu-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
+.menu-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.nav-cta{background:#2563eb!important;color:#fff!important;box-shadow:0 4px 14px rgba(37,99,235,.3)!important}
+.nav-cta:hover{background:#1d4ed8!important;color:#fff!important}
+.footer-brand-logo{width:auto!important;height:40px!important;max-width:100%!important;object-fit:contain!important;object-position:left center!important}
+.footer-brand-logo-light{display:none!important}
+:root[data-theme="light"] .footer-brand-logo-dark{display:none!important}
+:root[data-theme="light"] .footer-brand-logo-light{display:block!important}
+.footer-compliance{display:flex;gap:8px;align-items:center;margin:8px 0}
+.footer-bottom{display:flex;flex-wrap:wrap;gap:12px 20px;align-items:center}
+.footer-bottom-links{display:flex;flex-wrap:wrap;gap:10px 18px;max-width:100%}
+@media(max-width:768px){.footer-bottom{flex-direction:column;align-items:flex-start}.footer-bottom-links{width:100%;justify-content:flex-start}}
+.kh-field-main,.kh-field-aside{min-width:0}
+@media(max-width:900px){.kh-field-grid,.kh-start-card{grid-template-columns:minmax(0,1fr)!important}}
+@media(max-width:480px){.kh-table{min-width:0!important;font-size:.72rem!important}.kh-table th,.kh-table td{padding:8px 6px!important}}
+.compliance-badge{display:inline-flex;align-items:center;gap:4px;padding:4px 10px;border-radius:6px;font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;text-decoration:none;border:1px solid var(--pa-wd-008,rgba(148,163,184,.2));background:var(--pa-wb-003,rgba(255,255,255,.03));color:var(--pa-t-dim,#94a3b8);transition:all .2s}
+.compliance-badge:hover{border-color:rgba(74,222,128,.3);color:var(--pa-at-green-3,#4ade80);background:rgba(74,222,128,.05)}
+.footer-social{display:flex;gap:10px;margin-top:20px}
+.footer-social a{width:36px;height:36px;border-radius:8px;border:1px solid var(--pa-wd-006,rgba(148,163,184,.15));display:flex;align-items:center;justify-content:center;color:var(--pa-t-dim,#94a3b8);text-decoration:none;transition:all .2s}
+.footer-social a:hover{border-color:#2563eb;color:var(--pa-at-blue,#60a5fa);background:rgba(37,99,235,.08);transform:translateY(-2px)}
+.floating-meeting-btn{position:fixed;bottom:30px;right:30px;display:flex;align-items:center;justify-content:center;gap:0;width:52px;height:52px;padding:0;background:linear-gradient(135deg,#2563eb,#1d4ed8);color:#fff;text-decoration:none;border-radius:50%;font-size:14px;font-weight:600;box-shadow:0 4px 16px rgba(37,99,235,.35);z-index:998;white-space:nowrap;overflow:hidden;transition:width .25s,padding .25s,transform .3s,box-shadow .3s,opacity .3s}
+.floating-meeting-btn span{max-width:0;opacity:0;overflow:hidden;white-space:nowrap;transition:max-width .25s,opacity .2s}
+.floating-meeting-btn:hover,.floating-meeting-btn:focus-visible{width:176px;padding:0 18px;border-radius:50px;gap:8px;transform:translateY(-3px);box-shadow:0 8px 24px rgba(37,99,235,.5);color:#fff}
+.floating-meeting-btn:hover span,.floating-meeting-btn:focus-visible span{max-width:140px;opacity:1}
+.floating-meeting-btn svg{flex-shrink:0}
+.floating-meeting-btn.is-hidden{opacity:0;pointer-events:none;transform:translateY(12px)}
+@media(max-width:1180px){.nav-links{gap:18px}.nav-links>li>a{font-size:.79rem}}
+@media(max-width:1000px){nav:not(.mobile-menu) .nav-links,nav:not(.mobile-menu) .nav-cta{display:none}.menu-toggle{display:flex}.theme-toggle-mobile{display:inline-flex!important}nav:not(.mobile-menu) .nav-theme-item{display:none}.nav-logo{width:auto}.nav-logo img{height:32px!important}.nav-logo .nav-logo-dark{height:34px!important}.nav-logo .nav-logo-light{height:32px!important}}
+@media(max-width:768px){.nav-logo{width:auto}.nav-logo img{height:30px!important}.nav-logo .nav-logo-dark{height:32px!important}.nav-logo .nav-logo-light{height:30px!important}.floating-meeting-btn{width:48px;height:48px;border-radius:50%;padding:0;justify-content:center;font-size:13px}.floating-meeting-btn:hover,.floating-meeting-btn:focus-visible{width:48px;padding:0;border-radius:50%;gap:0;transform:none}.floating-meeting-btn span{display:none}.footer-compliance{justify-content:center}}
+/* Author, case-study, comparison, and editorial pages share a plain template.
+   Give that content the same card, type, and spacing language as the rest of
+   the site instead of leaving unstyled headings and lists. */
+.author-hero,.cs-hero,.lp-hero,.ep-hero{padding:140px 0 64px;border-bottom:1px solid var(--pa-wd-004);background:radial-gradient(circle at 12% 0%,rgba(37,99,235,.12),transparent 46%)}
+.author-hero h1,.cs-hero h1,.lp-hero h1,.ep-hero h1{font-size:clamp(2.2rem,4.4vw,3.55rem);line-height:1.08;font-weight:800;letter-spacing:-.035em;color:var(--pa-t-strong);max-width:960px;margin:14px 0 20px}
+.author-hero p,.cs-hero>.container>p,.lp-hero>.container>p,.ep-hero>.container>p{font-size:1.12rem;line-height:1.75;color:var(--pa-t-muted);max-width:840px}
+.section-label,.cs-kicker,.lp-kicker{display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border-radius:999px;background:rgba(37,99,235,.12);border:1px solid rgba(96,165,250,.28);color:var(--pa-at-blue,#60a5fa);font-size:.7rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase}
+.author-index-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;padding:64px 0 80px}
+.author-card{display:flex;flex-direction:column;gap:11px;padding:26px;border:1px solid var(--pa-wd-006);border-radius:20px;background:var(--pa-wb-002);text-decoration:none;transition:transform .25s,border-color .25s,background .25s,box-shadow .25s}
+.author-card:hover{transform:translateY(-4px);border-color:rgba(96,165,250,.38);background:var(--pa-wb-004);box-shadow:0 16px 40px rgba(0,0,0,.16)}
+.author-avatar{width:56px;height:56px;border-radius:16px;background:linear-gradient(135deg,#2563eb,#7c3aed);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.05rem;letter-spacing:.02em;flex:none}
+.author-card h2{font-size:1.25rem;font-weight:800;color:var(--pa-t-strong);letter-spacing:-.02em;margin:4px 0 0}
+.author-card .role,.author-role{font-size:.76rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--pa-at-blue,#60a5fa)}
+.author-card p{font-size:.92rem;line-height:1.65;color:var(--pa-t-muted);flex:1}
+.author-card .count{font-size:.84rem;font-weight:700;color:var(--pa-t-strong);margin-top:4px}
+.author-profile{display:flex;gap:24px;align-items:flex-start}
+.author-profile .author-avatar{width:76px;height:76px;border-radius:20px;font-size:1.3rem}
+.author-profile h1{margin-top:2px}
+.author-bio{font-size:1.05rem;line-height:1.75;color:var(--pa-t-muted);max-width:760px;margin:10px 0 0}
+.author-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.author-tag{padding:5px 10px;border-radius:999px;border:1px solid var(--pa-wd-006);background:var(--pa-wb-003);font-size:.73rem;font-weight:600;color:var(--pa-t-muted)}
+.author-posts{padding:56px 0 72px}
+.author-post-list{display:grid;gap:14px;margin-top:28px}
+.author-post{display:block;padding:22px 24px;border:1px solid var(--pa-wd-006);border-radius:16px;background:var(--pa-wb-002);text-decoration:none;transition:transform .2s,border-color .2s,background .2s}
+.author-post:hover{transform:translateY(-2px);border-color:rgba(96,165,250,.35);background:var(--pa-wb-004)}
+.author-post h3{font-size:1.05rem;font-weight:750;line-height:1.4;color:var(--pa-t-strong);margin:0 0 7px}
+.author-post p{font-size:.9rem;line-height:1.65;color:var(--pa-t-muted);margin:0}
+.author-post .meta{font-size:.76rem;color:var(--pa-t-dim);margin-top:10px}
+.cs-hero .cs-metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:34px}
+.cs-metric{padding:20px;border:1px solid var(--pa-wd-006);border-radius:16px;background:var(--pa-wb-002)}
+.cs-metric .n{font-size:clamp(1.8rem,3vw,2.35rem);font-weight:800;line-height:1;color:var(--pa-at-blue,#60a5fa);letter-spacing:-.03em}
+.cs-metric .l{font-size:.8rem;line-height:1.5;color:var(--pa-t-muted);margin-top:9px}
+.cs-body,.lp-body,.ep-body{padding:60px 0 72px}
+.cs-body>.container,.lp-body>.container,.ep-body>.container{max-width:1200px}
+.cs-body>.container>*,.lp-body>.container>*,.ep-body>.container>*{max-width:860px}
+.cs-body h2,.lp-body h2,.ep-body h2{font-size:1.5rem;line-height:1.25;font-weight:800;letter-spacing:-.02em;color:var(--pa-t-strong);margin:38px 0 14px}
+.cs-body h2:first-child,.lp-body h2:first-child,.ep-body h2:first-child{margin-top:0}
+.cs-body h3,.lp-body h3{font-size:1.08rem;font-weight:750;color:var(--pa-t-strong);margin:26px 0 10px}
+.cs-body p,.lp-body p,.ep-body p{font-size:.98rem;line-height:1.75;color:var(--pa-t-muted);margin:0 0 16px}
+.cs-body ul,.lp-body ul,.lp-body ol,.ep-body ul{padding-left:1.25em;margin:0 0 22px;color:var(--pa-t-muted)}
+.cs-body li,.lp-body li,.ep-body li{font-size:.96rem;line-height:1.7;margin:8px 0}
+.cs-body strong,.lp-body strong,.ep-body strong{color:var(--pa-t-strong);font-weight:700}
+.cs-body a,.lp-body a,.ep-body a{color:var(--pa-at-blue,#60a5fa);text-decoration:none;border-bottom:1px solid rgba(96,165,250,.3)}
+.cs-body a:hover,.lp-body a:hover,.ep-body a:hover{border-bottom-color:var(--pa-at-blue,#60a5fa)}
+.cs-steps{display:grid;gap:14px;margin:18px 0 28px}
+.cs-step{padding:20px 22px;border:1px solid var(--pa-wd-006);border-radius:16px;background:var(--pa-wb-002)}
+.cs-step h3{margin:0 0 7px}
+.cs-step p{margin:0}
+.cs-note,.lp-note,.ep-note{padding:18px 20px;border-left:3px solid #2563eb;background:rgba(37,99,235,.07);border-radius:0 12px 12px 0;color:var(--pa-t-muted);font-size:.9rem;line-height:1.7;margin:24px 0}
+.cs-links,.lp-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.cs-links a,.lp-links a{padding:9px 14px;border:1px solid var(--pa-wd-006);border-radius:999px;background:var(--pa-wb-002);color:var(--pa-at-blue,#60a5fa);text-decoration:none;font-size:.84rem;font-weight:650;border-bottom:1px solid var(--pa-wd-006)}
+.cs-links a:hover,.lp-links a:hover{background:var(--pa-wb-004);border-color:rgba(96,165,250,.35)}
+.lp-faq{margin-top:40px;border-top:1px solid var(--pa-wd-004);padding-top:8px}
+.lp-faq h2{margin-top:28px}
+.lp-faq details{border-bottom:1px solid var(--pa-wd-004);padding:16px 0}
+.lp-faq summary{cursor:pointer;font-weight:700;color:var(--pa-t-strong);list-style:none;display:flex;justify-content:space-between;gap:16px}
+.lp-faq summary::-webkit-details-marker{display:none}
+.lp-faq summary::after{content:'+';color:var(--pa-at-blue,#60a5fa);font-size:1.2rem;line-height:1;flex:none}
+.lp-faq details[open] summary::after{content:'−'}
+.lp-faq details p{margin:12px 0 0;font-size:.92rem}
+.lp-table-wrap{overflow-x:auto;margin:18px 0 28px;border:1px solid var(--pa-wd-006);border-radius:14px}
+.lp-table{width:100%;min-width:620px;border-collapse:collapse;font-size:.86rem}
+.lp-table th,.lp-table td{padding:12px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--pa-wd-006);line-height:1.55}
+.lp-table th{font-size:.7rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--pa-t-strong);background:var(--pa-wb-003)}
+.lp-table td{color:var(--pa-t-muted)}
+.lp-table tr:last-child td{border-bottom:none}
+.ep-meta{font-size:.84rem;color:var(--pa-t-dim);margin-top:30px;padding-top:18px;border-top:1px solid var(--pa-wd-004)}
+@media(max-width:900px){.cs-hero .cs-metrics{grid-template-columns:1fr}.author-hero,.cs-hero,.lp-hero,.ep-hero{padding:118px 0 48px}.cs-body,.lp-body,.ep-body{padding:44px 0 56px}}
+@media(max-width:600px){.author-profile{flex-direction:column;gap:16px}.author-profile .author-avatar{width:64px;height:64px;border-radius:18px;font-size:1.1rem}.author-index-grid{padding:40px 0 56px}.author-card{padding:22px}.author-post{padding:18px 20px}}
+@media(max-width:640px){.lp-table-wrap{overflow:visible;border:0;border-radius:0;margin:18px 0 24px}.lp-table{display:block;min-width:0;font-size:.9rem}.lp-table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}.lp-table tbody,.lp-table tr,.lp-table td{display:block;width:100%}.lp-table tr{padding:16px 18px;border:1px solid var(--pa-wd-006);border-radius:14px;background:var(--pa-wb-002);margin-bottom:12px}.lp-table td{border:0;padding:7px 0;line-height:1.6;font-size:.88rem}.lp-table td+td{border-top:1px solid var(--pa-wd-004);margin-top:4px;padding-top:10px}.lp-table td::before{content:attr(data-label);display:block;font-size:.64rem;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:var(--pa-t-dim);margin-bottom:3px}.lp-table td:first-child{font-size:1rem;font-weight:750;color:var(--pa-t-strong);padding-top:0}.lp-table td:first-child::before{display:none}.lp-table tr:last-child td{border-bottom:0}}
+</style>
 </head>
 <body>
-<a href="#main-content" class="sr-only" style="position:absolute;top:-100%;left:16px;z-index:9999;background:#2563eb;color:#fff;padding:12px 24px;border-radius:0 0 8px 8px;font-weight:600;font-size:.9rem;text-decoration:none" onfocus="this.style.top='0'" onblur="this.style.top='-100%'">Skip to main content</a>
+<a href="#main-content" class="sr-only skip-link" style="position:absolute;top:-100%;left:16px;z-index:9999;background:#2563eb;color:#fff;padding:12px 24px;border-radius:0 0 8px 8px;font-weight:600;font-size:.9rem;text-decoration:none">Skip to main content</a>
 
 <header>
 <nav aria-label="Main navigation">
 <div class="container">
 <a href="/" class="nav-logo" aria-label="Performalytic home">
-<img src="/assets/images/performalytic-logo-blue-2.png" alt="Performalytic" width="480" height="73" fetchpriority="high" />
+<img src="/assets/images/performalytic-logo-no-bg.png" alt="Performalytic" class="nav-logo-dark" width="411" height="78" fetchpriority="high" decoding="async" />
+<img src="/assets/images/performalytic-logo-blue-1.png" alt="Performalytic" class="nav-logo-light" width="1250" height="196" fetchpriority="high" decoding="async" />
 </a>
 <ul class="nav-links" role="list">
 <li><a href="/">Home</a></li>
 <li>
-<a href="#" aria-haspopup="true">Solutions <span class="arrow" aria-hidden="true">&#9662;</span></a>
+<a href="#" aria-haspopup="true" aria-expanded="false">Solutions <svg class="nav-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
 <div class="nav-dropdown" role="menu">
 <a href="/enterprise-solution-development/" role="menuitem">Enterprise Solution Development</a>
 <a href="/advanced-analytics-ai/" role="menuitem">Advanced Analytics &amp; AI</a>
@@ -455,16 +577,17 @@ nav:not(.mobile-menu).nav-scrolled{background:var(--pa-panel-81428-098)!importan
 <li><a href="/industries/">Industries</a></li>
 <li><a href="/technologies/">Technology</a></li>
 <li>
-<a href="#" aria-haspopup="true">Insights <span class="arrow" aria-hidden="true">&#9662;</span></a>
+<a href="#" aria-haspopup="true" aria-expanded="false">Insights <svg class="nav-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
 <div class="nav-dropdown" role="menu">
 <a href="/blog/" role="menuitem">Blog</a>
 <a href="/knowledge/" role="menuitem">Knowledge Hub</a>
 <a href="/products/" role="menuitem">Products</a>
+<a href="/compare/" role="menuitem">Compare 4DAlert</a>
 <a href="/tools/" role="menuitem">Tools</a>
 </div>
 </li>
 <li>
-<a href="#" aria-haspopup="true">Company <span class="arrow" aria-hidden="true">&#9662;</span></a>
+<a href="#" aria-haspopup="true" aria-expanded="false">Company <svg class="nav-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></a>
 <div class="nav-dropdown" role="menu">
 <a href="/about/" role="menuitem">About</a>
 <a href="/contact/" role="menuitem">Contact</a>
@@ -493,10 +616,11 @@ nav:not(.mobile-menu).nav-scrolled{background:var(--pa-panel-81428-098)!importan
 <a href="/technologies/">Technology</a>
 <div class="mm-group">
 <div class="mm-label">Insights</div>
-    <a href="/blog/">Blog</a>
-    <a href="/knowledge/">Knowledge Hub</a>
-    <a href="/products/">Products</a><a href="/compare/">Compare 4DAlert</a>
-    <a href="/tools/">Tools</a>
+<a href="/blog/">Blog</a>
+<a href="/knowledge/">Knowledge Hub</a>
+<a href="/products/">Products</a>
+<a href="/compare/">Compare 4DAlert</a>
+<a href="/tools/">Tools</a>
 </div>
 <div class="mm-group">
 <div class="mm-label">Company</div>
@@ -963,7 +1087,7 @@ Explore Solutions
 <div class="tech-track"><div class="tech-logo"><svg viewBox="0 0 24 24" width="24" height="24"><rect x="1" y="1" width="22" height="22" rx="6" fill="#FF3621"/><path fill="#fff" d="M13.983 11.078h2.119a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.119a.186.186 0 00-.186.186v1.888c0 .102.084.185.186.185m-2.954-5.43h2.118a.186.186 0 00.186-.186V3.574a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.186.185v1.888c0 .102.084.186.186.186m0 2.716h2.118a.187.187 0 00.186-.186V6.29a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.186.185v1.888c0 .102.084.186.186.186m-2.93 0h2.12a.186.186 0 00.184-.186V6.29a.185.185 0 00-.185-.185H8.1a.185.185 0 00-.185.185v1.888c0 .102.083.186.185.186m-2.964 0h2.119a.186.186 0 00.185-.186V6.29a.185.185 0 00-.185-.185H5.136a.186.186 0 00-.186.185v1.888c0 .102.084.186.186.186m5.893 2.715h2.118a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.118a.185.185 0 00-.186.186v1.888c0 .102.084.185.186.185m-2.93 0h2.12a.185.185 0 00.184-.185V9.006a.185.185 0 00-.184-.186h-2.12a.185.185 0 00-.184.186v1.888c0 .102.083.185.185.185m-2.964 0h2.119a.185.185 0 00.185-.185V9.006a.185.185 0 00-.185-.186H5.136a.186.186 0 00-.186.186v1.887c0 .102.084.186.186.186m-2.92 0h2.12a.185.185 0 00.184-.185V9.006a.185.185 0 00-.184-.186h-2.12a.185.185 0 00-.184.186v1.888c0 .102.082.185.184.185M23.763 9.89c-.065-.051-.672-.51-1.954-.51-.338.001-.676.03-1.01.087-.248-1.7-1.653-2.53-1.716-2.566l-.344-.199-.226.327c-.284.438-.49.922-.612 1.43-.23.97-.09 1.882.403 2.661-.595.332-1.55.413-1.744.42H.751a.751.751 0 00-.75.748 11.687 11.687 0 00.692 4.062c.545 1.428 1.355 2.48 2.41 3.124 1.18.723 3.1 1.137 5.275 1.137.983.003 1.963-.086 2.93-.266a12.248 12.248 0 003.823-1.389c.98-.567 1.86-1.288 2.61-2.136 1.252-1.418 1.998-2.997 2.553-4.4h.221c1.372 0 2.215-.549 2.68-1.009.309-.293.55-.65.707-1.046l.098-.288Z"/></svg> databricks</div>
 <div class="tech-logo"><svg viewBox="0 0 24 24" width="24" height="24"><rect x="1" y="1" width="22" height="22" rx="6" fill="#29B5E8"/><path fill="#fff" d="M13.001 4.518c-.394-.075-.806-.116-1.232-.122-4.348-.059-8.036 3.395-8.103 7.747-.032 2.068.797 3.95 2.203 5.281l.037.035c.058.053.118.104.18.153-.452-.09-.88-.248-1.273-.474-1.793-1.025-2.89-2.838-3.008-4.873-.148-2.557 1.506-4.9 3.974-5.876.906-.358 1.863-.556 2.828-.593.228-.008.456-.008.684 0 .324.012.648.047.968.106-1.37-.96-3.178-1.34-4.973-1.074C3.46 5.294 1.57 7.43 1.114 10.017c-.25 1.41.048 2.87.827 4.123.388.623.885 1.182 1.472 1.647-.283-.642-.45-1.343-.487-2.062-.137-2.68 1.752-5.078 4.346-5.79.962-.264 1.96-.358 2.945-.281.363.028.724.08 1.08.164-.592-1.304-1.93-2.223-3.445-2.407l-.056-.002Z"/></svg> snowflake</div>
 <div class="tech-logo"><svg viewBox="0 0 24 24" width="24" height="24"><rect x="1" y="1" width="22" height="22" rx="6" fill="#7B83EB"/><g transform="rotate(45 12 12)" fill="#fff"><rect x="7.5" y="4" width="9" height="5" rx="2"/><rect x="7.5" y="9.5" width="9" height="5" rx="2"/><rect x="7.5" y="15" width="9" height="5" rx="2"/></g></svg> Microsoft Fabric</div>
-<div class="tech-logo"><svg viewBox="0 0 24 24" width="24" height="24"><rect x="1" y="1" width="22" height="22" rx="6" fill="#232F3E"/><text x="12" y="15.5" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="8.5" fill="#fff" letter-spacing="1">aws</text><path d="M4.5 17c2.3 2.7 5.1 3.6 8.4.3" stroke="#FF9900" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg> AWS</div>
+<div class="tech-logo"><svg viewBox="0 0 24 24" width="24" height="24"><rect x="1" y="1" width="22" height="22" rx="6" fill="#FFFFFF" stroke="#FF9900" stroke-width="1"/><text x="12" y="15.5" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="8.5" fill="#232F3E" letter-spacing="1">aws</text><path d="M4.5 17c2.3 2.7 5.1 3.6 8.4.3" stroke="#FF9900" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg> AWS</div>
 <div class="tech-logo"><svg viewBox="0 0 24 24" width="24" height="24"><rect x="1" y="1" width="22" height="22" rx="6" fill="#0078D4"/><text x="12" y="18" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-weight="800" font-size="16" fill="#fff">A</text><path d="M4.5 18.5 H19.5" stroke="#fff" stroke-width="1.4" stroke-linecap="round"/></svg> Microsoft Azure</div>
 <div class="tech-logo"><svg viewBox="0 0 24 24" width="24" height="24"><rect x="1" y="1" width="22" height="22" rx="6" fill="#E8F0FE"/><path fill="#4285F4" d="M13.1 4.9 10.6 7.4a3.3 3.3 0 0 1 1.6 2.7H23a9 9 0 0 0-2.7-4.5A9.4 9.4 0 0 0 13.1 4.9z"/><path fill="#34A853" d="M12.2 20.7a9.4 9.4 0 0 0 7.2-3c.8-.9 1.5-1.8 2-2.8 1.6-2 2.4-4.2 2.6-5.9h-9.1a3.4 3.4 0 0 1-2.3 4.3l-.4 7.4z"/><path fill="#FBBC05" d="M3.9 7.8a9.6 9.6 0 0 0 .2 12.1l7.1-7.2a3.4 3.4 0 0 1-.1-4l-7.2 1z"/><path fill="#EA4335" d="M4 7.9l7.2 1A3.4 3.4 0 0 1 12.2 4c1.9 0 3.6.6 5.4 1.7L20.3 3A14.4 14.4 0 0 0 12.3 1 9.9 9.9 0 0 0 4 7.9z"/></svg> Google Cloud</div>
 <div class="tech-logo"><svg viewBox="0 0 24 24" width="24" height="24"><rect x="1" y="1" width="22" height="22" rx="6" fill="#0070F2"/><text x="12" y="16" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-weight="800" font-size="9.5" fill="#fff" letter-spacing="1">SAP</text></svg> SAP</div>
@@ -971,7 +1095,7 @@ Explore Solutions
 <div class="tech-track" aria-hidden="true"><div class="tech-logo"><svg viewBox="0 0 24 24" width="24" height="24"><rect x="1" y="1" width="22" height="22" rx="6" fill="#FF3621"/><path fill="#fff" d="M13.983 11.078h2.119a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.119a.186.186 0 00-.186.186v1.888c0 .102.084.185.186.185m-2.954-5.43h2.118a.186.186 0 00.186-.186V3.574a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.186.185v1.888c0 .102.084.186.186.186m0 2.716h2.118a.187.187 0 00.186-.186V6.29a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.186.185v1.888c0 .102.084.186.186.186m-2.93 0h2.12a.186.186 0 00.184-.186V6.29a.185.185 0 00-.185-.185H8.1a.185.185 0 00-.185.185v1.888c0 .102.083.186.185.186m-2.964 0h2.119a.186.186 0 00.185-.186V6.29a.185.185 0 00-.185-.185H5.136a.186.186 0 00-.186.185v1.888c0 .102.084.186.186.186m5.893 2.715h2.118a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.118a.185.185 0 00-.186.186v1.888c0 .102.084.185.186.185m-2.93 0h2.12a.185.185 0 00.184-.185V9.006a.185.185 0 00-.184-.186h-2.12a.185.185 0 00-.184.186v1.888c0 .102.083.185.185.185m-2.964 0h2.119a.185.185 0 00.185-.185V9.006a.185.185 0 00-.185-.186H5.136a.186.186 0 00-.186.186v1.887c0 .102.084.186.186.186m-2.92 0h2.12a.185.185 0 00.184-.185V9.006a.185.185 0 00-.184-.186h-2.12a.185.185 0 00-.184.186v1.888c0 .102.082.185.184.185M23.763 9.89c-.065-.051-.672-.51-1.954-.51-.338.001-.676.03-1.01.087-.248-1.7-1.653-2.53-1.716-2.566l-.344-.199-.226.327c-.284.438-.49.922-.612 1.43-.23.97-.09 1.882.403 2.661-.595.332-1.55.413-1.744.42H.751a.751.751 0 00-.75.748 11.687 11.687 0 00.692 4.062c.545 1.428 1.355 2.48 2.41 3.124 1.18.723 3.1 1.137 5.275 1.137.983.003 1.963-.086 2.93-.266a12.248 12.248 0 003.823-1.389c.98-.567 1.86-1.288 2.61-2.136 1.252-1.418 1.998-2.997 2.553-4.4h.221c1.372 0 2.215-.549 2.68-1.009.309-.293.55-.65.707-1.046l.098-.288Z"/></svg> databricks</div>
 <div class="tech-logo"><svg viewBox="0 0 24 24" width="24" height="24"><rect x="1" y="1" width="22" height="22" rx="6" fill="#29B5E8"/><path fill="#fff" d="M13.001 4.518c-.394-.075-.806-.116-1.232-.122-4.348-.059-8.036 3.395-8.103 7.747-.032 2.068.797 3.95 2.203 5.281l.037.035c.058.053.118.104.18.153-.452-.09-.88-.248-1.273-.474-1.793-1.025-2.89-2.838-3.008-4.873-.148-2.557 1.506-4.9 3.974-5.876.906-.358 1.863-.556 2.828-.593.228-.008.456-.008.684 0 .324.012.648.047.968.106-1.37-.96-3.178-1.34-4.973-1.074C3.46 5.294 1.57 7.43 1.114 10.017c-.25 1.41.048 2.87.827 4.123.388.623.885 1.182 1.472 1.647-.283-.642-.45-1.343-.487-2.062-.137-2.68 1.752-5.078 4.346-5.79.962-.264 1.96-.358 2.945-.281.363.028.724.08 1.08.164-.592-1.304-1.93-2.223-3.445-2.407l-.056-.002Z"/></svg> snowflake</div>
 <div class="tech-logo"><svg viewBox="0 0 24 24" width="24" height="24"><rect x="1" y="1" width="22" height="22" rx="6" fill="#7B83EB"/><g transform="rotate(45 12 12)" fill="#fff"><rect x="7.5" y="4" width="9" height="5" rx="2"/><rect x="7.5" y="9.5" width="9" height="5" rx="2"/><rect x="7.5" y="15" width="9" height="5" rx="2"/></g></svg> Microsoft Fabric</div>
-<div class="tech-logo"><svg viewBox="0 0 24 24" width="24" height="24"><rect x="1" y="1" width="22" height="22" rx="6" fill="#232F3E"/><text x="12" y="15.5" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="8.5" fill="#fff" letter-spacing="1">aws</text><path d="M4.5 17c2.3 2.7 5.1 3.6 8.4.3" stroke="#FF9900" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg> AWS</div>
+<div class="tech-logo"><svg viewBox="0 0 24 24" width="24" height="24"><rect x="1" y="1" width="22" height="22" rx="6" fill="#FFFFFF" stroke="#FF9900" stroke-width="1"/><text x="12" y="15.5" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="8.5" fill="#232F3E" letter-spacing="1">aws</text><path d="M4.5 17c2.3 2.7 5.1 3.6 8.4.3" stroke="#FF9900" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg> AWS</div>
 <div class="tech-logo"><svg viewBox="0 0 24 24" width="24" height="24"><rect x="1" y="1" width="22" height="22" rx="6" fill="#0078D4"/><text x="12" y="18" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-weight="800" font-size="16" fill="#fff">A</text><path d="M4.5 18.5 H19.5" stroke="#fff" stroke-width="1.4" stroke-linecap="round"/></svg> Microsoft Azure</div>
 <div class="tech-logo"><svg viewBox="0 0 24 24" width="24" height="24"><rect x="1" y="1" width="22" height="22" rx="6" fill="#E8F0FE"/><path fill="#4285F4" d="M13.1 4.9 10.6 7.4a3.3 3.3 0 0 1 1.6 2.7H23a9 9 0 0 0-2.7-4.5A9.4 9.4 0 0 0 13.1 4.9z"/><path fill="#34A853" d="M12.2 20.7a9.4 9.4 0 0 0 7.2-3c.8-.9 1.5-1.8 2-2.8 1.6-2 2.4-4.2 2.6-5.9h-9.1a3.4 3.4 0 0 1-2.3 4.3l-.4 7.4z"/><path fill="#FBBC05" d="M3.9 7.8a9.6 9.6 0 0 0 .2 12.1l7.1-7.2a3.4 3.4 0 0 1-.1-4l-7.2 1z"/><path fill="#EA4335" d="M4 7.9l7.2 1A3.4 3.4 0 0 1 12.2 4c1.9 0 3.6.6 5.4 1.7L20.3 3A14.4 14.4 0 0 0 12.3 1 9.9 9.9 0 0 0 4 7.9z"/></svg> Google Cloud</div>
 <div class="tech-logo"><svg viewBox="0 0 24 24" width="24" height="24"><rect x="1" y="1" width="22" height="22" rx="6" fill="#0070F2"/><text x="12" y="16" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-weight="800" font-size="9.5" fill="#fff" letter-spacing="1">SAP</text></svg> SAP</div>
@@ -1148,7 +1272,7 @@ Explore Solutions
 <div class="container">
 <div class="footer-grid">
 <div class="footer-brand">
-<a href="/" aria-label="Performalytic home"><img src="/assets/images/performalytic-logo-original.png" alt="Performalytic" class="footer-brand-logo footer-brand-logo-dark" width="346" height="128" loading="lazy" decoding="async" /><img src="/assets/images/performalytic-logo-blue-2.png" alt="Performalytic" class="footer-brand-logo footer-brand-logo-light" width="480" height="73" loading="lazy" decoding="async" /></a>
+<a href="/" aria-label="Performalytic home"><img src="/assets/images/performalytic-logo-no-bg.png" alt="Performalytic" class="footer-brand-logo footer-brand-logo-dark" width="411" height="78" decoding="async" /><img src="/assets/images/performalytic-logo-blue-1.png" alt="Performalytic" class="footer-brand-logo footer-brand-logo-light" width="1250" height="196" decoding="async" /></a>
 <p>We help enterprises turn data into a competitive advantage. From strategy and analytics to AI and application development &mdash; we deliver solutions that drive growth.</p>
 <div class="footer-social">
 <a href="https://www.linkedin.com/company/performalytic-corp/" target="_blank" rel="noopener noreferrer" aria-label="Follow Performalytic on LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
@@ -1191,7 +1315,7 @@ Explore Solutions
 </div>
 </footer>
 
-<script nonce="P3rf0rm4lyt1c">document.getElementById('deferred-styles').rel='stylesheet';</script>
+<script nonce="P3rf0rm4lyt1c">var __ds=document.getElementById('deferred-styles');if(__ds)__ds.rel='stylesheet';</script>
 <script nonce="P3rf0rm4lyt1c">
 (function(){'use strict';
 var mm=document.getElementById('mobileMenu'),mt=document.getElementById('menuToggle');

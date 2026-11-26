@@ -105,46 +105,77 @@ html.js .industries-grid .industry-card.revealed {
 .floating-meeting-btn {
   position: fixed;
   bottom: 30px;
-  left: 30px;
+  right: 30px;
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 12px 20px;
+  justify-content: center;
+  gap: 0;
+  width: 52px;
+  height: 52px;
+  padding: 0;
   background: linear-gradient(135deg, #2563eb, #1d4ed8);
   color: #fff;
   text-decoration: none;
-  border-radius: 50px;
+  border-radius: 50%;
   font-size: 14px;
   font-weight: 600;
   box-shadow: 0 4px 16px rgba(37, 99, 235, 0.35);
   z-index: 998;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+  transition: width 0.25s, padding 0.25s, transform 0.3s, box-shadow 0.3s, opacity 0.3s;
   white-space: nowrap;
 }
-.floating-meeting-btn:hover {
-  transform: translateY(-3px) scale(1.03);
+.floating-meeting-btn span {
+  max-width: 0;
+  opacity: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: max-width 0.25s, opacity 0.2s;
+}
+.floating-meeting-btn:hover,
+.floating-meeting-btn:focus-visible {
+  width: 176px;
+  padding: 0 18px;
+  border-radius: 50px;
+  gap: 8px;
+  transform: translateY(-3px);
   box-shadow: 0 8px 24px rgba(37, 99, 235, 0.5);
   color: #fff;
+}
+.floating-meeting-btn:hover span,
+.floating-meeting-btn:focus-visible span {
+  max-width: 140px;
+  opacity: 1;
 }
 .floating-meeting-btn svg {
   flex-shrink: 0;
 }
+.floating-meeting-btn.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(12px);
+}
 @media (max-width: 768px) {
   .floating-meeting-btn {
     bottom: 20px;
-    left: 16px;
-    padding: 10px 16px;
-    font-size: 13px;
-  }
-  .floating-meeting-btn span {
-    display: none;
-  }
-  .floating-meeting-btn {
+    right: 16px;
     width: 48px;
     height: 48px;
     border-radius: 50%;
     padding: 0;
     justify-content: center;
+    font-size: 13px;
+  }
+  .floating-meeting-btn:hover,
+  .floating-meeting-btn:focus-visible {
+    width: 48px;
+    padding: 0;
+    border-radius: 50%;
+    gap: 0;
+    transform: none;
+  }
+  .floating-meeting-btn span {
+    display: none;
   }
 }
 

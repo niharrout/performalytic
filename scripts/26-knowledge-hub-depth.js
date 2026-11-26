@@ -431,6 +431,22 @@ for (const [slug, d] of Object.entries(DEPTH)) {
     'master-data-management': 'MDM'
   };
   const catName = slug => tagMap[slug] || 'Guide';
+  // Curated one-sentence summaries keep the hub cards readable and avoid
+  // cutting a source excerpt in the middle of a clause.
+  const latestSummary = {
+    '/blog/agentic-ai-database-devops/': 'Agentic AI plans, drafts, tests, and reviews database changes while humans approve. See where it works today, where it fails, and how to deploy it safely.',
+    '/blog/ai-master-data-management/': 'How AI transforms the MDM pipeline: standardization, matching, survivorship, and stewardship, and how AI-based MDM differs from legacy platforms.',
+    '/blog/mdm-implementation-patterns/': 'The three canonical MDM implementation patterns, when to use each, the trade-offs, and how to migrate between them.',
+    '/blog/signs-data-infrastructure-holding-back/': "You don't need a tech meltdown to know your data stack is broken. These are the quiet warning signs, and what to do about them before they become costly.",
+    '/blog/choose-right-analytics-platform/': "Picking an analytics platform isn't just a tech decision. It affects every team, so here is how to get it right the first time.",
+    '/blog/enterprise-rag-architecture/': 'Build AI systems that actually know your business. This guide covers RAG patterns, vector databases, chunking strategies, and evaluation.'
+  };
+  const summaryFor = item => {
+    if (latestSummary[item.href]) return latestSummary[item.href];
+    if (item.desc.length <= 150) return item.desc;
+    const cut = item.desc.slice(0, 147).replace(/\s+\S*$/, '').replace(/[,;:.\-–—]+$/, '');
+    return cut + '…';
+  };
   const latestBlock = `<!-- kh:latest -->
 <section class="kh-latest" id="latest" aria-label="Latest guides">
   <div class="container">
@@ -443,7 +459,7 @@ for (const [slug, d] of Object.entries(DEPTH)) {
 ${top.map(a => `      <a class="kh-latest-card" href="${a.href}">
         <span class="kh-latest-meta"><span class="kh-latest-tag">${esc(catName(a.slug))}</span><span>${esc(a.date)}</span>${a.read ? `<span>${a.read} min read</span>` : ''}</span>
         <h3>${esc(a.title)}</h3>
-        <p>${esc(a.desc.length > 150 ? a.desc.slice(0, 147).replace(/\s+\S*$/, '') + '...' : a.desc)}</p>
+        <p>${esc(summaryFor(a))}</p>
       </a>`).join('\n')}
     </div>
   </div>

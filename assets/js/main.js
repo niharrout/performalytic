@@ -331,8 +331,17 @@
     btn.href = '/book-meeting/';
     btn.className = 'floating-meeting-btn';
     btn.setAttribute('aria-label', 'Book a Meeting');
+    btn.setAttribute('title', 'Book a Meeting');
     btn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg><span>Book a Meeting</span>';
     document.body.appendChild(btn);
+
+    var footer = document.querySelector('footer');
+    if (footer && 'IntersectionObserver' in window) {
+      var observer = new IntersectionObserver(function(entries) {
+        btn.classList.toggle('is-hidden', entries[0].isIntersecting);
+      }, { rootMargin: '0px 0px -120px 0px', threshold: 0.01 });
+      observer.observe(footer);
+    }
   }
 
   /* ============================================
