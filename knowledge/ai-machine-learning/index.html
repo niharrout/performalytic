@@ -608,6 +608,7 @@ nav.breadcrumb{background:none!important;border:0!important;box-shadow:none!impo
 @media(max-width:600px){.author-profile{flex-direction:column;gap:16px}.author-profile .author-avatar{width:64px;height:64px;border-radius:18px;font-size:1.1rem}.author-index-grid{padding:40px 0 56px}.author-card{padding:22px}.author-post{padding:18px 20px}}
 @media(max-width:640px){.lp-table-wrap{overflow:visible;border:0;border-radius:0;margin:18px 0 24px}.lp-table{display:block;min-width:0;font-size:.9rem}.lp-table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}.lp-table tbody,.lp-table tr,.lp-table td{display:block;width:100%}.lp-table tr{padding:16px 18px;border:1px solid var(--pa-wd-006);border-radius:14px;background:var(--pa-wb-002);margin-bottom:12px}.lp-table td{border:0;padding:7px 0;line-height:1.6;font-size:.88rem}.lp-table td+td{border-top:1px solid var(--pa-wd-004);margin-top:4px;padding-top:10px}.lp-table td::before{content:attr(data-label);display:block;font-size:.64rem;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:var(--pa-t-dim);margin-bottom:3px}.lp-table td:first-child{font-size:1rem;font-weight:750;color:var(--pa-t-strong);padding-top:0}.lp-table td:first-child::before{display:none}.lp-table tr:last-child td{border-bottom:0}}
 </style>
+  <link rel="stylesheet" href="/assets/css/knowledge-heroes.css" />
 </head>
 <body class="kh-v2">
 <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -709,18 +710,43 @@ nav.breadcrumb{background:none!important;border:0!important;box-shadow:none!impo
           <a href="#articles" class="btn-primary">Explore the Guides <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
           <a href="/contact/" class="btn-secondary">Talk to an AI Engineer</a>
         </div>
-        <div class="kh-hero-meta">
+        <div class="kh-hero-meta" aria-label="AI &amp; Machine Learning hub facts">
           <span><strong>10</strong> in-depth guides</span>
-          <span class="dot" aria-hidden="true"></span>
           <span><strong>4</strong> key concepts</span>
-          <span class="dot" aria-hidden="true"></span>
-          <span>Reviewed <strong>November 19, 2026</strong></span>
-          <span class="dot" aria-hidden="true"></span>
-          <span><a href="/editorial-policy/">Editorial standards</a></span>
+          <span>Updated <strong>Nov 19, 2026</strong></span>
+          <a href="/editorial-policy/">Editorial standards</a>
         </div>
       </div>
       <div class="hero-visual">
-        <img src="/assets/images/svg/knowledge-ai.svg" alt="AI and machine learning illustration" class="hero-illustration" width="400" height="400" />
+        <!-- kh-hero-art:start -->
+        <div class="kha" role="img" aria-labelledby="kha-ai-title kha-ai-desc">
+            <span id="kha-ai-title" class="sr-only">AI and machine learning production flow</span>
+            <span id="kha-ai-desc" class="sr-only">Business documents, tickets, SQL, and APIs are grounded, evaluated, and guarded before reaching a production AI model.</span>
+            <div class="kha-sources" aria-hidden="true">
+            <div class="kha-source"><span class="kha-source-dot"></span><span>Docs</span></div>
+            <div class="kha-source"><span class="kha-source-dot kha-dot--purple"></span><span>Tickets</span></div>
+            <div class="kha-source"><span class="kha-source-dot kha-dot--cyan"></span><span>SQL</span></div>
+            <div class="kha-source"><span class="kha-source-dot kha-dot--teal"></span><span>APIs</span></div>
+          </div>
+          <div class="kha-flow" aria-hidden="true">
+            <span class="kha-merge"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l1.9 6.1L20 10l-6.1 1.9L12 18l-1.9-6.1L4 10l6.1-1.9L12 2z"/></svg>Ground &amp; evaluate</span>
+          </div>
+          <div class="kha-card" aria-hidden="true">
+            <div class="kha-card-head">
+              <span class="kha-card-icon"><img src="/assets/images/svg/knowledge-ai.svg" alt="" /></span>
+              <span class="kha-card-copy"><span class="kha-card-kicker">Production AI</span><span class="kha-card-title">Grounded model</span></span>
+              <span class="kha-badge">Live</span>
+            </div>
+            <div class="kha-card-body"><div class="kha-metrics">
+                <div class="kha-metric"><span>Latency</span><strong>1.2s</strong><small>p95</small></div>
+                <div class="kha-metric"><span>Evals</span><strong>128</strong><small>passed</small></div>
+                <div class="kha-metric"><span>Guardrails</span><strong>On</strong><small>PII · safety</small></div>
+              </div>
+              <div class="kha-meter"><div class="kha-meter-head"><span>Production readiness</span><strong>94%</strong></div><div class="kha-meter-track"><span></span></div></div></div>
+            <div class="kha-foot"><span>RAG</span><span>Evals</span><span>Guardrails</span><span>Observability</span></div>
+          </div>
+          </div>
+        <!-- kh-hero-art:end -->
       </div>
     </div>
   </div>
