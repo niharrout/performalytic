@@ -1,0 +1,739 @@
+/* ============================================================
+   Service hero art + responsive hero layout
+   Loaded on the four service pages and the utility pages whose
+   two-column hero grid needs to stack correctly on small screens.
+   ============================================================ */
+
+/* --- Shared small-screen hero layout -------------------------
+   Several page templates keep .hero-grid at two columns below
+   900px, which squeezes the H1 into a 147px column. Force one
+   column and put the copy before the visual on every affected
+   page. The visual stays centred and can grow to a readable size. */
+@media (max-width: 900px) {
+  .hero-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 36px !important;
+  }
+
+  .hero-content {
+    order: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .hero-visual {
+    order: 1 !important;
+    width: 100% !important;
+    max-width: 560px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .hero-illustration {
+    max-width: 100% !important;
+  }
+}
+
+/* --- Service hero typography -------------------------------- */
+@media (min-width: 901px) {
+  .hero--service h1 {
+    font-size: clamp(2.5rem, 3.6vw, 3.35rem);
+    line-height: 1.08;
+    letter-spacing: -1.5px;
+    max-width: 100%;
+  }
+
+  .hero--service .hero-content > p {
+    font-size: 1.02rem;
+    line-height: 1.68;
+  }
+
+  .hero--service .hero-stats {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 30px;
+    padding-top: 22px;
+  }
+
+  .hero--service .hero-stat h3 {
+    font-size: 1.75rem;
+  }
+
+  .hero--service .hero-stat p {
+    font-size: 0.78rem;
+    line-height: 1.35;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 900px) {
+  .hero--service h1 {
+    font-size: clamp(2.1rem, 4.2vw, 2.65rem);
+    line-height: 1.12;
+    letter-spacing: -1px;
+  }
+
+  .hero--service .hero-content > p {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero--service .hero-stats {
+    gap: 16px;
+  }
+}
+
+/* --- Service hero art --------------------------------------- */
+.sha {
+  --sha-a: var(--pa-at-blue);
+  --sha-b: var(--pa-at-indigo);
+  --sha-soft: rgba(37, 99, 235, 0.14);
+  --sha-pill-a: #2563eb;
+  --sha-pill-b: #4f46e5;
+  position: relative;
+  width: 100%;
+  max-width: 560px;
+  isolation: isolate;
+}
+
+.sha::before {
+  content: '';
+  position: absolute;
+  inset: 8% 0 2%;
+  background: radial-gradient(ellipse at center, var(--sha-soft), transparent 68%);
+  filter: blur(24px);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.sha--enterprise {
+  --sha-a: var(--pa-at-blue);
+  --sha-b: var(--pa-at-indigo);
+  --sha-soft: rgba(37, 99, 235, 0.14);
+  --sha-pill-a: #2563eb;
+  --sha-pill-b: #4f46e5;
+}
+
+.sha--ai {
+  --sha-a: var(--pa-at-green);
+  --sha-b: var(--pa-at-cyan);
+  --sha-soft: rgba(5, 150, 105, 0.14);
+  --sha-pill-a: #047857;
+  --sha-pill-b: #0e7490;
+}
+
+.sha--bi {
+  --sha-a: var(--pa-at-purple);
+  --sha-b: var(--pa-at-blue);
+  --sha-soft: rgba(124, 58, 237, 0.14);
+  --sha-pill-a: #6d28d9;
+  --sha-pill-b: #2563eb;
+}
+
+.sha--appdev {
+  --sha-a: var(--pa-at-indigo);
+  --sha-b: var(--pa-at-blue);
+  --sha-soft: rgba(79, 70, 229, 0.14);
+  --sha-pill-a: #4338ca;
+  --sha-pill-b: #1d4ed8;
+}
+
+.sha .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.sha-sources {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  position: relative;
+  padding-bottom: 22px;
+}
+
+.sha-sources::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 8%;
+  right: 8%;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, transparent, var(--sha-a), var(--sha-b), transparent);
+  opacity: 0.55;
+}
+
+.sha-source {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-width: 0;
+  padding: 13px 8px;
+  border: 1px solid var(--pa-wd-006);
+  border-radius: 12px;
+  background: var(--pa-wb-004);
+  color: var(--pa-t-2);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  box-shadow: 0 4px 18px rgba(2, 6, 23, 0.06);
+}
+
+.sha-source::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -22px;
+  width: 2px;
+  height: 22px;
+  transform: translateX(-50%);
+  background: linear-gradient(180deg, var(--sha-a), transparent);
+  opacity: 0.55;
+}
+
+.sha-source-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex: none;
+  background: var(--sha-a);
+  box-shadow: 0 0 0 3px var(--sha-soft);
+}
+
+.sha-source:nth-child(even) .sha-source-dot {
+  background: var(--sha-b);
+}
+
+.sha-flow {
+  position: relative;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sha-flow::before,
+.sha-flow::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  width: 2px;
+  transform: translateX(-50%);
+  background: linear-gradient(180deg, var(--sha-a), var(--sha-b));
+  opacity: 0.5;
+}
+
+.sha-flow::before {
+  top: 0;
+  height: 17px;
+}
+
+.sha-flow::after {
+  bottom: 0;
+  height: 17px;
+}
+
+.sha-merge {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--sha-pill-a), var(--sha-pill-b));
+  color: #fff;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  box-shadow: 0 8px 24px var(--sha-soft);
+}
+
+.sha-merge svg {
+  width: 14px;
+  height: 14px;
+  flex: none;
+}
+
+.sha-card {
+  position: relative;
+  padding: 20px 22px 18px;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  background:
+    linear-gradient(var(--pa-bg-2), var(--pa-bg-2)) padding-box,
+    linear-gradient(135deg, var(--sha-a), var(--sha-b)) border-box;
+  box-shadow: 0 22px 55px rgba(2, 6, 23, 0.18);
+  overflow: hidden;
+}
+
+.sha-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--sha-pill-a), var(--sha-pill-b));
+  opacity: 0.9;
+}
+
+.sha-card-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.sha-card-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 15px;
+  background: linear-gradient(135deg, var(--sha-soft), transparent);
+  border: 1px solid var(--pa-wd-006);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  overflow: hidden;
+}
+
+.sha-card-icon img {
+  width: 40px;
+  height: 40px;
+  display: block;
+}
+
+.sha-card-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+  flex: 1;
+}
+
+.sha-card-kicker {
+  font-size: 0.62rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--sha-a);
+  line-height: 1.2;
+}
+
+.sha-card-title {
+  font-size: 1.06rem;
+  font-weight: 800;
+  letter-spacing: -0.015em;
+  color: var(--pa-t-strong);
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sha-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 5px 8px;
+  border-radius: 999px;
+  border: 1px solid var(--sha-soft);
+  background: var(--sha-soft);
+  color: var(--sha-a);
+  font-size: 0.66rem;
+  font-weight: 800;
+  white-space: nowrap;
+  flex: none;
+}
+
+.sha-card-body {
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid var(--pa-wd-006);
+}
+
+.sha-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.sha-metric {
+  min-width: 0;
+  padding: 9px 10px;
+  border: 1px solid var(--pa-wd-006);
+  border-radius: 9px;
+  background: var(--pa-wb-004);
+}
+
+.sha-metric span {
+  display: block;
+  margin-bottom: 3px;
+  font-size: 0.56rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--pa-t-dim);
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sha-metric strong {
+  display: block;
+  font-size: 0.94rem;
+  font-weight: 800;
+  color: var(--pa-t-strong);
+  line-height: 1.15;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sha-metric small {
+  display: block;
+  margin-top: 2px;
+  font-size: 0.56rem;
+  color: var(--pa-t-muted);
+  line-height: 1.3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sha-meter {
+  margin-top: 10px;
+  padding: 8px 10px;
+  border: 1px solid var(--pa-wd-006);
+  border-radius: 9px;
+  background: var(--pa-wb-004);
+}
+
+.sha-meter-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 0.58rem;
+  font-weight: 700;
+  color: var(--pa-t-muted);
+}
+
+.sha-meter-head strong {
+  color: var(--pa-t-strong);
+  font-weight: 800;
+}
+
+.sha-meter-track {
+  height: 6px;
+  border-radius: 999px;
+  background: var(--pa-wd-006);
+  overflow: hidden;
+  margin-top: 6px;
+}
+
+.sha-meter-track span {
+  display: block;
+  height: 100%;
+  width: 92%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--sha-pill-a), var(--sha-pill-b));
+}
+
+.sha-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  height: 34px;
+  margin-top: 10px;
+  padding: 0 2px;
+}
+
+.sha-bars span {
+  flex: 1;
+  min-height: 6px;
+  border-radius: 3px 3px 1px 1px;
+  background: linear-gradient(180deg, var(--sha-a), var(--sha-b));
+  opacity: 0.82;
+}
+
+.sha-bars span:nth-child(1) { height: 38%; }
+.sha-bars span:nth-child(2) { height: 56%; }
+.sha-bars span:nth-child(3) { height: 44%; }
+.sha-bars span:nth-child(4) { height: 72%; }
+.sha-bars span:nth-child(5) { height: 62%; }
+.sha-bars span:nth-child(6) { height: 86%; }
+.sha-bars span:nth-child(7) { height: 78%; }
+
+.sha-stages {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 6px;
+  position: relative;
+}
+
+.sha-stage {
+  position: relative;
+  padding: 8px 5px;
+  border: 1px solid var(--pa-wd-006);
+  border-radius: 8px;
+  background: var(--pa-wb-004);
+  text-align: center;
+  min-width: 0;
+}
+
+.sha-stage span {
+  display: block;
+  font-size: 0.58rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  color: var(--pa-t-dim);
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sha-stage strong {
+  display: block;
+  margin-top: 3px;
+  font-size: 0.62rem;
+  font-weight: 800;
+  color: var(--pa-t-strong);
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sha-stage--done strong {
+  color: var(--pa-at-green-3);
+}
+
+.sha-stage--live {
+  border-color: var(--sha-soft);
+  background: var(--sha-soft);
+}
+
+.sha-stage--live strong {
+  color: var(--sha-a);
+}
+
+.sha-release {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 10px;
+  padding: 8px 10px;
+  border: 1px solid var(--pa-wd-006);
+  border-radius: 8px;
+  background: var(--pa-wb-004);
+  font-size: 0.6rem;
+  color: var(--pa-t-muted);
+}
+
+.sha-release strong {
+  font-size: 0.62rem;
+  font-weight: 800;
+  color: var(--pa-at-green-3);
+  white-space: nowrap;
+}
+
+.sha-foot {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 14px;
+}
+
+.sha-foot span {
+  padding: 4px 8px;
+  border-radius: 7px;
+  background: var(--pa-wb-004);
+  border: 1px solid var(--pa-wd-006);
+  color: var(--pa-t-muted);
+  font-size: 0.62rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+/* --- Small-screen art adjustments --------------------------- */
+@media (max-width: 900px) {
+  .sha {
+    max-width: 520px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .sha-sources {
+    gap: 6px;
+    padding-bottom: 18px;
+  }
+
+  .sha-source {
+    padding: 10px 5px;
+    font-size: 0.7rem;
+    gap: 5px;
+    border-radius: 10px;
+  }
+
+  .sha-source::after {
+    height: 18px;
+    bottom: -18px;
+  }
+
+  .sha-flow {
+    height: 62px;
+  }
+
+  .sha-merge {
+    font-size: 0.62rem;
+    padding: 7px 11px;
+  }
+
+  .sha-card {
+    padding: 16px 16px 14px;
+    border-radius: 17px;
+  }
+
+  .sha-card-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+  }
+
+  .sha-card-icon img {
+    width: 34px;
+    height: 34px;
+  }
+
+  .sha-card-head {
+    gap: 10px;
+  }
+
+  .sha-card-title {
+    font-size: 0.96rem;
+  }
+
+  .sha-badge {
+    font-size: 0.6rem;
+    padding: 4px 7px;
+  }
+
+  .sha-metric span {
+    font-size: 0.52rem;
+  }
+
+  .sha-metric strong {
+    font-size: 0.84rem;
+  }
+
+  .sha-metric small {
+    font-size: 0.52rem;
+  }
+
+  .sha-foot span {
+    font-size: 0.58rem;
+    padding: 3px 6px;
+  }
+
+  .sha-stage span {
+    font-size: 0.52rem;
+  }
+
+  .sha-stage strong {
+    font-size: 0.58rem;
+  }
+
+  .sha-release {
+    font-size: 0.56rem;
+  }
+
+  .sha-release strong {
+    font-size: 0.58rem;
+  }
+}
+
+/* On very narrow phones a 4-up source row leaves too little room
+   for labels such as "Integrate". Use a 2x2 grid and a single
+   connector line instead. */
+@media (max-width: 420px) {
+  .sha-sources {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+    padding-bottom: 18px;
+  }
+
+  .sha-source {
+    padding: 10px 8px;
+    font-size: 0.72rem;
+  }
+
+  .sha-source::after {
+    display: none;
+  }
+
+  .sha-sources::after {
+    left: 12%;
+    right: 12%;
+  }
+}
+
+/* Give the service title the full second column on narrow phones.
+   The badge drops below the title instead of squeezing it to an
+   ellipsis. */
+@media (max-width: 380px) {
+  .sha-card-head {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    grid-template-rows: auto auto;
+    gap: 5px 10px;
+    align-items: center;
+  }
+
+  .sha-card-icon {
+    grid-row: 1 / span 2;
+  }
+
+  .sha-card-copy {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .sha-badge {
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: start;
+  }
+}
+
+/* Several content grids use fixed minimum tracks (300px/360px) that
+   overflow once the container padding is applied on small phones. */
+@media (max-width: 480px) {
+  .team-grid,
+  .approach-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  .team-card,
+  .approach-step {
+    min-width: 0 !important;
+  }
+}
