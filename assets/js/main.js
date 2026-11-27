@@ -495,11 +495,14 @@
       banner.querySelector('.btn-accept').addEventListener('click', function() {
         localStorage.setItem('cookie_consent', 'accepted');
         banner.classList.remove('visible');
+        window.dispatchEvent(new CustomEvent('pa:consent', { detail: 'accepted' }));
+        if (typeof window.paLoadAnalytics === 'function') window.paLoadAnalytics();
       });
 
       banner.querySelector('.btn-decline').addEventListener('click', function() {
         localStorage.setItem('cookie_consent', 'declined');
         banner.classList.remove('visible');
+        window.dispatchEvent(new CustomEvent('pa:consent', { detail: 'declined' }));
       });
 
       requestAnimationFrame(function() {

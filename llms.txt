@@ -104,6 +104,7 @@
 - [Technologies](https://performalytic.com/technologies/)
 - [Knowledge Hub](https://performalytic.com/knowledge/)
 - [FAQ](https://performalytic.com/faq/)
+- [Security & compliance](https://performalytic.com/security/): Security posture, controls, and responsible disclosure
 - [Contact](https://performalytic.com/contact/)
 - [Careers](https://performalytic.com/careers/)
 - [Apply to Careers](https://performalytic.com/careers/apply/): Job openings and the application form

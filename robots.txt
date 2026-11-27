@@ -1,5 +1,5 @@
 # robots.txt - https://performalytic.com/robots.txt
-# Last updated: 2026-11-13
+# Last updated: 2026-11-27
 #
 # Policy: AI crawlers, AI search/answer engines, and user-triggered AI agents are
 # explicitly welcome on the website, the company/organization pages, and the
@@ -8,6 +8,7 @@
 #
 # LLM-readable summary: https://performalytic.com/llms.txt
 # Full context:         https://performalytic.com/llms-full.txt
+# Security contact:     https://performalytic.com/.well-known/security.txt
 
 # Content Signals (https://contentsignals.org) - AI use is permitted
 Content-Signal: search=yes, ai-train=yes, ai-input=yes

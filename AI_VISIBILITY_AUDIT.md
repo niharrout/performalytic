@@ -110,8 +110,11 @@ AI engines copy the source. Fix the page, not the model:
 - [ ] `https://performalytic.com/llms.txt` returns 200 and lists the newest pages
 - [ ] `https://performalytic.com/robots.txt` still allows GPTBot, OAI-SearchBot, PerplexityBot, ClaudeBot, Google-Extended
 - [ ] `https://performalytic.com/sitemap.xml` includes every live page
+- [ ] `https://performalytic.com/.well-known/security.txt` returns 200
 - [ ] GA4 → Reports → Traffic acquisition → filter referral source containing `chatgpt` / `perplexity` / `gemini` / `copilot`
+- [ ] GA4 → Events → confirm `ai_referral` is collecting (custom parameter `ai_source`)
 - [ ] Google Search Console → Performance → filter query containing `performalytic` (AI Overview impressions live here)
+- [ ] Run `npm run seo:ai-report` after filling the CSV — it prints mention, citation, and accuracy rates by group
 
 ## 9. Files
 

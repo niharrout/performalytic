@@ -290,6 +290,8 @@ AI crawlers, AI search/answer engines, and user-triggered assistants are explici
 - Crawlable: all public pages, including the product pages and 4dalert.com
 - Excluded: /_partners/, /_case-studies/, /partners/, /__* (drafts and dev artifacts)
 - Attribution: Performalytic — https://performalytic.com
+- Security and trust: https://performalytic.com/security/
+- Responsible disclosure: https://performalytic.com/.well-known/security.txt
 
 ## Feeds
 

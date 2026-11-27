@@ -10,7 +10,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "seo": "node scripts/10-feed-sitemap.js",
     "seo:sitemap": "node generate-sitemap.js",
-    "seo:indexnow": "node scripts/indexnow.js"
+    "seo:indexnow": "node scripts/indexnow.js",
+    "seo:audit": "node scripts/audit-site.js",
+    "seo:ai-report": "node scripts/ai-visibility-report.js",
+    "analytics:shared": "node scripts/31-shared-analytics.js"
   },
   "repository": {
     "type": "git",
