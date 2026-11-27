@@ -1,0 +1,76 @@
+{
+  "site": "https://performalytic.com/",
+  "brandTerms": ["performalytic", "4dalert"],
+  "competitors": [
+    "Accenture", "Deloitte", "PwC", "Capgemini", "IBM", "Infosys", "TCS", "Wipro",
+    "Informatica", "Reltio", "Stibo", "Ataccama", "Collibra", "Monte Carlo",
+    "Great Expectations", "dbt Labs", "Kyon Consulting", "Advance Data Strategy"
+  ],
+  "priorityKeywords": [
+    { "keyword": "performalytic", "tier": "brand", "target": 1 },
+    { "keyword": "4dalert", "tier": "brand", "target": 1 },
+    { "keyword": "performalytic reviews", "tier": "brand", "target": 3 },
+    { "keyword": "4dalert reviews", "tier": "brand", "target": 3 },
+
+    { "keyword": "data reconciliation software", "tier": "product", "target": 10 },
+    { "keyword": "data reconciliation platform", "tier": "product", "target": 10 },
+    { "keyword": "data quality platform", "tier": "product", "target": 10 },
+    { "keyword": "mdm platform", "tier": "product", "target": 10 },
+    { "keyword": "schema compare tool", "tier": "product", "target": 10 },
+    { "keyword": "master data management software", "tier": "product", "target": 10 },
+
+    { "keyword": "what is data reconciliation", "tier": "topic", "target": 10 },
+    { "keyword": "data quality framework", "tier": "topic", "target": 10 },
+    { "keyword": "how to choose a bi platform", "tier": "topic", "target": 10 },
+    { "keyword": "what is master data management", "tier": "topic", "target": 10 },
+    { "keyword": "enterprise rag architecture", "tier": "topic", "target": 10 },
+    { "keyword": "mdm implementation timeline", "tier": "topic", "target": 10 },
+    { "keyword": "build vs buy data quality platform", "tier": "topic", "target": 10 },
+    { "keyword": "data observability", "tier": "topic", "target": 10 },
+    { "keyword": "schema drift", "tier": "topic", "target": 10 },
+    { "keyword": "entity resolution", "tier": "topic", "target": 10 },
+
+    { "keyword": "data analytics consulting chicago", "tier": "local", "target": 3 },
+    { "keyword": "ai consulting chicago", "tier": "local", "target": 3 },
+    { "keyword": "data engineering consulting chicago", "tier": "local", "target": 5 },
+
+    { "keyword": "best enterprise data analytics consulting firms", "tier": "competitive", "target": 20 },
+    { "keyword": "top mdm implementation firms", "tier": "competitive", "target": 20 },
+    { "keyword": "data quality consulting", "tier": "competitive", "target": 10 }
+  ],
+  "prompts": [
+    { "id": "A1", "group": "A", "prompt": "What is Performalytic?" },
+    { "id": "A2", "group": "A", "prompt": "Who is Performalytic and what does the company do?" },
+    { "id": "A3", "group": "A", "prompt": "Is Performalytic a legitimate company? What do you know about it?" },
+    { "id": "B1", "group": "B", "prompt": "Best enterprise data analytics consulting firms?" },
+    { "id": "B2", "group": "B", "prompt": "Top firms for master data management implementation?" },
+    { "id": "B3", "group": "B", "prompt": "Best companies for AI and data strategy consulting in Chicago?" },
+    { "id": "C1", "group": "C", "prompt": "What is data reconciliation?" },
+    { "id": "C2", "group": "C", "prompt": "What is a data quality framework?" },
+    { "id": "C3", "group": "C", "prompt": "How do you choose a business intelligence platform?" },
+    { "id": "C4", "group": "C", "prompt": "What is master data management?" },
+    { "id": "C5", "group": "C", "prompt": "What is enterprise RAG architecture?" },
+    { "id": "D1", "group": "D", "prompt": "What is 4DAlert?" },
+    { "id": "D2", "group": "D", "prompt": "Performalytic reviews" },
+    { "id": "D3", "group": "D", "prompt": "How long does an MDM implementation take?" },
+    { "id": "D4", "group": "D", "prompt": "Build vs buy for a data quality platform?" }
+  ],
+  "thresholds": {
+    "minImpressionsForMover": 50,
+    "opportunityPositionMin": 8,
+    "opportunityPositionMax": 30,
+    "opportunityMinImpressions": 100,
+    "lowCtr": 0.02,
+    "clickDropAlertPct": 0.3,
+    "positionDropAlert": 5,
+    "aiCitationDropPoints": 10
+  },
+  "serp": {
+    "maxQueries": 10
+  },
+  "ai": {
+    "autoRun": false,
+    "provider": "perplexity",
+    "model": "sonar"
+  }
+}

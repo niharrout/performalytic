@@ -13,7 +13,13 @@
     "seo:indexnow": "node scripts/indexnow.js",
     "seo:audit": "node scripts/audit-site.js",
     "seo:ai-report": "node scripts/ai-visibility-report.js",
-    "analytics:shared": "node scripts/31-shared-analytics.js"
+    "analytics:shared": "node scripts/31-shared-analytics.js",
+    "report": "node scripts/reports/run.js --period weekly",
+    "report:daily": "node scripts/reports/run.js --period daily",
+    "report:weekly": "node scripts/reports/run.js --period weekly",
+    "report:monthly": "node scripts/reports/run.js --period monthly",
+    "report:ai": "node scripts/reports/run.js --period weekly --with-ai",
+    "report:offline": "node scripts/reports/run.js --period weekly --offline"
   },
   "repository": {
     "type": "git",

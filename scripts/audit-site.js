@@ -11,7 +11,7 @@ const path = require('path');
 
 const ROOT = path.resolve(__dirname, '..');
 const SITE = 'https://performalytic.com';
-const SKIP_DIRS = new Set(['node_modules', '.git', 'assets/docs']);
+const SKIP_DIRS = new Set(['node_modules', '.git', 'assets/docs', 'reports']);
 const ASSET_EXT = /\.(css|js|png|jpe?g|webp|gif|svg|ico|woff2?|ttf|otf|eot|mp4|webm|pdf|zip)$/i;
 
 const errors = [];

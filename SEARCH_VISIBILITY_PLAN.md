@@ -333,6 +333,7 @@ The product is currently split across two domains with no category ownership. Fi
 | Product content | Added "How 4DAlert compares", "How long does an MDM implementation take?", and "Build vs buy a data quality platform" tables, plus an MDM-timeline FAQ entry. | `products/index.html` |
 | Topic content | Added the six-dimensions table to the data quality guide; added a weighted BI scorecard, visible FAQ, and `FAQPage` schema to the platform-selection guide. | `blog/data-quality-framework/index.html`, `blog/choose-right-analytics-platform/index.html` |
 | Trust | Added RFC 9116 `security.txt`; added `WebPage` freshness schema to `/security/`; linked security in `llms.txt` and `llms-full.txt`; added the security contact to `robots.txt`. | `.well-known/security.txt`, `security/index.html`, `llms*.txt`, `robots.txt` |
+| Reporting | Added a daily/weekly/monthly visibility pipeline: Search Console, GA4 (including AI referrals), Bing, optional SERP presence, and optional Perplexity prompt runs, with Markdown + HTML output, alerts, and recommendations. | `scripts/reports/*`, `reports/config.json`, `reports/README.md`, `.github/workflows/rank-report.yml` |
 
 ### Still requires a human (off-site or editorial)
 
@@ -353,3 +354,52 @@ The product is currently split across two domains with no category ownership. Fi
 1. Run `npm run seo:audit` (already passing).
 2. Commit and push; the deploy workflow regenerates `sitemap.xml` with real commit dates and submits changed URLs to IndexNow.
 3. Run the manual AI baseline within seven days so the 90-day clock starts from a real number.
+
+---
+
+## 12. Reporting cadence — implemented 2026-11-27
+
+The reporting pipeline lives in `reports/`. It pulls the four views that matter, because "ranking" is not one number:
+
+| View | Source | What it proves |
+|---|---|---|
+| Google organic | Search Console API | Queries we already appear for, average position, clicks, CTR, page attribution. |
+| Bing / Copilot | Bing Webmaster API | Same view in Bing's index. |
+| SERP presence | SerpAPI or Google Custom Search | Whether we appear at all for priority keywords. Search Console cannot show zero-impression queries. |
+| AI answers | Manual 75-cell audit + optional Perplexity API | Mention, citation, and accuracy across ChatGPT, Gemini, Copilot, Claude, and Perplexity. |
+| AI referrals | GA4 Data API | Which assistants send sessions, to which pages, and whether that is growing. |
+
+### Cadence
+
+| Cadence | Automated at | Read | Act | Time |
+|---|---|---|---|---|
+| Daily | 06:00 UTC | Alerts, brand queries, AI referrals, Bing clicks | Triage only; escalate outages or lost brand queries | 10 min |
+| Weekly | Monday 07:00 UTC | 7-day keyword movers, striking-distance queries, low-CTR pages, AI gaps, SERP gaps | Choose 2–3 content actions and add them to the queue | 30–45 min |
+| Monthly | 1st at 08:00 UTC | 28-day trend, full 75-cell AI audit, competitor mentions, content decay, reviews/backlinks/GBP | Re-baseline the 8 target pages, update this plan, assign off-site work | 2–3 hours |
+| Quarterly | First week | Keyword/prompt coverage, entity accuracy, share of voice | Add/prune keywords and prompts, reset targets | Half day |
+
+### Commands
+
+```bash
+npm run report          # weekly
+npm run report:daily
+npm run report:monthly
+npm run report:ai       # weekly + Perplexity prompt run
+npm run report:offline  # rebuild from cached raw responses
+```
+
+Output goes to the git-ignored `reports/out/<period>/<end-date>/`: `report.md`, `dashboard.html`, `summary.json`, and CSV extracts. GitHub Actions uploads the folder as a 90-day artifact and appends `report.md` to the job summary.
+
+### Setup
+
+Follow `reports/README.md`. The minimum useful setup is a Google service account with Search Console and GA4 read access. Add Bing, SERP, and Perplexity keys when ready.
+
+### What remains manual
+
+- The 75-cell AI audit and the accuracy judgment.
+- Google Business Profile insights, reviews, and local pack rankings.
+- Backlinks and unlinked mentions.
+- Gridinsoft, Salary.com, Glassdoor, Comparably, and review-profile corrections.
+- Deciding which 2–3 actions to take each week.
+
+The report is a decision aid, not a promise of rankings. It makes the inputs visible so the weekly and monthly reviews are based on evidence rather than anecdotes.

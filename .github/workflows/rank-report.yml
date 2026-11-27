@@ -1,0 +1,90 @@
+name: Ranking and AI visibility report
+
+on:
+  schedule:
+    # Daily at 06:00 UTC
+    - cron: '0 6 * * *'
+    # Weekly on Monday at 07:00 UTC
+    - cron: '0 7 * * 1'
+    # Monthly on the 1st at 08:00 UTC
+    - cron: '0 8 1 * *'
+  workflow_dispatch:
+    inputs:
+      period:
+        description: Report period
+        required: true
+        default: weekly
+        type: choice
+        options:
+          - daily
+          - weekly
+          - monthly
+      with_ai:
+        description: Run the Perplexity AI probe (costs API credits)
+        required: false
+        default: false
+        type: boolean
+
+permissions:
+  contents: read
+
+concurrency:
+  group: rank-report
+  cancel-in-progress: false
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Determine period
+        id: period
+        shell: bash
+        run: |
+          PERIOD="${{ github.event.inputs.period }}"
+          if [ -z "$PERIOD" ]; then
+            case "${{ github.event.schedule }}" in
+              "0 7 * * 1") PERIOD=weekly ;;
+              "0 8 1 * *") PERIOD=monthly ;;
+              *) PERIOD=daily ;;
+            esac
+          fi
+          echo "period=$PERIOD" >> "$GITHUB_OUTPUT"
+          AI_FLAG=""
+          if [ "${{ github.event.inputs.with_ai }}" = "true" ]; then
+            AI_FLAG="--with-ai"
+          fi
+          echo "ai_flag=$AI_FLAG" >> "$GITHUB_OUTPUT"
+          echo "Running $PERIOD report"
+
+      - name: Generate report
+        env:
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+          GSC_SITE_URL: ${{ secrets.GSC_SITE_URL }}
+          GA4_PROPERTY_ID: ${{ secrets.GA4_PROPERTY_ID }}
+          BING_API_KEY: ${{ secrets.BING_API_KEY }}
+          BING_SITE_URL: ${{ secrets.BING_SITE_URL }}
+          SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
+          GOOGLE_CSE_KEY: ${{ secrets.GOOGLE_CSE_KEY }}
+          GOOGLE_CSE_CX: ${{ secrets.GOOGLE_CSE_CX }}
+          PERPLEXITY_API_KEY: ${{ secrets.PERPLEXITY_API_KEY }}
+          SERP_MAX_QUERIES: ${{ vars.SERP_MAX_QUERIES }}
+        run: node scripts/reports/run.js --period "${{ steps.period.outputs.period }}" ${{ steps.period.outputs.ai_flag }}
+
+      - name: Upload report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: visibility-${{ steps.period.outputs.period }}-${{ github.run_id }}
+          path: reports/out/${{ steps.period.outputs.period }}
+          retention-days: 90
+          if-no-files-found: warn

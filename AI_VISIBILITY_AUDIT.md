@@ -114,7 +114,8 @@ AI engines copy the source. Fix the page, not the model:
 - [ ] GA4 → Reports → Traffic acquisition → filter referral source containing `chatgpt` / `perplexity` / `gemini` / `copilot`
 - [ ] GA4 → Events → confirm `ai_referral` is collecting (custom parameter `ai_source`)
 - [ ] Google Search Console → Performance → filter query containing `performalytic` (AI Overview impressions live here)
-- [ ] Run `npm run seo:ai-report` after filling the CSV — it prints mention, citation, and accuracy rates by group
+- [ ] Run `npm run seo:ai-report` after filling the CSV - it prints mention, citation, and accuracy rates by group
+- [ ] Run `npm run report` for the weekly Search Console/GA4/Bing/SERP/AI rollup, or `npm run report:ai` to include the Perplexity probe
 
 ## 9. Files
 
