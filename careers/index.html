@@ -87,10 +87,11 @@ section{padding:80px 0}
 .culture-card:hover p{color:var(--pa-t-muted)}
 
 .openings-section{background:linear-gradient(180deg,var(--pa-bg) 0%,var(--pa-bg-2) 100%)}
-.jobs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(420px,1fr));gap:28px;margin-top:48px}
+.jobs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(420px,1fr));gap:28px;margin-top:48px;align-items:stretch}
 
 .job-card{
   --accent:#2563eb;--accent-dark:#1d4ed8;--accent-2:#60a5fa;--accent-bg:rgba(37,99,235,.07);
+  display:flex;flex-direction:column;min-height:520px;
   background:var(--pa-wb-002);border-radius:22px;padding:34px 32px 28px;position:relative;overflow:hidden;
   border:1px solid var(--pa-wd-006);
   box-shadow:0 1px 2px var(--pa-sh-k-008);
@@ -98,6 +99,19 @@ section{padding:80px 0}
 }
 .job-card.role-frontend{--accent:#7c3aed;--accent-dark:#6d28d9;--accent-2:#c4b5fd;--accent-bg:rgba(124,58,237,.07)}
 .job-card.role-data{--accent:#0d9488;--accent-dark:#0f766e;--accent-2:#5eead4;--accent-bg:rgba(13,148,136,.07)}
+.job-card.role-marketing{--accent:#d97706;--accent-dark:#b45309;--accent-2:#fbbf24;--accent-bg:rgba(217,119,6,.08)}
+.job-card.role-seo{--accent:#4f46e5;--accent-dark:#4338ca;--accent-2:#a5b4fc;--accent-bg:rgba(79,70,229,.08)}
+.job-card.is-closed{--accent:#64748b;--accent-dark:#475569;--accent-2:#94a3b8;--accent-bg:rgba(100,116,139,.1);opacity:.78}
+.job-card.is-closed:hover{transform:none;box-shadow:0 1px 2px var(--pa-sh-k-008)}
+.job-card.is-closed:hover::before{opacity:0;animation-play-state:paused}
+.job-card.is-closed .job-medallion{background:linear-gradient(145deg,#64748b,#475569);box-shadow:none}
+.job-card.is-closed:hover .job-medallion{transform:none}
+.job-card.is-closed .job-live-dot::after{display:none}
+.job-card.is-closed .job-live span:last-child{color:var(--pa-t-muted)}
+.job-card.is-closed .skill-tag::before{background:var(--pa-t-dim)}
+.job-card.is-closed:hover .skill-tag{border-color:var(--pa-wd-006)}
+.job-card.is-closed .job-apply-btn{background:var(--pa-wb-006);color:var(--pa-t-dim);box-shadow:none;cursor:not-allowed;pointer-events:none}
+.job-card.is-closed .job-apply-btn:hover{transform:none;box-shadow:none}
 
 .job-card::before{
   content:'';position:absolute;inset:0;border-radius:22px;padding:1px;
@@ -113,7 +127,7 @@ section{padding:80px 0}
 
 .job-card:hover{transform:translateY(-8px);box-shadow:0 28px 60px -20px var(--accent-bg),0 8px 20px var(--pa-sh-152342-006)}
 
-.job-card-top{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:22px}
+.job-card-top{display:flex;align-items:flex-start;justify-content:space-between;min-height:52px;margin-bottom:20px}
 .job-medallion{
   width:52px;height:52px;border-radius:16px;
   background:linear-gradient(145deg,var(--accent),var(--accent-dark));
@@ -130,16 +144,16 @@ section{padding:80px 0}
 @keyframes ping{0%{transform:scale(1);opacity:.5}75%,100%{transform:scale(2.6);opacity:0}}
 .job-live span{font-size:.72rem;font-weight:700;color:var(--accent-dark);text-transform:uppercase;letter-spacing:.4px}
 
-.job-title{font-size:1.4rem;font-weight:800;color:var(--pa-t-strong);letter-spacing:-.3px;margin-bottom:6px}
-.job-dept{font-size:.85rem;font-weight:600;color:var(--accent);margin-bottom:18px}
+.job-title{display:flex;align-items:flex-end;min-height:2.5em;font-size:1.4rem;line-height:1.25;font-weight:800;color:var(--pa-t-strong);letter-spacing:-.3px;margin-bottom:6px}
+.job-dept{min-height:1.3rem;font-size:.85rem;font-weight:600;color:var(--accent);margin-bottom:16px}
 
-.job-meta{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:20px}
+.job-meta{display:flex;flex-wrap:wrap;align-content:flex-start;gap:10px;min-height:3.5rem;margin-bottom:18px}
 .job-meta-item{display:inline-flex;align-items:center;gap:6px;font-size:.8rem;font-weight:600;color:var(--pa-t-muted);background:var(--pa-wb-002);border:1px solid var(--pa-wd-006);padding:7px 12px;border-radius:9px}
 .job-meta-item svg{width:14px;height:14px;color:var(--pa-t-muted);flex-shrink:0}
 
-.job-description{font-size:.92rem;color:var(--pa-t-muted);line-height:1.7;margin-bottom:22px}
+.job-description{min-height:5.1rem;font-size:.92rem;color:var(--pa-t-muted);line-height:1.7;margin-bottom:18px}
 
-.job-skills{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:26px}
+.job-skills{display:flex;flex-wrap:wrap;align-content:flex-start;gap:8px;min-height:3rem;margin-bottom:22px}
 .skill-tag{
   display:inline-flex;align-items:center;gap:6px;
   background:linear-gradient(180deg,var(--pa-bg) 0%,var(--pa-bg-2) 100%);color:var(--pa-t-dim);padding:7px 13px 7px 10px;border-radius:8px;
@@ -151,7 +165,7 @@ section{padding:80px 0}
 .skill-tag:hover{background:var(--accent-bg);color:var(--accent-dark);transform:translateY(-1px)}
 .skill-tag:hover::before{background:var(--accent)}
 
-.job-footer{display:flex;align-items:center;justify-content:space-between;padding-top:22px;border-top:1px solid var(--pa-wd-004)}
+.job-footer{display:flex;align-items:center;justify-content:space-between;margin-top:auto;padding-top:22px;border-top:1px solid var(--pa-wd-004)}
 .job-salary-label{font-size:.72rem;font-weight:600;color:var(--pa-t-muted);text-transform:uppercase;letter-spacing:.4px;margin-bottom:2px}
 .job-salary{font-size:1rem;font-weight:800;color:var(--pa-t-strong)}
 
@@ -167,6 +181,21 @@ section{padding:80px 0}
 .job-apply-btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px -4px var(--accent-bg)}
 .job-apply-btn:hover svg{transform:translateX(3px)}
 .job-apply-btn:focus-visible{outline:2px solid var(--accent-2);outline-offset:2px}
+
+.job-details{margin:-4px 0 22px;border:1px solid var(--pa-wd-006);border-radius:12px;background:var(--pa-wb-003);overflow:hidden}
+.job-details summary{cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 16px;font-size:.8rem;font-weight:700;color:var(--pa-t);transition:background .2s,color .2s}
+.job-details summary::-webkit-details-marker{display:none}
+.job-details summary::after{content:'+';font-size:1.15rem;line-height:1;color:var(--accent-2);flex:none}
+.job-details[open] summary::after{content:'−'}
+.job-details summary:hover{background:var(--accent-bg);color:var(--pa-t-strong)}
+.job-details summary:focus-visible{outline:2px solid var(--accent-2);outline-offset:-2px}
+.job-details-body{padding:2px 16px 16px;border-top:1px solid var(--pa-wd-004)}
+.job-details-body h4{font-size:.78rem;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--pa-t-strong);margin:18px 0 8px}
+.job-details-body p,.job-details-body li{font-size:.84rem;line-height:1.65;color:var(--pa-t-muted)}
+.job-details-body p{margin:12px 0 8px}
+.job-details-body ul{padding-left:1.15em;margin:0 0 12px}
+.job-details-body li{margin:6px 0}
+.job-details-body strong{color:var(--pa-t-strong)}
 
 @media(prefers-reduced-motion:reduce){
   .job-card,.job-medallion,.job-apply-btn,.skill-tag{transition:none}
@@ -218,6 +247,7 @@ footer{background:var(--pa-bg-deep);border-top:1px solid var(--pa-wd-004);paddin
 .form-row{grid-template-columns:1fr}
 section{padding:60px 0}
 .jobs-grid{grid-template-columns:1fr}
+.job-card{min-height:0}
 .footer-grid{grid-template-columns:1fr 1fr;gap:32px}
 }
 @media(max-width:480px){
@@ -225,7 +255,7 @@ section{padding:60px 0}
 .footer-bottom{flex-direction:column;gap:12px;text-align:center}
 }
 </style>
-<script type="application/ld+json" nonce="P3rf0rm4lyt1c">[{"@context":"https://schema.org","@type":"Organization","name":"Performalytic","url":"https://performalytic.com/","logo":"https://performalytic.com/assets/images/performalytic-logo.png","sameAs":["https://www.linkedin.com/company/performalytic-corp/","https://twitter.com/performalytic-corp","https://www.facebook.com/performalytic-corp","https://www.instagram.com/performalytic-corp","https://www.youtube.com/@performalytic-corp"],"foundingDate":"2018","numberOfEmployees":800,"knowsAbout":["data analytics","business intelligence","artificial intelligence","machine learning","generative AI","RAG","AI agents","data quality","data governance","master data management","data reconciliation","schema CI/CD","DevOps","Power BI","SAP","Snowflake","Databricks","Microsoft Fabric","data strategy","enterprise application development"],"areaServed":["United States","India","Worldwide"],"knowsLanguage":["en"],"contactPoint":{"@type":"ContactPoint","contactType":"customer service","email":"info@performalytic.com","url":"https://performalytic.com/contact/"},"@id":"https://performalytic.com/#organization","address":{"@type":"PostalAddress","streetAddress":"111 W. Jackson Blvd, Suite 1700","addressLocality":"Chicago","addressRegion":"IL","postalCode":"60604","addressCountry":"US"}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://performalytic.com/"},{"@type":"ListItem","position":2,"name":"Careers","item":"https://performalytic.com/careers/"}]},{"@context":"https://schema.org","@type":"JobPosting","title":"Backend Developer","description":"Build and maintain scalable backend services, REST/GraphQL APIs, and data pipelines. Work with microservices architecture and cloud infrastructure to deliver high-performance systems.","datePosted":"2026-07-16","employmentType":"FULL_TIME","hiringOrganization":{"@id":"https://performalytic.com/#organization"},"jobLocation":{"@type":"Place","address":{"@type":"PostalAddress","addressLocality":"Bhubaneswar","addressRegion":"Odisha","postalCode":"751024","addressCountry":"IN"}},"skills":"Node.js, Python, PostgreSQL, REST APIs, Docker, AWS","url":"https://performalytic.com/careers/apply/?role=Backend+Developer"},{"@context":"https://schema.org","@type":"JobPosting","title":"Web Developer","description":"Develop modern, responsive web applications using React or Vue.js. Collaborate with designers and backend teams to deliver pixel-perfect, accessible user interfaces.","datePosted":"2026-07-16","employmentType":"FULL_TIME","hiringOrganization":{"@id":"https://performalytic.com/#organization"},"jobLocation":{"@type":"Place","address":{"@type":"PostalAddress","addressLocality":"Bhubaneswar","addressRegion":"Odisha","postalCode":"751024","addressCountry":"IN"}},"skills":"React, Angular, Next.js, HTML/CSS, JavaScript, TypeScript, Tailwind CSS","url":"https://performalytic.com/careers/apply/?role=Web+Developer"},{"@context":"https://schema.org","@type":"JobPosting","title":"Data Engineer","description":"Design and build scalable data pipelines and ETL workflows. Work with data warehousing, streaming platforms, and cloud infrastructure to ensure reliable data flow across systems.","datePosted":"2026-07-16","employmentType":"FULL_TIME","hiringOrganization":{"@id":"https://performalytic.com/#organization"},"jobLocation":{"@type":"Place","address":{"@type":"PostalAddress","addressLocality":"Bhubaneswar","addressRegion":"Odisha","postalCode":"751024","addressCountry":"IN"}},"skills":"Python, SQL, Snowflake, Databricks, Apache Spark, Airflow, AWS, Data Modeling","url":"https://performalytic.com/careers/apply/?role=Data+Engineer"},{"@context":"https://schema.org","@type":"WebPage","@id":"https://performalytic.com/careers/#webpage","url":"https://performalytic.com/careers/","name":"Careers at Performalytic - Data, AI &amp; DevOps Jobs","description":"Join Performalytic team of 800+ data experts. Explore open positions in backend development, web development, data analytics, AI, and DevOps.","inLanguage":"en","dateModified":"2026-11-27","isPartOf":{"@id":"https://performalytic.com/#website"},"about":{"@id":"https://performalytic.com/#organization"},"speakable":{"@type":"SpeakableSpecification","cssSelector":["h1","h2"]}},{"@context":"https://schema.org","@type":"FAQPage","@id":"https://performalytic.com/careers/#faq","url":"https://performalytic.com/careers/#faq","dateModified":"2026-11-27","mainEntity":[{"@type":"Question","name":"What roles does Performalytic hire?","acceptedAnswer":{"@type":"Answer","text":"Performalytic hires data, analytics, AI, and DevOps professionals across its Chicago headquarters and Bhubaneswar delivery center. Open roles are listed on the careers page."}},{"@type":"Question","name":"Where are the jobs located?","acceptedAnswer":{"@type":"Answer","text":"Open roles list their location. Performalytic operates from Chicago, Illinois, and Bhubaneswar, India."}},{"@type":"Question","name":"How do I apply?","acceptedAnswer":{"@type":"Answer","text":"Use the application form linked from the careers page or the specific job posting."}},{"@type":"Question","name":"What is the hiring process?","acceptedAnswer":{"@type":"Answer","text":"The process typically starts with an application review, followed by interviews with the hiring team. The recruiter shares the specific steps for each role."}}]}]</script>
+<script type="application/ld+json" nonce="P3rf0rm4lyt1c">[{"@context":"https://schema.org","@type":"Organization","name":"Performalytic","url":"https://performalytic.com/","logo":"https://performalytic.com/assets/images/performalytic-logo.png","sameAs":["https://www.linkedin.com/company/performalytic-corp/","https://twitter.com/performalytic-corp","https://www.facebook.com/performalytic-corp","https://www.instagram.com/performalytic-corp","https://www.youtube.com/@performalytic-corp"],"foundingDate":"2018","numberOfEmployees":800,"knowsAbout":["data analytics","business intelligence","artificial intelligence","machine learning","generative AI","RAG","AI agents","data quality","data governance","master data management","data reconciliation","schema CI/CD","DevOps","Power BI","SAP","Snowflake","Databricks","Microsoft Fabric","data strategy","enterprise application development"],"areaServed":["United States","India","Worldwide"],"knowsLanguage":["en"],"contactPoint":{"@type":"ContactPoint","contactType":"customer service","email":"info@performalytic.com","url":"https://performalytic.com/contact/"},"@id":"https://performalytic.com/#organization","address":{"@type":"PostalAddress","streetAddress":"111 W. Jackson Blvd, Suite 1700","addressLocality":"Chicago","addressRegion":"IL","postalCode":"60604","addressCountry":"US"}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://performalytic.com/"},{"@type":"ListItem","position":2,"name":"Careers","item":"https://performalytic.com/careers/"}]},{"@context":"https://schema.org","@type":"JobPosting","title":"B2B Software Marketing Executive","description":"Promote 4DAlert's enterprise software solutions, generate qualified business leads and expand our reach across global markets through targeted outreach, market research and digital marketing campaigns.","datePosted":"2026-11-27","employmentType":"FULL_TIME","hiringOrganization":{"@id":"https://performalytic.com/#organization"},"jobLocation":{"@type":"Place","address":{"@type":"PostalAddress","addressLocality":"Bhubaneswar","addressRegion":"Odisha","postalCode":"751024","addressCountry":"IN"}},"skills":"B2B marketing, lead generation, email marketing, LinkedIn outreach, content writing, CRM, market research, ABM","url":"https://performalytic.com/careers/apply/?role=B2B+Software+Marketing+Executive"},{"@context":"https://schema.org","@type":"JobPosting","title":"SEO, AEO & GEO Executive – Web Development","description":"Improve search rankings, organic traffic and AI-powered search visibility for 4DAlert through SEO, AEO and GEO, with website maintenance and development support.","datePosted":"2026-11-27","employmentType":"FULL_TIME","hiringOrganization":{"@id":"https://performalytic.com/#organization"},"jobLocation":{"@type":"Place","address":{"@type":"PostalAddress","addressLocality":"Bhubaneswar","addressRegion":"Odisha","postalCode":"751024","addressCountry":"IN"}},"skills":"SEO, AEO, GEO, Google Analytics 4, Google Search Console, SEMrush, Ahrefs, HTML, CSS, JavaScript, schema markup","url":"https://performalytic.com/careers/apply/?role=SEO%2C+AEO+%26+GEO+Executive+%E2%80%93+Web+Development"},{"@context":"https://schema.org","@type":"WebPage","@id":"https://performalytic.com/careers/#webpage","url":"https://performalytic.com/careers/","name":"Careers at Performalytic - Data, AI &amp; DevOps Jobs","description":"Join Performalytic team of 800+ data experts. Explore open positions in backend development, web development, data analytics, AI, and DevOps.","inLanguage":"en","dateModified":"2026-11-27","isPartOf":{"@id":"https://performalytic.com/#website"},"about":{"@id":"https://performalytic.com/#organization"},"speakable":{"@type":"SpeakableSpecification","cssSelector":["h1","h2"]}},{"@context":"https://schema.org","@type":"FAQPage","@id":"https://performalytic.com/careers/#faq","url":"https://performalytic.com/careers/#faq","dateModified":"2026-11-27","mainEntity":[{"@type":"Question","name":"What roles does Performalytic hire?","acceptedAnswer":{"@type":"Answer","text":"Performalytic hires data, analytics, AI, and DevOps professionals across its Chicago headquarters and Bhubaneswar delivery center. Open roles are listed on the careers page."}},{"@type":"Question","name":"Where are the jobs located?","acceptedAnswer":{"@type":"Answer","text":"Open roles list their location. Performalytic operates from Chicago, Illinois, and Bhubaneswar, India."}},{"@type":"Question","name":"How do I apply?","acceptedAnswer":{"@type":"Answer","text":"Use the application form linked from the careers page or the specific job posting."}},{"@type":"Question","name":"What is the hiring process?","acceptedAnswer":{"@type":"Answer","text":"The process typically starts with an application review, followed by interviews with the hiring team. The recruiter shares the specific steps for each role."}}]}]</script>
 <style id="pa-theme" nonce="P3rf0rm4lyt1c">
 /* Theme tokens. The dark column reproduces the colours the site shipped
    with, so dark mode is unchanged; light mode re-points the same tokens. */
@@ -478,7 +508,7 @@ nav.breadcrumb{background:none!important;border:0!important;box-shadow:none!impo
   <div class="container">
     <div class="quick-answer">
       <h2>Quick answer</h2>
-      <p>Performalytic hires data, analytics, AI, and DevOps professionals across its Chicago headquarters and Bhubaneswar delivery center. Open roles and the application form are listed on the careers page.</p>
+      <p>Performalytic is currently hiring a B2B Software Marketing Executive and an SEO, AEO &amp; GEO Executive &ndash; Web Development in Bhubaneswar. Open roles and the application form are listed on the careers page.</p>
     </div>
     <p class="page-updated">Last updated: <time datetime="2026-11-27">November 27, 2026</time></p>
   </div>
@@ -529,16 +559,16 @@ nav.breadcrumb{background:none!important;border:0!important;box-shadow:none!impo
     <div class="text-center">
       <span class="section-label">Open Positions</span>
       <h2 class="section-title">Find your next role</h2>
-      <p class="section-subtitle mx-auto">We&#x27;re growing fast. Here are the roles we&#x27;re hiring for right now.</p>
+      <p class="section-subtitle mx-auto">Explore our current openings and previously listed roles that are not hiring right now.</p>
     </div>
     <div class="jobs-grid">
  
-      <article class="job-card role-backend reveal" id="job-backend">
+      <article class="job-card role-backend is-closed reveal" id="job-backend" aria-disabled="true">
         <div class="job-card-top">
           <div class="job-medallion" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="7" rx="1.5"/><rect x="2" y="14" width="20" height="7" rx="1.5"/><line x1="6" y1="6.5" x2="6.01" y2="6.5"/><line x1="6" y1="17.5" x2="6.01" y2="17.5"/></svg>
           </div>
-          <div class="job-live"><span class="job-live-dot" aria-hidden="true"></span><span>Actively hiring</span></div>
+          <div class="job-live is-closed"><span class="job-live-dot" aria-hidden="true"></span><span>Currently not hiring</span></div>
         </div>
         <h3 class="job-title">Backend Developer</h3>
         <div class="job-dept">Engineering</div>
@@ -569,16 +599,16 @@ nav.breadcrumb{background:none!important;border:0!important;box-shadow:none!impo
         </div>
         <div class="job-footer">
           <div><div class="job-salary-label">Role</div><div class="job-salary">Backend Developer</div></div>
-          <a href="/careers/apply/?role=Backend+Developer" class="job-apply-btn">Apply now<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          <span class="job-apply-btn is-disabled" aria-disabled="true">Not hiring</span>
         </div>
       </article>
  
-      <article class="job-card role-frontend reveal" id="job-web">
+      <article class="job-card role-frontend is-closed reveal" id="job-web" aria-disabled="true">
         <div class="job-card-top">
           <div class="job-medallion" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
           </div>
-          <div class="job-live"><span class="job-live-dot" aria-hidden="true"></span><span>Actively hiring</span></div>
+          <div class="job-live is-closed"><span class="job-live-dot" aria-hidden="true"></span><span>Currently not hiring</span></div>
         </div>
         <h3 class="job-title">Web Developer</h3>
         <div class="job-dept">Frontend</div>
@@ -608,16 +638,16 @@ nav.breadcrumb{background:none!important;border:0!important;box-shadow:none!impo
         </div>
         <div class="job-footer">
           <div><div class="job-salary-label">Role</div><div class="job-salary">Web Developer</div></div>
-          <a href="/careers/apply/?role=Web+Developer" class="job-apply-btn">Apply now<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          <span class="job-apply-btn is-disabled" aria-disabled="true">Not hiring</span>
         </div>
       </article>
  
-      <article class="job-card role-data reveal" id="job-data-engineer">
+      <article class="job-card role-data is-closed reveal" id="job-data-engineer" aria-disabled="true">
         <div class="job-card-top">
           <div class="job-medallion" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.7-4 3-9 3s-9-1.3-9-3"/><path d="M3 5v14c0 1.7 4 3 9 3s9-1.3 9-3V5"/></svg>
           </div>
-          <div class="job-live"><span class="job-live-dot" aria-hidden="true"></span><span>Actively hiring</span></div>
+          <div class="job-live is-closed"><span class="job-live-dot" aria-hidden="true"></span><span>Currently not hiring</span></div>
         </div>
         <h3 class="job-title">Data Engineer</h3>
         <div class="job-dept">Engineering</div>
@@ -648,13 +678,195 @@ nav.breadcrumb{background:none!important;border:0!important;box-shadow:none!impo
         </div>
         <div class="job-footer">
           <div><div class="job-salary-label">Role</div><div class="job-salary">Data Engineer</div></div>
-          <a href="/careers/apply/?role=Data+Engineer" class="job-apply-btn">Apply now<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          <span class="job-apply-btn is-disabled" aria-disabled="true">Not hiring</span>
         </div>
       </article>
- 
+  
+      <article class="job-card role-marketing reveal" id="job-b2b-marketing">
+        <div class="job-card-top">
+          <div class="job-medallion" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11v2a2 2 0 0 0 2 2h2l4 4V5L7 9H5a2 2 0 0 0-2 2z"/><path d="M15 8a5 5 0 0 1 0 8"/><path d="M18 5a9 9 0 0 1 0 14"/></svg>
+          </div>
+          <div class="job-live"><span class="job-live-dot" aria-hidden="true"></span><span>Actively hiring</span></div>
+        </div>
+        <h3 class="job-title">B2B Software Marketing Executive</h3>
+        <div class="job-dept">Marketing</div>
+        <div class="job-meta">
+          <span class="job-meta-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+            Full-Time
+          </span>
+          <span class="job-meta-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Bhubaneswar
+          </span>
+          <span class="job-meta-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            1 &ndash; 3 Years
+          </span>
+        </div>
+        <p class="job-description">Promote 4DAlert&#x27;s enterprise software solutions, generate qualified business leads and expand our reach across global markets through targeted outreach, market research and digital marketing campaigns.</p>
+        <div class="job-skills">
+          <span class="skill-tag">B2B Marketing</span>
+          <span class="skill-tag">Lead Generation</span>
+          <span class="skill-tag">Email Marketing</span>
+          <span class="skill-tag">LinkedIn Outreach</span>
+          <span class="skill-tag">Content Writing</span>
+          <span class="skill-tag">CRM Tools</span>
+          <span class="skill-tag">Market Research</span>
+          <span class="skill-tag">ABM</span>
+        </div>
+        <details class="job-details">
+          <summary>View full job description</summary>
+          <div class="job-details-body">
+            <p><strong>About the Role</strong></p>
+            <p>We are looking for a B2B Marketing Executive to promote 4DAlert&#x27;s enterprise software solutions, generate qualified business leads and expand our reach across global markets. The candidate will focus on targeted outreach, market research, digital marketing campaigns and engaging with potential clients to create business opportunities.</p>
+            <h4>Key Responsibilities</h4>
+            <ul>
+              <li>Identify target companies, industries and potential customers for 4DAlert.</li>
+              <li>Research and connect with business and technology decision-makers.</li>
+              <li>Execute targeted email marketing, LinkedIn outreach and lead-generation campaigns.</li>
+              <li>Develop marketing content, product presentations and promotional materials.</li>
+              <li>Promote software solutions through digital marketing and outbound campaigns.</li>
+              <li>Manage prospect databases, follow-ups and lead nurturing activities.</li>
+              <li>Conduct market and competitor research to identify business opportunities.</li>
+              <li>Coordinate with sales and technical teams for product demos and prospect engagement.</li>
+              <li>Track campaign performance, lead responses and marketing results.</li>
+            </ul>
+            <h4>Requirements</h4>
+            <ul>
+              <li>Bachelor&#x27;s degree in Marketing, Business Administration or a related field.</li>
+              <li>1&ndash;3 years of experience in B2B marketing, IT marketing or software marketing.</li>
+              <li>Strong communication, content writing and research skills.</li>
+              <li>Experience in lead generation, email marketing and LinkedIn outreach.</li>
+              <li>Familiarity with CRM tools and digital marketing platforms.</li>
+              <li>A proactive, creative and target-oriented approach.</li>
+            </ul>
+            <h4>Preferred</h4>
+            <ul>
+              <li>Experience in SaaS, IT services or enterprise software marketing.</li>
+              <li>Familiarity with LinkedIn Sales Navigator, HubSpot or similar tools.</li>
+              <li>Understanding of B2B sales processes and Account-Based Marketing (ABM).</li>
+              <li>Interest in enterprise technology, data analytics and AI-based software solutions.</li>
+            </ul>
+            <h4>Key Objectives</h4>
+            <ul>
+              <li>Generate qualified leads and business opportunities.</li>
+              <li>Expand product awareness across target markets.</li>
+              <li>Engage potential customers and generate product demo opportunities.</li>
+              <li>Support the growth of 4DAlert through focused B2B marketing initiatives.</li>
+            </ul>
+          </div>
+        </details>
+        <div class="job-footer">
+          <div><div class="job-salary-label">Role</div><div class="job-salary">B2B Software Marketing Executive</div></div>
+          <a href="/careers/apply/?role=B2B+Software+Marketing+Executive" class="job-apply-btn">Apply now<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+      </article>
+  
+      <article class="job-card role-seo reveal" id="job-seo-aeo-geo">
+        <div class="job-card-top">
+          <div class="job-medallion" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="20" y1="20" x2="16.5" y2="16.5"/><path d="M8 11h6M11 8v6"/></svg>
+          </div>
+          <div class="job-live"><span class="job-live-dot" aria-hidden="true"></span><span>Actively hiring</span></div>
+        </div>
+        <h3 class="job-title">SEO, AEO &amp; GEO Executive &ndash; Web Development</h3>
+        <div class="job-dept">Marketing &amp; Web</div>
+        <div class="job-meta">
+          <span class="job-meta-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+            Full-Time
+          </span>
+          <span class="job-meta-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Bhubaneswar
+          </span>
+          <span class="job-meta-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            1 &ndash; 3 Years
+          </span>
+        </div>
+        <p class="job-description">Strengthen 4DAlert&#x27;s online presence through SEO, AEO and GEO, improve rankings and organic traffic, optimize content for AI-powered search platforms and support the website with hands-on development and maintenance.</p>
+        <div class="job-skills">
+          <span class="skill-tag">SEO</span>
+          <span class="skill-tag">AEO</span>
+          <span class="skill-tag">GEO</span>
+          <span class="skill-tag">GA4</span>
+          <span class="skill-tag">Search Console</span>
+          <span class="skill-tag">SEMrush / Ahrefs</span>
+          <span class="skill-tag">HTML, CSS &amp; JavaScript</span>
+          <span class="skill-tag">Schema Markup</span>
+        </div>
+        <details class="job-details">
+          <summary>View full job description</summary>
+          <div class="job-details-body">
+            <p><strong>About the Role</strong></p>
+            <p>We are looking for a skilled and result-oriented SEO Executive with knowledge of AEO (Answer Engine Optimization) and GEO (Generative Engine Optimization) to strengthen the online presence of 4DAlert. The primary focus will be improving search engine rankings, increasing organic traffic, optimizing content for AI-powered search platforms and generating potential business leads. The role will also involve website maintenance and development.</p>
+            <h4>Key Responsibilities</h4>
+            <p><strong>SEO &ndash; Search Engine Optimization (Primary)</strong></p>
+            <ul>
+              <li>Develop and implement on-page, off-page and technical SEO strategies.</li>
+              <li>Conduct keyword research and competitor analysis.</li>
+              <li>Optimize website content, landing pages, meta titles and descriptions.</li>
+              <li>Improve Google rankings and organic website traffic.</li>
+              <li>Perform SEO audits and resolve technical issues.</li>
+              <li>Build quality backlinks and improve domain authority.</li>
+            </ul>
+            <p><strong>AEO &amp; GEO Optimization</strong></p>
+            <ul>
+              <li>Optimize website content to appear in AI-generated answers and search results.</li>
+              <li>Improve content visibility across platforms such as ChatGPT, Google AI Overviews and Perplexity.</li>
+              <li>Implement structured data, schema markup and FAQ optimization.</li>
+              <li>Develop authoritative, relevant and answer-focused content.</li>
+              <li>Improve brand visibility and mentions across AI-powered search platforms.</li>
+            </ul>
+            <p><strong>Web Development (Secondary)</strong></p>
+            <ul>
+              <li>Maintain and update the 4DAlert website.</li>
+              <li>Develop and optimize website pages and landing pages.</li>
+              <li>Improve website speed, responsiveness and user experience.</li>
+              <li>Implement SEO-friendly website structures.</li>
+              <li>Handle basic website development and technical issues.</li>
+            </ul>
+            <h4>Required Skills</h4>
+            <ul>
+              <li>Bachelor&#x27;s degree in IT, Computer Science, Marketing or a related field.</li>
+              <li>1&ndash;3 years of experience in SEO and web development.</li>
+              <li>Strong knowledge of SEO, AEO and GEO concepts.</li>
+              <li>Experience with Google Analytics 4 and Google Search Console.</li>
+              <li>Familiarity with SEMrush, Ahrefs or similar SEO tools.</li>
+              <li>Basic knowledge of HTML, CSS and JavaScript.</li>
+              <li>Understanding of schema markup, structured data and content optimization.</li>
+            </ul>
+            <h4>Preferred Skills</h4>
+            <ul>
+              <li>Experience in B2B or SaaS product marketing.</li>
+              <li>Knowledge of WordPress or other CMS platforms.</li>
+              <li>Understanding of AI-powered search and content optimization.</li>
+              <li>Experience with website performance and conversion optimization.</li>
+            </ul>
+            <h4>Key Performance Areas</h4>
+            <ul>
+              <li>Improved organic search rankings and website traffic.</li>
+              <li>Increased visibility in AI-powered search results.</li>
+              <li>Improved keyword rankings and quality backlinks.</li>
+              <li>Better website performance and user experience.</li>
+              <li>Increased organic enquiries and business leads.</li>
+            </ul>
+            <p><strong>Recommended Job Title:</strong> SEO, AEO &amp; GEO Executive &ndash; Web Development</p>
+          </div>
+        </details>
+        <div class="job-footer">
+          <div><div class="job-salary-label">Role</div><div class="job-salary">SEO, AEO &amp; GEO Executive &ndash; Web Development</div></div>
+          <a href="/careers/apply/?role=SEO%2C+AEO+%26+GEO+Executive+%E2%80%93+Web+Development" class="job-apply-btn">Apply now<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+      </article>
+  
     </div>
   </div>
 </section>
+
  
  
  
@@ -662,7 +874,7 @@ nav.breadcrumb{background:none!important;border:0!important;box-shadow:none!impo
   <div class="container">
     <h2>Frequently asked questions</h2>
     <div class="faq-section">
-      <div class="faq-item"><h3>What roles does Performalytic hire?</h3><p>Performalytic hires data, analytics, AI, and DevOps professionals across its Chicago headquarters and Bhubaneswar delivery center. Open roles are listed on the careers page.</p></div>
+      <div class="faq-item"><h3>What roles does Performalytic hire?</h3><p>Current open roles are B2B Software Marketing Executive and SEO, AEO &amp; GEO Executive &ndash; Web Development. Both are full-time positions based in Bhubaneswar.</p></div>
       <div class="faq-item"><h3>Where are the jobs located?</h3><p>Open roles list their location. Performalytic operates from Chicago, Illinois, and Bhubaneswar, India.</p></div>
       <div class="faq-item"><h3>How do I apply?</h3><p>Use the application form linked from the careers page or the specific job posting.</p></div>
       <div class="faq-item"><h3>What is the hiring process?</h3><p>The process typically starts with an application review, followed by interviews with the hiring team. The recruiter shares the specific steps for each role.</p></div>
