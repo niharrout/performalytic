@@ -1095,3 +1095,15 @@ h2[id],h3[id]{scroll-margin-top:96px}
 .compliance-badge{display:inline-flex;align-items:center;gap:4px;padding:4px 10px;border-radius:6px;font-size:0.65rem;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;text-decoration:none;border:1px solid var(--pa-wd-008);background:var(--pa-wb-003);color:var(--pa-t-dim);transition:all .2s}
 .compliance-badge:hover{border-color:rgba(74,222,128,0.3);color:var(--pa-at-green-3);background:rgba(74,222,128,0.05)}
 @media(max-width:768px){.footer-compliance{justify-content:center}}
+
+/* AEO/GEO: answer-first blocks, static FAQ cards, and visible freshness */
+.aeo-quick{padding:40px 0 0}
+.quick-answer{margin:28px 0;padding:22px 24px;border:1px solid rgba(96,165,250,.28);border-radius:16px;background:rgba(37,99,235,.08)}
+.quick-answer h2,.quick-answer h3{font-size:1.05rem;font-weight:800;line-height:1.35;margin:0 0 8px;color:var(--pa-t-strong)}
+.quick-answer p{margin:0;color:var(--pa-t-muted);line-height:1.7}
+.post-faq{padding:56px 0;border-top:1px solid var(--pa-wd-004)}
+.post-faq .faq-item{padding:20px}
+.post-faq .faq-item h3{font-size:1rem;font-weight:700;color:var(--pa-t);margin:0 0 .5rem}
+.post-faq .faq-item p{font-size:.95rem;color:var(--pa-t-muted);margin:0;line-height:1.7}
+.page-updated{margin:18px 0 0;font-size:.82rem;color:var(--pa-t-dim)}
+@media(max-width:640px){.quick-answer{padding:18px 18px}.post-faq{padding:40px 0}}

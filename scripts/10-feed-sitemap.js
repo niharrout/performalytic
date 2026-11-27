@@ -58,7 +58,7 @@ ${items}
 console.log('feed.xml:', posts.length, 'items');
 
 // ---------- 3. Sitemap with git-based lastmod ----------
-const EXCLUDE_DIRS = ['_case-studies', '_partners', 'assets', 'node_modules', '.git', '.github', 'scripts'];
+const EXCLUDE_DIRS = ['_case-studies', '_partners', 'assets', 'node_modules', '.git', '.github', 'scripts', 'reports'];
 const EXCLUDE_FILES = ['404.html', 'maintenance.html', 'thank-you.html', 'CNAME'];
 const files = [];
 (function walk(dir) {
